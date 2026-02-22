@@ -29,4 +29,4 @@ Dr-Hardware-Autonet/
 └── README2.md                  # O Painel de Controle do Projeto (inglês)
 ```
 
-😉 **"Espero que minha jornada te ajude e inspire a ter novas ideias e a construir seus próprios projetos. Vamos evoluir juntos!"**
+😉 "Espero que minha jornada te ajude e inspire a ter novas ideias e a construir seus próprios projetos. Vamos evoluir juntos!"
