@@ -1,3 +1,5 @@
+<h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/kevindexter22/blob/main/README_ENG.md" target="_blank" rel="noopener noreferrer">🇬🇧 Inglês</a></h6>
+
 # 🏡 Bem vindo à Dr. Hardware Autonet
 
 💡 A ideia desse projeto é criar um homelab para evoluir a infraestrutura da minha casa e documentar o desenvolvimento de minhas habilidades em tecnologia ao mesmo tempo, trazendo aprendizagem, experiência e melhorias para o dia a dia.
