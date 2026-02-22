@@ -19,7 +19,7 @@ Dr-Hardware-Autonet/
 │   └── Observability-Logging   # Testes de ingestão de logs complexos
 ├── 🛠️ scripts/                 # Automações em Geral
 ├── 📖 docs/                    # Documentação Geral
-│   ├── architecture/           # Diagramas e Descrições
+│   ├── architecture/           # Diagramas
 │   └── troubleshooting/        # Um guia de Desafios, Erros e Soluções
 ├── .gitignore
 ├── LICENSE
