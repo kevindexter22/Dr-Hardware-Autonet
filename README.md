@@ -23,5 +23,6 @@ Dr-Hardware-Autonet/
 │   └── troubleshooting/        # Um guia de Desafios, Erros e Soluções
 ├── .gitignore
 ├── LICENSE
-└── README.md                   # O Painel de Controle do Projeto
+├── README.md                   # O Painel de Controle do Projeto
+└── README2.md                  # O Painel de Controle do Projeto (inglês>
 ```
