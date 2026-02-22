@@ -24,5 +24,5 @@ Dr-Hardware-Autonet/
 ├── .gitignore
 ├── LICENSE
 ├── README.md                   # O Painel de Controle do Projeto
-└── README2.md                  # O Painel de Controle do Projeto (inglês>
+└── README2.md                  # O Painel de Controle do Projeto (inglês)
 ```
