@@ -14,7 +14,7 @@ Dr-Hardware-Autonet/
 │   ├── Observability/          # Observavilidade em Geral (dashboards e alertas)
 │   └── Security-Auth/          # Servidores e Ferramentas (segurança e auditoria)
 ├── 🧪 labs/                    # LABORATÓRIOS VIRTUAIS (Estudos e R&D)
-│   ├── 01-bgp-routing-study/   # Simulações de Redes (Packet Tracer/PNETLAB)
+│   ├── Network-Lab/            # Simulações de Redes (Packet Tracer/PNETLAB)
 │   ├── 02-docker-swarm-test/   # Testes de Orquestração
 │   └── 03-logging-advanced/    # Testes de ingestão de logs complexos
 ├── 🛠️ scripts/                 # Automações em Geral
