@@ -10,7 +10,7 @@
 Dr-Hardware-Autonet/
 ├── 🏠 Infrastructure/          # INFRAESTRUTURA REAL (Home Lab)
 │   ├── Compute/                # Virtualização e Containerização (configs)
-│   ├── Network-Services/       # Serviços e Dispositivos voltados a infraestrutura (configs básicas)
+│   ├── Network-Services/       # Serviços e Dispositivos (configs básicas)
 │   ├── Observability/          # Observavilidade em Geral (dashboards e alertas)
 │   └── Security-Auth/          # Servidores e Ferramentas (segurança e auditoria)
 ├── 🧪 labs/                    # LABORATÓRIOS VIRTUAIS (Estudos e R&D)
