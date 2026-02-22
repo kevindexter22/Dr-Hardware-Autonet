@@ -6,12 +6,13 @@
 
 🗂️ Para uma melhor organização e facilidade de compreensão, esse repositório conta com a seguinte nomenclatura:
 
+```text
 Dr-Hardware-Autonet/
-├── 🏠 infrastructure/          # INFRAESTRUTURA REAL (Home Lab)
-│   ├── compute/                # Virtualização e Containerização (configs)
-│   ├── networking/             # Serviços e dispositivos voltados a infraestrutura (configs básicas)
-│   ├── observability/          # Observavilidade em Geral (dashboards e alertas)
-│   └── security-auth/          # FreeIPA, FreeRADIUS, MySQL, Wazuh (segurança e auditoria)
+├── 🏠 Infrastructure/          # INFRAESTRUTURA REAL (Home Lab)
+│   ├── Compute/                # Virtualização e Containerização (configs)
+│   ├── Network-Services/       # Serviços e Dispositivos voltados a infraestrutura (configs básicas)
+│   ├── Observability/          # Observavilidade em Geral (dashboards e alertas)
+│   └── Security-Auth/          # Servidores e Ferramentas (segurança e auditoria)
 ├── 🧪 labs/                    # LABORATÓRIOS VIRTUAIS (Estudos e R&D)
 │   ├── 01-bgp-routing-study/   # Simulações de Redes (Packet Tracer/PNETLAB)
 │   ├── 02-docker-swarm-test/   # Testes de Orquestração
@@ -23,3 +24,4 @@ Dr-Hardware-Autonet/
 ├── .gitignore
 ├── LICENSE
 └── README.md                   # O Painel de Controle do Projeto
+```
