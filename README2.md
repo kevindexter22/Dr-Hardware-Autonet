@@ -8,6 +8,25 @@
 
 🗂️ To make it easy to understand, this repository uses this organization:
 
-
+```text
+Dr-Hardware-Autonet/
+├── 🏠 Infrastructure/          # REAL INFRASTRUCTURE (Home Lab)
+│   ├── Compute/                # Virtualization and Containerization (configs)
+│   ├── Network-Services/       # Services and Devices (basic configs)
+│   ├── Observability/          # General Observability (dashboards and alerts)
+│   └── Security-Auth/          # Servers and Tools (security and auditing)
+├── 🧪 labs/                    # VIRTUAL LABS (Studies and R&D)
+│   ├── Network-Lab/            # Network Simulations (Packet Tracer/PNETLAB)
+│   ├── DevOps-Orchestration/   # Orchestration Testing
+│   └── Observability-Logging   # Complex log ingestion tests
+├── 🛠️ scripts/                 # GENERAL AUTOMATION
+├── 📖 docs/                    # GENERAL DOCUMENTATION
+│   ├── architecture/           # Diagrams
+│   └── troubleshooting/        # A Guide for Challenges, Errors and Solutions
+├── .gitignore
+├── LICENSE
+├── README.md                   # The Project Control Panel (brazilian portuguese)
+└── README2.md                  # The Project Control Panel
+```
 
 😉 "I hope my journey helps and inspires you to have new ideas and build your own projects. Let's grow together!"
