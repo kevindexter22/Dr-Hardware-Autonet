@@ -14,9 +14,9 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 ##
 
 ### 🚀 Implementações Realizadas
-- [ ] Servidor com Casa OS (Serviços rodando sobre docker)
 - [ ] Zabbix Proxy
 - [ ] Samba server para OPL
+- [ ] Servidor com Casa OS (Serviços rodando sobre docker)
 - [ ] Servidor para virtualização com Proxmox como hypervisor
 ##
 
