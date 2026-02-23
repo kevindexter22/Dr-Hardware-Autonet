@@ -2,7 +2,7 @@
 
 # 🏠 Infraestrutura
 
-#### **📝 Descrição**
+## 📝 Descrição**
 
 O objetivo principal desse diretório é trazer todas as informações ligadas à estrutura física, dispositivos/hardwares e serviços voltados ao meu homelab.
 
