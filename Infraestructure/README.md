@@ -18,4 +18,9 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [X] 
 ##
 
+### 🗓️ Roadmap (Próximos Passos)
+- [ ] Ex.
+
+##
+
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
