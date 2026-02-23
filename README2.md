@@ -17,7 +17,7 @@ Dr-Hardware-Autonet/
 │   └── Security-Auth/          # Servers and Tools (security and auditing)
 ├── 🧪 labs/                    # VIRTUAL LABS (Studies and R&D)
 │   ├── Network-Lab/            # Network Simulations (Packet Tracer/PNETLAB)
-│   ├── DevOps-Orchestration/   # Orchestration Testing
+│   ├── DevOps-Orchestration/   # Orchestration and Services Testing
 │   └── Observability-Logging   # Complex log ingestion tests
 ├── 🛠️ scripts/                 # GENERAL AUTOMATION
 ├── 📖 docs/                    # GENERAL DOCUMENTATION
