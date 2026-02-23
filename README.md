@@ -18,7 +18,7 @@ Dr-Hardware-Autonet/
 ├── 🧪 labs/                    # LABORATÓRIOS VIRTUAIS (Estudos e R&D)
 │   ├── Network-Lab/            # Simulações de Redes (Packet Tracer/PNETLAB)
 │   ├── DevOps-Orchestration/   # Testes de Orquestração
-│   └── Observability-Logging   # Testes de ingestão de logs complexos
+│   └── Observability-Logging/  # Testes de ingestão de logs complexos
 ├── 🛠️ scripts/                 # Automações em Geral
 ├── 📖 docs/                    # Documentação Geral
 │   ├── architecture/           # Diagramas
