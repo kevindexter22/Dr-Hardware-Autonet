@@ -31,4 +31,4 @@ Dr-Hardware-Autonet/
 
 😉 "Espero que minha jornada te ajude e inspire a ter novas ideias e a construir seus próprios projetos. Vamos evoluir juntos!"
 
-###### ℹ️ Distribuido sob a licença MIT. Veja [LICENSE](LICENSE) para mais informações.
+###### ℹ️ Distribuido sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais informações.
