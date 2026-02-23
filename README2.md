@@ -31,4 +31,4 @@ Dr-Hardware-Autonet/
 
 😉 "I hope my journey helps and inspires you to have new ideas and build your own projects. Let's grow together!"
 
-###### This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+###### ℹ️ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
