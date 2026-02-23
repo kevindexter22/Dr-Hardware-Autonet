@@ -13,4 +13,9 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 ##
 
+### 🚀 Implementações Realizadas
+- [X] 
+- [X] 
+##
+
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
