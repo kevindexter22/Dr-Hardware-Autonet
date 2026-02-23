@@ -9,4 +9,8 @@ O objetivo principal desse diretório é trazer todas as informações ligadas �
 Trarei aqui a visão do que está sendo implementado, assim como um pouco da base teórica, finalidade da implementação, arquivos de configuração/scripts e problemas com suas possíveis soluções realizados ao longo do tempo.
 ##
 
+### 🏗️ Topologia / Arquitetura
+
+##
+
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
