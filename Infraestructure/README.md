@@ -16,8 +16,8 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 ### 🚀 Implementações Realizadas
 
 #### 🗄️ Hardware e Virtualização
-- [x] CasaOS: Ambiente simplificado para gestão de containers Docker (Rodando no Raspberry Pi 4)
-- [x] Proxmox VE: Hypervisor para gerenciamentos de máquinas virtuais e cotainers (LXC) (Rodando no HP Pavilion G4)
+- [x] Raspberry Pi 4: Rodando CasaOS que é um ambiente simplificado para gestão de containers Docker
+- [x] HP Pavilion G4: Proxmox VE que é um Hypervisor para gerenciamentos de máquinas virtuais e cotainers (LXC)
 - [x] Raspberry Pi 3B: Possuo algumas rodando o Ubuntu 24.04 LTS com serviços específicos
 
 #### 📊 Monitoramento e Serviços
