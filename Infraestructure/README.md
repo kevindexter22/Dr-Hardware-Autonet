@@ -23,7 +23,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 #### 🤖 Automação e Scripting
 ##### 🧩 Shell Script (Bash)
 - [x] Ubuntu Post-Install: Script de automação para configuração e padronização de Desktops e Notebooks
-- [ ]  
+- [x] ..
 
 #### 📊 Monitoramento e Serviços
 - [x] Zabbix Stack: Servidor principal com Proxy para mnitoramento de rede descentralizado
