@@ -35,6 +35,10 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 ### 🗓️ Roadmap (Próximos Passos)
 
+#### 🗄️ Hardware e Virtualização
+- [ ] Upgrade no HP Pavilion G4
+- [ ] Aquisição de um novo hardware (configuração a decidir)
+
 #### 📊 Monitoramento e Serviços
 - [ ] FreeIPA: Gerenciamento centralizado de identidades, autenticações e políticas
 - [ ] Prometheus: Monitoramento e coleta de métricas com alertas em tempo real
@@ -42,6 +46,11 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [ ] DNS Colector + Grafana LOKI: Coleta e indexação de logs DNS para análise e observabilidade
 - [ ] Redundância de Serviços Essenciais: Criar backup dos serviços principais para caso de falhas
 - [ ] Freeradius + MySQL: Autenticação AAA com banco de dados para controle de acesso e accounting
+
+#### 📡 Ativos de Redes (Físicos)
+- [ ] Substituição/atualização dos Roteadores Principal/Secundário
+- [ ] Substituição do switch atual por um switch Gigabit
+- [ ] Substituição do TP-Link antigo das câmeras e melhorias no sistema
 ##
 
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
