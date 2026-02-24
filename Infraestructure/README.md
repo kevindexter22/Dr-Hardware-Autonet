@@ -14,12 +14,21 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 ##
 
 ### 🚀 Implementações Realizadas
-- [ ] Zabbix
-- [ ] Grafana
-- [ ] Zabbix Proxy
-- [ ] Samba server para OPL
-- [ ] Servidor com Casa OS (Serviços rodando sobre docker)
-- [ ] Servidor para virtualização com Proxmox como hypervisor
+
+#### 🗄️ Hardware e Virtualização
+- [ ] CasaOS: Ambiente simplificado para gestão de containers Docker (Rodando no Raspberry Pi 4)
+- [ ] Proxmox VE: Hypervisor para gerenciamentos de máquinas virtuais e cotainers (LXC) (Rodando no HP Pavilion G4)
+
+#### 📊 Monitoramento e Serviços
+- [ ] Zabbix Stack: Servidor principal com Proxy para mnitoramento de rede descentralizado
+- [ ] Grafana: Dashboards avançadas para visualizações de métricas e saúde do hardware
+- [ ] Samba server (OPL): Servidor de arquivos dedicado para carregamento de jogos de PS2
+- [ ] Docker Ecosystem: Diversos microsserviços implementados via Docker e gerenciados via Docker Compose
+
+#### 📡 Ativos de Redes (Físicos)
+- [ ] ONT/Modem: Intelbras - instalado pelo meu ISP
+- [ ] Roteador Principal/Secundário: 2x Huawei WS5800 - Ambos formam uma rede mesh para maior cobertura
+- [ ] Switches: 
 ##
 
 ### 🗓️ Roadmap (Próximos Passos)
