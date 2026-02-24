@@ -21,7 +21,8 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [x] Raspberry Pi 3B: Possuo algumas rodando o Ubuntu 24.04 LTS com serviços específicos
 
 #### 🤖 Automação e Scripting
-- [x] Ubuntu Post-Instalation - 
+##### Shell Script (Bash)
+- [x] Ubuntu Post-Installation: Script para configuração geral do Ubuntu após instalação
 
 #### 📊 Monitoramento e Serviços
 - [x] Zabbix Stack: Servidor principal com Proxy para mnitoramento de rede descentralizado
