@@ -48,6 +48,8 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
       
 #### 📊 Monitoramento e Serviços
+- [ ] PHPIPAM: Gerenciamento de endereços IP
+- [ ] GenieACS: Centralização de acesso e gerenciamento via TR-069/TR-098 ou TR-181
 - [ ] FreeIPA: Gerenciamento centralizado de identidades, autenticações e políticas
 - [ ] Prometheus: Monitoramento e coleta de métricas com alertas em tempo real
 - [ ] Pi-hole + Unbound DNS: DNS privado com bloqueio de anúncios e rastreadores
