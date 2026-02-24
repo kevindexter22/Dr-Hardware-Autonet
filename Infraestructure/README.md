@@ -34,12 +34,14 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 ##
 
 ### 🗓️ Roadmap (Próximos Passos)
-- [ ] FreeIPA
-- [ ] Prometheus
-- [ ] Pi-hole + Unbound DNS
-- [ ] DNS Colector + Grafana LOKI
-- [ ] Freeradius + MySQL (Docker+Cloud - Redundância)
-- [ ] Redundância de Serviços Essenciais 
+
+#### 📊 Monitoramento e Serviços
+- [ ] FreeIPA: Gerenciamento centralizado de identidades, autenticações e políticas
+- [ ] Prometheus: Monitoramento e coleta de métricas com alertas em tempo real
+- [ ] Pi-hole + Unbound DNS: DNS privado com bloqueio de anúncios e rastreadores
+- [ ] DNS Colector + Grafana LOKI: Coleta e indexação de logs DNS para análise e observabilidade
+- [ ] Redundância de Serviços Essenciais: Criar backup dos serviços principais para caso de falhas
+- [ ] Freeradius + MySQL: Autenticação AAA com banco de dados para controle de acesso e accounting
 ##
 
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
