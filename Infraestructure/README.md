@@ -37,7 +37,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 #### 🗄️ Hardware e Virtualização
 - [ ] Upgrade no HP Pavilion G4
-- [ ] Aquisição de um novo hardware (configuração a decidir)
+- [ ] Aquisição de um novo hardware (configuração e finalidade a decidir)
 
 #### 📊 Monitoramento e Serviços
 - [ ] FreeIPA: Gerenciamento centralizado de identidades, autenticações e políticas
