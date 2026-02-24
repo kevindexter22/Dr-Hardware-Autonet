@@ -20,6 +20,9 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [x] HP Pavilion G4: Rodando Proxmox VE que é um Hypervisor para gerenciamentos de VMs e cotainers (LXC)
 - [x] Raspberry Pi 3B: Possuo algumas rodando o Ubuntu 24.04 LTS com serviços específicos
 
+#### 🤖 Automação e Scripting
+- [x] Ubuntu Post-Instalation - 
+
 #### 📊 Monitoramento e Serviços
 - [x] Zabbix Stack: Servidor principal com Proxy para mnitoramento de rede descentralizado
 - [x] Grafana: Dashboards avançadas para visualizações de métricas e saúde do hardware
