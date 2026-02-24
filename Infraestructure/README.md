@@ -14,6 +14,8 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 ##
 
 ### 🚀 Implementações Realizadas
+- [ ] Zabbix
+- [ ] Grafana
 - [ ] Zabbix Proxy
 - [ ] Samba server para OPL
 - [ ] Servidor com Casa OS (Serviços rodando sobre docker)
@@ -21,8 +23,12 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 ##
 
 ### 🗓️ Roadmap (Próximos Passos)
-- [ ] Ex.
-
+- [ ] FreeIPA
+- [ ] Prometheus
+- [ ] Pi-hole + Unbound DNS
+- [ ] DNS Colector + Grafana LOKI
+- [ ] Freeradius + MySQL (Docker+Cloud - Redundância)
+- [ ] Redundância de Serviços Essenciais 
 ##
 
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
