@@ -48,7 +48,12 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 #### 🤖 Automação e Scripting
 ##### 🧩 Shell Script (Bash)
-
+- [ ] Automação de Backups dos arquivos de configuração e dump de bancos mais importantes
+- [ ] Script de healthcheck e conectividade para o Túnel VPN
+- [ ] Script para gerar relatórios do PHPIPAM
+- [ ] Script de healthcheck para FreeRADIUS
+- [ ] Watchdog de sincronismo do MySQL Master-Master
+- [ ] Automação de DNS Blacklist (Pi-hole "Caseiro" com Unbound)
       
 #### 📊 Monitoramento e Serviços
 - [ ] PHPIPAM: Gerenciamento de endereços IP
