@@ -23,7 +23,9 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 #### 🤖 Automação e Scripting
 ##### 🧩 Shell Script (Bash)
 - [x] Ubuntu Post-Install: Script de automação para configuração e padronização de Desktops e Notebooks
-- [x] ..
+- [x] Update Tool: Script para atualização centralizada (apt, snap, flatpak e pacotes.deb)
+- [x] Drive Persistence: Garante a persistência de pontos de montagem de HDs Externos para serviços de rede e OPL
+- [x] Smart Shutdown: Script para desligamento inteligente do Host Samba_OPL baseado no estado do PS2
 
 #### 📊 Monitoramento e Serviços
 - [x] Zabbix Stack: Servidor principal com Proxy para mnitoramento de rede descentralizado
