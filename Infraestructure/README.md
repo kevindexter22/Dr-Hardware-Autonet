@@ -28,7 +28,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 #### 📡 Ativos de Redes (Físicos)
 - [ ] ONT/Modem: Intelbras - instalado pelo meu ISP
 - [ ] Roteador Principal/Secundário: 2x Huawei WS5800 - Ambos formam uma rede mesh para maior cobertura
-- [ ] Switche: Overtek OT2808S/W/UX 8 Portas 10/100 - 
+- [ ] Switch: Overtek OT2808S/W/UX 8 Portas 10/100 - 
 ##
 
 ### 🗓️ Roadmap (Próximos Passos)
