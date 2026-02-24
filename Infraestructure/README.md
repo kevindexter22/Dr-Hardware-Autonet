@@ -22,9 +22,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 #### 🤖 Automação e Scripting
 ##### 🧩 Shell Script (Bash)
-- [x] Provisionamento e Manutenção: Scripts para automação de instalação e manutenção dos serviço
-- [x] Diagnóstico, Resiliência e Conectividade: Scripts para garantir a saúde e funcionamento adequado dos serviços 
-- [x] Produtividade e Utilitários: Scripts para tarefas corriqueiras do dia-a-dia
+
 
 #### 📊 Monitoramento e Serviços
 - [x] Zabbix Stack: Servidor principal com Proxy para mnitoramento de rede descentralizado
@@ -47,8 +45,8 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 #### 🤖 Automação e Scripting
 ##### 🧩 Shell Script (Bash)
-- [ ] Provisionamento e Manutenção: Scripts de instalação de alguns serviços, assim como healthcheck, sync e backup
 
+      
 #### 📊 Monitoramento e Serviços
 - [ ] FreeIPA: Gerenciamento centralizado de identidades, autenticações e políticas
 - [ ] Prometheus: Monitoramento e coleta de métricas com alertas em tempo real
