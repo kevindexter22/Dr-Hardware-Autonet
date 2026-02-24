@@ -18,6 +18,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 #### 🗄️ Hardware e Virtualização
 - [ ] CasaOS: Ambiente simplificado para gestão de containers Docker (Rodando no Raspberry Pi 4)
 - [ ] Proxmox VE: Hypervisor para gerenciamentos de máquinas virtuais e cotainers (LXC) (Rodando no HP Pavilion G4)
+- [ ] Raspberry Pi 3B: Possuo algumas rodando o Ubuntu 24.04 LTS com serviços específicos
 
 #### 📊 Monitoramento e Serviços
 - [ ] Zabbix Stack: Servidor principal com Proxy para mnitoramento de rede descentralizado
@@ -28,7 +29,8 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 #### 📡 Ativos de Redes (Físicos)
 - [ ] ONT/Modem: Intelbras - instalado pelo meu ISP
 - [ ] Roteador Principal/Secundário: 2x Huawei WS5800 - Ambos formam uma rede mesh para maior cobertura
-- [ ] Switch: Overtek OT2808S/W/UX 8 Portas 10/100 - 
+- [ ] Switch: Overtek OT2808S/W/UX 8 Portas fast ethernet - Onde ligo meus dispositivos que não precisam estar em gigabit
+- [ ] Roteador TP-Link wr-841n com OpenWRT - Roteador modificado com um firmware open source para conectar câmeras IP
 ##
 
 ### 🗓️ Roadmap (Próximos Passos)
