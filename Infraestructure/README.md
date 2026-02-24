@@ -21,8 +21,10 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [x] Raspberry Pi 3B: Possuo algumas rodando o Ubuntu 24.04 LTS com serviços específicos
 
 #### 🤖 Automação e Scripting
-##### Shell Script (Bash)
-- [x] Ubuntu Post-Installation: Script para configuração geral do Ubuntu após instalação
+##### 🧩 Shell Script (Bash)
+- [x] Provisionamento e Manutenção: Scripts para automação de instalação e manutenção dos serviço
+- [x] Diagnóstico, Resiliência e Conectividade: Scripts para garantir a saúde e funcionamento adequado dos serviços 
+- [x] Produtividade e Utilitários: Scripts para tarefas corriqueiras do dia-a-dia
 
 #### 📊 Monitoramento e Serviços
 - [x] Zabbix Stack: Servidor principal com Proxy para mnitoramento de rede descentralizado
@@ -42,6 +44,10 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 #### 🗄️ Hardware e Virtualização
 - [ ] Upgrade no HP Pavilion G4
 - [ ] Aquisição de um novo hardware (configuração e finalidade a decidir)
+
+#### 🤖 Automação e Scripting
+##### 🧩 Shell Script (Bash)
+- [ ] Provisionamento e Manutenção: Scripts de instalação de alguns serviços, assim como healthcheck, sync e backup
 
 #### 📊 Monitoramento e Serviços
 - [ ] FreeIPA: Gerenciamento centralizado de identidades, autenticações e políticas
