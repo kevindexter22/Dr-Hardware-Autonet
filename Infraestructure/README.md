@@ -28,7 +28,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 #### 📡 Ativos de Redes (Físicos)
 - [x] ONT/Modem: Intelbras - instalado pelo meu ISP
-- [x] Roteador Principal/Secundário: 2x Huawei WS5800 - Ambos formam uma rede mesh para maior cobertura
+- [x] Roteador Principal/Secundário: 2x Huawei WS5800 - Formando uma rede mesh para maior cobertura
 - [x] Switch: Overtek OT2808S/W/UX 8 Portas - Onde ligo meus dispositivos que não precisam estar em gigabit
 - [x] Roteador TP-Link wr-841n com OpenWRT - Onde conecto minhas câmeras IP
 ##
