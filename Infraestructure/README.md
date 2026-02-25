@@ -64,6 +64,11 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 ##### 🔄 *Orquestração e Gestão*
 - [ ] GitOps: Armazenamento dos scripts e playbooks em repositórios (GitHub) para versionamento
+
+##### 👁️‍🗨️ *Observabilidade Inteligente (AIOps)*
+- [ ] [ ] Criar Webhook Zabbix <-> Gemini API para análise de causa raiz (RCA)
+- [ ] Implementar enriquecimento de alertas com logs do Grafana Loki
+- [ ] Validar sugestões de correção automática via Rundeck no Homelab
       
 #### 📊 Monitoramento e Serviços
 - [ ] PHPIPAM: Gerenciamento de endereços IP
