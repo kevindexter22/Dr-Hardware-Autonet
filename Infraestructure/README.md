@@ -21,7 +21,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [x] Raspberry Pi 3B: Possuo algumas rodando o Ubuntu 24.04 LTS com serviços específicos
 
 #### 🤖 Automação e Scripting
-##### 🧩 Shell Script (Bash)
+##### 🧩 *Shell Script (Bash)*
 - [x] Ubuntu Post-Install: Script de automação para configuração e padronização de Desktops e Notebooks
 - [x] Update Tool: Script para atualização centralizada (apt, snap, flatpak e pacotes.deb)
 - [x] Drive Persistence: Garante a persistência de pontos de montagem de HDs Externos para serviços de rede e OPL
@@ -47,7 +47,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [ ] Aquisição de um novo hardware (configuração e finalidade a decidir)
 
 #### 🤖 Automação e Scripting
-##### 🧩 Shell Script (Bash)
+##### 🧩 *Shell Script (Bash)*
 - [ ] Automação de Backups dos arquivos de configuração e dump de bancos mais importantes
 - [ ] Script de healthcheck e conectividade para o Túnel VPN
 - [ ] Script para gerar relatórios do PHPIPAM
@@ -55,13 +55,13 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [ ] Watchdog de sincronismo do MySQL Master-Master
 - [ ] Automação de DNS Blacklist (Pi-hole "Caseiro" com Unbound)
 
-##### 🏗️ Infraestrutura como Código (IaC) e Configuração
+##### 🏗️ *Infraestrutura como Código (IaC) e Configuração*
 - [ ] Provisionamento de Microserviços com Terraform: Provisionar uma estrutura completa no proxmox
 - [ ] Ciclo de Vida de IPs: Utilizar Terraform como cliente do phpIPAM consultando IPs disponíveis
 - [ ] Configuração "Post-Boot": Conectar SSH com Ansible e instalar os serviços necessários
 - [ ] Gestão de template e imutabilidade: Um processo valida e baixa a imagem atual do S.O. e o ansible converte em template
 
-##### 🔄 Orquestração e Gestão
+##### 🔄 *Orquestração e Gestão*
 - [ ] GitOps: Armazenamento dos scripts e playbooks em repositórios (GitHub) para versionamento
       
 #### 📊 Monitoramento e Serviços
