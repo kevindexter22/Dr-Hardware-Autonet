@@ -55,13 +55,13 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [ ] Watchdog de sincronismo do MySQL Master-Master
 - [ ] Automação de DNS Blacklist (Pi-hole "Caseiro" com Unbound)
 
-##### Infraestrutura como Código (IaC) e Configuração
+##### 🏗️ Infraestrutura como Código (IaC) e Configuração
 - [ ] Provisionamento de Microserviços com Terraform: Provisionar uma estrutura completa no proxmox
 - [ ] Ciclo de Vida de IPs: Utilizar Terraform como cliente do phpIPAM consultando IPs disponíveis
 - [ ] Configuração "Post-Boot": Conectar SSH com Ansible e instalar os serviços necessários
 - [ ] Gestão de template e imutabilidade: Um processo valida e baixa a imagem atual do S.O. e o ansible converte em template
 
-##### Orquestração e Gestão
+##### 🔄 Orquestração e Gestão
 - [ ] GitOps: Armazenamento dos scripts e playbooks em repositórios (GitHub) para versionamento
       
 #### 📊 Monitoramento e Serviços
