@@ -71,7 +71,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [ ] Rundeck Integration: Orquestrar o ciclo de análise Redis → Gemini API → Ação via Ansible/GenieACS
 
 ##### 👁️‍🗨️ *Observabilidade Inteligente (AIOps)*
-- [ ] [ ] Criar Webhook Zabbix <-> Gemini API para análise de causa raiz (RCA)
+- [ ] Criar Webhook Zabbix <-> Gemini API para análise de causa raiz (RCA)
 - [ ] Implementar enriquecimento de alertas com logs do Grafana Loki
 - [ ] Validar sugestões de correção automática via Rundeck no Homelab
 - [ ] Dashboard de Telemetria TR-181 no Grafana: Visualização de Sinal/Ruído e CPU dos roteadores via Redis Data Source
