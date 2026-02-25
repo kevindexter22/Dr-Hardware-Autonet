@@ -54,6 +54,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [ ] Script de healthcheck para FreeRADIUS
 - [ ] Watchdog de sincronismo do MySQL Master-Master
 - [ ] Automação de DNS Blacklist (Pi-hole "Caseiro" com Unbound)
+- [ ] Scripts de remediação automática (Zabbix+Proxmox API)
 
 ##### 🏗️ *Infraestrutura como Código (IaC) e Configuração*
 - [ ] Provisionamento de Microserviços com Terraform: Provisionar uma estrutura completa no proxmox
@@ -73,6 +74,8 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [ ] DNS Colector + Grafana LOKI: Coleta e indexação de logs DNS para análise e observabilidade
 - [ ] Redundância de Serviços Essenciais: Criar backup dos serviços principais para caso de falhas
 - [ ] Freeradius + MySQL: Autenticação AAA com banco de dados para controle de acesso e accounting
+- [ ] Zabbix VAE (Virtual Appliance Edition): Monitoramento de Hardware, SNMP e Integração Nativa com Proxmox
+- [ ] Grafana: Criação de dashboards em geral
 
 #### 📡 Ativos de Redes (Físicos)
 - [ ] Substituição/atualização dos Roteadores Principal/Secundário
