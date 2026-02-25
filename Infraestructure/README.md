@@ -54,22 +54,29 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [ ] Script de healthcheck para FreeRADIUS
 - [ ] Watchdog de sincronismo do MySQL Master-Master
 - [ ] Automação de DNS Blacklist (Pi-hole "Caseiro" com Unbound)
-- [ ] Scripts de remediação automática (Zabbix+Proxmox API)
+
+##### 💊 *Scripts de Remediação*
+- [ ] Zabbix+Proxmox API
+- [ ] Zabbix+Genie: Troca automática de canal wi-fi ou reboot remoto
 
 ##### 🏗️ *Infraestrutura como Código (IaC) e Configuração*
 - [ ] Provisionamento de Microserviços com Terraform: Provisionar uma estrutura completa no proxmox
 - [ ] Ciclo de Vida de IPs: Utilizar Terraform como cliente do phpIPAM consultando IPs disponíveis
 - [ ] Configuração "Post-Boot": Conectar SSH com Ansible e instalar os serviços necessários
 - [ ] Gestão de template e imutabilidade: Um processo valida e baixa a imagem atual do S.O. e o ansible converte em template
+- [ ] Ansible para ACS: Padronização de Provisioning Flows e vparams no GenieACS
 
 ##### 🔄 *Orquestração e Gestão*
 - [ ] GitOps: Armazenamento dos scripts e playbooks em repositórios (GitHub) para versionamento
+- [ ] Rundeck Integration: Orquestrar o ciclo de análise Redis → Gemini API → Ação via Ansible/GenieACS
 
 ##### 👁️‍🗨️ *Observabilidade Inteligente (AIOps)*
 - [ ] [ ] Criar Webhook Zabbix <-> Gemini API para análise de causa raiz (RCA)
 - [ ] Implementar enriquecimento de alertas com logs do Grafana Loki
 - [ ] Validar sugestões de correção automática via Rundeck no Homelab
-      
+- [ ] Dashboard de Telemetria TR-181 no Grafana: Visualização de Sinal/Ruído e CPU dos roteadores via Redis Data Source
+- [ ] Análise Preditiva: Usar Gemini para analisar tendências de queda de sinal no Redis antes que o cliente perceba
+
 #### 📊 Monitoramento e Serviços
 - [ ] PHPIPAM: Gerenciamento de endereços IP
 - [ ] GenieACS: Centralização de acesso e gerenciamento via TR-069/TR-098 ou TR-181
