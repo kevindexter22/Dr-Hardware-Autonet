@@ -28,7 +28,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 - [x] Smart Shutdown: Script para desligamento inteligente do Host Samba_OPL baseado no estado do PS2
 
 #### 📊 Monitoramento e Serviços
-- [x] Zabbix Stack: Servidor principal com Proxy para mnitoramento de rede descentralizado
+- [x] Zabbix Stack: Servidor principal na OCI com Proxy para monitoramento de rede descentralizado
 - [x] Grafana: Dashboards avançadas para visualizações de métricas e saúde do hardware
 - [x] Samba server (OPL): Servidor de arquivos dedicado para carregamento de jogos de PS2
 - [x] Docker Ecosystem: Diversos microsserviços implementados via Docker
