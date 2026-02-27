@@ -11,7 +11,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 ### 🏗️ Topologia / Arquitetura
 
-<img width="820" height="927" alt="Diagrama_Homelab" src="https://github.com/user-attachments/assets/53b622ca-ac22-4a99-a5ed-28d2bf570fc8" />
+<img width="500" height="600" alt="Diagrama_Homelab" src="https://github.com/user-attachments/assets/53b622ca-ac22-4a99-a5ed-28d2bf570fc8" />
 
 ##
 
