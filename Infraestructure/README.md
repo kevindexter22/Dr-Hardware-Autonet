@@ -29,16 +29,18 @@ graph TD
 
     %% 2. HARDWARE
     subgraph S2 [2. Hardware]
-        R_Mesh1 --- RPi4[Raspberry Pi 4 - CasaOS]:::hardware
+        R_Mesh1 --- RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
         SW1 --- RPi3B_1[Raspberry Pi 3B - Samba_OPL]:::hardware
         SW1 --- RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
         R_Mesh2 --- HP[HP Pavilion - Proxmox VE]:::hardware
     end
 
     %% 3. SERVIÇOS     
-    subgraph S3 [3. Serviços];    
+    subgraph S3 [3. Serviços];
+        RPi4B --- ZA[Zabbix Agent]:::serviços
+        RPi3B_2 --- ZP[Zabbix Agent]:::serviços
         RPi3B_2 --- ZP[Zabbix Proxy]:::serviços
-        HP --- PVE[Proxmox VE]:::serviços
+        HP --- PVE[Proxmox VE]:::serviços        
     end
 
     %% 4. Internet (A PONTE)
@@ -57,6 +59,7 @@ graph TD
     
     %% Relacionamentos lógicos (setas duplas para replicação)
     ZP -.-> |Métricas| ZS
+    
 
 ```
 
