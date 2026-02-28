@@ -78,10 +78,10 @@ graph TD
 
     %% --- Set collor on conections ---
     
-    linkStyle 0 stroke:#ff4444,stroke-width:3px;          %% ONT --> R_Mesh1 (red)
-    linkStyle 4 stroke:#3498db,stroke-width:3px;          %% S1 --> S2 (blue)
-    linkStyle 14,15 stroke:#f1c40f,stroke-width:2px;      %% ONT -> Internet -> OCI (yelou)
-    linkStyle 16,17 stroke:#2ecc71,stroke-width:2px,stroke-dasharray: 5 5; %% Métrics Zabbix (green)
+    linkStyle 0 stroke:#ff4444,stroke-width:3px;
+    linkStyle 4 stroke:#3498db,stroke-width:3px;
+    linkStyle 14,15 stroke:#f1c40f,stroke-width:2px;
+    linkStyle 16,17 stroke:#2ecc71,stroke-width:2px,stroke-dasharray: 5 5;
 ```
 
 Atualmente a topologia da infraestrutura está conforme o diagrama acima:
