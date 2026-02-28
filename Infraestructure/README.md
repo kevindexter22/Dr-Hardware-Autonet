@@ -38,7 +38,7 @@ graph TD
     %% 3. SERVIÇOS     
     subgraph S3 [3. Serviços];
         RPi4B --- ZA[Zabbix Agent]:::serviços
-        RPi3B_2 --- ZP[Zabbix Agent]:::serviços
+        RPi3B_2 --- ZA[Zabbix Agent]:::serviços
         RPi3B_2 --- ZP[Zabbix Proxy]:::serviços
         HP --- PVE[Proxmox VE]:::serviços        
     end
