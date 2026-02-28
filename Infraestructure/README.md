@@ -54,7 +54,7 @@ graph TD
     end
 
     %% 4. Internet (The Bridge)
-    subgraph S6 [4. Internet]
+    subgraph S6 [4. ISP/Internet]
            internet[Internet]:::internet
     end
 
