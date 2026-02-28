@@ -10,16 +10,16 @@ Nessa seção, documento a gestão de recursos computacionais, detalhando como o
 
 ### 🛠️ Hypervisors e Runtimes
 
-- CasaOS: Utilizado no servidor principal. Ele tem uma interface para gerenciamento de containers rodando sob o docker, permitindo assim, facilidade na gestão e instalação de serviços personalizados via docker compose
-- Proxmox VE: Hypervisor para rodar máquinas virtuais e containers LXC para alguns serviços
-- Ubuntu Server: Para instalação de serviços direta, sem virtualização ou containerização
+- CasaOS: Utilizado no servidor principal. Ele tem uma interface para gerenciamento de containers rodando sob o docker, permitindo assim, facilidade na gestão e instalação de serviços personalizados via docker compose.
+- Proxmox VE: Hypervisor para rodar máquinas virtuais e containers LXC para alguns serviços.
+- Ubuntu Server: Para instalação de serviços direta, sem virtualização ou containerização.
 
 ##
 
 ### 🚀 Implementações Técnicas
 
-- Gestão de Recursos: Overprovisioning controlado de CPU e RAM para otimização de custos energéticos
-- Storage Persistence: Montagem de volumes Docker via ExFAT/NFS/Samba para garantir persistência de dados fora dos containers
+- Gestão de Recursos: Overprovisioning controlado de CPU e RAM para otimização de custos energéticos.
+- Storage Persistence: Montagem de volumes Docker via ExFAT/NFS/Samba para garantir persistência de dados fora dos containers.
 
 ##
 
