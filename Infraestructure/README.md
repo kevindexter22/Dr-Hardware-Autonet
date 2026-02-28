@@ -12,7 +12,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 ### 🏗️ Topologia / Arquitetura
 ```mermaid
 graph TD
-    %% Estilos
+    %% Styles
     classDef rede fill:#383838,stroke:#FFFFFF,stroke-width:2px;
     classDef hardware fill:#383838,stroke:#FFFFFF,stroke-width:2px;
     classDef internet fill:#383838,stroke:#FFFFFF,stroke-width:2px,stroke-dasharray: 5 5;
