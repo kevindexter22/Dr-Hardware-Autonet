@@ -59,8 +59,8 @@ graph TD
     S4 --> S5
     
     %% Relacionamentos lógicos (setas duplas para replicação)
-    ZP -.-> |Métricas| ZS
-    ZA -.-> |Métricas| ZS 
+    ZA -.-> |Métricas| ZS
+    ZP -.-> |Métricas| ZS 
 
 ```
 
