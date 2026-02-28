@@ -35,7 +35,7 @@ graph TD
         
         
         RPi3_2 --- ZP[Zabbix Proxy]:::hardware
-        HP --- PVE[(Proxmox)]:::hardware
+        HP --- PVE[Proxmox]:::hardware
     end
 
     %% 3. Internet (A PONTE)
