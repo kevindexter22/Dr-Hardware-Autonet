@@ -73,8 +73,8 @@ graph TD
 
     %% --- Set collor on conections ---
     
-    linkStyle 1 stroke:#3498db,stroke-width:3px;
-    linkStyle 2,4,6 stroke:#7FFFD4,stroke-width:3px;
+    linkStyle 0 stroke:#3498db,stroke-width:3px;
+    linkStyle 1,3,6 stroke:#7FFFD4,stroke-width:3px;
 ```
 
 Atualmente a topologia da infraestrutura está conforme o diagrama acima:
