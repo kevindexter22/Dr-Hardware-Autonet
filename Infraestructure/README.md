@@ -39,19 +39,18 @@ subgraph Home [🏠 Homelab - Dr. Hardware Autonet]
             end
         end
     end
+    
+      subgraph VPN [Túnel IPsec VPN]
+        direction LR
+        Tunnel((Internet))
+    end
 
     subgraph OCI [Oracle Cloud Infrastructure]
         direction TB
         ZS[Zabbix/Grafana Server]:::cloud
         M1[(MySQL Master 1)]:::cloud
     end
-
-    subgraph VPN [Túnel IPsec VPN]
-        direction LR
-        Tunnel((Internet))
-    end
   
-
     %% Conexões Lógicas
     M1 <--> |Replicação| M2
     ZP -.-> |Monitoramento| ZS
