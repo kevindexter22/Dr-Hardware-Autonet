@@ -15,7 +15,7 @@ graph TD
     %% Estilos
     classDef rede fill:#e3460d,stroke:#01579b,stroke-width:2px;
     classDef hardware fill:#AC00C2,stroke:#2e7d32,stroke-width:2px;
-    classDef tunel fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef internet fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,stroke-dasharray: 5 5;
     classDef oci fill:#616161,stroke:#7b1fa2,stroke-width:2px;
 
     %% 1. ATIVOS DE REDE
