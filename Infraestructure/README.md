@@ -13,18 +13,18 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 ```mermaid
 graph TD
     %% Styles
-    classDef rede fill:#383838,stroke:#FFFFFF,stroke-width:2px;
+    classDef network fill:#383838,stroke:#FFFFFF,stroke-width:2px;
     classDef hardware fill:#383838,stroke:#FFFFFF,stroke-width:2px;
     classDef internet fill:#383838,stroke:#FFFFFF,stroke-width:2px,stroke-dasharray: 5 5;
-    classDef serviços fill:#383838,stroke:#FFFFFF,stroke-width:2px, stroke-dasharray: 2 3;
+    classDef services fill:#383838,stroke:#FFFFFF,stroke-width:2px, stroke-dasharray: 2 3;
     classDef oci fill:#383838,stroke:#FFFFFF,stroke-width:2px;
 
     %% 1. ATIVOS DE REDE
     subgraph S1 [1. Ativos de Redes]
-        ONT[ONT Intelbras - Bridge]:::rede --> R_Mesh1[Huawei WS5800 Mesh]:::rede
-        R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::rede
-        R_Mesh1 --> SW1[Switch Overtek 8p]:::rede
-        SW1 --> R_Cams[TP-Link OpenWRT Câmeras]:::rede
+        ONT[ONT Intelbras - Bridge]:::rede --> R_Mesh1[Huawei WS5800 Mesh]:::network
+        R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::network
+        R_Mesh1 --> SW1[Switch Overtek 8p]:::network
+        SW1 --> R_Cams[TP-Link OpenWRT Cam]:::network
     end
 
     %% 2. HARDWARE
@@ -35,30 +35,30 @@ graph TD
         R_Mesh2 --- HP[HP Pavilion - Proxmox VE]:::hardware
     end
 
-    %% 3. SERVIÇOS     
-    subgraph S3 [3. Serviços];
-        RPi4B --- VPN[VPN Server]:::serviços
-        RPi4B --- ZA[Zabbix Agent]:::serviços
-        RPi3B_2 --- ZA[Zabbix Agent]:::serviços
-        RPi3B_2 --- ZP[Zabbix Proxy]:::serviços
-        HP --- PVE[Proxmox VE]:::serviços        
+    %% 3. SERVICES     
+    subgraph S3 [3. Services];
+        RPi4B --- VPN[VPN Server]:::services
+        RPi4B --- ZA[Zabbix Agent]:::services
+        RPi3B_2 --- ZA[Zabbix Agent]:::services
+        RPi3B_2 --- ZP[Zabbix Proxy]:::services
+        HP --- PVE[Proxmox VE]:::services        
     end
 
-    %% 4. Internet (A PONTE)
+    %% 4. Internet (The Bridge)
     subgraph S4 [4. Internet]
            internet[Internet]:::internet
     end
 
-    %% 5. OCI
+    %% 5. Oracle Cloud Infrastructure
     subgraph S5 [5. OCI]
         ZS[Zabbix Server - Grafana]:::oci
     end
 
-    %% Conexões de Fluxo de Dados para manter a ordem
+    %% Conections of data flow
     ONT --> S4
     S4 --> S5
     
-    %% Relacionamentos lógicos (setas duplas para replicação)
+    %% Logical conections
     ZA -.-> |Métricas| ZS
     ZP -.-> |Métricas| ZS 
 
