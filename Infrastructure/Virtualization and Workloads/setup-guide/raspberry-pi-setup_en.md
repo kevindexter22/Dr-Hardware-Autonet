@@ -1,1 +1,0 @@
-<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/Infrastructure/Virtualization%20and%20Workloads/setup-guide/raspberry-pi-setup_pt-BR.md" target="_blank" rel="noopener noreferrer">🇧🇷 Portuguese</a></h6>
