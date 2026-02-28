@@ -9,6 +9,7 @@ Nessa seção, documento a gestão de recursos computacionais, detalhando como o
 ##
 
 ### 💻 Hardware
+
 - HP Pavilion G4-1270BR
   - Processador: Core i5 3th 2.4 GHz
   - Memória RAM: 8 GB DDR3, 1600 MHz
@@ -18,14 +19,23 @@ Nessa seção, documento a gestão de recursos computacionais, detalhando como o
   - Graphics: Intel HD Graphics 6000
  
 - Raspberry Pi 4B
-  - Processador: Broadcom BCM2711, Quad-core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
+  - Processador: Broadcom BCM2711, Quad-core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5 GHz
   - Memória RAM: 4GB LPDDR4-3200 SDRAM
   - Armazenamento: Cartão Micro-SD 64 GB
   - Conectividade:
     - Wireless: Wi-Fi Dual-band 2.4 GHz e 5.0 GHz (802.11ac) e Bluetooth 5.0 (com BLE)
-    - Rede Cabeada: Gigabit Ethernet
+    - Rede Cabeada: Gigabit Ethernet 10/100/1000 Mbps
   - Portas USB: 2 portas USB 3.0 e 2 portas USB 2.0
 
+- Raspberry Pi 3B
+  - Processador: Broadcom BCM2837, Quad-core Cortex-A53 (ARMv8) 64-bit SoC @ 1.2 GHz
+  - Memória RAM: 1 GB LPDDR2
+  - Armazenamento: Cartão Micro-SD 16 ou 32 GB
+  - Conectividade:
+    - Wireless: Wi-Fi 802.11n (2.4 GHz) e Bluetooth 4.1 (Classic e BLE)
+    - Rede Cabeada: Fast Ethernet 10/100 Mbps
+  - Portas USB: 4 portas USB 2.0
+  
 ##
 
 ### 🛠️ Hypervisors e Runtimes
