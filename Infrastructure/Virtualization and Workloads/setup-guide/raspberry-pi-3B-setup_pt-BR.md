@@ -30,7 +30,7 @@ Aqui focarei na instalação das mais comuns para o uso como servidor (Raspberry
 
 ### 🔗 Documentação e Download
 
-#### <a href="https://rockylinux.org" target="_blank" rel="noopener noreferrer"><img width="20" height="20" alt="image" src="https://github.com/user-attachments/assets/0f91be5f-a8b7-4774-a1a4-614aba390e87" /> Rocky Linux </a>
+#### [Rocky Linux](https://rockylinux.org/){:target="_blank"} </a>
 
 ##
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
