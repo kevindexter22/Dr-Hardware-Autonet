@@ -40,6 +40,7 @@ graph TD
 
     %% 3. Internet (A PONTE)
     subgraph S3 [3. Internet]
+           internet[Internet]
     end
 
     %% 4. OCI
