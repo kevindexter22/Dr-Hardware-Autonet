@@ -8,6 +8,16 @@ Nessa seção, documento a gestão de recursos computacionais, detalhando como o
 
 ##
 
+### 💻 Hardware
+- HP Pavilion G4 1270BR
+  - Processador: Core i5 3th
+  - Memória RAM: 8 GB DDR3
+  - Armazenamento:
+    - SSD: Kingston 480 GB
+    - HDD: Sumsung 750 GB 
+
+##
+
 ### 🛠️ Hypervisors e Runtimes
 
 - CasaOS: Utilizado no servidor principal. Ele tem uma interface para gerenciamento de containers rodando sob o docker, permitindo assim, facilidade na gestão e instalação de serviços personalizados via docker compose.
