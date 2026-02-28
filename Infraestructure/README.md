@@ -28,9 +28,9 @@ subgraph Home [🏠 Homelab - Dr. Hardware Autonet]
         end
 
         subgraph Compute [Hardware e Virtualização]
-            R1 --- RPi4[Raspberry Pi 4 - CasaOS]
-            R2 --- HP[HP Pavilion - Proxmox VE]
-            SW1 --- RPi3[Raspberry Pi 3B - Samba_OPL]
+            R1 ---- RPi4[Raspberry Pi 4 - CasaOS]
+            R2 ---- HP[HP Pavilion - Proxmox VE]
+            SW1 ---- RPi3[Raspberry Pi 3B - Samba_OPL]
             
             subgraph Services [Serviços Principais]
                 SW1 --- ZP[Zabbix Proxy]
