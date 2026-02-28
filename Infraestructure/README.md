@@ -20,7 +20,7 @@ graph TD
 
     %% 1. ATIVOS DE REDE
     subgraph S1 [1. Ativos de Redes]
-        ONT[ONT Intelbras - Bridge]:::rede --> R_Mesh1[Huawei WS5800 Mesh]:::rede
+        ONT[ONT Intelbras (Bridge)]:::rede --> R_Mesh1[Huawei WS5800 Mesh]:::rede
         R_Mesh1 --> SW1[Switch Overtek 8p]:::rede
         R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::rede
         SW1 --> R_Cams[TP-Link OpenWRT Câmeras]:::rede
@@ -30,13 +30,13 @@ graph TD
     %% 2. HARDWARE E SERVIÇOS
     subgraph S2 [2. Hardware e Serviços]
         R_Mesh1 --- RPi4[Raspberry Pi 4 - CasaOS]:::hardware
-        SW1 --- RPi3[Raspberry Pi 3B - Samba_OPL]:::hardware
-        SW1 --- RPi3[Raspberry Pi 3B - Zabbix Proxy]:::hardware
+        SW1 --- RPi3_1[Raspberry Pi 3B - Samba_OPL]:::hardware
+        SW1 --- RPi3_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
         R_Mesh2 --- HP[HP Pavilion - Proxmox VE]:::hardware
         
         
-        RPi4 --- ZP[Zabbix Proxy]:::hardware
-        HP --- M2[(MySQL Master 2)]:::hardware
+        RPi3_2 --- ZP[Zabbix Proxy]:::hardware
+        HP --- PVE[(Proxmox)]:::hardware
     end
 
     %% 3. TUNEL (A PONTE)
@@ -46,17 +46,16 @@ graph TD
 
     %% 4. OCI
     subgraph S4 [4. OCI]
-        ZS[Zabbix Server]:::oci
-        M1[(MySQL Master 1)]:::oci
+        ZS[Zabbix Server - Grafana]:::oci
     end
 
     %% Conexões de Fluxo de Dados para manter a ordem
-    R_Mesh --> VPN
-    VPN --> S4
+    R_Mesh --> INTERNET
+    INTERNET --> S4
     
     %% Relacionamentos lógicos (setas duplas para replicação)
-    M2 <==> |Sincronismo| M1
     ZP -.-> |Métricas| ZS
+
 ```
 
 
