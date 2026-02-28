@@ -73,9 +73,15 @@ graph TD
     S6 --> S7
     
     %% Logical conections
-    ZA -.-> |Métricas| ZS
-    ZP -.-> |Métricas| ZS 
+    ZA -.-> |Métrics| ZS
+    ZP -.-> |Métrics| ZS 
 
+    %% --- Set collor on conections ---
+    
+    linkStyle 0 stroke:#ff4444,stroke-width:3px;          %% ONT --> R_Mesh1 (red)
+    linkStyle 4 stroke:#3498db,stroke-width:3px;          %% S1 --> S2 (blue)
+    linkStyle 14,15 stroke:#f1c40f,stroke-width:2px;      %% ONT -> Internet -> OCI (yelou)
+    linkStyle 16,17 stroke:#2ecc71,stroke-width:2px,stroke-dasharray: 5 5; %% Métrics Zabbix (green)
 ```
 
 Atualmente a topologia da infraestrutura está conforme o diagrama acima:
