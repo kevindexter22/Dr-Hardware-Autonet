@@ -8,7 +8,7 @@
 
 Nesta etapa vamos instalar o sistema operacional de base.
 
-Ele vai servir tanto para instalarmos os serviços diretamente no sistema deixando o Raspberry Pi dedicado como se optarmos por utilizar o Docker (seja instalando o serviço e orquestrando com o Docker Swarm ou utilizando o CasaOS que possui uma interface web.
+Ele vai servir tanto para instalarmos os serviços diretamente no sistema deixando o Raspberry Pi dedicado como se optarmos por utilizar o Docker (seja instalando o serviço e orquestrando com o Docker Swarm ou utilizando o CasaOS que possui uma interface web para gerenciamento dos containers).
 
 O Raspberry Pi possui diversas distribuições linux otimizadas para ele, tais como: Raspberry Pi OS (que é basicamente o debian), Ubuntu, Rocky Linux, Alpine, entre outros.
 
