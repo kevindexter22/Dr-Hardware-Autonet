@@ -21,7 +21,7 @@ graph TD
 
     %% 1. ATIVOS DE REDE
     subgraph S1 [1. Ativos de Redes]
-        ONT[ONT Intelbras - Bridge]:::rede --> R_Mesh1[Huawei WS5800 Mesh]:::network
+        ONT[ONT Intelbras - Bridge]:::network --> R_Mesh1[Huawei WS5800 Mesh]:::network
         R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::network
         R_Mesh1 --> SW1[Switch Overtek 8p]:::network
         SW1 --> R_Cams[TP-Link OpenWRT Cam]:::network
