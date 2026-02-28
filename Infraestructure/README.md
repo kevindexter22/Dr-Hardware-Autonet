@@ -91,6 +91,8 @@ O Roteador principal (Huawei) conta com duas torres para uma maior cobertura e a
 
 Como não disponho de espaço físico para um rack que centralizaria o homelab os servidores ficam descentralizados, de acordo com espaço do local e serviço que executarão.
 
+Sendo assim os servidores e dispositivos ficam em locais separados, mas são gerenciados na mesma rede local.
+
 ##
 
 ### 🚀 Implementações Realizadas
