@@ -11,13 +11,8 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 ### 🏗️ Topologia / Arquitetura
 ```mermaid
-graph TD
-
----
-
 title: 🏠 Dr. Hardware Autonet
 
----
 ```
 
 
