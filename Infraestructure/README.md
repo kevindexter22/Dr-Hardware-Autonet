@@ -68,7 +68,9 @@ Atualmente a topologia da infraestrutura está conforme o diagrama acima:
 
 Temos uma ONT Intelbras 121AC (vinda do meu ISP) configurada em bridge e linkada ao Roteador Mesh Huawei WS5800.
 
-Esse roteador conta com duas torres para uma maior cobertura e ambas estão conectadas via Cabo UTP para maior estabilidade.
+O Roteador principal (Huawei) conta com duas torres para uma maior cobertura e ambas estão conectadas via Cabo UTP para maior estabilidade.
+
+Como não disponho de espaço físico para um rack que centralizaria o homelab os servidores ficam descentralizados, de acordo com espaço do local e serviço que executarão.
 
 ##
 
