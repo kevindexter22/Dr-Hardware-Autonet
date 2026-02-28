@@ -20,11 +20,11 @@ Aqui focarei na instalação das mais comuns para o uso como servidor (Raspberry
 
 ##
 
-### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/b64bbe84-d2a5-438c-bbb3-1e5b2eca6e47" /> Raspberry Pi OS
+### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/b64bbe84-d2a5-438c-bbb3-1e5b2eca6e47" /> Instalando e Configurando o Raspberry Pi OS
 
 ##
 
-### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/0f91be5f-a8b7-4774-a1a4-614aba390e87" /> Rocky Linux
+### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/0f91be5f-a8b7-4774-a1a4-614aba390e87" /> Instalando e Configurando o Rocky Linux
 
 ##
 
