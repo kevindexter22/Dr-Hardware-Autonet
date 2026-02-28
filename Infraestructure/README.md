@@ -37,6 +37,7 @@ graph TD
 
     %% 3. SERVIÇOS     
     subgraph S3 [3. Serviços];
+        RPi4B --- VPN[VPN Server]:::serviços
         RPi4B --- ZA[Zabbix Agent]:::serviços
         RPi3B_2 --- ZA[Zabbix Agent]:::serviços
         RPi3B_2 --- ZP[Zabbix Proxy]:::serviços
