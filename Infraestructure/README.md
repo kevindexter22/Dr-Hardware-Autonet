@@ -11,8 +11,6 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 ### 🏗️ Topologia / Arquitetura
 ```mermaid
-title: 🏠 Dr. Hardware Autonet
-
 graph TD
     %% Definição de Estilos
     classDef cloud fill:#f9f,stroke:#333,stroke-width:2px;
