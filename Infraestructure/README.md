@@ -38,19 +38,19 @@ graph TD
         HP --- PVE[Proxmox]:::hardware
     end
 
-    %% 3. Internet (A PONTE)
-    subgraph S3 [3. Internet]
+    %% 4. Internet (A PONTE)
+    subgraph S4 [4. Internet]
            internet[Internet]
     end
 
-    %% 4. OCI
-    subgraph S4 [4. OCI]
+    %% 5. OCI
+    subgraph S5 [5. OCI]
         ZS[Zabbix Server - Grafana]:::oci
     end
 
     %% Conexões de Fluxo de Dados para manter a ordem
-    ONT --> S3
-    S3 --> S4
+    ONT --> S4
+    S4 --> S5
     
     %% Relacionamentos lógicos (setas duplas para replicação)
     ZP -.-> |Métricas| ZS
