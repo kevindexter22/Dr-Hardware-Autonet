@@ -10,23 +10,23 @@
 
 ```text
 Dr-Hardware-Autonet/
-├── 🏠 Infrastructure/          # INFRAESTRUTURA REAL (Home Lab)
-│   ├── Compute/                # Virtualização e Containerização (configs)
-│   ├── Network-Services/       # Serviços e Dispositivos (configs básicas)
-│   ├── Observability/          # Observavilidade em Geral (dashboards e alertas)
-│   └── Security-Auth/          # Servidores e Ferramentas (segurança e auditoria)
-├── 🧪 labs/                    # LABORATÓRIOS VIRTUAIS (Estudos e R&D)
-│   ├── Network-Lab/            # Simulações de Redes (Packet Tracer/PNETLAB)
-│   ├── DevOps-Orchestration/   # Testes de Orquestração e Serviços
-│   └── Observability-Logging/  # Testes de Ingestão de Logs Complexos
-├── 🛠️ scripts/                 # Automações em Geral
-├── 📖 docs/                    # Documentação Geral
-│   ├── architecture/           # Diagramas
-│   └── troubleshooting/        # Um guia de Desafios, Erros e Soluções
+├── 🏠 Infrastructure/                # INFRAESTRUTURA REAL (Home Lab)
+│   ├── Virtualization and Workloads/ # Virtualização e Containerização (configs)
+│   ├── Network-Services/             # Serviços e Dispositivos (configs básicas)
+│   ├── Observability/                # Observavilidade em Geral (dashboards e alertas)
+│   └── Security-Auth/                # Servidores e Ferramentas (segurança e auditoria)
+├── 🧪 labs/                          # LABORATÓRIOS VIRTUAIS (Estudos e R&D)
+│   ├── Network-Lab/                  # Simulações de Redes (Packet Tracer/PNETLAB)
+│   ├── DevOps-Orchestration/         # Testes de Orquestração e Serviços
+│   └── Observability-Logging/        # Testes de Ingestão de Logs Complexos
+├── 🛠️ scripts/                       # Automações em Geral
+├── 📖 docs/                          # Documentação Geral
+│   ├── architecture/                 # Diagramas
+│   └── troubleshooting/              # Um guia de Desafios, Erros e Soluções
 ├── .gitignore
 ├── LICENSE
-├── README.md                   # O Painel de Controle do Projeto
-└── README2.md                  # O Painel de Controle do Projeto (inglês)
+├── README.md                         # O Painel de Controle do Projeto
+└── README2.md                        # O Painel de Controle do Projeto (inglês)
 ```
 
 😉 "Espero que minha jornada te ajude e inspire a ter novas ideias e a construir seus próprios projetos. Vamos evoluir juntos!"
