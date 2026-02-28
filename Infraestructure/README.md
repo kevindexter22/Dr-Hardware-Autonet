@@ -20,7 +20,7 @@ graph TD
     classDef oci fill:#383838,stroke:#FFFFFF,stroke-width:2px;
 
     %% 1. NETWORK EQUIPMENT
-    subgraph S1 [1. Network Equipment]
+    subgraph S1 [1. Network Equipment - local 1]
         ONT[ONT Intelbras - Bridge]:::network --> R_Mesh1[Huawei WS5800 Mesh]:::network
         R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::network
         R_Mesh1 --> SW1[Switch Overtek 8p]:::network
