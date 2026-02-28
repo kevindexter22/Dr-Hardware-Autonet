@@ -26,15 +26,17 @@ graph TD
         SW1 --> R_Cams[TP-Link OpenWRT Câmeras]:::rede
     end
 
-    %% 2. HARDWARE E SERVIÇOS
-    subgraph S2 [2. Hardware e Serviços]
+    %% 2. HARDWARE
+    subgraph S2 [2. Hardware]
         R_Mesh1 --- RPi4[Raspberry Pi 4 - CasaOS]:::hardware
-        SW1 --- RPi3_1[Raspberry Pi 3B - Samba_OPL]:::hardware
-        SW1 --- RPi3_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
+        SW1 --- RPi3B_1[Raspberry Pi 3B - Samba_OPL]:::hardware
+        SW1 --- RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
         R_Mesh2 --- HP[HP Pavilion - Proxmox VE]:::hardware
-        
-        
-        RPi3_2 --- ZP[Zabbix Proxy]:::hardware
+    end
+
+    %% 3. SERVIÇOS     
+    subgraph S3 [3. Serviços]    
+        RPi3B_2 --- ZP[Zabbix Proxy]:::hardware
         HP --- PVE[Proxmox]:::hardware
     end
 
