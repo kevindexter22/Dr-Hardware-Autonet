@@ -28,7 +28,7 @@ Aqui focarei na instalação das mais comuns para o uso como servidor (Raspberry
 
 ##
 
-### 🔗 Download e Documentação
+### 🔗 Documentação e Download
 
 ##
 
