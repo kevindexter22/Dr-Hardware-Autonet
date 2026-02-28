@@ -177,6 +177,7 @@ Because of this, the servers and devices stay in separate rooms, but I manage th
 - [ ] Replace or update the Main/Secondary routers
 - [ ] Replace the current switch with a Gigabit switch
 - [ ] Replace the old TP-Link for cameras and improve the system
+
 ##
 
-###### ℹ️ Part of the
+###### ℹ️ Part of the Dr. Hardware Autonet project - MIT License.
