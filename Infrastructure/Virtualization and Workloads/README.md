@@ -11,7 +11,7 @@ Nessa seção, documento a gestão de recursos computacionais, detalhando como o
 ### 💻 Hardware
 
 - HP Pavilion G4-1270BR
-  - Processador: Core i5 3th 2.4 GHz
+  - Processador: Core i5 3th, Dual Core 2.5 GHz
   - Memória RAM: 8 GB DDR3, 1600 MHz
   - Armazenamento:
     - SSD: Kingston 480 GB
