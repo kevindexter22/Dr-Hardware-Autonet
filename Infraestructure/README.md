@@ -13,7 +13,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 ```mermaid
 graph TD
     %% Estilos
-    classDef rede fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef rede fill:#e3460d,stroke:#01579b,stroke-width:2px;
     classDef hardware fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
     classDef tunel fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,stroke-dasharray: 5 5;
     classDef oci fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
