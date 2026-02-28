@@ -40,21 +40,21 @@ graph TD
     %% 2. HARDWARE
     subgraph Principal02["2. Hardware"]
     subgraph S3 [Local 01]
-        R_Mesh1 --- RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
-        SW1 --- RPi3B_1[Raspberry Pi 3B - Samba_OPL]:::hardware
-        SW1 --- RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
+        R_Mesh1 ---> RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
+        SW1 ---> RPi3B_1[Raspberry Pi 3B - Samba_OPL]:::hardware
+        SW1 ---> RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
     end
     subgraph S4 [Local 02]
-        R_Mesh2 --- HP[HP Pavilion - Proxmox VE]:::hardware
+        R_Mesh2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
     end
     end
 
     %% 3. SERVICES     
     subgraph S5 [3. Services];
-        RPi4B --- VPN[VPN Server]:::services
-        RPi4B --- ZA[Zabbix Agent]:::services
-        RPi3B_2 --- ZA[Zabbix Agent]:::services
-        RPi3B_2 --- ZP[Zabbix Proxy]:::services
+        RPi4B ---> VPN[VPN Server]:::services
+        RPi4B ---> ZA[Zabbix Agent]:::services
+        RPi3B_2 ---> ZA[Zabbix Agent]:::services
+        RPi3B_2 ---> ZP[Zabbix Proxy]:::services
         HP --- PVE[Proxmox VE]:::services        
     end
 
