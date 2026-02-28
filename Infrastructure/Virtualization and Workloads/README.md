@@ -9,12 +9,22 @@ Nessa seção, documento a gestão de recursos computacionais, detalhando como o
 ##
 
 ### 💻 Hardware
-- HP Pavilion G4 1270BR
-  - Processador: Core i5 3th
-  - Memória RAM: 8 GB DDR3
+- HP Pavilion G4-1270BR
+  - Processador: Core i5 3th 2.4 GHz
+  - Memória RAM: 8 GB DDR3, 1600 MHz
   - Armazenamento:
     - SSD: Kingston 480 GB
-    - HDD: Sumsung 750 GB 
+    - HDD: Sumsung 750 GB
+  - Graphics: Intel HD Graphics 6000
+ 
+- Raspberry Pi 4B
+  - Processador: Broadcom BCM2711, Quad-core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5GHz
+  - Memória RAM: 4GB LPDDR4-3200 SDRAM
+  - Armazenamento: Micro SD 64 GB
+  - Conectividade:
+    - Wireless: Wi-Fi Dual-band 2.4 GHz e 5.0 GHz (802.11ac) e Bluetooth 5.0 (com BLE)
+    - Rede Cabeada: Gigabit Ethernet
+  - Portas USB: 2 portas USB 3.0 e 2 portas USB 2.0
 
 ##
 
