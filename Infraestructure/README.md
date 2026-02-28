@@ -79,7 +79,7 @@ graph TD
     %% --- Set collor on conections ---
     
     linkStyle 1 stroke:#3498db,stroke-width:3px;
-    linkStyle 2,3,4 stroke:#7FFFD4,stroke-width:3px;
+    linkStyle 2,4 stroke:#7FFFD4,stroke-width:3px;
     linkStyle 14,15 stroke:#f1c40f,stroke-width:2px;
     linkStyle 16,17 stroke:#2ecc71,stroke-width:2px,stroke-dasharray: 5 5;
 ```
