@@ -16,7 +16,7 @@ graph TD
     classDef rede fill:#383838,stroke:#FFFFFF,stroke-width:2px;
     classDef hardware fill:#383838,stroke:#FFFFFF,stroke-width:2px;
     classDef internet fill:#383838,stroke:#FFFFFF,stroke-width:2px,stroke-dasharray: 5 5;
-    classDef serviços fill:#383838,stroke:#FFFFFF,stroke-width:2px;
+    classDef serviços fill:#383838,stroke:#FFFFFF,stroke-width:2px, stroke-dasharray: 2 3;
     classDef oci fill:#383838,stroke:#FFFFFF,stroke-width:2px;
 
     %% 1. ATIVOS DE REDE
@@ -37,8 +37,8 @@ graph TD
 
     %% 3. SERVIÇOS     
     subgraph S3 [3. Serviços];    
-        RPi3B_2 --- ZP[Zabbix Proxy]:::hardware
-        HP --- PVE[Proxmox]:::hardware
+        RPi3B_2 --- ZP[Zabbix Proxy]:::serviços
+        HP --- PVE[Proxmox VE]:::serviços
     end
 
     %% 4. Internet (A PONTE)
