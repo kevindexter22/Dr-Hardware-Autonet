@@ -69,8 +69,8 @@ graph TD
     S6 --> S7
     
     %% Logical conections
-    ZA -.-> |Métrics| ZS
-    ZP -.-> |Métrics| ZS 
+    ZA -.-> |Metrics| ZS
+    ZP -.-> |Metrics| ZS 
 
     %% --- Set collor on conections ---
     
