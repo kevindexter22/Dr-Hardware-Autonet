@@ -27,9 +27,10 @@ Nessa seção, documento a gestão de recursos computacionais, detalhando como o
 
 ```text
 📂 Virtualization & Workloads/
-├── 📄 README.md              (Visão geral e inventário de VMs)
-├── 📂 setup-guides/          (Pasta com os manuais)
-└── 📂 templates/             (Arquivos Prontos)
+├── 📄 README.md              # Visão geral e inventário de VMs
+├── 📄 README2.md             # Visão geral e inventário de VMs (Inglês)
+├── 📂 setup-guides/          # Pasta com os manuais
+└── 📂 templates/             # Arquivos Prontos
 ```
 
 ##
