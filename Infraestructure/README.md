@@ -75,7 +75,6 @@ graph TD
     linkStyle 0 stroke:#3498db,stroke-width:3px;
     linkStyle 1,3,4,7 stroke:#7FFFD4,stroke-width:3px;
     linkStyle 2,5,6 stroke:#836FFF,stroke-width:3px;
-    linkStyle  stroke:#FFFF00,stroke-width:3px;
     linkStyle 8,9,10,11,12 stroke:#E6E6FA,stroke-width:3px;
 
 ```
