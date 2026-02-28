@@ -24,13 +24,12 @@ Nessa seção, documento a gestão de recursos computacionais, detalhando como o
 ##
 
 ### 📂 Estrutura do Diretório
+
 ```text
 📂 Virtualization & Workloads/
 ├── 📄 README.md              (Visão geral e inventário de VMs)
 ├── 📂 setup-guides/          (Pasta com os manuais)
-│   ├── PROXMOX_STEP_BY_STEP.md
-│   └── DOCKER_DEPLOYMENT.md
 └── 📂 templates/             (Arquivos Prontos)
-    └── docker-compose-base.yml
 ```
+
 ##
