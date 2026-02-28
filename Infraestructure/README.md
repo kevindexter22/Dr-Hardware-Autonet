@@ -64,6 +64,9 @@ graph TD
 
 ```
 
+Atualmente a topologia da infraestrutura está conforme o diagrama:
+Temos uma ONT Intelbras 121AC configurada em bridge e linkada ao Roteador Mesh Huawei WS5800.
+Esse roteador conta com duas torres para uma maior cobertura e ambas estão conectadas via Cabo UTP para maior estabilidade.
 
 ##
 
