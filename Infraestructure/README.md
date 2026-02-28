@@ -11,51 +11,52 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 ### 🏗️ Topologia / Arquitetura
 ```mermaid
-graph LR
-    %% Definição de Estilos
-    classDef cloud fill:#f9f,stroke:#333,stroke-width:2px;
-    classDef local fill:#bbf,stroke:#333,stroke-width:2px;
-    classDef hardware fill:#dfd,stroke:#333,stroke-width:1px;
+graph TD
+    %% Estilos
+    classDef rede fill:#e1f5fe,stroke:#01579b,stroke-width:2px;
+    classDef hardware fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px;
+    classDef tunel fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef oci fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px;
 
-subgraph Home [🏠 Homelab - Dr. Hardware Autonet]
-        direction TB
+    %% 1. ATIVOS DE REDE
+    subgraph S1 [1. Ativos de Redes]
+        ONT[ONT Intelbras (Bridge)]:::rede --> R_Mesh1[Huawei WS5800 Mesh]:::rede
+        R_Mesh1 --> SW1[Switch Overtek 8p]:::rede
+        R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::rede
+        SW1 --> R_Cams[TP-Link OpenWRT Câmeras]:::rede
+                
+    end
+
+    %% 2. HARDWARE E SERVIÇOS
+    subgraph S2 [2. Hardware e Serviços]
+        R_Mesh1 --- RPi4[Raspberry Pi 4 - CasaOS]:::hardware
+        SW1 --- RPi3[Raspberry Pi 3B - Samba_OPL]:::hardware
+        SW1 --- RPi3[Raspberry Pi 3B - Zabbix Proxy]:::hardware
+        R_Mesh2 --- HP[HP Pavilion - Proxmox VE]:::hardware
         
-        subgraph Net [Ativos de Rede]
-            ONT[ONT Intelbras] --- R1[Huawei Mesh WS5800]
-            R1 --- R2[Huawei Mesh WS5800]
-            R1 --- SW1[Switch Overtek 8p]
-            SW1 --- R3[TP-Link OpenWRT - Câmeras]
-        end
-
-        subgraph Compute [Hardware e Virtualização]
-            R1 ---- RPi4[Raspberry Pi 4 - CasaOS]
-            R2 ---- HP[HP Pavilion - Proxmox VE]
-            SW1 ---- RPi3[Raspberry Pi 3B - Samba_OPL]
-            
-            subgraph Services [Serviços Principais]
-                SW1 --- ZP[Zabbix Proxy]
-                HP --- M2[(MySQL Master 2)]
-                RPi3 --- Samba[Samba Server OPL]
-            end
-        end
+        
+        RPi4 --- ZP[Zabbix Proxy]:::hardware
+        HP --- M2[(MySQL Master 2)]:::hardware
     end
+
+    %% 3. TUNEL (A PONTE)
+    subgraph S3 [3. Túnel]
+        VPN{{"Túnel IPsec VPN"}}:::tunel
+    end
+
+    %% 4. OCI
+    subgraph S4 [4. OCI]
+        ZS[Zabbix Server]:::oci
+        M1[(MySQL Master 1)]:::oci
+    end
+
+    %% Conexões de Fluxo de Dados para manter a ordem
+    R_Mesh --> VPN
+    VPN --> S4
     
-      subgraph VPN [Túnel IPsec VPN]
-        direction LR
-        Tunnel((Internet))
-    end
-
-    subgraph OCI [Oracle Cloud Infrastructure]
-        direction TB
-        ZS[Zabbix/Grafana Server]:::cloud
-        M1[(MySQL Master 1)]:::cloud
-    end
-  
-    %% Conexões Lógicas
-    M1 <--> |Replicação| M2
-    ZP -.-> |Monitoramento| ZS
-    R1 <==> VPN <==> OCI
-
+    %% Relacionamentos lógicos (setas duplas para replicação)
+    M2 <==> |Sincronismo| M1
+    ZP -.-> |Métricas| ZS
 ```
 
 
