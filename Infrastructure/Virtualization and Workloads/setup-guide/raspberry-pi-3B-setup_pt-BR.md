@@ -2,6 +2,6 @@
 
 # <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/135b24c8-25c5-4e75-8eb3-24f175094478" /> Raspberry Pi 3B
 
-### Instalando e Configurando o Ubuntu Server
+### ⚙️ Instalando e Configurando o Ubuntu Server
 
 ##
