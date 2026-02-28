@@ -25,6 +25,8 @@ graph TD
         R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::network
         R_Mesh1 --> SW1[Switch Overtek 8p]:::network
         SW1 --> R_Cams[TP-Link OpenWRT Cam]:::network
+    subgraph S2 [2. Network Equipment - local 2]
+    
     end
 
     %% 2. HARDWARE
