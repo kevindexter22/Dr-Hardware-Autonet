@@ -50,7 +50,7 @@ graph TD
     end
 
     %% 5. Oracle Cloud Infrastructure
-    subgraph S5 [5. OCI]
+    subgraph S5 [5. Oracle Cloud Infrastructure]
         ZS[Zabbix Server - Grafana]:::oci
     end
 
