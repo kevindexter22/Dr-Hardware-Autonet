@@ -31,4 +31,4 @@ Aqui focarei na instalação das mais comuns para o uso como servidor (Raspberry
 ### 🔗 Documentação e Download
 
 ##
-
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
