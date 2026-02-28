@@ -39,14 +39,19 @@ graph TD
         HP --- PVE[(Proxmox)]:::hardware
     end
 
+    %% 3. Internet (A PONTE)
+    subgraph S3 [3. Internet]
+        VPN{{"Túnel IPsec VPN"}}:::tunel
+    end
+
     %% 4. OCI
     subgraph S4 [4. OCI]
         ZS[Zabbix Server - Grafana]:::oci
     end
 
     %% Conexões de Fluxo de Dados para manter a ordem
-    R_Mesh --> INTERNET
-    Internet --> S4
+    R_Mesh --> S3
+    S3 --> S4
     
     %% Relacionamentos lógicos (setas duplas para replicação)
     ZP -.-> |Métricas| ZS
