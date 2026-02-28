@@ -19,7 +19,7 @@ graph TD
 
     subgraph OCI [Oracle Cloud Infrastructure]
         direction TB
-        ZS[Zabbix Server]:::cloud
+        ZS[Zabbix/Grafana Server]:::cloud
         M1[(MySQL Master 1)]:::cloud
     end
 
@@ -32,18 +32,19 @@ graph TD
         direction TB
         
         subgraph Net [Ativos de Rede]
-            ONT[Modem Intelbras] --- R1[Huawei Mesh WS5800]
-            R1 --- SW[Switch Overtek 8p]
-            R1 --- R2[TP-Link OpenWRT - Câmeras]
+            ONT[ONT Intelbras] --- R1[Huawei Mesh WS5800]
+            R1 --- R2[Huawei Mesh WS5800]
+            R1 --- SW1[Switch Overtek 8p]
+            SW1 --- R3[TP-Link OpenWRT - Câmeras]
         end
 
         subgraph Compute [Hardware e Virtualização]
-            SW --- RPi4[Raspberry Pi 4 - CasaOS]
-            SW --- HP[HP Pavilion - Proxmox VE]
-            SW --- RPi3[Raspberry Pi 3B - Ubuntu]
+            R1 --- RPi4[Raspberry Pi 4 - CasaOS]
+            R2 --- HP[HP Pavilion - Proxmox VE]
+            SW1 --- RPi3[Raspberry Pi 3B - Samba_OPL]
             
             subgraph Services [Serviços Principais]
-                RPi4 --- ZP[Zabbix Proxy]
+                SW1 --- ZP[Zabbix Proxy]
                 HP --- M2[(MySQL Master 2)]
                 RPi3 --- Samba[Samba Server OPL]
             end
