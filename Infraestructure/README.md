@@ -13,6 +13,12 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 ```mermaid
 title: 🏠 Dr. Hardware Autonet
 
+graph TD
+    %% Definição de Estilos
+    classDef cloud fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef local fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef hardware fill:#dfd,stroke:#333,stroke-width:1px;
+
 ```
 
 
