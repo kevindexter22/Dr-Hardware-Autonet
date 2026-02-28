@@ -19,6 +19,14 @@ graph TD
     classDef services fill:#383838,stroke:#FFFFFF,stroke-width:2px, stroke-dasharray: 2 3;
     classDef oci fill:#383838,stroke:#FFFFFF,stroke-width:2px;
 
+    S1 --> S2
+    
+    %% Colorir a primeira linha (S1-->S2) de vermelho
+    linkStyle 0 stroke:red,stroke-width:2px;
+    
+    %% Colorir a terceira linha (B-->D) de azul
+    linkStyle 2 stroke:blue,stroke-width:4px;
+
     %% 1. NETWORK EQUIPMENT
     subgraph Principal["1. Network Equipment"]
     subgraph S1 [Local 01]
