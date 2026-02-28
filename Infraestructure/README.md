@@ -49,7 +49,7 @@ graph TD
     end
 
     %% Conexões de Fluxo de Dados para manter a ordem
-    R_Mesh --> S3
+    ONT --> S3
     S3 --> S4
     
     %% Relacionamentos lógicos (setas duplas para replicação)
