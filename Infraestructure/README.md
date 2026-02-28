@@ -35,7 +35,7 @@ graph TD
     end
 
     %% 3. SERVIÇOS     
-    subgraph S3 [3. Serviços]    
+    subgraph S3 [3. Servicos]    
         RPi3B_2 --- ZP[Zabbix Proxy]:::hardware
         HP --- PVE[Proxmox]:::hardware
     end
