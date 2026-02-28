@@ -45,6 +45,7 @@ graph TD
 
     %% 3. SERVICES     
     subgraph S5 [3. Services];
+        RPi3B_1 --- SMB1[Samba]
         RPi4B --- VPN[VPN Server]:::services
         RPi4B --- ZA[Zabbix Agent]:::services
         RPi3B_2 --- ZA[Zabbix Agent]:::services
@@ -75,8 +76,8 @@ graph TD
     linkStyle 0 stroke:#3498db,stroke-width:3px;
     linkStyle 1,3,5,7 stroke:#7FFFD4,stroke-width:3px;
     linkStyle 2,4,6 stroke:#836FFF,stroke-width:3px;
-    linkStyle 8,9,10,11,12 stroke:#E6E6FA,stroke-width:3px;
-    linkStyle 13 stroke:#FFFF00,stroke-width:3px;
+    linkStyle 8,9,10,11,12,13 stroke:#E6E6FA,stroke-width:3px;
+    linkStyle 14 stroke:#FFFF00,stroke-width:3px;
 
 
 ```
