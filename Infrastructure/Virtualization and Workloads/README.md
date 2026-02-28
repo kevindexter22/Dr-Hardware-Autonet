@@ -32,5 +32,6 @@ Nessa seção, documento a gestão de recursos computacionais, detalhando como o
 ├── 📂 setup-guides/          # Pasta com os manuais
 └── 📂 templates/             # Arquivos Prontos
 ```
-
 ##
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
+
