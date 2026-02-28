@@ -30,7 +30,7 @@ graph TD
     end
 
     %% 2. HARDWARE
-    subgraph S2 [2. Hardware]
+    subgraph S3 [2. Hardware]
         R_Mesh1 --- RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
         SW1 --- RPi3B_1[Raspberry Pi 3B - Samba_OPL]:::hardware
         SW1 --- RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
@@ -38,7 +38,7 @@ graph TD
     end
 
     %% 3. SERVICES     
-    subgraph S3 [3. Services];
+    subgraph S4 [3. Services];
         RPi4B --- VPN[VPN Server]:::services
         RPi4B --- ZA[Zabbix Agent]:::services
         RPi3B_2 --- ZA[Zabbix Agent]:::services
@@ -47,18 +47,18 @@ graph TD
     end
 
     %% 4. Internet (The Bridge)
-    subgraph S4 [4. Internet]
+    subgraph S5 [4. Internet]
            internet[Internet]:::internet
     end
 
     %% 5. Oracle Cloud Infrastructure
-    subgraph S5 [5. Oracle Cloud Infrastructure]
+    subgraph S6 [5. Oracle Cloud Infrastructure]
         ZS[Zabbix Server - Grafana]:::oci
     end
 
     %% Conections of data flow
-    ONT --> S4
-    S4 --> S5
+    ONT --> S5
+    S5 --> S6
     
     %% Logical conections
     ZA -.-> |Métricas| ZS
