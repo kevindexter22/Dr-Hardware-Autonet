@@ -33,3 +33,4 @@ In this section, I document how I manage computer resources. I explain how the h
 └── 📂 templates/             # Ready-to-use files
 ```
 ##
+###### ℹ️ Part of the project Dr. Hardware Autonet - Licensed under the MIT license.
