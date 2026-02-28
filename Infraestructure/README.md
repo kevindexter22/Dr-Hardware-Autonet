@@ -43,7 +43,7 @@ graph TD
 
     %% 4. Internet (A PONTE)
     subgraph S4 [4. Internet]
-           internet({Internet})
+           internet[Internet]:::internet
     end
 
     %% 5. OCI
