@@ -45,7 +45,7 @@ graph TD
 
     %% 3. SERVICES     
     subgraph S5 [3. Services];
-        RPi3B_1 --- SMB1[Samba]
+        RPi3B_1 --- SMB1[Samba]:::services
         RPi4B --- VPN[VPN Server]:::services
         RPi4B --- ZA[Zabbix Agent]:::services
         RPi3B_2 --- ZA[Zabbix Agent]:::services
