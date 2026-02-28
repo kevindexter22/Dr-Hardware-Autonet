@@ -60,7 +60,7 @@ graph TD
     
     %% Relacionamentos lógicos (setas duplas para replicação)
     ZP -.-> |Métricas| ZS
-    
+    ZA -.-> |Métricas| ZS 
 
 ```
 
