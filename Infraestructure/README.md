@@ -26,7 +26,7 @@ graph TD
         SW1 --> R_Cams[TP-Link OpenWRT Cam]:::network    
     end
     subgraph S2 [2. Network Equipment - local 2]
-    R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::network
+        R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::network
     end
 
     %% 2. HARDWARE
