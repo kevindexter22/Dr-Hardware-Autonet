@@ -74,6 +74,8 @@ graph TD
     
     linkStyle 0 stroke:#3498db,stroke-width:3px;
     linkStyle 1,3,4 stroke:#7FFFD4,stroke-width:3px;
+    linkStyle 2,5,6 stroke:#F5DEB3,stroke-width:3px;
+
 ```
 
 Atualmente a topologia da infraestrutura está conforme o diagrama acima:
