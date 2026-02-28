@@ -29,7 +29,6 @@ graph TD
     subgraph S2 [Local 02]
         R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::network
     end
-    S1 --> S2
     end
     
     %% 2. HARDWARE
