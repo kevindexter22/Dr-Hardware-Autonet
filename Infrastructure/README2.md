@@ -12,7 +12,78 @@ Here, I will show what is being built, the basic theory, the reason for the impl
 
 ### 🏗️ Topology / Architecture
 
+```mermaid
+graph TD
+    %% Styles
+    classDef network fill:#383838,stroke:#FFFFFF,stroke-width:2px;
+    classDef hardware fill:#383838,stroke:#FFFFFF,stroke-width:2px;
+    classDef internet fill:#383838,stroke:#FFFFFF,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef services fill:#383838,stroke:#FFFFFF,stroke-width:2px, stroke-dasharray: 2 3;
+    classDef oci fill:#383838,stroke:#FFFFFF,stroke-width:2px;
 
+    %% 1. NETWORK EQUIPMENT
+    subgraph Principal["1. Network Equipment"]
+    subgraph S1 [Local 01]
+        ONT[ONT Intelbras - Bridge]:::network --> R_Mesh1[Huawei WS5800 Mesh]:::network
+        R_Mesh1 --> SW1[Switch Overtek 8p]:::network
+        SW1 --> R_Cams[TP-Link OpenWRT Cam]:::network    
+    end
+    subgraph S2 [Local 02]
+        R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::network
+    end
+    end
+    
+    %% 2. HARDWARE
+    subgraph Principal02["2. Hardware"]
+    subgraph S3 [Local 01]
+        SW1 ---> RPi3B_1[Raspberry Pi 3B - Arquivos_OPL]:::hardware
+        R_Mesh1 ---> RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
+        SW1 ---> RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
+    end
+    subgraph S4 [Local 02]
+        R_Mesh2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
+    end
+    end
+
+    %% 3. SERVICES     
+    subgraph S5 [3. Services];
+        RPi3B_1 --- SMB1[Samba]:::services
+        RPi4B --- Docker[Docker]:::services
+        RPi4B --- VPN[VPN Server]:::services
+        RPi4B --- ZA[Zabbix Agent]:::services
+        RPi3B_2 --- ZA[Zabbix Agent]:::services
+        RPi3B_2 --- ZP[Zabbix Proxy]:::services
+        HP --- PVE[Proxmox VE]:::services        
+    end
+
+    %% 4. Internet (The Bridge)
+    subgraph S6 [4. ISP/Internet]
+           internet[Internet]:::internet
+    end
+
+    %% 5. Oracle Cloud Infrastructure
+    subgraph S7 [5. OCI]
+        ZS[Zabbix Server - Grafana]:::oci
+    end
+
+    %% Conections of data flow
+    ONT --> S6
+    S6 --> S7
+    
+    %% Logical conections
+    ZA -.-> |Métrics| ZS
+    ZP -.-> |Métrics| ZS 
+
+    %% --- Set collor on conections ---
+    
+    linkStyle 0 stroke:#3498db,stroke-width:3px;
+    linkStyle 1,3,5,7 stroke:#7FFFD4,stroke-width:3px;
+    linkStyle 2,4,6 stroke:#836FFF,stroke-width:3px;
+    linkStyle 8,9,10,11,12,13,14 stroke:#E6E6FA,stroke-width:3px;
+    linkStyle 15 stroke:#FFFF00,stroke-width:3px;
+    linkStyle 16,17,18 stroke:#F5FFFA,stroke-width:3px,stroke-dasharray: 5 5;
+
+```
 
 Currently, the infrastructure topology follows the plan below:
 
