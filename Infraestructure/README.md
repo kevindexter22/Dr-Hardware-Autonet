@@ -20,6 +20,7 @@ graph TD
     classDef oci fill:#383838,stroke:#FFFFFF,stroke-width:2px;
 
     %% 1. NETWORK EQUIPMENT
+    subgraph Principal["Network Equipment"]
     subgraph S1 [1. Local 01]
         ONT[ONT Intelbras - Bridge]:::network --> R_Mesh1[Huawei WS5800 Mesh]:::network
         R_Mesh1 --> SW1[Switch Overtek 8p]:::network
@@ -28,7 +29,8 @@ graph TD
     subgraph S2 [2. Local 02]
         R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::network
     end
-
+    S1 --> S2
+    end
     %% 2. HARDWARE
     subgraph S3 [2. Hardware]
         R_Mesh1 --- RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
