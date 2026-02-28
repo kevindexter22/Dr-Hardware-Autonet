@@ -11,6 +11,51 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 ### 🏗️ Topologia / Arquitetura
 ```mermaid
+graph TD
+    %% Definição de Estilos
+    classDef cloud fill:#f9f,stroke:#333,stroke-width:2px;
+    classDef local fill:#bbf,stroke:#333,stroke-width:2px;
+    classDef hardware fill:#dfd,stroke:#333,stroke-width:1px;
+
+subgraph Home [🏠 Homelab - Dr. Hardware Autonet]
+        direction TB
+        
+        subgraph Net [Ativos de Rede]
+            ONT[ONT Intelbras] --- R1[Huawei Mesh WS5800]
+            R1 --- R2[Huawei Mesh WS5800]
+            R1 --- SW1[Switch Overtek 8p]
+            SW1 --- R3[TP-Link OpenWRT - Câmeras]
+        end
+
+        subgraph Compute [Hardware e Virtualização]
+            R1 --- RPi4[Raspberry Pi 4 - CasaOS]
+            R2 --- HP[HP Pavilion - Proxmox VE]
+            SW1 --- RPi3[Raspberry Pi 3B - Samba_OPL]
+            
+            subgraph Services [Serviços Principais]
+                SW1 --- ZP[Zabbix Proxy]
+                HP --- M2[(MySQL Master 2)]
+                RPi3 --- Samba[Samba Server OPL]
+            end
+        end
+    end
+
+    subgraph OCI [Oracle Cloud Infrastructure]
+        direction TB
+        ZS[Zabbix/Grafana Server]:::cloud
+        M1[(MySQL Master 1)]:::cloud
+    end
+
+    subgraph VPN [Túnel IPsec VPN]
+        direction LR
+        Tunnel((Internet))
+    end
+  
+
+    %% Conexões Lógicas
+    M1 <--> |Replicação| M2
+    ZP -.-> |Monitoramento| ZS
+    R1 <==> VPN <==> OCI
 
 ```
 
