@@ -13,11 +13,11 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 ```mermaid
 graph TD
     %% Estilos
-    classDef rede fill:#e3460d,stroke:#01579b,stroke-width:2px;
-    classDef hardware fill:#AC00C2,stroke:#2e7d32,stroke-width:2px;
+    classDef rede fill:#fff3e0,stroke:#ef6c00,stroke-width:2px;
+    classDef hardware fill:#fff3e0,stroke:#ef6c00,stroke-width:2px;
     classDef internet fill:#fff3e0,stroke:#ef6c00,stroke-width:2px,stroke-dasharray: 5 5;
-    classDef serviços fill:#616161,stroke:#7b1fa2,stroke-width:2px;
-    classDef oci fill:#616161,stroke:#7b1fa2,stroke-width:2px;
+    classDef serviços fill:#fff3e0,stroke:#ef6c00,stroke-width:2px;
+    classDef oci fill:#fff3e0,stroke:#ef6c00,stroke-width:2px;
 
     %% 1. ATIVOS DE REDE
     subgraph S1 [1. Ativos de Redes]
