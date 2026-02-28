@@ -11,7 +11,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 ### 🏗️ Topologia / Arquitetura
 ```mermaid
-graph TD
+graph LR
     %% Definição de Estilos
     classDef cloud fill:#f9f,stroke:#333,stroke-width:2px;
     classDef local fill:#bbf,stroke:#333,stroke-width:2px;
