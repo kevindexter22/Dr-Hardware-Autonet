@@ -22,11 +22,11 @@ graph TD
     %% 1. NETWORK EQUIPMENT
     subgraph S1 [1. Network Equipment - local 1]
         ONT[ONT Intelbras - Bridge]:::network --> R_Mesh1[Huawei WS5800 Mesh]:::network
-        R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::network
         R_Mesh1 --> SW1[Switch Overtek 8p]:::network
         SW1 --> R_Cams[TP-Link OpenWRT Cam]:::network    
     end
     subgraph S2 [2. Network Equipment - local 2]
+    R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::network
     end
 
     %% 2. HARDWARE
