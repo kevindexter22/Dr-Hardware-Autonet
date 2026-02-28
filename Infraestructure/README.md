@@ -22,8 +22,8 @@ graph TD
     subgraph S1 [1. Ativos de Redes]
         ONT[ONT Intelbras - Bridge]:::rede --> R_Mesh1[Huawei WS5800 Mesh]:::rede
         R_Mesh1 --> SW1[Switch Overtek 8p]:::rede
-        R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::rede
         SW1 --> R_Cams[TP-Link OpenWRT Câmeras]:::rede
+        R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::rede
                 
     end
 
@@ -41,7 +41,6 @@ graph TD
 
     %% 3. Internet (A PONTE)
     subgraph S3 [3. Internet]
-        VPN{{"Túnel IPsec VPN"}}:::tunel
     end
 
     %% 4. OCI
@@ -50,7 +49,7 @@ graph TD
     end
 
     %% Conexões de Fluxo de Dados para manter a ordem
-    ONT --> S3
+    R_Mesh --> S3
     S3 --> S4
     
     %% Relacionamentos lógicos (setas duplas para replicação)
