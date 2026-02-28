@@ -42,7 +42,6 @@ graph TD
     subgraph S4 [Local 02]
         R_Mesh2 --- HP[HP Pavilion - Proxmox VE]:::hardware
     end
-    S3 ---> S4
     end
 
     %% 3. SERVICES     
