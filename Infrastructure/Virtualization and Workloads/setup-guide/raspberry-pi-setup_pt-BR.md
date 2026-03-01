@@ -30,7 +30,7 @@ Com o Micro-SD já inserido no computador, abra o **Raspberry Pi Imager**. A int
   <br><em>Interface inicial para seleção de dispositivo e sistema.</em>
 </p>
 
-> [!Dica]
+> [!TIP]
 > Vamos formatar o cartão diretamente por este aplicativo, para evitar erros de partição comuns em outros métodos.
 
 #### 2. Formatação (Erase)
