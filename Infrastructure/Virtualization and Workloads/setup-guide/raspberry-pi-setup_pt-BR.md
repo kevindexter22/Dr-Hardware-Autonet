@@ -24,7 +24,7 @@ Sendo assim vamos instalar o sistema utilizando esse método.
 
 1. Com o Micro-SD já inserido no computador, vamos iniciar o aplicativo e veremos a seguinte tela
 
-<img width="389" height="287" alt="image" src="https://github.com/user-attachments/assets/db0d5c09-a11d-4fe9-9f42-4c7a8181327c" /><br>
+<img width="389" height="287" alt="image" src="https://github.com/user-attachments/assets/db0d5c09-a11d-4fe9-9f42-4c7a8181327c" />
 
 Aqui é onde selecionamos o modelo do Raspberry Pi e o sistema que vamos instalar, assim como em qual disco vamos gravar esse sistema e configurações iniciais.
 
@@ -32,9 +32,9 @@ Podemos formatar o cartão Micro-SD por esse aplicativo também. Vamos iniciar p
 
 2. Após selecionar o dispositivo clicando em Choose Device (em nosso caso será uma Raspberry Pi 3B) Escolhemos a opção Erase em Operational System.
 
-<br><img width="389" height="287" alt="image" src="https://github.com/user-attachments/assets/9f28cb4e-450e-4235-8563-23947dd24357" />
+<img width="389" height="287" alt="image" src="https://github.com/user-attachments/assets/9f28cb4e-450e-4235-8563-23947dd24357" />
 
-<img width="389" height="287" alt="image" src="https://github.com/user-attachments/assets/f7b0d48e-96ef-4998-937b-7725c7a10362" /><br>
+<img width="389" height="287" alt="image" src="https://github.com/user-attachments/assets/f7b0d48e-96ef-4998-937b-7725c7a10362" />
 
 
 3. 
