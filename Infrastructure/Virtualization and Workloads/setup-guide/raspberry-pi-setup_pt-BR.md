@@ -31,7 +31,7 @@ Com o Micro-SD já inserido no computador, abra o **Raspberry Pi Imager**. A int
 </p>
 
 > [!TIP]
-> Você pode formatar o cartão diretamente por este aplicativo, o que evita erros de partição comuns em outros métodos.
+> Vamos formatar o cartão diretamente por este aplicativo, para evitar erros de partição comuns em outros métodos.
 
 #### 2. Formatação (Erase)
 Para limpar o cartão antes da instalação:
@@ -42,10 +42,9 @@ Para limpar o cartão antes da instalação:
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9f28cb4e-450e-4235-8563-23947dd24357" width="400" />
   <img src="https://github.com/user-attachments/assets/f7b0d48e-96ef-4998-937b-7725c7a10362" width="400" />
+  <img src="https://github.com/user-attachments/assets/e7333177-5124-4592-985b-43d2de2c97f3" width="400" />
+
 </p>
-
-
-3. 
 
 ##
 
