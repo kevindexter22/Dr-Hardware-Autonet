@@ -16,11 +16,11 @@ Aqui focarei na instalação das mais comuns para o uso como servidor (Raspberry
 
 ##
 
-### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/5c0caa8d-9f10-4a62-a0f9-ea5f937e0cb8" /> Instalando e Configurando o Ubuntu Server
+### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/b64bbe84-d2a5-438c-bbb3-1e5b2eca6e47" /> Instalando e Configurando o Raspberry Pi OS
 
 ##
 
-### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/b64bbe84-d2a5-438c-bbb3-1e5b2eca6e47" /> Instalando e Configurando o Raspberry Pi OS
+### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/5c0caa8d-9f10-4a62-a0f9-ea5f937e0cb8" /> Instalando e Configurando o Ubuntu Server
 
 ##
 
