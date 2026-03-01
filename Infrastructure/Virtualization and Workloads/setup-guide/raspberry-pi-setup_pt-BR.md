@@ -101,8 +101,10 @@ O procedimento aqui é muito similar ao anterior:
 <br><em>Interface de configuração personalizada pré-instalação do sistema.</em>
 </p>
 
-7. Aqui é onde definimos o nome de nosso dispositivo (hostname), usuário e senha de acesso, padrão do teclado, fuso horário em que estamos e se formos usa-lo no wifi podemos configurar por aqui ou mesmo desabilita-lo se formos utilizar a conexão via cabo.
+7. Aqui é onde definimos o nome de nosso dispositivo (hostname), usuário e senha de acesso, padrão do teclado, fuso horário em que estamos, se formos usa-lo no wifi podemos configurar por aqui ou mesmo desabilita-lo se formos utilizar a conexão via cabo e temos a opção de habilitar ou desabilitar o acesso remoto via SSH.
 
+> [!NOTE]
+> Você pode formatar o cartão Micro-SD diretamente por este aplicativo. Recomenda-se fazer isso antes de iniciar qualquer nova instalação para evitar conflitos de partições antigas.
 
 <p align="center">
    <img src="https://github.com/user-attachments/assets/a7022172-d377-4bcc-b874-ea13118ef94c" width="300" />
