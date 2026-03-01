@@ -61,14 +61,36 @@ Para limpar o cartão antes da instalação:
 
 ### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/b64bbe84-d2a5-438c-bbb3-1e5b2eca6e47" /> Instalando e Configurando o Raspberry Pi OS
 
-#### 1. Instalando o Raspberry Pi OS
-
 O processo de instalação pelo aplicativo é tão intuitivo quando a formatação que fizemos anteriormente.
 
 Para fazer a instalação abrimos o aplicativo.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/db0d5c09-a11d-4fe9-9f42-4c7a8181327c" width="450" alt="Interface RPI Imager" />
+</p>
+
+#### 1. Instalação do Sistema Operacional
+
+O procedimento aqui é muito similar ao anterior:
+1. Clique em **CHOOSE DEVICE** e selecione o seu modelo (ex: Raspberry Pi 3B).
+2. Em **OPERATING SYSTEM**, selecione a categoria (ex: Raspberry Pi OS (other).
+3. Em seguida escolha o sistema operacional que deseja instalar (ex: Raspberry Pi OS Lite (64-bit)).
+4. Selecione o seu cartão em **CHOOSE STORAGE**.
+5. Feito isso clique em **NEXT**, ele trará uma mensagem perguntanto se deseja personalizar a instalação, se clicarmos em **NO, CLEAR SETTINGS** ele continuará a instalação de forma "limpa", ou seja, com todas as configurações pré-definidas.
+A opção **YES** aplica as configurações já feitas em instalações anteriores.
+A opção **NO** continuará sem aplicar as configurações personalizadas também.
+Para facilitar o acesso e por conta de segurança, vamos personalizar as nossas configurações clicando sobre a opção **EDIT SETTINGS**
+6. 
+7. Aguarde a formatação ser concluída.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5a615bb1-6b5f-4e4d-a3e4-9ed8e5cdb891" />
+  <img src="https://github.com/user-attachments/assets/cd4151a6-98af-452b-94bc-72618ea7bde1" />
+  <img src="https://github.com/user-attachments/assets/463a69df-a971-4837-a818-85494226246f" />
+  <img src="https://github.com/user-attachments/assets/3207b67f-536e-44c3-b0f0-d7ba3d3489d8" />
+  <img src="https://github.com/user-attachments/assets/209995ee-7c0e-4e31-a003-416f140be6bc" />
+  <img src="https://github.com/user-attachments/assets/42ed04fa-a5b6-4864-a7c6-aca4b2f19791" />
+
 </p>
 
 ##
