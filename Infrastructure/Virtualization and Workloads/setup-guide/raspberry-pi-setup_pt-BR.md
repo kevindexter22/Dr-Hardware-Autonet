@@ -24,7 +24,7 @@ Sendo assim vamos instalar o sistema utilizando esse método.
 
 1. Com o Micro-SD já inserido no computador, vamos iniciar o aplicativo e veremos a seguinte tela
 
-<img width="359" height="257" align="center" alt="image" src="https://github.com/user-attachments/assets/db0d5c09-a11d-4fe9-9f42-4c7a8181327c" />
+<img width="389" height="287" alt="image" src="https://github.com/user-attachments/assets/db0d5c09-a11d-4fe9-9f42-4c7a8181327c" />
 
 2. 
 
