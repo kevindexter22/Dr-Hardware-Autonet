@@ -114,7 +114,7 @@ O procedimento aqui é muito similar ao anterior:
 8. Na aba Services é onde podemos habilitar ou não o acesso via SSH.
 <br>Recomenda-se habilita-lo para podermos gerenciar o nosso servidor através da rede.
 
-<p>
+<p align="center">
   <img src="https://github.com/user-attachments/assets/84f3c74f-3504-4cc3-8ed1-d70a9b2dbb45" width="300" />
   <br><em>Habilitação do protocolo SSH.</em>
 </p>
