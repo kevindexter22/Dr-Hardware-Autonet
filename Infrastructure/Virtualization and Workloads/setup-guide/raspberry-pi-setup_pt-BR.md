@@ -107,7 +107,7 @@ Nela notamos a existência de 3 abas na parte superior: **GENERAL**, **SERVICES*
 
 <p align="center">
    <img src="https://github.com/user-attachments/assets/a7022172-d377-4bcc-b874-ea13118ef94c" width="300" />
-   <br><em>Configuração do wi-fi.</em>
+   <br><em>Configuração da conectividade via wi-fi em detalhes.</em>
 </p>
 
 > [!TIP]
