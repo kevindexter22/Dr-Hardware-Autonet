@@ -156,6 +156,17 @@ Ao entrar na partição **bootfs** vamos abrir o arquivo **network-config** para
   <img src="https://github.com/user-attachments/assets/01ddfd5c-7d98-4002-b8e9-fda69072aeb3" width="300" />
 </p>
 
+Descendo um pouco vemos que existe a opção de configuração tando da interface de rede cabeada como da interface sem fio e que nesse documento é possível também realizar as configurações de rede wireless.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0b13c186-c11a-4541-bb17-9e76fd035173" width="300" />
+</p>
+
+Apesar de ter realizado essa configuração anteriormente, farei aqui novamente para ilustrar e também configurarei um endereço IP estático para que ele inicie com esse IP sempre.
+
+Isso facilitará nosso acesso SSH ao servidor, assim como, manterá os serviços que utilizaremos sempre nesse mesmo IP.
+
+
 ##
 
 ### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/5c0caa8d-9f10-4a62-a0f9-ea5f937e0cb8" /> Instalando e Configurando o Ubuntu Server
