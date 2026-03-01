@@ -16,7 +16,7 @@ Aqui focarei na instalação das mais comuns para o uso como servidor (Raspberry
 
 ##
 
-### Preparando o Cartão Micro-SD para a Instalação via RPI Imager
+### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/d94a1bcc-23ae-43cf-9e33-d8bbb48ec709" /> Preparando o Cartão Micro-SD para a Instalação via RPI Imager
 
 
 
