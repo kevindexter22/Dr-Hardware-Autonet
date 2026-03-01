@@ -116,11 +116,15 @@ O procedimento aqui é muito similar ao anterior:
 > Selecionar o país no sistema operacional ao usar o Wi-Fi é crucial principalmente para conformidade legal e regulamentações de radiofrequência, garantindo que o seu dispositivo opere dentro das leis locais de comunicação. Se o país estiver incorreto, o dispositivo pode, no melhor caso, conectar-se normalmente ou apresentar alguma instabilidade, e no pior caso, não encontrar certas redes Wi-Fi.
 
 8. Na aba Services é onde podemos habilitar ou não o acesso via SSH.
-<br>Recomenda-se habilita-lo para podermos gerenciar o nosso servidor de forma segura através da rede.
+<br>Recomenda-se habilita-lo para podermos gerenciar o nosso servidor através da rede.
 
+<p>
+  <img src="https://github.com/user-attachments/assets/84f3c74f-3504-4cc3-8ed1-d70a9b2dbb45" width="300" />
+  <br><em>Habilitação do protocolo SSH.</em>
+</p>
 
 > [!NOTE]
-> Você pode formatar o cartão Micro-SD diretamente por este aplicativo. Recomenda-se fazer isso antes de iniciar qualquer nova instalação para evitar conflitos de partições antigas.
+> O SSH é essencial para gerir sistemas "Headless" (sem monitor) criando um tunel seguro para a conexão remota. No Raspberry Pi, ele vem desativado por padrão por questões de segurança, sendo necessário ativá-lo nas configurações do **RPI Imager** ou criando um arquivo vazio chamado `ssh` na partição de boot.
 
 ##
 
