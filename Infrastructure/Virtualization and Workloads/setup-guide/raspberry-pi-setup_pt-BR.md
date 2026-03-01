@@ -78,8 +78,11 @@ O procedimento aqui é muito similar ao anterior:
 3. Em seguida escolha o sistema operacional que deseja instalar (ex: Raspberry Pi OS Lite (64-bit)).
 4. Selecione o seu cartão em **CHOOSE STORAGE**.
 5. Feito isso clique em **NEXT**, ele trará uma mensagem perguntanto se deseja personalizar a instalação, se clicarmos em **NO, CLEAR SETTINGS** ele continuará a instalação de forma "limpa", ou seja, com todas as configurações pré-definidas.
+
 A opção **YES** aplica as configurações já feitas em instalações anteriores.
+
 A opção **NO** continuará sem aplicar as configurações personalizadas também.
+
 Para facilitar o acesso e por conta de segurança, vamos personalizar as nossas configurações clicando sobre a opção **EDIT SETTINGS**
 
 <p align="center">
