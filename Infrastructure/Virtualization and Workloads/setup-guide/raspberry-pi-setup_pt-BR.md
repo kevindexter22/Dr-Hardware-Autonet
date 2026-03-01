@@ -48,9 +48,13 @@ Para limpar o cartão antes da instalação:
   <img src="https://github.com/user-attachments/assets/6533c7e6-5f65-49b4-8913-ad1ace5e42fc" width="300" />
   <img src="https://github.com/user-attachments/assets/1a6b810c-f452-4228-9923-3ba136c301a7" width="300" />
   <img src="https://github.com/user-attachments/assets/c05c33d1-0a00-46f4-8179-b8a2c69766d9" width="300" />
-</p><br>
-<p aligin="center">
+</p>
 
+6. Após finalizado basta clicar em **CONTINUE**, ejetar e reinserir o Cartão Micro-SD e estamos prontos para a instalação do sistema operacional.
+
+<p align="center">
+   <img src="https://github.com/user-attachments/assets/93c0fa24-f915-4f9d-a918-316df4f84b6b" width="300" />
+   <img src="https://github.com/user-attachments/assets/3e0edead-6622-40c4-ab25-291e30e4022c" width="300" />
 </p>
 
 ##
