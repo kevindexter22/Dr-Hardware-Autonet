@@ -91,8 +91,11 @@ Para facilitar o acesso e por conta de segurança, vamos personalizar as nossas 
 </p>
 
 6. Ao clicar nessa opção ele nos abre a seguinte tela:
+Nela notamos a existência de 3 abas na parte superior: **GENERAL**, **SERVICES** e **OPTIONS**.
 <p align="center">
-<img src="https://github.com/user-attachments/assets/0b862b40-6af3-4f33-8af2-f9a21f216eae" width="300" alt="EDIT SETTINGS" />
+  <img src="https://github.com/user-attachments/assets/0b862b40-6af3-4f33-8af2-f9a21f216eae" width="300" />
+  <img src="https://github.com/user-attachments/assets/ce9f91cf-26e9-4f1a-bb9c-aaa88d0bb6da" width="300" />
+  <img src="https://github.com/user-attachments/assets/743b2ae1-2602-4e1f-8046-513de0df5da2" width="300" />
 <br><em>Interface de configuração personalizada pré-instalação do sistema.</em>
 </p>
 
