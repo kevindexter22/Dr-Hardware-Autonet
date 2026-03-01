@@ -108,6 +108,7 @@ Nela notamos a existência de 3 abas na parte superior: **GENERAL**, **SERVICES*
 <p align="center">
 <img src="https://github.com/user-attachments/assets/67d10ad8-d50f-4ba0-bb15-2398809e6d15" width="300" />
 </p>
+
 > [!TIP]
 > Vamos formatar o cartão diretamente por este aplicativo, para evitar erros de partição comuns em outros métodos.
 
