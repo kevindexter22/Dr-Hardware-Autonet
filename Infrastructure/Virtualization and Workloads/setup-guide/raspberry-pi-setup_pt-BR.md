@@ -14,11 +14,19 @@ O Raspberry Pi possui diversas distribuições linux otimizadas para ele, tais c
 
 Aqui focarei na instalação das mais comuns para o uso como servidor (Raspberry Pi OS Lite, Rock Linux e Ubuntu Server), porém utilizarei o Ubuntu Server em meus projetos.
 
+Em relação a sistemas operacionais a própria Raspberry Pi Foundation disponibiliza uma ferramenta chamada Raspberry Pi Imager que nos permite gravar/instalar os sistemas embarcados de forma simples e intuitiva.
+
+Sendo assim vamos instalar o sistema utilizando esse método.
+
 ##
 
 ### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/d94a1bcc-23ae-43cf-9e33-d8bbb48ec709" /> Preparando o Cartão Micro-SD para a Instalação via RPI Imager
 
+1. Com o Micro-SD já inserido no computador, vamos iniciar o aplicativo e veremos a seguinte tela
 
+<img width="359" height="257" alt="image" src="https://github.com/user-attachments/assets/db0d5c09-a11d-4fe9-9f42-4c7a8181327c" />
+
+2. 
 
 ##
 
