@@ -72,6 +72,7 @@ Para fazer a instalação abrimos o aplicativo.
 #### 1. Instalação do Sistema Operacional
 
 O procedimento aqui é muito similar ao anterior:
+
 1. Clique em **CHOOSE DEVICE** e selecione o seu modelo (ex: Raspberry Pi 3B).
 2. Em **OPERATING SYSTEM**, selecione a categoria (ex: Raspberry Pi OS (other).
 3. Em seguida escolha o sistema operacional que deseja instalar (ex: Raspberry Pi OS Lite (64-bit)).
@@ -91,7 +92,9 @@ Para facilitar o acesso e por conta de segurança, vamos personalizar as nossas 
 </p>
 
 6. Ao clicar nessa opção ele nos abre a seguinte tela:
+
 Nela notamos a existência de 3 abas na parte superior: **GENERAL**, **SERVICES** e **OPTIONS**.
+
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0b862b40-6af3-4f33-8af2-f9a21f216eae" width="300" />
   <img src="https://github.com/user-attachments/assets/ce9f91cf-26e9-4f1a-bb9c-aaa88d0bb6da" width="300" />
@@ -99,7 +102,14 @@ Nela notamos a existência de 3 abas na parte superior: **GENERAL**, **SERVICES*
 <br><em>Interface de configuração personalizada pré-instalação do sistema.</em>
 </p>
 
+7. Aqui é onde definimos o nome de nosso dispositivo (hostname), usuário e senha de acesso, padrão do teclado, fuso horário em que estamos e se formos usa-lo no wifi podemos configurar por aqui ou mesmo desabilita-lo se formos utilizar a conexão via cabo.
 
+
+<p align="center">
+<img src="https://github.com/user-attachments/assets/67d10ad8-d50f-4ba0-bb15-2398809e6d15" width="300" />
+</p>
+> [!TIP]
+> Vamos formatar o cartão diretamente por este aplicativo, para evitar erros de partição comuns em outros métodos.
 
 ##
 
