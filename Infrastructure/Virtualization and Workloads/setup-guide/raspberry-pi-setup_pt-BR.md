@@ -123,11 +123,16 @@ O procedimento aqui é muito similar ao anterior:
 > O SSH é essencial para gerir sistemas "Headless" (sem monitor) criando um tunel seguro para a conexão remota. No Raspberry Pi, ele vem desativado por padrão por questões de segurança, sendo necessário ativá-lo nas configurações do **RPI Imager** ou criando um arquivo vazio chamado `ssh` na partição de boot.
 
 9. Após as configurações serem feitas, clicamos em **SAVE** para salvar as configurações e em **YES** para que sejam aplicadas durante a instalação do sistema.
+   <br> Na próxima janela, confirme a formatação do cartão clicando em **YES** novamente e aguarde o término da instalação.
 
 <p align="center">
    <img src="https://github.com/user-attachments/assets/35aa6601-535a-4c4a-b75b-bf98601400e8" width="300" />
    <img src="https://github.com/user-attachments/assets/dd6b37f0-181a-4f18-a4af-4c3720e5fb73" width="300" />
+   <img src="https://github.com/user-attachments/assets/3264e183-996d-4df7-b15c-ca1862f0f62e" width="300" />
+   <img src="https://github.com/user-attachments/assets/ef8800d2-8898-432b-bd2a-fb7ff80c6bec" width="300" />
 </p>
+
+10. 
 
 ##
 
