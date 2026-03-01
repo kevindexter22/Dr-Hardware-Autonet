@@ -92,8 +92,7 @@ O procedimento aqui é muito similar ao anterior:
 </p>
 
 6. Ao clicar nessa opção ele nos abre a seguinte tela:
-
-Nela notamos a existência de 3 abas na parte superior: **GENERAL**, **SERVICES** e **OPTIONS**.
+   <br>Nela notamos a existência de 3 abas na parte superior: **GENERAL**, **SERVICES** e **OPTIONS**.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0b862b40-6af3-4f33-8af2-f9a21f216eae" width="300" />
