@@ -16,6 +16,12 @@ Aqui focarei na instalação das mais comuns para o uso como servidor (Raspberry
 
 ##
 
+### Preparando o Cartão Micro-SD para a Instalação via RPI Imager
+
+
+
+##
+
 ### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/b64bbe84-d2a5-438c-bbb3-1e5b2eca6e47" /> Instalando e Configurando o Raspberry Pi OS
 
 ##
