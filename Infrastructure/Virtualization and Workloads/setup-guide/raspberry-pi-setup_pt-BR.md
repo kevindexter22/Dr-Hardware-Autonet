@@ -22,19 +22,27 @@ Sendo assim vamos instalar o sistema utilizando esse método.
 
 ### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/d94a1bcc-23ae-43cf-9e33-d8bbb48ec709" /> Preparando o Cartão Micro-SD para a Instalação via RPI Imager
 
-1. Com o Micro-SD já inserido no computador, vamos iniciar o aplicativo e veremos a seguinte tela
+#### 1. Iniciando o Aplicativo
+Com o Micro-SD já inserido no computador, abra o **Raspberry Pi Imager**. A interface principal permite selecionar o hardware, o SO e o destino da gravação.
 
-<img width="389" height="287" alt="image" src="https://github.com/user-attachments/assets/db0d5c09-a11d-4fe9-9f42-4c7a8181327c" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/db0d5c09-a11d-4fe9-9f42-4c7a8181327c" width="450" alt="Interface RPI Imager" />
+  <br><em>Interface inicial para seleção de dispositivo e sistema.</em>
+</p>
 
-Aqui é onde selecionamos o modelo do Raspberry Pi e o sistema que vamos instalar, assim como em qual disco vamos gravar esse sistema e configurações iniciais.
+> [!TIP]
+> Você pode formatar o cartão diretamente por este aplicativo, o que evita erros de partição comuns em outros métodos.
 
-Podemos formatar o cartão Micro-SD por esse aplicativo também. Vamos iniciar por esse passo.
+#### 2. Formatação (Erase)
+Para limpar o cartão antes da instalação:
+1. Clique em **CHOOSE DEVICE** e selecione o seu modelo (ex: Raspberry Pi 3B).
+2. Em **OPERATING SYSTEM**, role até o final e escolha a opção **ERASE** (MS-DOS FAT32).
+3. Selecione o seu cartão em **CHOOSE STORAGE**.
 
-2. Após selecionar o dispositivo clicando em Choose Device (em nosso caso será uma Raspberry Pi 3B) Escolhemos a opção Erase em Operational System.
-
-<img width="389" height="287" alt="image" src="https://github.com/user-attachments/assets/9f28cb4e-450e-4235-8563-23947dd24357" />
-
-<img width="389" height="287" alt="image" src="https://github.com/user-attachments/assets/f7b0d48e-96ef-4998-937b-7725c7a10362" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/9f28cb4e-450e-4235-8563-23947dd24357" width="400" />
+  <img src="https://github.com/user-attachments/assets/f7b0d48e-96ef-4998-937b-7725c7a10362" width="400" />
+</p>
 
 
 3. 
