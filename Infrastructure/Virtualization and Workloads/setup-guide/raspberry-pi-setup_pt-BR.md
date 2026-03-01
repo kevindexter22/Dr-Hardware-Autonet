@@ -126,13 +126,17 @@ O procedimento aqui é muito similar ao anterior:
    <br> Na próxima janela, confirme a formatação do cartão clicando em **YES** novamente e aguarde o término da instalação.
 
 <p align="center">
-   <img src="https://github.com/user-attachments/assets/35aa6601-535a-4c4a-b75b-bf98601400e8" width="200" />
-   <img src="https://github.com/user-attachments/assets/dd6b37f0-181a-4f18-a4af-4c3720e5fb73" width="200" />
-   <img src="https://github.com/user-attachments/assets/3264e183-996d-4df7-b15c-ca1862f0f62e" width="200" />
-   <img src="https://github.com/user-attachments/assets/ef8800d2-8898-432b-bd2a-fb7ff80c6bec" width="200" />
+   <img src="https://github.com/user-attachments/assets/35aa6601-535a-4c4a-b75b-bf98601400e8" width="225" />
+   <img src="https://github.com/user-attachments/assets/dd6b37f0-181a-4f18-a4af-4c3720e5fb73" width="225" />
+   <img src="https://github.com/user-attachments/assets/3264e183-996d-4df7-b15c-ca1862f0f62e" width="225" />
+   <img src="https://github.com/user-attachments/assets/ef8800d2-8898-432b-bd2a-fb7ff80c6bec" width="225" />
 </p>
 
-10. 
+10. Após finalizar a instalação, basta clicar em **CONTINUE**.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b9b80956-8b90-409b-b6eb-00992eae5093" widht="300" />
+</p>
 
 ##
 
