@@ -93,7 +93,7 @@ Para facilitar o acesso e por conta de segurança, vamos personalizar as nossas 
 6. Ao clicar nessa opção ele nos abre a seguinte tela:
 <p align="center">
 <img src="https://github.com/user-attachments/assets/0b862b40-6af3-4f33-8af2-f9a21f216eae" width="300" alt="EDIT SETTINGS" />
-<br><em>Interface de configuração pré instalação do sistema.</em>
+<br><em>Interface de configuração personalizada pré-instalação do sistema.</em>
 </p>
 
 
