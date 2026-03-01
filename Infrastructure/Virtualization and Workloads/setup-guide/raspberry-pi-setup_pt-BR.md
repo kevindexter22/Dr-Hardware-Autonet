@@ -77,6 +77,10 @@ O procedimento aqui é muito similar ao anterior:
 2. Em **OPERATING SYSTEM**, selecione a categoria (ex: Raspberry Pi OS (other).
 3. Em seguida escolha o sistema operacional que deseja instalar (ex: Raspberry Pi OS Lite (64-bit)).
 4. Selecione o seu cartão em **CHOOSE STORAGE**.
+
+> [!NOTE]
+> Estamos escolhendo esse oistema operacional devido a não possuir interface gráfica e o nosso objetivo ser voltado para a configuração de um servidor.
+
 5. Feito isso clique em **NEXT**, ele trará uma mensagem perguntanto se deseja personalizar a instalação, se clicarmos em **NO, CLEAR SETTINGS** ele continuará a instalação de forma "limpa", ou seja, com todas as configurações pré-definidas.
 <br>A opção **YES** aplica as configurações já feitas em instalações anteriores.
 <br>A opção **NO** continuará sem aplicar as configurações personalizadas também.
@@ -101,10 +105,7 @@ O procedimento aqui é muito similar ao anterior:
 <br><em>Interface de configuração personalizada pré-instalação do sistema.</em>
 </p>
 
-7. Aqui é onde definimos o nome de nosso dispositivo (hostname), usuário e senha de acesso, padrão do teclado, fuso horário em que estamos, se formos usa-lo no wifi podemos configurar por aqui ou mesmo desabilita-lo se formos utilizar a conexão via cabo e temos a opção de habilitar ou desabilitar o acesso remoto via SSH.
-
-> [!NOTE]
-> Você pode formatar o cartão Micro-SD diretamente por este aplicativo. Recomenda-se fazer isso antes de iniciar qualquer nova instalação para evitar conflitos de partições antigas.
+7. Aqui é onde definimos o nome de nosso dispositivo (hostname), usuário e senha de acesso, padrão do teclado, fuso horário em que estamos e se formos usa-lo no wifi podemos configurar por aqui ou mesmo desabilita-lo se formos utilizar a conexão via cabo.
 
 <p align="center">
    <img src="https://github.com/user-attachments/assets/a7022172-d377-4bcc-b874-ea13118ef94c" width="300" />
@@ -113,6 +114,13 @@ O procedimento aqui é muito similar ao anterior:
 
 > [!TIP]
 > Selecionar o país no sistema operacional ao usar o Wi-Fi é crucial principalmente para conformidade legal e regulamentações de radiofrequência, garantindo que o seu dispositivo opere dentro das leis locais de comunicação. Se o país estiver incorreto, o dispositivo pode, no melhor caso, conectar-se normalmente ou apresentar alguma instabilidade, e no pior caso, não encontrar certas redes Wi-Fi.
+
+8. Na aba Services é onde podemos habilitar ou não o acesso via SSH.
+<br>Recomenda-se habilita-lo para podermos gerenciar o nosso servidor de forma segura através da rede.
+
+
+> [!NOTE]
+> Você pode formatar o cartão Micro-SD diretamente por este aplicativo. Recomenda-se fazer isso antes de iniciar qualquer nova instalação para evitar conflitos de partições antigas.
 
 ##
 
