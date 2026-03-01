@@ -149,6 +149,13 @@ A que vamos acessar para configurar alguns arquivos é a bootfs.
   <br><em>Partições montadas no computador.</em>
 </p>
 
+Ao entrar na partição **bootfs** vamos abrir o arquivo **network-config** para fazermos as configurações da interface de rede:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/389a2377-15d0-481e-a325-6f23e8bfbd49" width="300" />
+  <img src="https://github.com/user-attachments/assets/01ddfd5c-7d98-4002-b8e9-fda69072aeb3" width="300" />
+</p>
+
 ##
 
 ### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/5c0caa8d-9f10-4a62-a0f9-ea5f937e0cb8" /> Instalando e Configurando o Ubuntu Server
