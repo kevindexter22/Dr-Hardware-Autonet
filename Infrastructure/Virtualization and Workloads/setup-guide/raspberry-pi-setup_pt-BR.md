@@ -1,6 +1,6 @@
 <h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/Infrastructure/Virtualization%20and%20Workloads/setup-guide/raspberry-pi-setup_en.md" target="_blank" rel="noopener noreferrer">🇬🇧 Inglês</a></h6>
 
-# <img width="50" height="50" align="center" alt="image" src="https://github.com/user-attachments/assets/135b24c8-25c5-4e75-8eb3-24f175094478" /> Raspberry Pi
+# <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/135b24c8-25c5-4e75-8eb3-24f175094478" /> Raspberry Pi
 
 ### 
 
@@ -24,7 +24,7 @@ Sendo assim vamos instalar o sistema utilizando esse método.
 
 1. Com o Micro-SD já inserido no computador, vamos iniciar o aplicativo e veremos a seguinte tela
 
-<img width="359" height="257" alt="image" src="https://github.com/user-attachments/assets/db0d5c09-a11d-4fe9-9f42-4c7a8181327c" />
+<img width="359" height="257" align="center" alt="image" src="https://github.com/user-attachments/assets/db0d5c09-a11d-4fe9-9f42-4c7a8181327c" />
 
 2. 
 
