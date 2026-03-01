@@ -138,6 +138,9 @@ O procedimento aqui é muito similar ao anterior:
   <img src="https://github.com/user-attachments/assets/b9b80956-8b90-409b-b6eb-00992eae5093" width="300" />
 </p>
 
+#### 2. Configurações Pós Instalação
+Agora antes de colocar o Micro-SD no dispositivo, vamos fazer algumas configurações diretamente nos arquivos de boot do sistema.
+
 ##
 
 ### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/5c0caa8d-9f10-4a62-a0f9-ea5f937e0cb8" /> Instalando e Configurando o Ubuntu Server
