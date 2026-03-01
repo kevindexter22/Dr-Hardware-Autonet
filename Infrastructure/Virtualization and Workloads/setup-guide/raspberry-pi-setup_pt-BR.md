@@ -80,8 +80,6 @@ O procedimento aqui é muito similar ao anterior:
 A opção **YES** aplica as configurações já feitas em instalações anteriores.
 A opção **NO** continuará sem aplicar as configurações personalizadas também.
 Para facilitar o acesso e por conta de segurança, vamos personalizar as nossas configurações clicando sobre a opção **EDIT SETTINGS**
-6. 
-7. Aguarde a formatação ser concluída.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/5a615bb1-6b5f-4e4d-a3e4-9ed8e5cdb891" width="300" />
@@ -90,8 +88,11 @@ Para facilitar o acesso e por conta de segurança, vamos personalizar as nossas 
   <img src="https://github.com/user-attachments/assets/3207b67f-536e-44c3-b0f0-d7ba3d3489d8" width="300" />
   <img src="https://github.com/user-attachments/assets/209995ee-7c0e-4e31-a003-416f140be6bc" width="300" />
   <img src="https://github.com/user-attachments/assets/42ed04fa-a5b6-4864-a7c6-aca4b2f19791" width="300" />
-
 </p>
+
+6. Ao clicar nessa opção ele nos abre a seguinte tela:
+<img src="https://github.com/user-attachments/assets/0b862b40-6af3-4f33-8af2-f9a21f216eae" width="300" alt="EDIT SETTINGS" />
+<br><em>Interface de configuração pré instalação do sistema.</em>
 
 ##
 
