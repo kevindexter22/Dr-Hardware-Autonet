@@ -106,11 +106,12 @@ Nela notamos a existência de 3 abas na parte superior: **GENERAL**, **SERVICES*
 
 
 <p align="center">
-<img src="https://github.com/user-attachments/assets/67d10ad8-d50f-4ba0-bb15-2398809e6d15" width="300" />
+   <img src="https://github.com/user-attachments/assets/a7022172-d377-4bcc-b874-ea13118ef94c" width="300" />
+   <br><em>Configuração do wi-fi.</em>
 </p>
 
 > [!TIP]
-> Vamos formatar o cartão diretamente por este aplicativo, para evitar erros de partição comuns em outros métodos.
+> Selecionar o país no sistema operacional ao usar o Wi-Fi é crucial principalmente para conformidade legal e regulamentações de radiofrequência, garantindo que o seu dispositivo opere dentro das leis locais de comunicação. Se o país estiver incorreto, o dispositivo pode, no melhor caso, conectar-se normalmente ou apresentar alguma instabilidade, e no pior caso, não encontrar certas redes Wi-Fi.
 
 ##
 
