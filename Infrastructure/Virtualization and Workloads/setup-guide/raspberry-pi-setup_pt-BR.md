@@ -38,13 +38,17 @@ Para limpar o cartão antes da instalação:
 1. Clique em **CHOOSE DEVICE** e selecione o seu modelo (ex: Raspberry Pi 3B).
 2. Em **OPERATING SYSTEM**, role até o final e escolha a opção **ERASE** (MS-DOS FAT32).
 3. Selecione o seu cartão em **CHOOSE STORAGE**.
+4. Feito isso clique em **NEXT**, ele trará uma mensagem confirmando se deseja mesmo formatar o cartão então confirme em **YES**.
+5. Aguarde a formatação ser concluída.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/9f28cb4e-450e-4235-8563-23947dd24357" width="300" />
   <img src="https://github.com/user-attachments/assets/f7b0d48e-96ef-4998-937b-7725c7a10362" width="300" />
   <img src="https://github.com/user-attachments/assets/e7333177-5124-4592-985b-43d2de2c97f3" width="300" />
 </p>
-
+<p aligin="center">
+  
+</p>
 ##
 
 ### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/b64bbe84-d2a5-438c-bbb3-1e5b2eca6e47" /> Instalando e Configurando o Raspberry Pi OS
