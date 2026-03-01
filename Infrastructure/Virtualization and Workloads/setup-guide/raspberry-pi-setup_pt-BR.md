@@ -77,10 +77,6 @@ O procedimento aqui é muito similar ao anterior:
 2. Em **OPERATING SYSTEM**, selecione a categoria (ex: Raspberry Pi OS (other).
 3. Em seguida escolha o sistema operacional que deseja instalar (ex: Raspberry Pi OS Lite (64-bit)).
 4. Selecione o seu cartão em **CHOOSE STORAGE**.
-
-> [!NOTE]
-> Estamos escolhendo esse oistema operacional devido a não possuir interface gráfica e o nosso objetivo ser voltado para a configuração de um servidor.
-
 5. Feito isso clique em **NEXT**, ele trará uma mensagem perguntanto se deseja personalizar a instalação, se clicarmos em **NO, CLEAR SETTINGS** ele continuará a instalação de forma "limpa", ou seja, com todas as configurações pré-definidas.
 <br>A opção **YES** aplica as configurações já feitas em instalações anteriores.
 <br>A opção **NO** continuará sem aplicar as configurações personalizadas também.
@@ -125,6 +121,8 @@ O procedimento aqui é muito similar ao anterior:
 
 > [!NOTE]
 > O SSH é essencial para gerir sistemas "Headless" (sem monitor) criando um tunel seguro para a conexão remota. No Raspberry Pi, ele vem desativado por padrão por questões de segurança, sendo necessário ativá-lo nas configurações do **RPI Imager** ou criando um arquivo vazio chamado `ssh` na partição de boot.
+
+9. 
 
 ##
 
