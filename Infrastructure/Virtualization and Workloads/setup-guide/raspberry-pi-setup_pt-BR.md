@@ -49,6 +49,7 @@ Para limpar o cartão antes da instalação:
 <p aligin="center">
   
 </p>
+
 ##
 
 ### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/b64bbe84-d2a5-438c-bbb3-1e5b2eca6e47" /> Instalando e Configurando o Raspberry Pi OS
