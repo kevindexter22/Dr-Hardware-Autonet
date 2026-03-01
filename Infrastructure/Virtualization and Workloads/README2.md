@@ -57,10 +57,10 @@ In this section, I document how I manage computer resources. I explain how the h
 
 ```text
 📂 Virtualization & Workloads/
-├── 📄 README.md              # Overview and VM inventory
-├── 📄 README2.md             # Overview and VM inventory (English)
-├── 📂 setup-guides/          # Folder with manuals
-└── 📂 templates/             # Ready-to-use files
+├── 📄 README.md              # Overview and VM Inventory (Brazilian Portuguese)
+├── 📄 README2.md             # Overview and VM Inventory
+├── 📂 setup-guides/          # Folder with Manuals
+└── 📂 templates/             # Ready-to-Use Files
 ```
 
 ##
