@@ -135,7 +135,7 @@ O procedimento aqui é muito similar ao anterior:
 10. Após finalizar a instalação, basta clicar em **CONTINUE**.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/b9b80956-8b90-409b-b6eb-00992eae5093" widht="300" />
+  <img src="https://github.com/user-attachments/assets/b9b80956-8b90-409b-b6eb-00992eae5093" width="300" />
 </p>
 
 ##
