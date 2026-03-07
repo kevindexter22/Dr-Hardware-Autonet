@@ -166,6 +166,9 @@ Apesar de ter realizado essa configuração anteriormente, farei aqui novamente 
 
 Isso facilitará nosso acesso SSH ao servidor, assim como, manterá os serviços que utilizaremos sempre nesse mesmo IP.
 
+No documento encontre a parte da configuração da interface que deseja configurar, no nosso caso será a interface **WLAN0**.
+
+Obs.: Caso vá utilizar uma conexão cabeada, configure na parte referente a interface **eth0**.
 
 ##
 
