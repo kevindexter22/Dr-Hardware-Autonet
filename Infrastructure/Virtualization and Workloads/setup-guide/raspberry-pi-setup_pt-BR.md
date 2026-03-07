@@ -171,7 +171,7 @@ No documento encontre a parte da configuração da interface que deseja configur
 Descomente as linhas e faça a configuração conforme abaixo, utilizando as informações de IP de sua rede.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/52d894f2-1918-4872-b609-a6e5bca6f636" width="300" />
+  <img src="https://github.com/user-attachments/assets/242187c5-5651-4171-85d5-efe24e809576" width="300" />
 </p>
 
 Obs.: Caso vá utilizar uma conexão cabeada, configure na parte referente a interface **eth0**.
