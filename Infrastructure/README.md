@@ -35,7 +35,7 @@ graph TD
     subgraph Principal02["2. Hardware"]
     subgraph S3 [Local 01]
         SW1 ---> RPi3B_1[Raspberry Pi 3B - Arquivos_OPL]:::hardware
-        R_Mesh1 ---> RPi4B[Raspberry Pi 4B (4GB) - CasaOS]:::hardware
+        R_Mesh1 ---> RPi4B[Raspberry Pi 4B_4GB - CasaOS]:::hardware
         SW1 ---> RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
     end
     subgraph S4 [Local 02]
