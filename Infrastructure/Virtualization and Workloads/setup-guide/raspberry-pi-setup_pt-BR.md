@@ -185,7 +185,7 @@ Para configurar o SSID e a senha de sua rede wifi, basta descomentar e preencher
 Após fazer isso, basta salvar o arquivo, desmontar a partição, inserir o micro SD na Raspberry e inicia-la pela primeira vez.
 
 > [!TIP]
-> Para ver que está tudo certo, basta no terminal ou CMD (se usar windows) digitar o comando ping 'seu_ip' e ver se ao iniciar
+> Para ver que está tudo certo, basta no terminal ou CMD (se usar windows) digitar o comando ping `seu_ip` e ver se ao iniciar
 > ele comunica com o IP configurado no arquivo.
 
 
