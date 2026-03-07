@@ -179,7 +179,7 @@ Obs.: Caso vá utilizar uma conexão cabeada, configure na parte referente a int
 Para configurar o SSID e a senha de sua rede wifi, basta descomentar e preencher os campos na parte de  **access-points** conforme exemplo abaixo:
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/c3ba666d-07c2-460a-8fca-3011ea574d04" width="300" />
+  <img src="https://github.com/user-attachments/assets/b5462ebd-8043-45d9-9d07-da834699b140" width="300" />
 </p>
 
 Após fazer isso, basta salvar o arquivo, desmontar a partição, inserir o micro SD na Raspberry e inicia-la pela primeira vez.
