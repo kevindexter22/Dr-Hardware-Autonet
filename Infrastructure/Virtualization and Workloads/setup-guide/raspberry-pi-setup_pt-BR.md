@@ -178,7 +178,7 @@ Obs.: Caso vá utilizar uma conexão cabeada, configure na parte referente a int
 
 Para configurar o SSID e a senha de sua rede wifi, basta descomentar e preencher os campos na parte de  **access-points** conforme exemplo abaixo:
 
-<p>
+<p align="center">
   <img src="https://github.com/user-attachments/assets/01a582fd-6f8b-484e-a651-df242ea164c8" width="300" />
 </p>
 
