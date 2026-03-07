@@ -170,13 +170,17 @@ No documento encontre a parte da configuração da interface que deseja configur
 
 Descomente as linhas e faça a configuração conforme abaixo, utilizando as informações de IP de sua rede.
 
-<img src="https://github.com/user-attachments/assets/52d894f2-1918-4872-b609-a6e5bca6f636" width="300" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/52d894f2-1918-4872-b609-a6e5bca6f636" width="300" />
+</p>
 
 Obs.: Caso vá utilizar uma conexão cabeada, configure na parte referente a interface **eth0**.
 
 Para configurar o SSID e a senha de sua rede wifi, basta descomentar e preencher os campos na parte de  **access-points** conforme exemplo abaixo:
 
-<img src="https://github.com/user-attachments/assets/01a582fd-6f8b-484e-a651-df242ea164c8" width="300" />
+<p>
+  <img src="https://github.com/user-attachments/assets/01a582fd-6f8b-484e-a651-df242ea164c8" width="300" />
+</p>
 
 Após fazer isso, basta salvar o arquivo, desmontar a partição, inserir o micro SD na Raspberry e inicia-la pela primeira vez.
 
