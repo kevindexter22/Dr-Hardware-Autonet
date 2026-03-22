@@ -80,7 +80,7 @@ O procedimento aqui é muito similar ao anterior:
 5. Feito isso clique em **NEXT**, ele trará uma mensagem perguntanto se deseja personalizar a instalação, se clicarmos em **NO, CLEAR SETTINGS** ele continuará a instalação de forma "limpa", ou seja, com todas as configurações pré-definidas.
 <br>A opção **YES** aplica as configurações já feitas em instalações anteriores.
 <br>A opção **NO** continuará sem aplicar as configurações personalizadas também.
-<br>Para facilitar o acesso e por conta de segurança, vamos personalizar as nossas configurações clicando sobre a opção **EDIT SETTINGS**
+<br>Como vamos personalizar a instalação após o sistema estar no Cartão Micro-SD, vamos clicar em **NO, CLEAR SETTINGS**.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/5a615bb1-6b5f-4e4d-a3e4-9ed8e5cdb891" width="300" />
@@ -91,39 +91,7 @@ O procedimento aqui é muito similar ao anterior:
   <img src="https://github.com/user-attachments/assets/42ed04fa-a5b6-4864-a7c6-aca4b2f19791" width="300" />
 </p>
 
-6. Ao clicar nessa opção ele nos abre a seguinte tela:
-   <br>Nela notamos a existência de 3 abas na parte superior: **GENERAL**, **SERVICES** e **OPTIONS**.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/0b862b40-6af3-4f33-8af2-f9a21f216eae" width="300" />
-  <img src="https://github.com/user-attachments/assets/ce9f91cf-26e9-4f1a-bb9c-aaa88d0bb6da" width="300" />
-  <img src="https://github.com/user-attachments/assets/743b2ae1-2602-4e1f-8046-513de0df5da2" width="300" />
-<br><em>Interface de configuração personalizada pré-instalação do sistema.</em>
-</p>
-
-7. Aqui é onde definimos o nome de nosso dispositivo (hostname), usuário e senha de acesso, padrão do teclado, fuso horário em que estamos e se formos usa-lo no wifi podemos configurar por aqui ou mesmo desabilita-lo se formos utilizar a conexão via cabo.
-
-<p align="center">
-   <img src="https://github.com/user-attachments/assets/a7022172-d377-4bcc-b874-ea13118ef94c" width="300" />
-   <br><em>Configuração da conectividade via wi-fi em detalhes.</em>
-</p>
-
-> [!TIP]
-> Selecionar o país no sistema operacional ao usar o Wi-Fi é crucial principalmente para conformidade legal e regulamentações de radiofrequência, garantindo que o seu dispositivo opere dentro das leis locais de comunicação. Se o país estiver incorreto, o dispositivo pode, no melhor caso, conectar-se normalmente ou apresentar alguma instabilidade, e no pior caso, não encontrar certas redes Wi-Fi.
-
-8. Na aba Services é onde podemos habilitar ou não o acesso via SSH.
-<br>Recomenda-se habilita-lo para podermos gerenciar o nosso servidor através da rede.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/84f3c74f-3504-4cc3-8ed1-d70a9b2dbb45" width="300" />
-  <br><em>Habilitação do protocolo SSH.</em>
-</p>
-
-> [!NOTE]
-> O SSH é essencial para gerir sistemas "Headless" (sem monitor) criando um tunel seguro para a conexão remota. No Raspberry Pi, ele vem desativado por padrão por questões de segurança, sendo necessário ativá-lo nas configurações do **RPI Imager** ou criando um arquivo vazio chamado `ssh` na partição de boot.
-
-9. Após as configurações serem feitas, clicamos em **SAVE** para salvar as configurações e em **YES** para que sejam aplicadas durante a instalação do sistema.
-   <br> Na próxima janela, confirme a formatação do cartão clicando em **YES** novamente e aguarde o término da instalação.
+9. Na próxima janela, confirme a formatação do cartão clicando em **YES** novamente e aguarde o término da instalação.
 
 <p align="center">
    <img src="https://github.com/user-attachments/assets/35aa6601-535a-4c4a-b75b-bf98601400e8" width="225" />
