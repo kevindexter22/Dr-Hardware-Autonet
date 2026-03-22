@@ -129,7 +129,7 @@ Descendo um pouco vemos que existe a opção de configuração tando da interfac
   <img src="https://github.com/user-attachments/assets/0b13c186-c11a-4541-bb17-9e76fd035173" width="300" />
 </p>
 
-Apesar de ter realizado essa configuração anteriormente, farei aqui novamente para ilustrar e também configurarei um endereço IP estático para que ele inicie com esse IP sempre.
+Aqui configurarei um endereço IP estático para que ele inicie com esse IP sempre.
 
 Isso facilitará nosso acesso SSH ao servidor, assim como, manterá os serviços que utilizaremos sempre nesse mesmo IP.
 
