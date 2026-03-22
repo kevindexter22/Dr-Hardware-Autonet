@@ -117,6 +117,8 @@ A que vamos acessar para configurar alguns arquivos é a bootfs.
   <br><em>Partições montadas no computador.</em>
 </p>
 
+##### Configurando **IP Estático** e **Wifi** *(se nescessário)*
+
 Ao entrar na partição **bootfs** vamos abrir o arquivo **network-config** para fazermos as configurações da interface de rede:
 
 <p align="center">
@@ -129,8 +131,6 @@ Descendo um pouco vemos que existe a opção de configuração tando da interfac
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0b13c186-c11a-4541-bb17-9e76fd035173" width="300" />
 </p>
-
-1. Configurando **IP Estático** e **Wifi** *(se nescessário)*
 
 Nessa etapa vamos configurar um endereço IP estático para que ele inicie com esse IP sempre.
 
