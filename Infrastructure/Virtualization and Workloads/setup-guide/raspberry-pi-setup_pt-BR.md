@@ -130,7 +130,9 @@ Descendo um pouco vemos que existe a opção de configuração tando da interfac
   <img src="https://github.com/user-attachments/assets/0b13c186-c11a-4541-bb17-9e76fd035173" width="300" />
 </p>
 
-Aqui configurarei um endereço IP estático para que ele inicie com esse IP sempre.
+1. Configurando **IP Estático** e **Wifi** *(se nescessário)*
+
+Nessa etapa vamos configurar um endereço IP estático para que ele inicie com esse IP sempre.
 
 Isso facilitará nosso acesso SSH ao servidor, assim como, manterá os serviços que utilizaremos sempre nesse mesmo IP.
 
@@ -150,7 +152,9 @@ Para configurar o SSID e a senha de sua rede wifi, basta descomentar e preencher
   <img src="https://github.com/user-attachments/assets/b5462ebd-8043-45d9-9d07-da834699b140" width="300" />
 </p>
 
-Após fazer isso, basta salvar o arquivo, desmontar a partição, inserir o micro SD na Raspberry e inicia-la pela primeira vez.
+Após fazer isso, basta salvar o arquivo.
+
+
 
 > [!TIP]
 > Para ver que está tudo certo, basta no terminal ou CMD (se usar windows) digitar o comando ping `seu_ip` e ver se ao iniciar
