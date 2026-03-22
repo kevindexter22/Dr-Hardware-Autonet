@@ -117,7 +117,7 @@ A que vamos acessar para configurar alguns arquivos é a bootfs.
   <br><em>Partições montadas no computador.</em>
 </p>
 
-##### Configurando **IP Estático** e **Wifi** *(se nescessário)*
+#### Configurando **IP Estático** e **Wifi** *(se nescessário)*
 
 Ao entrar na partição **bootfs** vamos abrir o arquivo **network-config** para fazermos as configurações da interface de rede:
 
@@ -154,7 +154,7 @@ Para configurar o SSID e a senha de sua rede wifi (se for utilizar a rede sem fi
 
 Após fazer isso, basta salvar o arquivo.
 
-
+#### Configurando o SSH para acesso remoto seguro
 
 > [!TIP]
 > Para ver que está tudo certo, basta no terminal ou CMD (se usar windows) digitar o comando ping `seu_ip` e ver se ao iniciar
