@@ -126,7 +126,7 @@ Ao entrar na partição **bootfs** vamos abrir o arquivo **network-config** para
   <img src="https://github.com/user-attachments/assets/01ddfd5c-7d98-4002-b8e9-fda69072aeb3" width="300" />
 </p>
 
-Descendo um pouco vemos que existe a opção de configuração tando da interface de rede cabeada como da interface sem fio e que nesse documento é possível também realizar as configurações de rede wireless.
+Descendo um pouco vemos que existe nesse arquivo a opção de configuração tando da interface de rede cabeada como da interface sem fio e vemos que nesse documento é possível também realizar as configurações de rede wireless.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0b13c186-c11a-4541-bb17-9e76fd035173" width="300" />
@@ -146,7 +146,7 @@ Descomente as linhas e faça a configuração conforme abaixo, utilizando as inf
 
 Obs.: Caso vá utilizar uma conexão cabeada, configure na parte referente a interface **eth0**.
 
-Para configurar o SSID e a senha de sua rede wifi, basta descomentar e preencher os campos na parte de  **access-points** conforme exemplo abaixo:
+Para configurar o SSID e a senha de sua rede wifi (se for utilizar a rede sem fio), basta descomentar e preencher os campos na parte de  **access-points** conforme exemplo abaixo:
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/b5462ebd-8043-45d9-9d07-da834699b140" width="300" />
