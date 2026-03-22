@@ -106,7 +106,8 @@ O procedimento aqui é muito similar ao anterior:
 </p>
 
 #### 2. Configurações Pós Instalação
-Agora antes de colocar o Micro-SD no dispositivo, vamos fazer algumas configurações diretamente nos arquivos de boot do sistema.<br>
+Agora antes de colocar o Micro-SD no dispositivo, vamos fazer algumas configurações diretamente nos arquivos de boot do sistema.
+
 Ao ejetar e inserir novamente o cartão no leitor, ele montará duas partições: **bootfs** (partição de inicialização e onde fica as configurações que carregarão ao iniciar o sistema) e **rootfs** (a partição raiz (/) do sistema.
 
 A que vamos acessar para configurar alguns arquivos é a bootfs.
