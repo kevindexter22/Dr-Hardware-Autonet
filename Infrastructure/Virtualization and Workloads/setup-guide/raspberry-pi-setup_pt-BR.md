@@ -159,15 +159,45 @@ Após fazer isso, basta salvar o arquivo.
 Agora vamos habilitar o ssh e configurar o usuário e senha para acesso.
 
 1. Crie o arquivo ssh na partição bootfs do micro SD, caso utilize linux, pode fazer utilizando o comando abaixo no terminal.
+
 ```sh
 touch /media/<seu_usuário>/bootfs/ssh
 ```
-Obs. No windows basta acessar a partição e criar o arquivo ssh sem nenhuma extenção.
+Obs.: No windows basta acessar a partição e criar o arquivo ssh sem nenhuma extenção.
 
 2. Agora como as novas versões do sistema não vem com um usuário pré-definido precisamos criar um arquivo que contenha e crie essas informações ao iniciar o sistema.
 
 Para isso, criamos um arquivo chamado `userconf.txt` na partição bootfs. Esse arquivo vai conter `usuário:senha_criptografada`.
 
+```sh
+# criar o arquivo userconf.txt via terminal no linux
+touch /media/<seu_usuário>/bootfs/userconf.txt
+```
+Obs.: No windows basta criar um novo arquivo de texto nessa partição.
+
+Agora precisamos gerar a senha criptografada para adicionar no arquivo.
+
+No linux utilizamos o utilitário `openssl` e digitamos o seguinte comando no terminal:
+```sh
+echo 'sua_senha' | openssl passwd -6 -stdin
+```
+- O que o comando faz: o parâmetro -6 utiliza o algoritmo SHA512, que é o padrão recomendado.
+-  Resultado: Ele retornará algo como $6$rounds=656000$.... Copie todo esse código, pois iremos inseri-lo no arquivo de configuração.
+
+No windows ele não possui uma forma nativa de gerar utilizando o openssl, mas podemos fazer isso utilizando o WSL (ubuntu,debian,etc).
+
+Na distribuição do WSL que utiliza, basta ter o utilitário `openssl` ativo e digitar o comando abaixo:
+```sh
+echo "sua_senha" | openssl passwd -6 -stdin
+```
+
+Após esse procedimento feito, basta abrir o arquivo `userconf.txt` e adicionar a configuração conforme abaixo:
+```
+usuário:código_gerado
+
+## Exemplo:
+pi:$6$dU2DKSj1d8KE57Uy$Q.5BPFHoWNzupp7YQWbteJMt8/ANu
+```
 
 > [!TIP]
 > Para ver que está tudo certo, basta no terminal ou CMD (se usar windows) digitar o comando ping `seu_ip` e ver se ao iniciar
