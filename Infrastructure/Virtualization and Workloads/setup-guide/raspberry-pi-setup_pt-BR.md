@@ -186,7 +186,7 @@ echo 'sua_senha' | openssl passwd -6 -stdin
 
 No windows ele não possui uma forma nativa de gerar utilizando o openssl, mas podemos fazer isso utilizando o WSL (ubuntu,debian,etc).
 
-Na distribuição do WSL que utiliza, basta ter o utilitário `openssl` ativo e digitar o comando abaixo:
+Na distribuição do WSL que utiliza, basta ter o utilitário `openssl` instalado e digitar o comando abaixo:
 ```sh
 echo "sua_senha" | openssl passwd -6 -stdin
 ```
