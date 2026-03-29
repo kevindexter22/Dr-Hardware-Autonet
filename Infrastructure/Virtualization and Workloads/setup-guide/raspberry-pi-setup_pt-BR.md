@@ -184,6 +184,11 @@ echo 'sua_senha' | openssl passwd -6 -stdin
 - O que o comando faz: o parâmetro -6 utiliza o algoritmo SHA512, que é o padrão recomendado.
 -  Resultado: Ele retornará algo como $6$rounds=656000$.... Copie todo esse código, pois iremos inseri-lo no arquivo de configuração.
 
+É possível também gerar a configuração inserindo a saída direto no arquivo `userconf.txt` com o comando:
+```sh
+echo "seu_usuário:$(openssl passwd -6 'sua_senha')" > /media/<seu_usuario>/bootfs/userconf.txt
+```
+
 No windows ele não possui uma forma nativa de gerar utilizando o openssl, mas podemos fazer isso utilizando o WSL (ubuntu,debian,etc).
 
 Na distribuição do WSL que utiliza, basta ter o utilitário `openssl` instalado e digitar o comando abaixo:
