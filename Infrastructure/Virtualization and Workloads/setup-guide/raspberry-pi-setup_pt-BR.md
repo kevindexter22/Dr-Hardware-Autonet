@@ -156,6 +156,13 @@ Após fazer isso, basta salvar o arquivo.
 
 #### Configurando o SSH para acesso remoto seguro
 
+Agora vamos habilitar o ssh e configurar o usuário e senha para acesso.
+
+1. Crie o arquivo ssh na partição bootfs do micro SD, caso utilize linux faça isso com o comando abaixo no terminal.
+```sh
+touch /media/<seu_usuário>/bootfs/ssh
+```
+
 > [!TIP]
 > Para ver que está tudo certo, basta no terminal ou CMD (se usar windows) digitar o comando ping `seu_ip` e ver se ao iniciar
 > ele comunica com o IP configurado no arquivo.
