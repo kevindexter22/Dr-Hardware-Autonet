@@ -196,7 +196,7 @@ Na distribuição do WSL que utiliza, basta ter o utilitário `openssl` instalad
 echo "sua_senha" | openssl passwd -6 -stdin
 ```
 > [!TIP]
-> Para garantir que nenhum "erro" ocorra, utilize uma senha simples (sem caracteres especiais)
+> Para garantir que nenhum "erro" ocorra, utilize uma senha simples (sem caracteres especiais).
 
 Após esse procedimento feito, basta abrir o arquivo `userconf.txt` e adicionar a configuração conforme abaixo:
 ```
