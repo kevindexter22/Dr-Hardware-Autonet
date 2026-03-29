@@ -190,6 +190,8 @@ Na distribuição do WSL que utiliza, basta ter o utilitário `openssl` instalad
 ```sh
 echo "sua_senha" | openssl passwd -6 -stdin
 ```
+> [!TIP]
+> Para garantir que nenhum "erro" ocorra, utilize uma senha simples (sem caracteres especiais)
 
 Após esse procedimento feito, basta abrir o arquivo `userconf.txt` e adicionar a configuração conforme abaixo:
 ```
@@ -203,6 +205,8 @@ Agora basta inserir o Micro-SD na Raspberry Pi e inicia-la pela primeira vez.
 > [!TIP]
 > Para ver que está tudo certo, basta no terminal ou CMD (se usar windows) digitar o comando ping `seu_ip` e ver se ao iniciar
 > ele comunica com o IP configurado no arquivo.
+
+Após esse procedimento o raspberry está pronto para ser acessado e utilizado.
 
 ##
 
