@@ -269,7 +269,46 @@ Antes de colocar o Micro-SD no dispositivo, vamos fazer algumas configurações 
 
 Ao ejetar e inserir novamente o cartão no leitor, ele montará duas partições: **system-boot** (partição de inicialização e onde fica as configurações que carregarão ao iniciar o sistema) e **writable** (a partição raiz (/) do sistema.
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3d3fcd14-e2fc-45f1-8e12-d7294c35f260" width="300" />
+</p>
 
+Ao entrar na partição **system-boot** vamos abrir o arquivo **network-config** para fazermos as configurações da interface de rede:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/08472c49-4250-40ce-a3d8-fdd120d0d4c8" width="300" />
+  <img src="https://github.com/user-attachments/assets/3d3bbc18-a681-4136-98bf-6546188aa9ef" width="300" />
+</p>
+
+Descendo um pouco vemos que existe nesse arquivo a opção de configuração tando da interface de rede cabeada como da interface sem fio e vemos que nesse documento é possível também realizar as configurações de rede wireless.
+
+Nessa etapa vamos configurar um endereço IP estático para que ele inicie com esse IP sempre.
+
+Isso facilitará nosso acesso SSH ao servidor, assim como, manterá os serviços que utilizaremos sempre nesse mesmo IP.
+
+No documento encontre a parte da configuração da interface que deseja configurar, no nosso caso será a interface **WLAN0**.
+
+Descomente as linhas e faça a configuração conforme abaixo, utilizando as informações de IP de sua rede.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d983a776-967f-4058-9a06-0b189861eb85" width="300" />
+</p>
+
+Obs.: Caso vá utilizar uma conexão cabeada, configure na parte referente a interface **eth0**.
+
+Para configurar o SSID e a senha de sua rede wifi (se for utilizar a rede sem fio), basta descomentar e preencher os campos na parte de  **access-points** conforme exemplo abaixo:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0354b6d0-b257-465c-9751-ddf107be3cdc" width="300" />
+</p>
+
+Após fazer isso, basta salvar o arquivo.
+
+> [!TIP]
+> 1. O Ubuntu habilita por padrão o acesso ssh e já vem pré configurado com o usuário `ubuntu` e a senha `ubuntu`.
+> 2. Após o primeiro acesso devemos mudar isso e aplicar algumas outras configurações de segurança, independente do SO.
+
+Após salvo o arquivo basta ejetar o Micro-SD com segurança, inserir no Raspberry Pi e após a primeira inicialização ele estará pronto para uso.
 
 ##
 
