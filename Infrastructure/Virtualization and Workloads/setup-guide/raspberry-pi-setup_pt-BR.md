@@ -80,7 +80,7 @@ O procedimento aqui é muito similar ao anterior:
 5. Feito isso clique em **NEXT**, ele trará uma mensagem perguntanto se deseja personalizar a instalação, se clicarmos em **NO, CLEAR SETTINGS** ele continuará a instalação de forma "limpa", ou seja, com todas as configurações pré-definidas.
 <br>A opção **YES** aplica as configurações já feitas em instalações anteriores.
 <br>A opção **NO** continuará sem aplicar as configurações personalizadas também.
-<br>Como vamos personalizar a instalação após o sistema estar no Cartão Micro-SD, vamos clicar em **NO, CLEAR SETTINGS**.
+<br>Como vamos personalizar a instalação após o sistema estar no Cartão Micro-SD, vamos clicar em **NO**.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/5a615bb1-6b5f-4e4d-a3e4-9ed8e5cdb891" width="300" />
@@ -229,6 +229,32 @@ Após esse procedimento o raspberry está pronto para ser acessado e utilizado.
 ##
 
 ### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/5c0caa8d-9f10-4a62-a0f9-ea5f937e0cb8" /> Instalando e Configurando o Ubuntu Server
+
+A instalação do Ubuntu Server é bem parecida com a instalação do Raspiberry Pi OS.
+
+Antes de mais nada, formatamos o Cartão Micro-SD conforme indicado acima.
+
+Iniciamos o aplicativo e seguimos os seguintes passos para instalação. 
+
+1. Clique em **CHOOSE DEVICE** e selecione o seu modelo (ex: Raspberry Pi 3B).
+2. Em **OPERATING SYSTEM**, selecione a categoria (ex: Raspberry Pi OS (other).
+3. Em seguida escolha o sistema operacional que deseja instalar (ex: Ubuntu Server 24.04.4 LTS (64-bit)).
+4. Selecione o seu cartão em **CHOOSE STORAGE**.
+5. Feito isso clique em **NEXT**, ele trará uma mensagem perguntanto se deseja personalizar a instalação, se clicarmos em **NO, CLEAR SETTINGS** ele continuará a instalação de forma "limpa", ou seja, com todas as configurações pré-definidas.
+<br>A opção **YES** aplica as configurações já feitas em instalações anteriores.
+<br>A opção **NO** continuará sem aplicar as configurações personalizadas também.
+<br>Como vamos personalizar a instalação após o sistema estar no Cartão Micro-SD, vamos clicar em **NO**.
+6. Na próxima janela, confirme a formatação do cartão clicando em **YES** novamente e aguarde o término da instalação.
+7. Após finalizar a instalação, basta clicar em **CONTINUE**.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/66009c77-24ba-4888-ac26-9b4696b6decb" width="300" />
+  <img src="https://github.com/user-attachments/assets/602d52e8-3d5b-4d8e-8c34-36d658a9c557" width="300" />
+  <img src="https://github.com/user-attachments/assets/2994683d-8216-4f40-b4d9-9611d6af56c2" width="300" />
+  <img src="https://github.com/user-attachments/assets/e6c56d0c-0801-41ea-87ef-3316b4c6ff62" width="300" />
+  <img src="https://github.com/user-attachments/assets/955a671f-4de4-4aa7-9e89-e8ceab6d6984" width="300" />
+  <img src="https://github.com/user-attachments/assets/c2383b39-dbc1-43f3-94c2-199878585cca" width="300" />
+</p>
 
 ##
 
