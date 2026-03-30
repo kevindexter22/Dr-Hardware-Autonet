@@ -138,6 +138,7 @@ Because of this, the servers and devices stay in separate rooms, but I manage th
 - [ ] Healthcheck script for FreeRADIUS
 - [ ] Watchdog for MySQL Master-Master synchronization
 - [ ] DNS Blacklist automation (DIY "Pi-hole" with Unbound)
+- [ ] Backup of server, service and DB configs
 
 ##### 💊 *Remediation Scripts*
 - [ ] Zabbix + Proxmox API
