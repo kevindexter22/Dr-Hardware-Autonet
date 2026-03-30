@@ -136,7 +136,7 @@ Sendo assim os servidores e dispositivos ficam em locais separados, mas são ger
 - [ ] Script de healthcheck para FreeRADIUS
 - [ ] Watchdog de sincronismo do MySQL Master-Master
 - [ ] Automação de DNS Blacklist (Pi-hole "Caseiro" com Unbound)
-- [ ] Backup de configurações de cada servidor/serviço/banco
+- [ ] Backup de configurações de cada servidor,serviço e banco de dados
 
 ##### 💊 *Scripts de Remediação*
 - [ ] Zabbix+Proxmox API
