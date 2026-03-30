@@ -75,7 +75,7 @@ O procedimento aqui é muito similar ao anterior:
 
 1. Clique em **CHOOSE DEVICE** e selecione o seu modelo (ex: Raspberry Pi 3B).
 2. Em **OPERATING SYSTEM**, selecione a categoria (ex: Raspberry Pi OS (other).
-3. Em seguida escolha o sistema operacional que deseja instalar (ex: Raspberry Pi OS Lite (64-bit)).
+3. Em seguida escolha o sistema operacional que deseja instalar (ex: Raspberry Pi OS Lite (64-bit).
 4. Selecione o seu cartão em **CHOOSE STORAGE**.
 5. Feito isso clique em **NEXT**, ele trará uma mensagem perguntanto se deseja personalizar a instalação, se clicarmos em **NO, CLEAR SETTINGS** ele continuará a instalação de forma "limpa", ou seja, com todas as configurações pré-definidas.
 <br>A opção **YES** aplica as configurações já feitas em instalações anteriores.
@@ -237,15 +237,16 @@ Antes de mais nada, formatamos o Cartão Micro-SD conforme indicado acima.
 Iniciamos o aplicativo e seguimos os seguintes passos para instalação. 
 
 1. Clique em **CHOOSE DEVICE** e selecione o seu modelo (ex: Raspberry Pi 3B).
-2. Em **OPERATING SYSTEM**, selecione a categoria (ex: Raspberry Pi OS (other).
-3. Em seguida escolha o sistema operacional que deseja instalar (ex: Ubuntu Server 24.04.4 LTS (64-bit)).
-4. Selecione o seu cartão em **CHOOSE STORAGE**.
-5. Feito isso clique em **NEXT**, ele trará uma mensagem perguntanto se deseja personalizar a instalação, se clicarmos em **NO, CLEAR SETTINGS** ele continuará a instalação de forma "limpa", ou seja, com todas as configurações pré-definidas.
+2. Em **OPERATING SYSTEM**, selecione a categoria (ex: Other general-purpose OS).
+3. Em seguida escolha o sistema operacional que deseja (ex: Ubuntu).
+4. Em seguida escolha a versão do sistema operacional que deseja instalar (ex: Ubuntu Server 24.04.4 LTS (64-bit).
+5. Selecione o seu cartão em **CHOOSE STORAGE**.
+6. Feito isso clique em **NEXT**, ele trará uma mensagem perguntanto se deseja personalizar a instalação, se clicarmos em **NO, CLEAR SETTINGS** ele continuará a instalação de forma "limpa", ou seja, com todas as configurações pré-definidas.
 <br>A opção **YES** aplica as configurações já feitas em instalações anteriores.
 <br>A opção **NO** continuará sem aplicar as configurações personalizadas também.
 <br>Como vamos personalizar a instalação após o sistema estar no Cartão Micro-SD, vamos clicar em **NO**.
-6. Na próxima janela, confirme a formatação do cartão clicando em **YES** novamente e aguarde o término da instalação.
-7. Após finalizar a instalação, basta clicar em **CONTINUE**.
+7. Na próxima janela, confirme a formatação do cartão clicando em **YES** novamente e aguarde o término da instalação.
+8. Após finalizar a instalação, basta clicar em **CONTINUE**.
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/66009c77-24ba-4888-ac26-9b4696b6decb" width="300" />
