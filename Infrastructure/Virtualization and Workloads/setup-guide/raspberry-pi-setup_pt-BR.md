@@ -236,6 +236,8 @@ Antes de mais nada, formatamos o Cartão Micro-SD conforme indicado acima.
 
 Iniciamos o aplicativo e seguimos os seguintes passos para instalação. 
 
+#### 1. Instalação do Sistema Operacional
+
 1. Clique em **CHOOSE DEVICE** e selecione o seu modelo (ex: Raspberry Pi 3B).
 2. Em **OPERATING SYSTEM**, selecione a categoria (ex: Other general-purpose OS).
 3. Em seguida escolha o sistema operacional que deseja (ex: Ubuntu).
@@ -256,6 +258,18 @@ Iniciamos o aplicativo e seguimos os seguintes passos para instalação.
   <img src="https://github.com/user-attachments/assets/955a671f-4de4-4aa7-9e89-e8ceab6d6984" width="300" />
   <img src="https://github.com/user-attachments/assets/c2383b39-dbc1-43f3-94c2-199878585cca" width="300" />
 </p>
+
+#### 2. Configurações Pós Instalação
+
+#### Configurando **IP Estático** e **Wifi** *(se nescessário)*
+
+O passo é similar ao do Raspberry Pi OS, uma vez que ambos são derivados da mesma distribuição (Debian).
+
+Antes de colocar o Micro-SD no dispositivo, vamos fazer algumas configurações diretamente nos arquivos de boot do sistema.
+
+Ao ejetar e inserir novamente o cartão no leitor, ele montará duas partições: **system-boot** (partição de inicialização e onde fica as configurações que carregarão ao iniciar o sistema) e **writable** (a partição raiz (/) do sistema.
+
+
 
 ##
 
