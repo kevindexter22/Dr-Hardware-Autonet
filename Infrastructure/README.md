@@ -24,7 +24,7 @@ graph TD
     subgraph S1 [Local 01]
         ONT[ONT Intelbras - Bridge]:::network --> R_Mesh1[TP-Link EX521 Mesh]:::network
         R_Mesh1 --> SW1[Switch TP-Link 8p]:::network
-        SW1 --> R_Cams[TP-Link DD-WRT Cam]:::network    
+        R_Mesh1 --> R_Cams[TP-Link DD-WRT Cam]:::network    
     end
     subgraph S2 [Local 02]
         R_Mesh1 --> R_Mesh2[TP-Link EX521 Mesh]:::network
@@ -35,7 +35,7 @@ graph TD
     subgraph Principal02["2. Hardware"]
     subgraph S3 [Local 01]
         SW1 ---> RPi3B_1[Raspberry Pi 3B - Arquivos_OPL]:::hardware
-        R_Mesh1 ---> RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
+        SW1 ---> RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
         SW1 ---> RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
     end
     subgraph S4 [Local 02]
