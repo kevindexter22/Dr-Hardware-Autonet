@@ -24,12 +24,12 @@ graph TD
     %% 1. NETWORK EQUIPMENT
     subgraph Principal["1. Network Equipment"]
     subgraph S1 [Local 01]
-        ONT[ONT Intelbras - Bridge]:::network --> R_Mesh1[Huawei WS5800 Mesh]:::network
-        R_Mesh1 --> SW1[Switch Overtek 8p]:::network
-        SW1 --> R_Cams[TP-Link OpenWRT Cam]:::network    
+        ONT[ONT Intelbras - Bridge]:::network --> R_Mesh1[TP-Link EX521 Mesh]:::network
+        R_Mesh1 --> R_Cams[TP-Link DD-WRT Cam]:::network 
+        R_Mesh1 --> SW1[Switch TP-Link 8p]:::network  
     end
     subgraph S2 [Local 02]
-        R_Mesh1 --> R_Mesh2[Huawei WS5800 Mesh]:::network
+        R_Mesh1 --> R_Mesh2[TP-Link EX521 Mesh]:::network
     end
     end
     
@@ -37,7 +37,7 @@ graph TD
     subgraph Principal02["2. Hardware"]
     subgraph S3 [Local 01]
         SW1 ---> RPi3B_1[Raspberry Pi 3B - Arquivos_OPL]:::hardware
-        R_Mesh1 ---> RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
+        SW1 ---> RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
         SW1 ---> RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
     end
     subgraph S4 [Local 02]
@@ -76,9 +76,8 @@ graph TD
 
     %% --- Set collor on conections ---
     
-    linkStyle 0 stroke:#3498db,stroke-width:3px;
-    linkStyle 1,3,5,7 stroke:#7FFFD4,stroke-width:3px;
-    linkStyle 2,4,6 stroke:#836FFF,stroke-width:3px;
+    linkStyle 0,1,2,3 stroke:#3498db,stroke-width:3px;
+    linkStyle 4,5,6,7 stroke:#7FFFD4,stroke-width:3px;
     linkStyle 8,9,10,11,12,13,14 stroke:#E6E6FA,stroke-width:3px;
     linkStyle 15 stroke:#FFFF00,stroke-width:3px;
     linkStyle 16,17,18 stroke:#F5FFFA,stroke-width:3px,stroke-dasharray: 5 5;
