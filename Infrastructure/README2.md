@@ -52,6 +52,8 @@ graph TD
         RPi4B --- ZA[Zabbix Agent]:::services
         RPi3B_2 --- ZA[Zabbix Agent]:::services
         RPi3B_2 --- ZP[Zabbix Proxy]:::services
+        RPi3B_1 --- ZP[Zabbix Proxy]:::services
+        RPi3B_1 --- SMB1[Samba]:::services
         HP --- PVE[Proxmox VE]:::services        
     end
 
