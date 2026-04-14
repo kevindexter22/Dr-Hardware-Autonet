@@ -86,7 +86,7 @@ graph TD
 
 Currently, the infrastructure topology follows the plan below:
 
-We have an Intelbras 121AC ONT (from my ISP) in bridge mode, connected to the Huawei WS5800 Mesh Router.
+We have an Intelbras 121AC ONT (from my ISP) in bridge mode, connected to the TP-Link EX521 Mesh Router.
 
 The main router (Huawei) has two towers for better coverage. Both are connected via UTP cable for more stability.
 
