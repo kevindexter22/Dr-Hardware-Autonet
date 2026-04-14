@@ -312,8 +312,4 @@ Após salvo o arquivo basta ejetar o Micro-SD com segurança, inserir no Raspber
 
 ##
 
-### <img width="25" height="25" alt="image" src="https://github.com/user-attachments/assets/0f91be5f-a8b7-4774-a1a4-614aba390e87" /> Instalando e Configurando o Rocky Linux
-
-##
-
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
