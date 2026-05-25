@@ -66,8 +66,8 @@ graph TD
     end
 
     %% Conections of data flow
-    ONT --> S6
-    S6 --> S7
+    ONT <--> S6
+    S6 <--> S7
     
     %% Logical conections
     ZA -.-> |Metrics| ZS
