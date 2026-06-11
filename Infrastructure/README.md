@@ -32,12 +32,12 @@ graph TD
     
     %% 2. HARDWARE
     subgraph Principal02["2. Hardware"]
-    subgraph S3 [Local 01]
+    subgraph S2 [Local 01]
         SW1 ---> RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
         SW1 ---> RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
         SW1 ---> RPi3B_1[Raspberry Pi 3B - Arquivos_OPL]:::hardware
     end
-    subgraph S4 [Local 02]
+    subgraph S3 [Local 02]
         SW2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
         SW2 ---> RPi3B_3[Raspberry Pi 3B - FreeRadius]:::hardware
         SW2 ---> RPi3B_4[Raspberry Pi 3B - BD MySQL]:::hardware
@@ -46,7 +46,7 @@ graph TD
 
     %% 3. SERVICES
     subgraph Principal03["3. SERVICES"]
-    subgraph S5 [Services];
+    subgraph S4 [Services];
         HP --- PVE[Containeres LXC]:::services
         RPi3B_3 --- FreeRAD[FreeRADIUS]:::services
         RPi3B_3 --- BDMSQL[MySQL Slave]:::services
@@ -59,25 +59,25 @@ graph TD
         RPi3B_2 --- ZP01[Zabbix Proxy]:::services
         RPi3B_1 --- SMB1[Samba v1]:::services
     end
-    subgraph S6 [Containeres];
+    subgraph S5 [Containeres];
         Docker --- Trillium[Trillium Note]:::services
         Docker --- ZP02[Zabbix Proxy]:::services
     end
     end
 
     %% 4. Internet (The Bridge)
-    subgraph S7 [4. ISP/Internet]
+    subgraph S6 [4. ISP/Internet]
            internet[Internet]:::internet
     end
 
     %% 5. Oracle Cloud Infrastructure
-    subgraph S8 [5. OCI]
+    subgraph S7 [5. OCI]
         ZS[Zabbix Server - Grafana]:::oci
     end
 
     %% Conections of data flow
-    ONT <--> S7
-    S7 <--> S8
+    ONT <--> S6
+    S6 <--> S7
     
     %% Logical conections
     ZA -.-> |Metrics| ZS
