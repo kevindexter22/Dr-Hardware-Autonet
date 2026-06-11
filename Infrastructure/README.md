@@ -52,10 +52,11 @@ graph TD
         HP --- PVE[Containeres LXC]:::services
         RPi4B --- Docker[Docker]:::services     
         RPi4B --- VPN[VPN Server]:::services
+        RPi4B --- SMB2[Samba v2/3]:::services
         RPi4B --- ZA[Zabbix Agent]:::services
         RPi3B_2 --- ZP[Zabbix Proxy]:::services
         RPi3B_2 --- ZA[Zabbix Agent]:::services
-        RPi3B_1 --- SMB1[Samba]:::services
+        RPi3B_1 --- SMB1[Samba v1]:::services
     end
     subgraph S6 [Containeres];
         Docker[Docker] --- Trillium[Trillium Note]:::services
