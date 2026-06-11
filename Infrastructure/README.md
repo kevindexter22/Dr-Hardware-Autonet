@@ -27,8 +27,8 @@ graph TD
         R_Mesh1 --> SW1[Switch TP-Link 8p]:::network
     end
     subgraph S2 [Local 02]
-        R_Mesh2 ---> SW2[Switch Overtek 8p]:::network  
         R_Mesh1 --> R_Mesh2[TP-Link EX521 Mesh]:::network
+        R_Mesh2 ---> SW2[Switch Overtek 8p]:::network  
     end
     end
     
