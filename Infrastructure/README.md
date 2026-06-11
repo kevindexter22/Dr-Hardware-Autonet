@@ -21,14 +21,14 @@ graph TD
 
     %% 1. NETWORK EQUIPMENT
     subgraph Principal["1. Network Equipment"]
-    subgraph S1 [Local 01]
-        ONT[ONT Intelbras - Bridge]:::network --> R_Mesh1[TP-Link EX521 Mesh]:::network
-        R_Mesh1 --> R_Cams[TP-Link DD-WRT Cam]:::network 
-        R_Mesh1 --> SW1[Switch TP-Link 8p]:::network  
+    subgraph S1 [Local 02]
+        R_Mesh1 --> R_Mesh2[TP-Link EX521 Mesh]:::network
+        R_Mesh2 ---> SW2[Switch Overtek 8p]:::network  
     end
     subgraph S2 [Local 02]
-        R_Mesh1 --> R_Mesh2[TP-Link EX521 Mesh]:::network
-        R_Mesh2 ---> SW2[Switch Overtek 8p]:::network
+        ONT[ONT Intelbras - Bridge]:::network --> R_Mesh1[TP-Link EX521 Mesh]:::network
+        R_Mesh1 --> R_Cams[TP-Link DD-WRT Cam]:::network 
+        R_Mesh1 --> SW1[Switch TP-Link 8p]:::network
     end
     end
     
