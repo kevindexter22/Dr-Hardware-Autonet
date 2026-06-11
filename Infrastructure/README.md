@@ -48,7 +48,7 @@ graph TD
 
     %% 3. SERVICES
     subgraph Principal03["3. SERVICES"]
-    subgraph S5 [Services]
+    subgraph S5 [Services];
         HP --- PVE[Proxmox VE]:::services
         RPi4B --- Docker[Docker]:::services     
         RPi4B --- VPN[VPN Server]:::services
@@ -58,7 +58,7 @@ graph TD
         RPi3B_2 --- ZA[Zabbix Agent]:::services
         RPi3B_2 --- ZP[Zabbix Proxy]:::services
     end
-    subgraph S6 [Containeres]
+    subgraph S6 [Containeres];
         Docker[Docker] --- Trillium[Trillium Note]:::services
     end
     end
