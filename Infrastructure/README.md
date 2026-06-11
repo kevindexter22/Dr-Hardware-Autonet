@@ -63,7 +63,7 @@ graph TD
     end
     subgraph S6 [Containeres];
         Docker --- Trillium[Trillium Note]:::services
-        Docker --- ZP02 [Zabbix Proxy Secundário]:::services
+        Docker --- ZP02[Zabbix Proxy Secundario]:::services
     end
     end
 
