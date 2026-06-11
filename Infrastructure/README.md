@@ -42,7 +42,7 @@ graph TD
     subgraph S4 [Local 02]
         SW2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
         SW2 ---> RPi3B_3[Raspberry Pi 3B - FreeRadius]:::hardware
-        SW2 ---> RPi3B_4[Raspberry Pi 3B - ???]:::hardware
+        SW2 ---> RPi3B_4[Raspberry Pi 3B - BD MySQL]:::hardware
     end
     end
 
@@ -57,12 +57,13 @@ graph TD
         RPi4B --- VPN[VPN Server]:::services
         RPi4B --- SMB2[Samba v2/3]:::services
         RPi4B --- ZA[Zabbix Agent]:::services
-        RPi3B_2 --- ZP[Zabbix Proxy]:::services
+        RPi3B_2 --- ZP01[Zabbix Proxy Principal]:::services
         RPi3B_2 --- ZA[Zabbix Agent]:::services
         RPi3B_1 --- SMB1[Samba v1]:::services
     end
     subgraph S6 [Containeres];
-        Docker[Docker] --- Trillium[Trillium Note]:::services
+        Docker --- Trillium[Trillium Note]:::services
+        Docker --- ZP02 [Zabbix Proxy Secundário]:::services
     end
     end
 
@@ -82,8 +83,8 @@ graph TD
     
     %% Logical conections
     ZA -.-> |Metrics| ZS
-    ZP -.-> |Metrics| ZS 
-
+    ZP01 -.-> |Metrics| ZS 
+    ZP02 -.-> |Metrics| ZS
     %% --- Set collor on conections ---
     
     linkStyle 0,1,2,3,4 stroke:#3498db,stroke-width:3px;
