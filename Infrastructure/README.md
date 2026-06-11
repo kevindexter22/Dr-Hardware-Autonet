@@ -135,7 +135,8 @@ Sendo assim os servidores e dispositivos ficam em locais separados, mas são ger
 
 #### 📡 Ativos de Redes (Físicos)
 - [x] ONT/Modem: Intelbras - instalado pelo meu ISP
-- [x] Roteador Principal/Secundário: 2x Huawei WS5800 - Formando uma rede mesh para maior cobertura
+- [x] Roteador Principal/Secundário: 2x TP-Link EX521 - Formando uma rede mesh para maior cobertura
+- [X] Substituição do switch principal por um switch Gigabit
 - [x] Switch: Overtek OT2808S/W/UX 8 Portas - Onde ligo meus dispositivos que não precisam estar em gigabit
 - [x] Roteador TP-Link wr841n com OpenWRT - Onde conecto minhas câmeras IP
 ##
@@ -150,7 +151,7 @@ Sendo assim os servidores e dispositivos ficam em locais separados, mas são ger
 ##### 🧩 *Shell Script (Bash)*
 - [ ] Automação de Backups dos arquivos de configuração e dump de bancos mais importantes
 - [ ] Script de healthcheck e conectividade para o Túnel VPN
-- [ ] Script para gerar relatórios do PHPIPAM
+- [ ] Script para gerar relatórios do Netbox
 - [ ] Script de healthcheck para FreeRADIUS
 - [ ] Watchdog de sincronismo do MySQL Master-Master
 - [ ] Automação de DNS Blacklist (Pi-hole "Caseiro" com Unbound)
@@ -162,7 +163,7 @@ Sendo assim os servidores e dispositivos ficam em locais separados, mas são ger
 
 ##### 🏗️ *Infraestrutura como Código (IaC) e Configuração*
 - [ ] Provisionamento de Microserviços com Terraform: Provisionar uma estrutura completa no proxmox
-- [ ] Ciclo de Vida de IPs: Utilizar Terraform como cliente do phpIPAM consultando IPs disponíveis
+- [ ] Ciclo de Vida de IPs: Utilizar Terraform como cliente do Netbox consultando IPs disponíveis
 - [ ] Configuração "Post-Boot": Conectar SSH com Ansible e instalar os serviços necessários
 - [ ] Gestão de template e imutabilidade: Um processo valida e baixa a imagem atual do S.O. e o ansible converte em template
 - [ ] Ansible para ACS: Padronização de Provisioning Flows e vparams no GenieACS
@@ -179,11 +180,10 @@ Sendo assim os servidores e dispositivos ficam em locais separados, mas são ger
 - [ ] Análise Preditiva: Usar Gemini para analisar tendências de queda de sinal no Redis antes que o cliente perceba
 
 #### 📊 Monitoramento e Serviços
-- [ ] PHPIPAM: Gerenciamento de endereços IP
+- [ ] Netbox: Gerenciamento de endereços IP
 - [ ] GenieACS: Centralização de acesso e gerenciamento via TR-069/TR-098 ou TR-181
 - [ ] FreeIPA: Gerenciamento centralizado de identidades, autenticações e políticas
-- [ ] Prometheus: Monitoramento e coleta de métricas com alertas em tempo real
-- [ ] Pi-hole + Unbound DNS: DNS privado com bloqueio de anúncios e rastreadores
+- [ ] Unbound DNS: DNS privado 
 - [ ] DNS Colector + Grafana LOKI: Coleta e indexação de logs DNS para análise e observabilidade
 - [ ] Redundância de Serviços Essenciais: Criar backup dos serviços principais para caso de falhas
 - [ ] Freeradius + MySQL: Autenticação AAA com banco de dados para controle de acesso e accounting
@@ -191,9 +191,8 @@ Sendo assim os servidores e dispositivos ficam em locais separados, mas são ger
 - [ ] Grafana: Criação de dashboards em geral
 
 #### 📡 Ativos de Redes (Físicos)
-- [ ] Substituição/atualização dos Roteadores Principal/Secundário
-- [ ] Substituição do switch atual por um switch Gigabit
 - [ ] Substituição do TP-Link antigo das câmeras e melhorias no sistema
+
 ##
 
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
