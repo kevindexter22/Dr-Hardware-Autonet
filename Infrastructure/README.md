@@ -63,7 +63,11 @@ graph TD
         PVE --- FIPA[FreeIPA]:::services
     end
     subgraph S6 [Containeres Docker];
-        Docker --- Trillium[Trillium Note]:::services
+        Docker --- TRILLIUM[Trillium Note]:::services
+        Docker --- SIYUAN[SiYuan Note]:::services
+        Docker --- EMBY[Emby]:::services
+        Docker --- MSPEED[MySpeed]:::services
+        Docker --- N8N[N8N]:::services
         Docker --- ZP02[Zabbix Proxy]:::services
     end
     end
