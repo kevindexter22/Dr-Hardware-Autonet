@@ -58,19 +58,24 @@ graph TD
         HP --- PVE[Proxmox VE]:::services        
     end
 
-    %% 4. Internet (The Bridge)
-    subgraph S6 [4. ISP/Internet]
+    %% 4. CONTAINERES     
+    subgraph S6 [4. Containeres];
+        Docker[Docker] --- Trillium[Trillium Note]:::services
+    end
+
+    %% 5. Internet (The Bridge)
+    subgraph S7 [5. ISP/Internet]
            internet[Internet]:::internet
     end
 
-    %% 5. Oracle Cloud Infrastructure
-    subgraph S7 [5. OCI]
+    %% 6. Oracle Cloud Infrastructure
+    subgraph S8 [6. OCI]
         ZS[Zabbix Server - Grafana]:::oci
     end
 
     %% Conections of data flow
-    ONT <--> S6
-    S6 <--> S7
+    ONT <--> S7
+    S7 <--> S8
     
     %% Logical conections
     ZA -.-> |Metrics| ZS
