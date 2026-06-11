@@ -48,6 +48,7 @@ graph TD
 
     %% 3. SERVICES     
     subgraph S5 [3. Services];
+        HP --- PVE[Proxmox VE]:::services        
         RPi4B --- Docker[Docker]:::services
         RPi4B --- VPN[VPN Server]:::services
         RPi4B --- ZA[Zabbix Agent]:::services
@@ -55,7 +56,6 @@ graph TD
         RPi3B_2 --- ZP[Zabbix Proxy]:::services
         RPi3B_1 --- ZP[Zabbix Proxy]:::services
         RPi3B_1 --- SMB1[Samba]:::services
-        HP --- PVE[Proxmox VE]:::services        
     end
 
     %% 4. CONTAINERES     
