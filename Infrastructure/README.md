@@ -41,6 +41,8 @@ graph TD
     subgraph S4 [Local 02]
         R_Mesh2 ---> SW2[Switch Overtek 8p]:::network
         SW2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
+        SW2 ---> RPi3B_3[Raspberry Pi 3B - FreeRadius]:::hardware
+        SW2 ---> RPi3B_4[Raspberry Pi 3B - ???]:::hardware
     end
     end
 
