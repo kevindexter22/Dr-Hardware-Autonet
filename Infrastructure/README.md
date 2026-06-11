@@ -28,6 +28,7 @@ graph TD
     end
     subgraph S2 [Local 02]
         R_Mesh1 --> R_Mesh2[TP-Link EX521 Mesh]:::network
+        R_Mesh2 ---> SW2[Switch Overtek 8p]:::network
     end
     end
     
@@ -39,7 +40,6 @@ graph TD
         SW1 ---> RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
     end
     subgraph S4 [Local 02]
-        R_Mesh2 ---> SW2[Switch Overtek 8p]:::network
         SW2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
         SW2 ---> RPi3B_3[Raspberry Pi 3B - FreeRadius]:::hardware
         SW2 ---> RPi3B_4[Raspberry Pi 3B - ???]:::hardware
@@ -78,8 +78,8 @@ graph TD
 
     %% --- Set collor on conections ---
     
-    linkStyle 0,1,2,3 stroke:#3498db,stroke-width:3px;
-    linkStyle 4,5,6,7 stroke:#7FFFD4,stroke-width:3px;
+    linkStyle 0,1,2,3,4 stroke:#3498db,stroke-width:3px;
+    linkStyle 5,6,7 stroke:#7FFFD4,stroke-width:3px;
     linkStyle 8,9,10,11,12,13,14,15 stroke:#E6E6FA,stroke-width:3px;
     linkStyle 16 stroke:#FFFF00,stroke-width:3px;
     linkStyle 17,18,19 stroke:#F5FFFA,stroke-width:3px,stroke-dasharray: 5 5;
