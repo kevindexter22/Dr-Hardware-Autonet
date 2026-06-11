@@ -55,7 +55,7 @@ graph TD
         RPi4B --- ZA[Zabbix Agent]:::services
         RPi3B_2 --- ZP[Zabbix Proxy]:::services
         RPi3B_2 --- ZA[Zabbix Agent]:::services
-        RPi3B_1 --- ZP[Zabbix Agent]:::services
+        RPi3B_1 --- ZA[Zabbix Agent]:::services
         RPi3B_1 --- SMB1[Samba]:::services
     end
     subgraph S6 [Containeres];
