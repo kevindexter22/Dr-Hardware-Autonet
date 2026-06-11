@@ -56,7 +56,7 @@ graph TD
         RPi4B --- SMB2[Samba v2/3]:::services
         RPi4B --- ZA[Zabbix Agent]:::services
         RPi3B_2 --- ZA[Zabbix Agent]:::services
-        RPi3B_2 --- ZP01[Zabbix Proxy]:::services
+        RPi3B_2 --- ZP01[Zabbix Proxy 01]:::services
         RPi3B_1 --- SMB1[Samba v1]:::services
     end
     subgraph S5 [Containeres LXC];
@@ -68,7 +68,7 @@ graph TD
         Docker --- EMBY[Emby]:::services
         Docker --- MSPEED[MySpeed]:::services
         Docker --- N8N[N8N]:::services
-        Docker --- ZP02[Zabbix Proxy]:::services
+        Docker --- ZP02[Zabbix Proxy 02]:::services
     end
     end
 
