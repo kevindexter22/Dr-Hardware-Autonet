@@ -49,7 +49,7 @@ graph TD
     %% 3. SERVICES
     subgraph Principal03["3. SERVICES"]
     subgraph S5 [Services];
-        HP --- PVE[Proxmox VE]:::services
+        HP --- PVE[Containeres LXC]:::services
         RPi4B --- Docker[Docker]:::services     
         RPi4B --- VPN[VPN Server]:::services
         RPi4B --- ZA[Zabbix Agent]:::services
