@@ -59,25 +59,29 @@ graph TD
         RPi3B_2 --- ZP01[Zabbix Proxy]:::services
         RPi3B_1 --- SMB1[Samba v1]:::services
     end
-    subgraph S5 [Containeres];
+    subgraph S5 [Containeres LXC];
+        PVE --- FIPA[FreeIPA]:::services
+    end
+    subgraph S6 [Containeres Docker];
         Docker --- Trillium[Trillium Note]:::services
         Docker --- ZP02[Zabbix Proxy]:::services
     end
     end
+    end
 
     %% 4. Internet (The Bridge)
-    subgraph S6 [4. ISP/Internet]
+    subgraph S7 [4. ISP/Internet]
            internet[Internet]:::internet
     end
 
     %% 5. Oracle Cloud Infrastructure
-    subgraph S7 [5. OCI]
+    subgraph S8 [5. OCI]
         ZS[Zabbix Server - Grafana]:::oci
     end
 
     %% Conections of data flow
-    ONT <--> S6
-    S6 <--> S7
+    ONT <--> S7
+    S7 <--> S8
     
     %% Logical conections
     ZA -.-> |Metrics| ZS
