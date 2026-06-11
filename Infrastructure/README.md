@@ -86,7 +86,7 @@ graph TD
     ZP01 -.-> |Metrics| ZS 
     ZP02 -.-> |Metrics| ZS
 
- %% --- Set collor on conections ---
+    %% --- Set collor on conections ---
     
     linkStyle 0,1,2,3,4 stroke:#3498db,stroke-width:3px;
     linkStyle 5,6,7,8,9,10,11 stroke:#7FFFD4,stroke-width:3px;
