@@ -61,6 +61,7 @@ graph TD
     subgraph S6 [Containeres]
         Docker[Docker] --- Trillium[Trillium Note]:::services
     end
+    end
 
     %% 4. Internet (The Bridge)
     subgraph S7 [4. ISP/Internet]
