@@ -34,12 +34,12 @@ graph TD
     
     %% 2. HARDWARE
     subgraph Principal02["2. Hardware"]
-    subgraph S4 [Local 01]
+    subgraph S3 [Local 01]
         SW1 ---> RPi3B_1[Raspberry Pi 3B - Arquivos_OPL]:::hardware
         SW1 ---> RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
         SW1 ---> RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
     end
-    subgraph S3 [Local 02]
+    subgraph S4 [Local 02]
         SW2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
         SW2 ---> RPi3B_3[Raspberry Pi 3B - FreeRadius]:::hardware
         SW2 ---> RPi3B_4[Raspberry Pi 3B - ???]:::hardware
@@ -52,10 +52,10 @@ graph TD
         RPi4B --- VPN[VPN Server]:::services
         RPi4B --- Docker[Docker]:::services
         RPi4B --- ZA[Zabbix Agent]:::services
-        RPi3B_2 --- ZA[Zabbix Agent]:::services
-        RPi3B_2 --- ZP[Zabbix Proxy]:::services
         RPi3B_1 --- ZP[Zabbix Proxy]:::services
         RPi3B_1 --- SMB1[Samba]:::services
+        RPi3B_2 --- ZA[Zabbix Agent]:::services
+        RPi3B_2 --- ZP[Zabbix Proxy]:::services
     end
 
     %% 4. CONTAINERES     
