@@ -67,7 +67,6 @@ graph TD
         Docker --- ZP02[Zabbix Proxy]:::services
     end
     end
-    end
 
     %% 4. Internet (The Bridge)
     subgraph S7 [4. ISP/Internet]
