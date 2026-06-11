@@ -50,6 +50,9 @@ graph TD
     subgraph Principal03["3. SERVICES"]
     subgraph S5 [Services];
         HP --- PVE[Containeres LXC]:::services
+        RPi3B_3 --- FreeRAD[FreeRADIUS]
+        RPi3B_3 --- BDMSQL[MySQL]
+        RPi3B_4 --- BDSSQL[MySQL]
         RPi4B --- Docker[Docker]:::services     
         RPi4B --- VPN[VPN Server]:::services
         RPi4B --- SMB2[Samba v2/3]:::services
