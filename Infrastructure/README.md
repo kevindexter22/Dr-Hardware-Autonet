@@ -39,7 +39,8 @@ graph TD
         SW1 ---> RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
     end
     subgraph S4 [Local 02]
-        R_Mesh2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
+        R_Mesh2 ---> SW2[Switch Overtek 8p]:::network
+        SW2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
     end
     end
 
