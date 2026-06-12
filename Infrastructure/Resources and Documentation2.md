@@ -1,1 +1,1 @@
-<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/Infrastructure/Resources%20and%20Documentation.md" target="_blank" rel="noopener noreferrer">🇧🇷 Portuguese</a></h6>
+<h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/Infrastructure/Resources%20and%20Documentation.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
