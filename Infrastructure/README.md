@@ -40,7 +40,7 @@ graph TD
     subgraph S3 [Local 02]
         SW2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
         SW2 ---> RPi3B_3[Raspberry Pi 3B - FreeRadius]:::hardware
-        SW2 ---> RPi3B_4[Raspberry Pi 3B - BD MySQL]:::hardware
+        SW2 ---> RPi3B_4[Raspberry Pi 3B - DNS Redundância]:::hardware
     end
     end
 
@@ -49,8 +49,8 @@ graph TD
     subgraph S4 [Services];
         HP --- PVE[Containeres LXC]:::services
         RPi3B_3 --- FreeRAD[FreeRADIUS]:::services
-        RPi3B_3 --- BDMSQL[MySQL Slave]:::services
-        RPi3B_4 --- BDSSQL[MySQL Master]:::services
+        RPi3B_3 --- BDMSQL[MySQL Master]:::services
+        RPi3B_4 --- UNB[Unbound]:::services
         RPi4B --- Docker[Docker]:::services     
         RPi4B --- VPN[VPN Server]:::services
         RPi4B --- SMB2[Samba v2/3]:::services
