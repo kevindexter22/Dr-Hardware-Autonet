@@ -106,11 +106,20 @@ Atualmente a topologia da infraestrutura está conforme o diagrama acima:
 
 Temos uma ONT Intelbras 121AC (vinda do meu ISP) configurada em bridge e linkada ao Roteador Mesh TP-Link EX521.
 
-O core principal conta com 2 roteadores TP-Link em mesh para uma maior cobertura e ambas estão conectadas via Cabo UTP para maior estabilidade.
+O core principal conta com 2 roteadores TP-Link em mesh, em dois locais diferentes, para uma maior cobertura e estão conectados via Cabo UTP para maior estabilidade, assim como o switch principal é um Switch Gigabit com 8 Portas.
 
-Como não disponho de espaço físico para um rack que centralizaria o homelab os servidores ficam descentralizados, de acordo com espaço do local e serviço que executarão.
+No local 01 possui 3 Raspberry Pi, sendo 2 modelo 3B e uma o modelo 4B com 4GB de memória. Todos com Ubuntu 24.04 LTS como sistema operacional. 
 
-Sendo assim os servidores e dispositivos ficam em locais separados, mas são gerenciados na mesma rede local.
+Em uma das Raspberry Pi 3B estou rodando o Zabbix Proxy e na outra possuo o Samba para utilização junto ao OPL para acesso local via rede (como o OPL só tem compatibilidade com o protocolo SMB 1.0 e ele possui diversas vulnerabilidades, esse servidor fica limitado ao acesso local somante e só é ligado nos momentos de utilização).
+
+Na Raspberry Pi 4B estou utilizando o Casa OS (que é basicamente um servidor docker com interface gráfica para gerência).
+Nele estou rodando diversos containeres com serviços direcionados ao meu uso pessoal.
+
+No local 02 possuo um notebook HP Pavilion G4 com Proxmox para execução de VMs e Containers LXC e 4 Raspberry Pi 3B onde vou executar mais alguns serviços. 
+
+Nos roteadores e servidores são feitas as configurações necessárias para garantir a segurança e integridade da infraestrutura, tais como redes wifi separadas da principal (para convidados e dispositivos IoT), firewalls e demais medidas necessárias. 
+
+Como não disponho de espaço físico para um rack que centralizaria todos os dispositivos e servidores do homelab, mantenho tudo descentralizados, de acordo com espaço do local e serviços que serão executados. Apesar desse detalhe, os dispositivos são gerenciados dentro da mesma rede local.
 
 ##
 
