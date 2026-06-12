@@ -121,6 +121,8 @@ Nele estou rodando diversos containeres com serviços direcionados ao meu uso pe
 
 No local 02 possuo um notebook HP Pavilion G4 com Proxmox para execução de VMs e Containers LXC e 4 Raspberry Pi 3B onde vou executar mais alguns serviços. 
 
+Possuo também VMs na Oracle Cloud onde armazeno alguns servidores que interagem com minha infraestrutura diretamente.
+
 Nos roteadores e servidores são feitas as configurações necessárias para garantir a segurança e integridade da infraestrutura, tais como redes wifi separadas da principal (para convidados e dispositivos IoT), firewalls e demais medidas necessárias. 
 
 Como não disponho de espaço físico para um rack que centralizaria todos os dispositivos e servidores do homelab, mantenho tudo descentralizados, de acordo com espaço do local e serviços que serão executados. Apesar desse detalhe, os dispositivos são gerenciados dentro da mesma rede local.
