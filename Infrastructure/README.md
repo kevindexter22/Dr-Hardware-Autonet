@@ -50,7 +50,7 @@ graph TD
         HP --- PVE[Containeres LXC]:::services
         RPi3B_3 --- FreeRAD[FreeRADIUS]:::services
         RPi3B_3 --- BDMSQL[MySQL Master]:::services
-        RPi3B_4 --- UNB[Unbound]:::services
+        RPi3B_4 --- UNB2[Unbound DNS]:::services
         RPi4B --- Docker[Docker]:::services     
         RPi4B --- VPN[VPN Server]:::services
         RPi4B --- SMB2[Samba v2/3]:::services
@@ -63,6 +63,7 @@ graph TD
         PVE --- FIPA[FreeIPA]:::services
     end
     subgraph S6 [Containeres Docker];
+        Docker --- UNB[Unbound DNS]:::services
         Docker --- TRILLIUM[Trillium Note]:::services
         Docker --- SIYUAN[SiYuan Note]:::services
         Docker --- EMBY[Emby]:::services
