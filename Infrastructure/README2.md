@@ -5,9 +5,10 @@
 
 ### 📝 Description
 
-The main goal of this folder is to provide all information about the physical structure, devices/hardware, and services in my homelab.
+The main goal of this folder is to bring all the information about the physical structure, devices/hardware, and services for my homelab.
 
-Here, I will show what is being built, the basic theory, the reason for the implementation, configuration files/scripts, and problems with their solutions found over time.
+Here, I will show what I am building. I will also show some theory, the reason for the implementation, config files/scripts, and problems with their solutions over time.
+
 ##
 
 ### 🏗️ Topology / Architecture
@@ -85,15 +86,25 @@ graph TD
 
 ```
 
-Currently, the infrastructure topology follows the plan below:
+Today, the infrastructure topology is like the diagram above:
 
-We have an Intelbras 121AC ONT (from my ISP) in bridge mode, connected to the TP-Link EX521 Mesh Router.
+We have an ONT Intelbras 121AC (from my ISP) in bridge mode and connected to the TP-Link EX521 Mesh Router.
 
-The main router (Huawei) has two towers for better coverage. Both are connected via UTP cable for more stability.
+The main core has 2 TP-Link mesh routers in two different places. This gives better coverage. They are connected via UTP Cable for more stability. The main switch is an 8-Port Gigabit Switch.
 
-I don't have physical space for a rack to centralize the homelab. So, the servers are in different places, depending on the space and the service they run.
+In Location 01, I have 3 Raspberry Pis. Two are model 3B and one is model 4B with 4GB of memory. They all run Ubuntu 24.04 LTS as the operating system.
 
-Because of this, the servers and devices stay in separate rooms, but I manage them on the same local network.
+On one Raspberry Pi 3B, I am running Zabbix Proxy. On the other, I have Samba to use with OPL for local network access. (Because OPL is only compatible with the SMB 1.0 protocol and it has many vulnerabilities, this server is limited to local access only. It is only turned on when I use it).
+
+On the Raspberry Pi 4B, I use Casa OS (which is basically a Docker server with a visual interface for management). On it, I run many containers with services for my personal use.
+
+In Location 02, I have an HP Pavilion G4 notebook with Proxmox to run VMs and LXC Containers. I also have 4 Raspberry Pi 3Bs where I will run some more services.
+
+I also have VMs in Oracle Cloud, where I store some servers that work directly with my infrastructure.
+
+On the routers and servers, I make the necessary configs to guarantee the safety and integrity of the infrastructure. For example, separate Wi-Fi networks (for guests and IoT devices), firewalls, and other necessary measures.
+
+Because I don't have physical space for a rack to put all the homelab devices and servers together, I keep everything decentralized, depending on the space and the services. Even with this detail, all devices are managed on the same local network.
 
 ##
 
@@ -102,26 +113,27 @@ Because of this, the servers and devices stay in separate rooms, but I manage th
 #### 🗄️ Hardware and Virtualization
 - [x] Raspberry Pi 4B 4GB: Running CasaOS, which is a simple environment to manage Docker containers
 - [x] HP Pavilion G4: Running Proxmox VE, which is a Hypervisor to manage VMs and containers (LXC)
-- [x] Raspberry Pi 3B: I have some units running Ubuntu 24.04 LTS with specific services
+- [x] Raspberry Pi 3B: I have some running Ubuntu 24.04 LTS with specific services
 
 #### 🤖 Automation and Scripting
 ##### 🧩 *Shell Script (Bash)*
-- [x] Ubuntu Post-Install: Automation script to configure and standardize Desktops and Laptops
-- [x] Update Tool: Script for centralized updates (apt, snap, flatpak, and .deb packages)
-- [x] Drive Persistence: Ensures external HDDs stay connected for network services and OPL
-- [x] Smart Shutdown: Script to turn off the Samba_OPL host automatically based on the PS2 state
+- [x] Ubuntu Post-Install: Automation script to configure and standardize Desktops and Notebooks
+- [x] Update Tool: Script for central updates (apt, snap, flatpak, and .deb packages)
+- [x] Drive Persistence: Guarantees the persistence of External HD mount points for network services and OPL
+- [x] Smart Shutdown: Script for smart shutdown of the Samba_OPL Host based on the PS2 state
 
 #### 📊 Monitoring and Services
 - [x] Zabbix Stack: Main server on OCI with Proxy for decentralized network monitoring
-- [x] Grafana: Advanced dashboards for metrics and hardware health
+- [x] Grafana: Advanced dashboards to see metrics and hardware health
 - [x] Samba server (OPL): Dedicated file server to load PS2 games
-- [x] Docker Ecosystem: Several microservices running via Docker
+- [x] Docker Ecosystem: Many microservices implemented via Docker
 
 #### 📡 Network Devices (Physical)
 - [x] ONT/Modem: Intelbras - installed by my ISP
-- [x] Main/Secondary Router: 2x Huawei WS5800 - Creating a mesh network for better coverage
-- [x] Switch: Overtek 8 Ports - Where I connect devices that don't need gigabit speed
-- [x] TP-Link router with OpenWRT - Where I connect my IP cameras
+- [x] Main/Secondary Router: 2x TP-Link EX521 - Making a mesh network for better coverage
+- [X] Replaced the main switch with a Gigabit switch
+- [x] Switch: Overtek OT2808S/W/UX 8 Ports - Where I connect devices that don't need gigabit speed
+- [x] Router TP-Link wr841n with OpenWRT - Where I connect my IP cameras
 ##
 
 ### 🗓️ Roadmap (Future Steps)
@@ -132,51 +144,48 @@ Because of this, the servers and devices stay in separate rooms, but I manage th
 
 #### 🤖 Automation and Scripting
 ##### 🧩 *Shell Script (Bash)*
-- [ ] Automated backups for configuration files and important databases
-- [ ] Healthcheck and connectivity script for the VPN Tunnel
-- [ ] Script to generate reports for PHPIPAM
+- [ ] Backup automation for config files and dump of the most important databases
+- [ ] Healthcheck and connection script for the VPN Tunnel
+- [ ] Script to generate Netbox reports
 - [ ] Healthcheck script for FreeRADIUS
-- [ ] Watchdog for MySQL Master-Master synchronization
-- [ ] DNS Blacklist automation (DIY "Pi-hole" with Unbound)
-- [ ] Backup of server, service and DB configs
+- [ ] Sync watchdog for MySQL Master-Master
+- [ ] DNS Blacklist automation
+- [ ] Backup configs for each server, service, and database
 
 ##### 💊 *Remediation Scripts*
 - [ ] Zabbix + Proxmox API
 - [ ] Zabbix + Genie: Automatic Wi-Fi channel change or remote reboot
 
 ##### 🏗️ *Infrastructure as Code (IaC) and Configuration*
-- [ ] Provisioning Microservices with Terraform: Create a full structure in Proxmox
-- [ ] IP Life Cycle: Use Terraform with phpIPAM to check available IPs
-- [ ] "Post-Boot" Configuration: Use Ansible to install services via SSH
-- [ ] Template and immutability management: A process to download OS images and convert them into templates using Ansible
+- [ ] Microservices Provisioning with Terraform: Provision a complete structure on Proxmox
+- [ ] IP Lifecycle: Use Terraform as a Netbox client checking available IPs
+- [ ] "Post-Boot" Configuration: Connect SSH with Ansible and install the necessary services
+- [ ] Template and immutability management: A process checks and downloads the current OS image and Ansible makes a template
 - [ ] Ansible for ACS: Standardize Provisioning Flows and vparams in GenieACS
 
 ##### 🔄 *Orchestration and Management*
-- [ ] GitOps: Save scripts and playbooks on GitHub for version control
-- [ ] Rundeck Integration: Orchestrate analysis cycle Redis → Gemini API → Action via Ansible/GenieACS
+- [ ] GitOps: Store scripts and playbooks in repositories (GitHub) for versioning
+- [ ] Rundeck Integration: Orchestrate the analysis cycle Redis → Gemini API → Action via Ansible/GenieACS
 
 ##### 👁️‍🗨️ *Intelligent Observability (AIOps)*
-- [ ] Create Zabbix <-> Gemini API Webhook for root cause analysis (RCA)
-- [ ] Add Grafana Loki logs to alert messages
-- [ ] Test automatic fixes via Rundeck in the Homelab
-- [ ] TR-181 Telemetry Dashboard in Grafana: Signal/Noise and CPU of routers via Redis Data Source
-- [ ] Predictive Analysis: Use AI to analyze signal problems in Redis before the client notices
+- [ ] Create Webhook Zabbix <-> Gemini API for Root Cause Analysis (RCA)
+- [ ] Implement alert enrichment with Grafana Loki logs
+- [ ] Validate auto-fix suggestions via Rundeck in the Homelab
+- [ ] TR-181 Telemetry Dashboard in Grafana: View Signal/Noise and CPU of routers via Redis Data Source
+- [ ] Predictive Analysis: Use Gemini to analyze signal drop trends in Redis before the client notices
 
 #### 📊 Monitoring and Services
-- [ ] PHPIPAM: IP address management
-- [ ] GenieACS: Central management for devices via TR-069/TR-098 or TR-181
-- [ ] FreeIPA: Central identity, authentication, and policy management
-- [ ] Prometheus: Monitoring and metrics with real-time alerts
-- [ ] Pi-hole + Unbound DNS: Private DNS with ad-blocking
-- [ ] DNS Collector + Grafana LOKI: Collect and analyze DNS logs
-- [ ] Redundancy for Essential Services: Create backups for main services
-- [ ] FreeRADIUS + MySQL: AAA authentication with database for access control
-- [ ] Zabbix VAE (Virtual Appliance Edition): Hardware monitoring and native Proxmox integration
-- [ ] Grafana: Create general dashboards
+- [ ] Netbox: IP address management
+- [ ] GenieACS: Access centralization and management via TR-069/TR-098 or TR-181
+- [ ] FreeIPA: Central management of identities, authentications, and policies
+- [ ] Unbound DNS: Private DNS
+- [ ] DNS Collector + Grafana LOKI: Collect and index DNS logs for analysis and observability
+- [ ] Redundancy for Essential Services: Create backups for main services in case of failure
+- [ ] Freeradius + MySQL: AAA Authentication with database for access control and accounting
+- [ ] Zabbix VAE (Virtual Appliance Edition): Hardware Monitoring, SNMP, and Native Proxmox Integration
+- [ ] Grafana: Creation of general dashboards
 
 #### 📡 Network Devices (Physical)
-- [ ] Replace or update the Main/Secondary routers
-- [ ] Replace the current switch with a Gigabit switch
 - [ ] Replace the old TP-Link for cameras and improve the system
 
 ##
