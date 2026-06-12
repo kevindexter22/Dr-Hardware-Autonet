@@ -100,9 +100,9 @@ graph TD
     
     linkStyle 0,1,2,3,4 stroke:#3498db,stroke-width:3px;
     linkStyle 5,6,7,8,9,10,11,12 stroke:#7FFFD4,stroke-width:3px;
-    linkStyle 13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32 stroke:#E6E6FA,stroke-width:3px;
-    linkStyle 33 stroke:#FFFF00,stroke-width:3px;
-    linkStyle 34,35,36,37 stroke:#F5FFFA,stroke-width:3px,stroke-dasharray: 5 5;
+    linkStyle 13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33 stroke:#E6E6FA,stroke-width:3px;
+    linkStyle 34 stroke:#FFFF00,stroke-width:3px;
+    linkStyle 35,36,37,38 stroke:#F5FFFA,stroke-width:3px,stroke-dasharray: 5 5;
 
 ```
 
