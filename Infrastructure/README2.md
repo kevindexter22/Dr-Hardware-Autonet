@@ -24,65 +24,88 @@ graph TD
 
     %% 1. NETWORK EQUIPMENT
     subgraph Principal["1. Network Equipment"]
-    subgraph S1 [Local 01]
+    subgraph S1 [CORE]
         ONT[ONT Intelbras - Bridge]:::network --> R_Mesh1[TP-Link EX521 Mesh]:::network
-        R_Mesh1 --> R_Cams[TP-Link DD-WRT Cam]:::network 
-        R_Mesh1 --> SW1[Switch TP-Link 8p]:::network  
-    end
-    subgraph S2 [Local 02]
         R_Mesh1 --> R_Mesh2[TP-Link EX521 Mesh]:::network
+        R_Mesh1 --> SW1[Switch TP-Link 8p]:::network
+        R_Mesh1 --> R_Cams[TP-Link DD-WRT Cam]:::network
+        R_Mesh2 ---> SW2[Switch Overtek 8p]:::network  
     end
     end
     
     %% 2. HARDWARE
     subgraph Principal02["2. Hardware"]
-    subgraph S3 [Local 01]
-        SW1 ---> RPi3B_1[Raspberry Pi 3B - Arquivos_OPL]:::hardware
+    subgraph S2 [Local 01]
         SW1 ---> RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
         SW1 ---> RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
+        SW1 ---> RPi3B_1[Raspberry Pi 3B - Arquivos_OPL]:::hardware
     end
-    subgraph S4 [Local 02]
-        R_Mesh2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
+    subgraph S3 [Local 02]
+        SW2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
+        SW2 ---> RPi3B_4[Raspberry Pi 3B - DNS Redundância]:::hardware
+        SW2 ---> RPi3B_5[Raspberry Pi 3B - ???]:::hardware
+        SW2 ---> RPi3B_6[Raspberry Pi 3B - ???]:::hardware
+        SW2 ---> RPi3B_3[Raspberry Pi 3B - FreeRadius]:::hardware
     end
     end
 
-    %% 3. SERVICES     
-    subgraph S5 [3. Services];
-        RPi4B --- Docker[Docker]:::services
+    %% 3. SERVICES
+    subgraph Principal03["3. SERVICES"]
+    subgraph S4 [Services];
+        HP --- PVE[Containeres LXC]:::services
+        RPi3B_4 --- UNB2[Unbound DNS]:::services
+        RPi3B_5 --- 01[???]:::services
+        RPi3B_6 --- 02[???]:::services
+        RPi3B_3 --- FreeRAD[FreeRADIUS]:::services
+        RPi3B_3 --- BDMSQL[MySQL Master]:::services
+        RPi4B --- Docker[Docker]:::services     
         RPi4B --- VPN[VPN Server]:::services
+        RPi4B --- SMB2[Samba v2/3]:::services
         RPi4B --- ZA[Zabbix Agent]:::services
         RPi3B_2 --- ZA[Zabbix Agent]:::services
-        RPi3B_2 --- ZP[Zabbix Proxy]:::services
-        RPi3B_1 --- ZP[Zabbix Proxy]:::services
-        RPi3B_1 --- SMB1[Samba]:::services
-        HP --- PVE[Proxmox VE]:::services        
+        RPi3B_2 --- ZP01[Zabbix Proxy 01]:::services
+        RPi3B_1 --- SMB1[Samba v1]:::services
+    end
+    subgraph S5 [Containeres LXC];
+        PVE --- FIPA[FreeIPA]:::services
+    end
+    subgraph S6 [Containeres Docker];
+        Docker --- UNB[Unbound DNS]:::services
+        Docker --- TRILLIUM[Trillium Note]:::services
+        Docker --- SIYUAN[SiYuan Note]:::services
+        Docker --- EMBY[Emby]:::services
+        Docker --- MSPEED[MySpeed]:::services
+        Docker --- N8N[N8N]:::services
+        Docker --- ZP02[Zabbix Proxy 02]:::services
+    end
     end
 
     %% 4. Internet (The Bridge)
-    subgraph S6 [4. ISP/Internet]
+    subgraph S7 [4. ISP/Internet]
            internet[Internet]:::internet
     end
 
     %% 5. Oracle Cloud Infrastructure
-    subgraph S7 [5. OCI]
+    subgraph S8 [5. OCI]
         ZS[Zabbix Server - Grafana]:::oci
     end
 
     %% Conections of data flow
-    ONT <--> S6
-    S6 <--> S7
+    ONT <--> S7
+    S7 <--> S8
     
     %% Logical conections
     ZA -.-> |Metrics| ZS
-    ZP -.-> |Metrics| ZS 
+    ZP01 -.-> |Metrics| ZS 
+    ZP02 -.-> |Metrics| ZS
 
     %% --- Set collor on conections ---
     
-    linkStyle 0,1,2,3 stroke:#3498db,stroke-width:3px;
-    linkStyle 4,5,6,7 stroke:#7FFFD4,stroke-width:3px;
-    linkStyle 8,9,10,11,12,13,14,15 stroke:#E6E6FA,stroke-width:3px;
-    linkStyle 16 stroke:#FFFF00,stroke-width:3px;
-    linkStyle 17,18,19 stroke:#F5FFFA,stroke-width:3px,stroke-dasharray: 5 5;
+    linkStyle 0,1,2,3,4 stroke:#3498db,stroke-width:3px;
+    linkStyle 5,6,7,8,9,10,11,12 stroke:#7FFFD4,stroke-width:3px;
+    linkStyle 13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33 stroke:#E6E6FA,stroke-width:3px;
+    linkStyle 34 stroke:#FFFF00,stroke-width:3px;
+    linkStyle 35,36,37,38 stroke:#F5FFFA,stroke-width:3px,stroke-dasharray: 5 5;
 
 ```
 
