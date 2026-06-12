@@ -39,10 +39,10 @@ graph TD
     end
     subgraph S3 [Local 02]
         SW2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
-        SW2 ---> RPi3B_4[Raspberry Pi 3B - DNS Redundância]:::hardware
-        SW2 ---> RPi3B_3[Raspberry Pi 3B - FreeRadius]:::hardware
         SW2 ---> RPi3B_5[Raspberry Pi 3B - ???]:::hardware
         SW2 ---> RPi3B_6[Raspberry Pi 3B - ???]:::hardware
+        SW2 ---> RPi3B_4[Raspberry Pi 3B - DNS Redundância]:::hardware
+        SW2 ---> RPi3B_3[Raspberry Pi 3B - FreeRadius]:::hardware
     end
     end
 
