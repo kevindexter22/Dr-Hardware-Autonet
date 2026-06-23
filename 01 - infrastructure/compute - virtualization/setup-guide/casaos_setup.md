@@ -74,7 +74,10 @@ http://192.168.x.x
 
 <p align="center">
 <img src="https://github.com/user-attachments/assets/6c2f6ad1-a813-4bc5-8ac5-6fcff1a63da9" alt="image1" width="300"/>
-
+<img src="https://github.com/user-attachments/assets/176e9110-e186-4644-b9ad-b6f201a5dde9" alt="image2" width="300"/>
+<br>
+<img src="https://github.com/user-attachments/assets/511c4573-5fa3-4946-8da5-21ab25fdcfb9" alt="image3" width="300"/>
+<img src="https://github.com/user-attachments/assets/7cd12e79-e2ae-4d43-b797-0378b28e7be9" alt="image4" width="300"/>
 </p>
 
 ---
