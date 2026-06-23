@@ -1,18 +1,18 @@
 <h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/Infrastructure/Compute-Virtualization/Setup-Guide/Raspberry_Pi_Setup.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
-# 🛠️ SOP: Provisionando Bare-Metal - Raspberry Pi
+# 🛠️ (SOP) Provisionando Bare-Metal - Raspberry Pi
 
 ### 📝 Descrição e Escopo
 
 Este documento define o Procedimento Operacional Padrão (SOP) para o provisionamento inicial dos nós de processamento baseados em arquitetura ARM (Raspberry Pi). 
 
-O objetivo é preparar a imagem do Sistema Operacional base (Ubuntu Server ou Raspberry Pi OS) de forma manual (sem necessidade de interface de vídeo/teclado local), injetando configurações de rede L2/L3 e credenciais de acesso remoto (via *Cloud-Init*) diretamente no armazenamento físico (Micro-SD). Isso prepara o nó de *Compute* para posterior integração e gerência automatizada via *Infraestructure as Code* (IaC).
+O objetivo é preparar a imagem do Sistema Operacional base (Ubuntu Server ou Raspberry Pi OS) de forma manual (sem necessidade de interface de vídeo/teclado local), injetando configurações de rede L2/L3 e credenciais de acesso remoto (via *Cloud-Init*) diretamente no armazenamento físico (Micro-SD). Isso prepara a instância para posterior integração e gerência automatizada via *Infraestructure as Code* (IaC) ou para a instalçao de serviços nativamente.
 
 ---
 
 ### 💾 Fase 1: Preparação da Mídia Física (Camada 1 / L1)
 
-Para garantir a integridade dos blocos de dados e evitar falhas de alocação em cartões previamente utilizados na infraestrutura, realizamos o *Erase* completo utilizando a ferramenta **Raspberry Pi Imager**.
+Para garantir a integridade dos blocos de dados e evitar falhas de alocação em cartões previamente utilizados na infraestrutura, realizamos a formatação do cartão Micro-SD utilizando a ferramenta **Raspberry Pi Imager**.
 
 #### 1. Limpeza da Tabela de Partições
 1. Abra o Raspberry Pi Imager.
