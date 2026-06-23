@@ -13,101 +13,115 @@ Here, I will show what I am building. I will also show some theory, the reason f
 
 ### 🏗️ Topology / Architecture
 
+#### L1-L2 Diagram: Physical Topology e Data Link
+
 ```mermaid
+
 graph TD
-    %% Styles
-    classDef network fill:#383838,stroke:#FFFFFF,stroke-width:2px;
-    classDef hardware fill:#383838,stroke:#FFFFFF,stroke-width:2px;
-    classDef internet fill:#383838,stroke:#FFFFFF,stroke-width:2px,stroke-dasharray: 5 5;
-    classDef services fill:#383838,stroke:#FFFFFF,stroke-width:2px, stroke-dasharray: 2 3;
-    classDef oci fill:#383838,stroke:#FFFFFF,stroke-width:2px;
-
-    %% 1. NETWORK EQUIPMENT
-    subgraph Principal["1. Network Equipment"]
-    subgraph S1 [CORE]
-        ONT[ONT Intelbras - Bridge]:::network --> R_Mesh1[TP-Link EX521 Mesh]:::network
-        R_Mesh1 --> R_Mesh2[TP-Link EX521 Mesh]:::network
-        R_Mesh1 --> SW1[Switch TP-Link 8p]:::network
-        R_Mesh1 --> R_Cams[TP-Link DD-WRT Cam]:::network
-        R_Mesh2 ---> SW2[Switch Overtek 8p]:::network  
-    end
-    end
+    %% L1/L2 Style Classes
+    classDef firewall fill:#c0392b,stroke:#FFFFFF,stroke-width:2px,color:#fff;
+    classDef network fill:#2c3e50,stroke:#FFFFFF,stroke-width:2px,color:#fff;
+    classDef compute fill:#2980b9,stroke:#FFFFFF,stroke-width:2px,color:#fff;
     
-    %% 2. HARDWARE
-    subgraph Principal02["2. Hardware"]
-    subgraph S2 [Local 01]
-        SW1 ---> RPi4B[Raspberry Pi 4B - CasaOS]:::hardware
-        SW1 ---> RPi3B_2[Raspberry Pi 3B - Zabbix Proxy]:::hardware
-        SW1 ---> RPi3B_1[Raspberry Pi 3B - Arquivos_OPL]:::hardware
-    end
-    subgraph S3 [Local 02]
-        SW2 ---> HP[HP Pavilion - Proxmox VE]:::hardware
-        SW2 ---> RPi3B_4[Raspberry Pi 3B - DNS Redundância]:::hardware
-        SW2 ---> RPi3B_5[Raspberry Pi 3B - ???]:::hardware
-        SW2 ---> RPi3B_6[Raspberry Pi 3B - ???]:::hardware
-        SW2 ---> RPi3B_3[Raspberry Pi 3B - FreeRadius]:::hardware
-    end
+    subgraph WAN [ISP / Edge]
+        ONT[Intelbras ONT <br/>Bridge Mode]:::firewall
     end
 
-    %% 3. SERVICES
-    subgraph Principal03["3. SERVICES"]
-    subgraph S4 [Services];
-        HP --- PVE[Containeres LXC]:::services
-        RPi3B_4 --- UNB2[Unbound DNS]:::services
-        RPi3B_5 --- 01[???]:::services
-        RPi3B_6 --- 02[???]:::services
-        RPi3B_3 --- FreeRAD[FreeRADIUS]:::services
-        RPi3B_3 --- BDMSQL[MySQL Master]:::services
-        RPi4B --- Docker[Docker]:::services     
-        RPi4B --- VPN[VPN Server]:::services
-        RPi4B --- SMB2[Samba v2/3]:::services
-        RPi4B --- ZA[Zabbix Agent]:::services
-        RPi3B_2 --- ZA[Zabbix Agent]:::services
-        RPi3B_2 --- ZP01[Zabbix Proxy 01]:::services
-        RPi3B_1 --- SMB1[Samba v1]:::services
-    end
-    subgraph S5 [Containeres LXC];
-        PVE --- FIPA[FreeIPA]:::services
-    end
-    subgraph S6 [Containeres Docker];
-        Docker --- UNB[Unbound DNS]:::services
-        Docker --- TRILLIUM[Trillium Note]:::services
-        Docker --- SIYUAN[SiYuan Note]:::services
-        Docker --- EMBY[Emby]:::services
-        Docker --- MSPEED[MySpeed]:::services
-        Docker --- N8N[N8N]:::services
-        Docker --- ZP02[Zabbix Proxy 02]:::services
-    end
+    subgraph CORE [L2 Core / Mesh]
+        R_Mesh1[TP-Link EX521<br/>Master Router]:::network
+        R_Mesh2[TP-Link EX521<br/>Mesh Node]:::network
+        
+        ONT ==>|WAN/PPPoE| R_Mesh1
+        R_Mesh1 ==>|UTP Backhaul| R_Mesh2
     end
 
-    %% 4. Internet (The Bridge)
-    subgraph S7 [4. ISP/Internet]
-           internet[Internet]:::internet
+    subgraph LOC_01 [Location 01 - Compute Edge]
+        SW1[TP-Link Switch<br/>8-Port Gigabit]:::network
+        R_Cams[TP-Link wr841n<br/>DD-WRT]:::network
+        RPi4B[Raspberry Pi 4B<br/>4GB]:::compute
+        RPi3B_1[Raspberry Pi 3B<br/>Zabbix Proxy]:::compute
+        RPi3B_2[Raspberry Pi 3B<br/>Samba OPL]:::compute
+
+        R_Mesh1 -->|Uplink| SW1
+        R_Mesh1 -->|Uplink| R_Cams
+        SW1 --- RPi4B
+        SW1 --- RPi3B_1
+        SW1 --- RPi3B_2
     end
 
-    %% 5. Oracle Cloud Infrastructure
-    subgraph S8 [5. OCI]
-        ZS[Zabbix Server - Grafana]:::oci
+    subgraph LOC_02 [Location 02 - Compute Core]
+        SW2[Overtek Switch<br/>8-Port Fast/Giga]:::network
+        HP[HP Pavilion G4<br/>Bare-metal]:::compute
+        RPi3B_3[Raspberry Pi 3B<br/>DNS/Radius]:::compute
+        RPi3B_4[Raspberry Pi 3B<br/>Extra Node]:::compute
+
+        R_Mesh2 -->|Uplink| SW2
+        SW2 --- HP
+        SW2 --- RPi3B_3
+        SW2 --- RPi3B_4
+    end
+```
+##
+
+#### L3-L7: Logical Architecture and OSS
+
+```mermaid
+
+graph TD
+    %% L3-L7 Style Classes
+    classDef hypervisor fill:#8e44ad,stroke:#FFFFFF,stroke-width:2px,color:#fff;
+    classDef oss fill:#27ae60,stroke:#FFFFFF,stroke-width:2px,color:#fff;
+    classDef coreService fill:#d35400,stroke:#FFFFFF,stroke-width:2px,color:#fff;
+    classDef cloud fill:#f39c12,stroke:#FFFFFF,stroke-width:2px,color:#fff;
+
+    subgraph VIM [Virtualization and Container Infrastructure]
+        PVE[Proxmox VE<br/>HP Pavilion]:::hypervisor
+        DOCKER[Docker Engine / CasaOS<br/>RPi 4B]:::hypervisor
+        NATIVE[Native Ubuntu Server<br/>RPi 3Bs]:::hypervisor
     end
 
-    %% Conections of data flow
-    ONT <--> S7
-    S7 <--> S8
-    
-    %% Logical conections
-    ZA -.-> |Metrics| ZS
-    ZP01 -.-> |Metrics| ZS 
-    ZP02 -.-> |Metrics| ZS
+    subgraph AAA_SEC [Control Plane: Security and IAM]
+        FIPA[FreeIPA - LXC]:::coreService
+        FRAD[FreeRADIUS - Native]:::coreService
+        PVE -.-> FIPA
+        NATIVE -.-> FRAD
+        FRAD -.->|LDAP Query| FIPA
+    end
 
-    %% --- Set collor on conections ---
-    
-    linkStyle 0,1,2,3,4 stroke:#3498db,stroke-width:3px;
-    linkStyle 5,6,7,8,9,10,11,12 stroke:#7FFFD4,stroke-width:3px;
-    linkStyle 13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33 stroke:#E6E6FA,stroke-width:3px;
-    linkStyle 34 stroke:#FFFF00,stroke-width:3px;
-    linkStyle 35,36,37,38 stroke:#F5FFFA,stroke-width:3px,stroke-dasharray: 5 5;
+    subgraph NET_SERVICES [Data Plane: Network and Storage Services]
+        UNB[Unbound DNS - Docker]:::coreService
+        SMB[Samba v2/v3 - Docker]:::coreService
+        VPN[VPN Server - Docker]:::coreService
+        
+        DOCKER -.-> UNB
+        DOCKER -.-> SMB
+        DOCKER -.-> VPN
+    end
+
+    subgraph OSS_MGMT [Management Plane: FCAPS Observability]
+        ZPX[Zabbix Proxy]:::oss
+        ZA[Zabbix Agents]:::oss
+        GRAF_LOKI[Grafana Loki / Promtail]:::oss
+        
+        DOCKER -.-> ZPX
+        NATIVE -.-> ZPX
+        NATIVE -.-> ZA
+    end
+
+    subgraph PUBLIC_CLOUD [Oracle Cloud OCI]
+        ZBS[Zabbix Server]:::cloud
+        GRAF[Grafana Dashboards]:::cloud
+    end
+
+    %% Data Mediation Flows (Ports Obfuscated)
+    ZA ==>|TCP/XXXX Metrics| ZPX
+    ZPX ==>|TCP/XXXX Trapper| ZBS
+    GRAF_LOKI -.->|Logs| GRAF
+    ZBS --- GRAF
 
 ```
+
+##
 
 Today, the infrastructure topology is like the diagram above:
 
