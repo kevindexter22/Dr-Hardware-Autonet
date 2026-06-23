@@ -1,0 +1,1 @@
+<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/Infrastructure/Compute-Virtualization/Setup-Guide/Raspberry_Pi_Setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
