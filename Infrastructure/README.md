@@ -119,7 +119,7 @@ graph TD
 ```
 ##
 
-Atualmente a topologia da infraestrutura está conforme o diagrama acima:
+Atualmente a topologia da infraestrutura está conforme os diagramas acima:
 
 Temos uma ONT Intelbras 121AC (vinda do meu ISP) configurada em bridge e linkada ao Roteador Mesh TP-Link EX521.
 
