@@ -35,7 +35,7 @@ sudo apt install curl -y
 
 ---
 
-### ⚙️ Instalando o CasaOS
+### ⚙️ Fase 2: Instalando o CasaOS
 
 A equipe responsável pelo CasaOS criou um script que automatiza a instalação.
 
@@ -46,3 +46,14 @@ Para utiliza-lo, execute o comando:
 curl -fsSL https://get.casaos.io | sudo bash
 ```
 *O que vai acontecer agora: O terminal vai mostrar uma tela de progresso. Esse processo pode levar de 2 a 10 minutos, dependendo da velocidade da sua internet e do modelo do seu Raspberry Pi, pois ele estará baixando a engine do Docker e as imagens do sistema.*
+
+Assim que o script terminar, ele geralmente exibe no terminal o endereço de acesso. 
+
+Se você não anotou ou passou rápido, descubra o IP local do seu Raspberry Pi utilizando o comando:
+```bash
+hostname -I
+```
+*Você verá um endereço no formato 192.168.x.x ou 10.x.x.x*
+
+---
+
