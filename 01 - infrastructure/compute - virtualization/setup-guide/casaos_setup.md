@@ -18,3 +18,11 @@ A função dessa ferramenta no cenário proposto é rodar alguns serviços essen
 
 ##
 
+### ⚙️ Preparação do sistema (Atualização)
+
+Antes de instalar qualquer serviço é preciso garantir que a base do sistema operacional está atualizada com os patches de segurança e os repositórios mais recentes.
+
+Para isso utilizamos o seguinte comando:
+```bash
+sudo apt update; sudo apt upgrade -y
+```
