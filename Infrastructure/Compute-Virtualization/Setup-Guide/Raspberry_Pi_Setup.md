@@ -97,3 +97,4 @@ Uma vez autenticado, o Bootstrap Bare-Metal está concluído. O nó encontra-se 
 
 ##
 
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
