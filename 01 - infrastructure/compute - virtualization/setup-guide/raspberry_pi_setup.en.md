@@ -8,7 +8,7 @@ This document defines the Standard Operating Procedure (SOP) for the first setup
 
 The goal is to prepare the base Operating System image (Ubuntu Server or Raspberry Pi OS) manually (without needing a local monitor or keyboard). We inject L2/L3 network settings and remote access credentials (via *Cloud-Init*) directly into the physical storage (Micro-SD). This prepares the node for future integration and automated management via *Infrastructure as Code* (IaC) or for native service installation.
 
----
+##
 
 ### 💾 Phase 1: Physical Media Preparation (Layer 1 / L1)
 
@@ -27,7 +27,7 @@ To ensure data block integrity and avoid errors on previously used cards in the 
   <img src="https://github.com/user-attachments/assets/e7333177-5124-4592-985b-43d2de2c97f3" width="300" />
 </p>
 
----
+##
 
 ### 🐧 Phase 2: Base Operating System Installation (OS / NFVI)
 
@@ -43,7 +43,7 @@ The lab architecture uses **Ubuntu Server** as the standard because it is stable
   <img src="https://github.com/user-attachments/assets/602d52e8-3d5b-4d8e-8c34-36d658a9c557" width="300" />
 </p>
 
----
+##
 
 ### ⚙️ Phase 3: Configuration Injection via Cloud-Init (Layers 2 and 3)
 
@@ -81,7 +81,7 @@ Add the output to the /media/<your_user>/bootfs/userconf.txt file using the key-
 admin_lab:$6$dU2DKSj1d8KE57Uy$Q.5BPFHoWNzupp7YQWbteJMt8/ANu...
 ```
 
----
+##
 
 ### ✅ Phase 4: Validation and Handover (Post-Boot)
 
