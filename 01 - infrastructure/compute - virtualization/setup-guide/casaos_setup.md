@@ -12,7 +12,7 @@ A função dessa ferramenta no cenário proposto é rodar alguns serviços essen
 
 ### ℹ️ Pré-requisitos
 
-Como ele é uma ferramenta instalada sobre uma distribuição base, é muito importante já estar com uma distribuição Linux devidamente instalada.
+Como ele é uma ferramenta instalada sobre um sistema base, é muito importante já estar com uma distribuição Linux devidamente instalada.
 
 ##
 
