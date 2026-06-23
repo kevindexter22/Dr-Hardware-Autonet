@@ -80,7 +80,7 @@ http://192.168.x.x
 <img src="https://github.com/user-attachments/assets/7cd12e79-e2ae-4d43-b797-0378b28e7be9" alt="image4" width="300" height="200"/>
 <br>
 </p>
-* **Ilustrações**: Desenvolvidas por [itsfoss](https://itsfoss.com/).
+* **Ilustrações**: Desenvolvidas por [itsfoss](https://itsfoss.com/).*
 
 ---
 
