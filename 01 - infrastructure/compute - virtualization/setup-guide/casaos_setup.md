@@ -66,7 +66,7 @@ http://192.168.x.x
 
 2. Na primeira vez que você acessar a página web, o CasaOS apresentará uma tela de boas-vindas pedindo para você criar a conta de administrador.
 
-3. Clique em "GO" ou "Create Account".
+3. Clique em *"GO"* ou *"Create Account"*.
 
 4. Defina o nome de usuário e uma senha forte.
 
