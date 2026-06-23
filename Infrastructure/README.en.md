@@ -122,7 +122,7 @@ graph TD
 
 ##
 
-Today, the infrastructure topology is like the diagram above:
+Today, the infrastructure topology is like the diagrams above:
 
 We have an ONT Intelbras 121AC (from my ISP) in bridge mode and connected to the TP-Link EX521 Mesh Router.
 
