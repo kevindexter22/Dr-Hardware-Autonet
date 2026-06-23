@@ -81,3 +81,5 @@ http://192.168.x.x
 - **Armazenamento externo:** Se for plugar um HD externo ou SSD na USB do Raspberry Pi, o CasaOS possui um gerenciador de arquivos nativo. Formate o disco preferencialmente em ext4 (padrão Linux) ou ExFAT para melhor performance.
 
 ##
+
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
