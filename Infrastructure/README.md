@@ -60,6 +60,7 @@ graph TD
     end
 
 ```
+##
 
 #### Diagrama L3 a L7: Arquitetura Lógica e Ecossistema OSS
 
@@ -117,6 +118,7 @@ graph TD
     ZBS --- GRAF
 
 ```
+##
 
 Atualmente a topologia da infraestrutura está conforme o diagrama acima:
 
