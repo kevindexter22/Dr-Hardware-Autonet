@@ -99,7 +99,7 @@ graph TD
     subgraph OSS_MGMT [Management Plane: Observabilidade FCAPS]
         ZPX[Zabbix Proxy]:::oss
         ZA[Zabbix Agents]:::oss
-        GRAF_LOKI[Grafana Loki / Promtail]:::oss
+        GRAF_LOKI[Grafana Loki / DNS Collector]:::oss
         
         DOCKER -.-> ZPX
         NATIVE -.-> ZPX
