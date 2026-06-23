@@ -33,4 +33,16 @@ sudo apt update; sudo apt upgrade -y
 sudo apt install curl -y
 ```
 
-###
+---
+
+### ⚙️ Instalando o CasaOS
+
+A equipe responsável pelo CasaOS criou um script que automatiza a instalação.
+
+Ele vai instalar o Docker (caso não esteja instalado), configurar as redes internas (bridges) e vai baixar os containeres do CasaOS.
+
+Para utiliza-lo, execute o comando:
+```bash
+curl -fsSL https://get.casaos.io | sudo bash
+```
+**O que vai acontecer agora: O terminal vai mostrar uma tela de progresso. Esse processo pode levar de 2 a 10 minutos, dependendo da velocidade da sua internet e do modelo do seu Raspberry Pi, pois ele estará baixando a engine do Docker e as imagens do sistema.**
