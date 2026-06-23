@@ -1,4 +1,4 @@
-<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01 - infrastructure/compute - virtualization/setup-guide/casaos_setup.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
+<img width="1975" height="977" alt="image" src="https://github.com/user-attachments/assets/0f04ca5d-d31c-4993-9b3d-3521680bed48" /><img width="1000" height="495" alt="image" src="https://github.com/user-attachments/assets/f5689f9a-bfb9-4fff-a7dd-56287c8df71f" /><h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01 - infrastructure/compute - virtualization/setup-guide/casaos_setup.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
 # 🛠️ (SOP) Instalando o CasaOS - Raspberry Pi
 
@@ -73,9 +73,8 @@ http://192.168.x.x
 5. Pronto! Você estará no Dashboard principal e já pode começar a instalar os aplicativos pela "App Store" nativa deles ou carregar seus docker-compose.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/cc4ade53-430a-43df-a0bf-151a01c8c28a" alt="image" width="300"/>
-  <img src="https://github.com/user-attachments/assets/ca692d40-cc25-45b3-9830-c550fc38cf1a" alt="image" width="300"/>
-  <img src="https://github.com/user-attachments/assets/bec9d425-5730-4f6d-af6b-f5163875fb86"  alt="image" width="300"/>
+<img src="https://github.com/user-attachments/assets/6c2f6ad1-a813-4bc5-8ac5-6fcff1a63da9" alt="image1" width="300"/>
+
 </p>
 
 ---
