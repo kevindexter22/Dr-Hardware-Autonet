@@ -1,4 +1,4 @@
-<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/README.md" target="_blank" rel="noopener noreferrer">🇧🇷 Portuguese</a></h6>
+<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/README.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 🏡 Welcome to Dr. Hardware Autonet
 
