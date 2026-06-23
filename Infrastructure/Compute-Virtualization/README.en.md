@@ -2,42 +2,42 @@
 
 # 🗄️ Compute & Virtualization
 
-### 📝 Descrição
+### 📝 Description
 
-Nesta seção, documento o inventário e a gestão de recursos computacionais do laboratório (NFVI), detalhando o hardware físico e a camada de virtualização/orquestração (VIM) responsável por particionar e entregar os recursos aos serviços.
+In this section, I document the lab's computer resources (NFVI). It shows the physical hardware and the virtualization layer (VIM) that divides and gives resources to the services.
 
 ---
 
-### 💻 Inventário de Hardware (Resource Pool)
+### 💻 Hardware Inventory (Resource Pool)
 
-| Dispositivo | Função Principal | CPU / Arquitetura | RAM | Storage | Conectividade (Rede) |
+| Device | Main Role | CPU / Architecture | RAM | Storage | Connectivity (Network) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| **HP Pavilion G4-1270BR** | Hypervisor Core | Core i5 3rd Gen (Dual 2.5GHz) | 8 GB DDR3 | 480 GB SSD + 750 GB HDD | Gigabit Ethernet (via adaptador/integrada) |
-| **Raspberry Pi 4B** | Container Host Edge | Cortex-A72 Quad-core (ARMv8 64-bit) | 4 GB LPDDR4 | 64 GB Micro-SD | Gigabit Ethernet, Wi-Fi 5 |
-| **Raspberry Pi 3B (x4)** | Micro-Serviços / Node | Cortex-A53 Quad-core (ARMv8 64-bit) | 1 GB LPDDR2 | 16/32 GB Micro-SD | Fast Ethernet (10/100), Wi-Fi 4 |
+| **HP Pavilion G4-1270BR** | Core Hypervisor | Core i5 3rd Gen (Dual 2.5GHz) | 8 GB DDR3 | 480 GB SSD + 750 GB HDD | Gigabit Ethernet (via adapter/integrated) |
+| **Raspberry Pi 4B** | Edge Container Host | Cortex-A72 Quad-core (ARMv8 64-bit) | 4 GB LPDDR4 | 64 GB Micro-SD | Gigabit Ethernet, Wi-Fi 5 |
+| **Raspberry Pi 3B (x4)** | Micro-Services / Node | Cortex-A53 Quad-core (ARMv8 64-bit) | 1 GB LPDDR2 | 16/32 GB Micro-SD | Fast Ethernet (10/100), Wi-Fi 4 |
 
 ---
 
-### 🛠️ Hypervisors e Runtimes (VIM / CaaS)
+### 🛠️ Hypervisors and Runtimes (VIM / CaaS)
 
-*   **CasaOS (RPi 4B):** Atua como o orquestrador principal de contêineres na borda. Fornece uma interface simplificada sobre o Docker Engine, agilizando a gestão e implantação de microsserviços via `docker-compose`.
-*   **Proxmox VE (HP Pavilion):** Hypervisor Bare-Metal responsável por isolar e gerenciar Máquinas Virtuais (VMs) e Contêineres de Sistema (LXC) para os serviços de infraestrutura mais pesados.
-*   **Ubuntu Server (Bare-Metal):** Sistema Operacional base adotado nativamente nas instâncias de Raspberry Pi 3B para execução direta de serviços com menor overhead (sem camada de virtualização).
-
----
-
-### 🚀 Políticas e Implementações Técnicas
-
-*   **Gestão de Recursos (Capacity Management):** Aplicação de *overprovisioning* controlado de vCPUs e RAM no Proxmox para maximizar a densidade de serviços e otimizar os custos energéticos do hardware legado.
-*   **Storage Persistence:** Padronização da montagem de volumes para o ecossistema Docker, utilizando ExFAT, NFS ou SMB, garantindo a persistência e a integridade dos dados operacionais fora do ciclo de vida dos contêineres.
+* **CasaOS (RPi 4B):** It is the main container manager on the edge. It gives a simple interface for the Docker Engine, making it fast to manage and start services with `docker-compose`.
+* **Proxmox VE (HP Pavilion):** Bare-Metal hypervisor. It isolates and manages Virtual Machines (VMs) and System Containers (LXC) for heavier infrastructure services.
+* **Ubuntu Server (Bare-Metal):** The base Operating System (OS) used directly on the Raspberry Pi 3B nodes. It runs services with less overhead (no virtualization layer).
 
 ---
 
-### 📂 Estrutura do Diretório
+### 🚀 Technical Policies and Implementations
+
+* **Resource Management (Capacity Management):** Controlled *overprovisioning* of vCPUs and RAM in Proxmox. This maximizes the number of services and saves energy on older hardware.
+* **Storage Persistence:** Standard volume mounts for the Docker environment using ExFAT, NFS, or SMB. This keeps the operational data safe and saved outside the containers.
+
+---
+
+### 📂 Directory Structure
 
 ```text
 01-infrastructure/compute-virtualization/
-├── 📄 README.md              # Visão Geral e Inventário de Hardware (Português)
-├── 📄 README.en.md           # Visão Geral e Inventário de Hardware (Inglês)
-├── 📂 setup-guides/          # Procedimentos Operacionais Padrão (SOPs) de provisionamento base
-└── 📂 templates/             # Imagens base, Cloud-Init e manifestos de infraestrutura
+├── 📄 README.md              # Overview and Hardware Inventory (Portuguese)
+├── 📄 README.en.md           # Overview and Hardware Inventory (English)
+├── 📂 setup-guides/          # Standard Operating Procedures (SOPs) for base setup
+└── 📂 templates/             # Base images, Cloud-Init, and infrastructure files
