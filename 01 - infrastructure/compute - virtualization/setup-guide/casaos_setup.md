@@ -82,7 +82,7 @@ http://192.168.x.x
 
 - **IP estático:** como trata-se de um servidor e você usará acessando a interface web, defina um IP estático caso não tenha feito. Você pode fazer isso nas configurações do Ubuntu Server ou reservando um endereço IP dentro de seu roteador.
   
-- **Armazenamento externo:** Se for plugar um HD externo ou SSD na USB do Raspberry Pi, o CasaOS possui um gerenciador de arquivos nativo. Formate o disco preferencialmente em ext4 (padrão Linux) ou ExFAT para melhor performance.
+- **Armazenamento externo:** Se for plugar um HD externo ou SSD na USB do Raspberry Pi, o CasaOS possui um gerenciador de arquivos nativo. Formate o disco preferencialmente em ext4 (padrão Linux) ou ExFAT para melhor compatibilidade e performance.
 
 ##
 
