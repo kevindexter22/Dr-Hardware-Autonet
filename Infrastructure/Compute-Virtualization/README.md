@@ -1,67 +1,43 @@
-<h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/Infrastructure/Compute-Virtualization/README.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 Inglês</a></h6>
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/Infrastructure/Compute-Virtualization/README.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
-# 🗄️ Virtualização e Containerização
+# 🗄️ Compute & Virtualization
 
 ### 📝 Descrição
 
-Nessa seção, documento a gestão de recursos computacionais, detalhando como o hardware é particionado para atender as demandas dos serviços.
+Nesta seção, documento o inventário e a gestão de recursos computacionais do laboratório (NFVI), detalhando o hardware físico e a camada de virtualização/orquestração (VIM) responsável por particionar e entregar os recursos aos serviços.
 
-##
+---
 
-### 💻 Hardware
+### 💻 Inventário de Hardware (Resource Pool)
 
-- HP Pavilion G4-1270BR
-  - Processador: Core i5 3th, Dual Core 2.5 GHz
-  - Memória RAM: 8 GB DDR3, 1600 MHz
-  - Armazenamento:
-    - SSD: Kingston 480 GB
-    - HDD: Sumsung 750 GB
-  - Graphics: Intel HD Graphics 6000
- 
-- Raspberry Pi 4B
-  - Processador: Broadcom BCM2711, Quad-core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5 GHz
-  - Memória RAM: 4GB LPDDR4-3200 SDRAM
-  - Armazenamento: Cartão Micro-SD 64 GB
-  - Conectividade:
-    - Wireless: Wi-Fi Dual-band 2.4 GHz e 5.0 GHz (802.11ac) e Bluetooth 5.0 (com BLE)
-    - Rede Cabeada: Gigabit Ethernet 10/100/1000 Mbps
-  - Portas USB: 2 portas USB 3.0 e 2 portas USB 2.0
+| Dispositivo | Função Principal | CPU / Arquitetura | RAM | Storage | Conectividade (Rede) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **HP Pavilion G4-1270BR** | Hypervisor Core | Core i5 3rd Gen (Dual 2.5GHz) | 8 GB DDR3 | 480 GB SSD + 750 GB HDD | Gigabit Ethernet (via adaptador/integrada) |
+| **Raspberry Pi 4B** | Container Host Edge | Cortex-A72 Quad-core (ARMv8 64-bit) | 4 GB LPDDR4 | 64 GB Micro-SD | Gigabit Ethernet, Wi-Fi 5 |
+| **Raspberry Pi 3B (x4)** | Micro-Serviços / Node | Cortex-A53 Quad-core (ARMv8 64-bit) | 1 GB LPDDR2 | 16/32 GB Micro-SD | Fast Ethernet (10/100), Wi-Fi 4 |
 
-- Raspberry Pi 3B
-  - Processador: Broadcom BCM2837, Quad-core Cortex-A53 (ARMv8) 64-bit SoC @ 1.2 GHz
-  - Memória RAM: 1 GB LPDDR2
-  - Armazenamento: Cartão Micro-SD 16 ou 32 GB
-  - Conectividade:
-    - Wireless: Wi-Fi 802.11n (2.4 GHz) e Bluetooth 4.1 (Classic e BLE)
-    - Rede Cabeada: Fast Ethernet 10/100 Mbps
-  - Portas USB: 4 portas USB 2.0
-  
-##
+---
 
-### 🛠️ Hypervisors e Runtimes
+### 🛠️ Hypervisors e Runtimes (VIM / CaaS)
 
-- CasaOS: Utilizado no servidor principal. Ele tem uma interface para gerenciamento de containers rodando sob o docker, permitindo assim, facilidade na gestão e instalação de serviços personalizados via docker compose.
-- Proxmox VE: Hypervisor para rodar máquinas virtuais e containers LXC para alguns serviços.
-- Ubuntu Server: Para instalação de serviços direto, sem virtualização ou containerização.
+*   **CasaOS (RPi 4B):** Atua como o orquestrador principal de contêineres na borda. Fornece uma interface simplificada sobre o Docker Engine, agilizando a gestão e implantação de microsserviços via `docker-compose`.
+*   **Proxmox VE (HP Pavilion):** Hypervisor Bare-Metal responsável por isolar e gerenciar Máquinas Virtuais (VMs) e Contêineres de Sistema (LXC) para os serviços de infraestrutura mais pesados.
+*   **Ubuntu Server (Bare-Metal):** Sistema Operacional base adotado nativamente nas instâncias de Raspberry Pi 3B para execução direta de serviços com menor overhead (sem camada de virtualização).
 
-##
+---
 
-### 🚀 Implementações Técnicas
+### 🚀 Políticas e Implementações Técnicas
 
-- Gestão de Recursos: Overprovisioning controlado de CPU e RAM para otimização de custos energéticos.
-- Storage Persistence: Montagem de volumes Docker via ExFAT/NFS/Samba para garantir persistência de dados fora dos containers.
+*   **Gestão de Recursos (Capacity Management):** Aplicação de *overprovisioning* controlado de vCPUs e RAM no Proxmox para maximizar a densidade de serviços e otimizar os custos energéticos do hardware legado.
+*   **Storage Persistence:** Padronização da montagem de volumes para o ecossistema Docker, utilizando ExFAT, NFS ou SMB, garantindo a persistência e a integridade dos dados operacionais fora do ciclo de vida dos contêineres.
 
-##
+---
 
 ### 📂 Estrutura do Diretório
 
 ```text
-📂 Virtualization & Workloads/
-├── 📄 README.md              # Visão Geral e Inventário de VMs
-├── 📄 README2.md             # Visão geral e Inventário de VMs (inglês)
-├── 📂 setup-guides/          # Pasta com os Manuais
-└── 📂 templates/             # Arquivos Prontos
-```
-##
-###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
-
+01-infrastructure/compute-virtualization/
+├── 📄 README.md              # Visão Geral e Inventário de Hardware (Português)
+├── 📄 README.en.md           # Visão Geral e Inventário de Hardware (Inglês)
+├── 📂 setup-guides/          # Procedimentos Operacionais Padrão (SOPs) de provisionamento base
+└── 📂 templates/             # Imagens base, Cloud-Init e manifestos de infraestrutura
