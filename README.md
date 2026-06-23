@@ -10,26 +10,34 @@
 
 ```text 
 Dr-Hardware-Autonet/
-├── 🏠 Infrastructure/                  # INFRAESTRUTURA REAL (Home Lab)
-│   ├── Virtualization and Workloads/   # Virtualização e Containerização (configs)
-│   ├── Network-Services/               # Serviços e Dispositivos (configs básicas)
-│   ├── Observability/                  # Observavilidade em Geral (dashboards e alertas)
-|   ├── Security-Auth/                  # Servidores e Ferramentas (segurança e auditoria)
-|   ├── Resources and Documentation.md  # Links das Documentações Oficiais e Downloads
-|   ├── README.md                       # Informações Gerais sobre essa Sessão
-│   └── README2.md                      # Informações Gerais sobre essa Sessão (inglês)
-├── 🧪 labs/                            # LABORATÓRIOS VIRTUAIS (Estudos e R&D)
-│   ├── Network-Lab/                    # Simulações de Redes (Packet Tracer/PNETLAB)
-│   ├── DevOps-Orchestration/           # Testes de Orquestração e Serviços
-│   └── Observability-Logging/          # Testes de Ingestão de Logs Complexos
-├── 🛠️ scripts/                         # Automações em Geral
-├── 📖 docs/                            # Documentação Geral
-│   ├── architecture/                   # Diagramas
-│   └── troubleshooting/                # Um guia de Desafios, Erros e Soluções
-├── .gitignore
-├── LICENSE
-├── README.md                           # O Painel de Controle do Projeto
-└── README2.md                          # O Painel de Controle do Projeto (inglês)
+├── 🏠 01-infrastructure/               # INFRAESTRUTURA FÍSICA E LÓGICA (Home Lab)
+│   ├── compute-virtualization/         # Hypervisors (Proxmox, ESXi) e Containers (K8s, Docker)
+│   ├── network-core/                   # Roteamento, Switching e Serviços Base (DHCP, DNS, BGP, OSPF)
+│   └── storage/                        # NAS, SAN, Ceph, etc.
+│
+├── ⚙️ 02-automation-iac/               # GESTÃO DE CONFIGURAÇÃO E AUTOMAÇÃO (Redução de MTTR)
+│   ├── ansible/                        # Playbooks para provisionamento e gerência de configuração
+│   ├── terraform/                      # IaC para provisionamento de recursos
+│   └── python-scripts/                 # Scripts customizados (Netmiko, NAPALM, APIs REST/ETL)
+│
+├── 👁️ 03-oss-management/               # SISTEMAS DE SUPORTE À OPERAÇÃO (FCAPS)
+│   ├── observability/                  # Métricas (Prometheus, Grafana), Logs (ELK/Loki) e Tracing
+│   ├── security-iam/                   # Autenticação, Autorização (Radius, TACACS+, Vault)
+│   └── alerts-mediation/               # Regras de alerta, webhooks e mediação de dados
+│
+├── 🧪 04-labs-rnd/                     # PESQUISA E DESENVOLVIMENTO (Simuladores e PoCs)
+│   ├── network-simulations/            # EVE-NG, GNS3, PNETLab, Packet Tracer
+│   └── devops-sandboxes/               # Testes isolados de orquestração e CI/CD
+│
+├── 📖 docs/                            # DOCUMENTAÇÃO OFICIAL E ENGENHARIA
+│   ├── architecture-diagrams/          # Topologias (L2/L3), fluxos de API e diagramas lógicos
+│   ├── runbooks-troubleshooting/       # Guias de mitigação de falhas (SOPs)
+│   └── standards-policies.md           # Políticas de IPAM, VLANs e nomenclaturas adotadas
+│
+├── .gitignore                          # Exclusão de arquivos sensíveis (.env, tfstate, etc.)
+├── LICENSE                             # Licenciamento do projeto
+├── README.md                           # Painel de Controle Principal (Português)
+└── README.en.md                        # Painel de Controle Principal (Inglês)
 ```
 
 😉 "Espero que minha jornada te ajude e inspire a ter novas ideias e a construir seus próprios projetos. Vamos evoluir juntos!"
