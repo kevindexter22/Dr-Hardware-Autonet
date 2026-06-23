@@ -8,7 +8,7 @@ Este documento define o Procedimento Operacional Padrão (SOP) para o provisiona
 
 O objetivo é preparar a imagem do Sistema Operacional base (Ubuntu Server ou Raspberry Pi OS) de forma manual (sem necessidade de interface de vídeo/teclado local), injetando configurações de rede L2/L3 e credenciais de acesso remoto (via *Cloud-Init*) diretamente no armazenamento físico (Micro-SD). Isso prepara a instância para posterior integração e gerência automatizada via *Infraestructure as Code* (IaC) ou para a instalçao de serviços nativamente.
 
----
+##
 
 ### 💾 Fase 1: Preparação da Mídia Física (Camada 1 / L1)
 
@@ -27,7 +27,7 @@ Para garantir a integridade dos blocos de dados e evitar falhas de alocação em
   <img src="https://github.com/user-attachments/assets/e7333177-5124-4592-985b-43d2de2c97f3" width="300" />
 </p>
 
----
+##
 
 ### 🐧 Fase 2: Instalação do Sistema Operacional Base (OS / NFVI)
 
@@ -43,7 +43,7 @@ A arquitetura do laboratório padroniza o **Ubuntu Server** pela sua estabilidad
   <img src="https://github.com/user-attachments/assets/602d52e8-3d5b-4d8e-8c34-36d658a9c557" width="300" />
 </p>
 
----
+##
 
 ### ⚙️ Fase 3: Injeção de Configurações via Cloud-Init (Camadas 2 e 3)
 
@@ -81,7 +81,7 @@ Adicione o output no arquivo /media/<seu_usuario>/bootfs/userconf.txt seguindo o
 admin_lab:$6$dU2DKSj1d8KE57Uy$Q.5BPFHoWNzupp7YQWbteJMt8/ANu...
 ```
 
----
+##
 
 ### ✅ Fase 4: Validação e Handover (Post-Boot)
 
