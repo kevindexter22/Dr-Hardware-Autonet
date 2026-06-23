@@ -29,7 +29,7 @@ Dr-Hardware-Autonet/
 │   ├── network-simulations/            # EVE-NG, GNS3, PNETLab, Packet Tracer
 │   └── devops-sandboxes/               # Isolated tests for orchestration and CI/CD
 │
-├── 📖 docs/                            # OFFICIAL DOCUMENTATION AND ENGINEERING
+├── 📖 05-docs/                         # OFFICIAL DOCUMENTATION AND ENGINEERING
 │   ├── architecture-diagrams/          # Topologies (L2/L3), API flows and logical diagrams
 │   ├── runbooks-troubleshooting/       # Guides to fix problems (SOPs)
 │   └── standards-policies.md           # IPAM policies, VLANs and naming rules
