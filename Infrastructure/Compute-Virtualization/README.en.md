@@ -41,3 +41,8 @@ In this section, I document the lab's computer resources (NFVI). It shows the ph
 ├── 📄 README.en.md           # Overview and Hardware Inventory (English)
 ├── 📂 setup-guides/          # Standard Operating Procedures (SOPs) for base setup
 └── 📂 templates/             # Base images, Cloud-Init, and infrastructure files
+```
+
+##
+
+###### ℹ️ Part of the Dr. Hardware Autonet project - MIT License.
