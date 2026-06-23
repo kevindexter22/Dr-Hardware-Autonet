@@ -22,11 +22,10 @@ Para garantir a integridade dos blocos de dados e evitar falhas de alocação em
 5. Execute a limpeza confirmando em **YES** na janela de aviso.
 
 <p align="center">
-  <img src="[https://github.com/user-attachments/assets/9f28cb4e-450e-4235-8563-23947dd24357](https://github.com/user-attachments/assets/9f28cb4e-450e-4235-8563-23947dd24357)" width="300" />
-  <img src="[https://github.com/user-attachments/assets/f7b0d48e-96ef-4998-937b-7725c7a10362](https://github.com/user-attachments/assets/f7b0d48e-96ef-4998-937b-7725c7a10362)" width="300" />
-  <img src="[https://github.com/user-attachments/assets/e7333177-5124-4592-985b-43d2de2c97f3](https://github.com/user-attachments/assets/e7333177-5124-4592-985b-43d2de2c97f3)" width="300" />
+  <img src="https://github.com/user-attachments/assets/9f28cb4e-450e-4235-8563-23947dd24357" width="300" />
+  <img src="https://github.com/user-attachments/assets/f7b0d48e-96ef-4998-937b-7725c7a10362" width="300" />
+  <img src="https://github.com/user-attachments/assets/e7333177-5124-4592-985b-43d2de2c97f3" width="300" />
 </p>
-
 ---
 
 ### 🐧 Fase 2: Instalação do Sistema Operacional Base (OS / NFVI)
@@ -39,10 +38,9 @@ A arquitetura do laboratório padroniza o **Ubuntu Server** pela sua estabilidad
 4. Confirme a gravação e aguarde a validação do *checksum* e o término do processo.
 
 <p align="center">
-  <img src="[https://github.com/user-attachments/assets/66009c77-24ba-4888-ac26-9b4696b6decb](https://github.com/user-attachments/assets/66009c77-24ba-4888-ac26-9b4696b6decb)" width="300" />
-  <img src="[https://github.com/user-attachments/assets/602d52e8-3d5b-4d8e-8c34-36d658a9c557](https://github.com/user-attachments/assets/602d52e8-3d5b-4d8e-8c34-36d658a9c557)" width="300" />
+  <img src="https://github.com/user-attachments/assets/66009c77-24ba-4888-ac26-9b4696b6decb" width="300" />
+  <img src="https://github.com/user-attachments/assets/602d52e8-3d5b-4d8e-8c34-36d658a9c557" width="300" />
 </p>
-
 ---
 
 ### ⚙️ Fase 3: Injeção de Configurações via Cloud-Init (Camadas 2 e 3)
@@ -57,7 +55,7 @@ Edite o arquivo `network-config`. Este manifesto será lido pelo *Cloud-Init* no
 Descomente e ajuste os parâmetros da interface correspondente ao seu *uplink* (`wlan0` para conectividade *wireless* ou `eth0` para rede ethernet), definindo o roteamento e o IP estático do *Management Plane*:
 
 <p align="center">
-  <img src="[https://github.com/user-attachments/assets/242187c5-5651-4171-85d5-efe24e809576](https://github.com/user-attachments/assets/242187c5-5651-4171-85d5-efe24e809576)" width="300" />
+  <img src="https://github.com/user-attachments/assets/242187c5-5651-4171-85d5-efe24e809576" width="300" />
 </p>
 
 > **Nota Arquitetural:** Para conexões Wi-Fi, garanta o preenchimento correto das chaves WPA em `access-points`.
