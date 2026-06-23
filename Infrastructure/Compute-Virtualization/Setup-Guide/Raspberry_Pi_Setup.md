@@ -2,7 +2,7 @@
 
 # 🛠️ Provisionando Bare-Metal - Raspberry Pi
 
-### 📝 Descrição e Escopo (Configuration Management)
+### 📝 Descrição e Escopo
 
 Este documento define o Procedimento Operacional Padrão (SOP) para o provisionamento inicial (*Bootstrap*) dos nós de processamento baseados em arquitetura ARM (Raspberry Pi). 
 
