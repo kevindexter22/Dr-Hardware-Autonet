@@ -79,7 +79,7 @@ http://192.168.x.x
 <img src="https://github.com/user-attachments/assets/511c4573-5fa3-4946-8da5-21ab25fdcfb9" alt="image3" width="300" height="200"/>
 <img src="https://github.com/user-attachments/assets/7cd12e79-e2ae-4d43-b797-0378b28e7be9" alt="image4" width="300" height="200"/>
   <br>
-    <small>Imagens por: <a href="https://itsfoss.com" target="_blank" rel="noopener">It's Foss</a></small>
+    <small>Imagens por <a href="https://itsfoss.com" target="_blank" rel="noopener">It's Foss</a></small>
  </p>
 
 ---
