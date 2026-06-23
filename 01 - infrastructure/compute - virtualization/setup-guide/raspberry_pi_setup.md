@@ -78,6 +78,7 @@ Adicione o output no arquivo /media/<seu_usuario>/bootfs/userconf.txt seguindo o
 ```bash
 admin_lab:$6$dU2DKSj1d8KE57Uy$Q.5BPFHoWNzupp7YQWbteJMt8/ANu...
 ```
+---
 
 ### ✅ Fase 4: Validação e Handover (Post-Boot)
 
