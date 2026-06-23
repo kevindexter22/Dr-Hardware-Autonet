@@ -163,6 +163,7 @@ Because I don't have physical space for a rack to put all the homelab devices an
 - [x] Grafana: Advanced dashboards to see metrics and hardware health
 - [x] Samba server (OPL): Dedicated file server to load PS2 games
 - [x] Docker Ecosystem: Many microservices implemented via Docker
+- [x] FreeIPA: Central management of identities, authentications, and policies
 
 #### 📡 Network Devices (Physical)
 - [x] ONT/Modem: Intelbras - installed by my ISP
@@ -213,7 +214,6 @@ Because I don't have physical space for a rack to put all the homelab devices an
 #### 📊 Monitoring and Services
 - [ ] Netbox: IP address management
 - [ ] GenieACS: Access centralization and management via TR-069/TR-098 or TR-181
-- [ ] FreeIPA: Central management of identities, authentications, and policies
 - [ ] Unbound DNS: Private DNS
 - [ ] DNS Collector + Grafana LOKI: Collect and index DNS logs for analysis and observability
 - [ ] Redundancy for Essential Services: Create backups for main services in case of failure
