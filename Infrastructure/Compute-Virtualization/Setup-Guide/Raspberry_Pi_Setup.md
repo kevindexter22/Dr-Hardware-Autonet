@@ -1,6 +1,6 @@
 <h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/Infrastructure/Compute-Virtualization/Setup-Guide/Raspberry_Pi_Setuap.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
-# 🛠️ Provisionando Bare-Metal - Raspberry Pi
+# 🛠️ SOP: Provisionando Bare-Metal - Raspberry Pi
 
 ### 📝 Descrição e Escopo
 
