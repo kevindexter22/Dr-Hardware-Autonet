@@ -64,18 +64,17 @@ Descomente e ajuste os parâmetros da interface correspondente ao seu *uplink* (
 *Importante: O Ubuntu Server habilita o serviço SSH por *default* (Credenciais padrão: `ubuntu` / `ubuntu`). Os passos abaixo são estritamente para a distribuição baseada no Raspberry Pi OS.*
 
 1. **Ativação do Daemon SSH:** Crie um arquivo em branco nominado `ssh` na raiz da partição de inicialização.
-   ```bash
-   touch /media/<seu_usuario>/bootfs/ssh
-   ```
+```bash
+touch /media/<seu_usuario>/bootfs/ssh
+```
 2. **Injeção de Credenciais e Hash SHA-512:** Crie o manifesto userconf.txt para provisionar o usuário administrador do sistema e sua respectiva senha criptografada.
 
 Gere o hash via shell (Linux/WSL):
-
 ```bash
 echo "sua_senha_operacional" | openssl passwd -6 -stdin
 ```
-Adicione o output no arquivo /media/<seu_usuario>/bootfs/userconf.txt seguindo o formato de chave-valor usuario:hash:
 
+Adicione o output no arquivo /media/<seu_usuario>/bootfs/userconf.txt seguindo o formato de chave-valor usuario:hash:
 ```bash
 admin_lab:$6$dU2DKSj1d8KE57Uy$Q.5BPFHoWNzupp7YQWbteJMt8/ANu...
 ```
@@ -97,5 +96,4 @@ ssh <usuario>@<IP_ESTATICO_CONFIGURADO>
 Uma vez autenticado, o Bootstrap Bare-Metal está concluído. O nó encontra-se pronto para a transição de estado, aguardando o deployment de serviços ou orquestração contínua via ferramentas de Automação (ex: Ansible/Terraform).
 
 ##
-
 
