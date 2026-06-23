@@ -74,10 +74,32 @@ Descomente e ajuste os parâmetros da interface correspondente ao seu *uplink* (
 2. **Injeção de Credenciais e Hash SHA-512:** Crie o manifesto userconf.txt para provisionar o usuário administrador do sistema e sua respectiva senha criptografada.
 
 Gere o hash via shell (Linux/WSL):
+
 ```bash
 echo "sua_senha_operacional" | openssl passwd -6 -stdin
 ```
 Adicione o output no arquivo /media/<seu_usuario>/bootfs/userconf.txt seguindo o formato de chave-valor usuario:hash:
+
 ```bash
 admin_lab:$6$dU2DKSj1d8KE57Uy$Q.5BPFHoWNzupp7YQWbteJMt8/ANu...
+```
+
+### ✅ Fase 4: Validação e Handover (Post-Boot)
+
+1. Ejete o Micro-SD com segurança, insira-o no hardware do Raspberry Pi e energize o equipamento.
+
+2. A partir do seu bastion host ou terminal de gerência, monitore a disponibilidade da rede via ICMP (Camada 3):
+```bash
+ping <IP_ESTATICO_CONFIGURADO>
+```
+
+3. Estabeleça o túnel encriptado inicial para validar a chave de host (RSA/ED25519) e confirmar o provisionamento:
+```bash
+ssh <usuario>@<IP_ESTATICO_CONFIGURADO>
 ``` 
+
+Uma vez autenticado, o Bootstrap Bare-Metal está concluído. O nó encontra-se pronto para a transição de estado, aguardando o deployment de serviços ou orquestração contínua via ferramentas de Automação (ex: Ansible/Terraform).
+
+##
+
+
