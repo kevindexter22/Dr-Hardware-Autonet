@@ -11,7 +11,7 @@ Trarei aqui a visão do que está sendo implementado, assim como um pouco da bas
 
 ### 🏗️ Topologia / Arquitetura
 
-#### Diagrama L1/L2: Topologia Física e Data Link
+#### Diagrama L1-L2: Topologia Física e Data Link
 
 ```mermaid
 
@@ -60,9 +60,8 @@ graph TD
     end
 
 ```
-##
 
-#### Diagrama L3 a L7: Arquitetura Lógica e Ecossistema OSS
+#### Diagrama L3-L7: Arquitetura Lógica e Ecossistema OSS
 
 ```mermaid
 graph TD
@@ -112,8 +111,8 @@ graph TD
     end
 
     %% Fluxos de Mediação de Dados
-    ZA ==>|Métricas| ZPX
-    ZPX ==>|Trapper| ZBS
+    ZA ==>|Métricas TCP/XXXX| ZPX
+    ZPX ==>|Trapper TCP/XXXX| ZBS
     GRAF_LOKI -.->|Logs| GRAF
     ZBS --- GRAF
 
