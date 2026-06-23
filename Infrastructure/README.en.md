@@ -61,7 +61,6 @@ graph TD
         SW2 --- RPi3B_4
     end
 ```
-##
 
 #### L3-L7: Logical Architecture and OSS
 
