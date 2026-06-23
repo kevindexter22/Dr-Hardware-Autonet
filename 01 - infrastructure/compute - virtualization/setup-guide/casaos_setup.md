@@ -81,5 +81,6 @@ http://192.168.x.x
 <br>
 </p>
 * **Ilustrações**: Desenvolvidas por [itsfoss](https://itsfoss.com/).
+
 ---
 
