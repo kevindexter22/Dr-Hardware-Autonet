@@ -4,9 +4,9 @@
 
 ### 📝 Descrição e Escopo
 
-Este documento define o Procedimento Operacional Padrão (SOP) para o provisionamento inicial (*Bootstrap*) dos nós de processamento baseados em arquitetura ARM (Raspberry Pi). 
+Este documento define o Procedimento Operacional Padrão (SOP) para o provisionamento inicial dos nós de processamento baseados em arquitetura ARM (Raspberry Pi). 
 
-O objetivo é preparar a imagem do Sistema Operacional base (Ubuntu Server ou Raspberry Pi OS) de forma *headless* (sem necessidade de interface de vídeo/teclado local), injetando configurações de rede L2/L3 e credenciais de acesso remoto (via *Cloud-Init*) diretamente no armazenamento físico (Micro-SD). Isso prepara o nó de *Compute* para posterior integração e gerência automatizada via *Infraestructure as Code* (IaC).
+O objetivo é preparar a imagem do Sistema Operacional base (Ubuntu Server ou Raspberry Pi OS) de forma manual (sem necessidade de interface de vídeo/teclado local), injetando configurações de rede L2/L3 e credenciais de acesso remoto (via *Cloud-Init*) diretamente no armazenamento físico (Micro-SD). Isso prepara o nó de *Compute* para posterior integração e gerência automatizada via *Infraestructure as Code* (IaC).
 
 ---
 
