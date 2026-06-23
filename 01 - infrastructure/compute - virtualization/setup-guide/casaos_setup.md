@@ -75,6 +75,7 @@ http://192.168.x.x
 <p align="center">
 <img src="https://github.com/user-attachments/assets/26740f42-99b4-4741-a320-99f2964b283c" alt="Dashboard" width="300"/>
 </p>
+
 ##
 
 ### 💡 Dicas Pós-Instalação
