@@ -41,3 +41,8 @@ Nesta seção, documento o inventário e a gestão de recursos computacionais do
 ├── 📄 README.en.md           # Visão Geral e Inventário de Hardware (Inglês)
 ├── 📂 setup-guides/          # Procedimentos Operacionais Padrão (SOPs) de provisionamento base
 └── 📂 templates/             # Imagens base, Cloud-Init e manifestos de infraestrutura
+```
+
+##
+
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
