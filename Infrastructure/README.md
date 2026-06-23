@@ -112,8 +112,8 @@ graph TD
     end
 
     %% Fluxos de Mediação de Dados
-    ZA ==>|Métricas TCP/10050| ZPX
-    ZPX ==>|Trapper TCP/10051| ZBS
+    ZA ==>|Métricas| ZPX
+    ZPX ==>|Trapper| ZBS
     GRAF_LOKI -.->|Logs| GRAF
     ZBS --- GRAF
 
