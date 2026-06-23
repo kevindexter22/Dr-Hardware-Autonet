@@ -72,7 +72,7 @@ http://192.168.x.x
 
 5. Pronto! Você estará no Dashboard principal e já pode começar a instalar os aplicativos pela "App Store" nativa deles ou carregar seus docker-compose.
 
-<p align="center">
+<p align="center"><br>
 <img src="https://github.com/user-attachments/assets/26740f42-99b4-4741-a320-99f2964b283c" alt="Dashboard" width="300"/>
 </p>
 
