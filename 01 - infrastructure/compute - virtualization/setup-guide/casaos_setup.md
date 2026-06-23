@@ -1,4 +1,4 @@
-<img width="1975" height="977" alt="image" src="https://github.com/user-attachments/assets/0f04ca5d-d31c-4993-9b3d-3521680bed48" /><img width="1000" height="495" alt="image" src="https://github.com/user-attachments/assets/f5689f9a-bfb9-4fff-a7dd-56287c8df71f" /><h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01 - infrastructure/compute - virtualization/setup-guide/casaos_setup.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01 - infrastructure/compute - virtualization/setup-guide/casaos_setup.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
 # 🛠️ (SOP) Instalando o CasaOS - Raspberry Pi
 
