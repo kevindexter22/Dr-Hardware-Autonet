@@ -18,7 +18,7 @@ A função dessa ferramenta no cenário proposto é rodar alguns serviços essen
 
 ##
 
-### ⚙️ Fase 1: Preparação do sistema
+### 🐧 Fase 1: Preparação do sistema
 
 1. Antes de instalar qualquer serviço é preciso garantir que a base do sistema operacional está atualizada com os patches de segurança e os repositórios mais recentes.
 
@@ -33,4 +33,4 @@ sudo apt update; sudo apt upgrade -y
 sudo apt install curl -y
 ```
 
-##
+###
