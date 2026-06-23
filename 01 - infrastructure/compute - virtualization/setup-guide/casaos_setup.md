@@ -26,7 +26,7 @@ Para isso utilizamos o seguinte comando:
 ```bash
 sudo apt update; sudo apt upgrade -y
 ```
-**(Se o sistema pedir para reiniciar após atualizar o kernel, faça isso com `sudo reboot` e conecte-se novamente).**
+***(Se o sistema pedir para reiniciar após atualizar o kernel, faça isso com `sudo reboot` e conecte-se novamente).***
 
 2. O script de instalação do CasaOS precisa da ferramenta `curl` para baixar os arquivos. O Ubuntu geralmente já vem com ela, mas por garantia, execute o comando:
 ```bash
@@ -45,4 +45,4 @@ Para utiliza-lo, execute o comando:
 ```bash
 curl -fsSL https://get.casaos.io | sudo bash
 ```
-**O que vai acontecer agora: O terminal vai mostrar uma tela de progresso. Esse processo pode levar de 2 a 10 minutos, dependendo da velocidade da sua internet e do modelo do seu Raspberry Pi, pois ele estará baixando a engine do Docker e as imagens do sistema.**
+***O que vai acontecer agora: O terminal vai mostrar uma tela de progresso. Esse processo pode levar de 2 a 10 minutos, dependendo da velocidade da sua internet e do modelo do seu Raspberry Pi, pois ele estará baixando a engine do Docker e as imagens do sistema.***
