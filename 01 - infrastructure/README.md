@@ -161,6 +161,7 @@ Como não disponho de espaço físico para um rack que centralizaria todos os di
 - [x] Grafana: Dashboards avançadas para visualizações de métricas e saúde do hardware
 - [x] Samba server (OPL): Servidor de arquivos dedicado para carregamento de jogos de PS2
 - [x] Docker Ecosystem: Diversos microsserviços implementados via Docker
+- [x] FreeIPA: Gerenciamento centralizado de identidades, autenticações e políticas
 
 #### 📡 Ativos de Redes (Físicos)
 - [x] ONT/Modem: Intelbras - instalado pelo meu ISP
@@ -211,7 +212,6 @@ Como não disponho de espaço físico para um rack que centralizaria todos os di
 #### 📊 Monitoramento e Serviços
 - [ ] Netbox: Gerenciamento de endereços IP
 - [ ] GenieACS: Centralização de acesso e gerenciamento via TR-069/TR-098 ou TR-181
-- [ ] FreeIPA: Gerenciamento centralizado de identidades, autenticações e políticas
 - [ ] Unbound DNS: DNS privado 
 - [ ] DNS Colector + Grafana LOKI: Coleta e indexação de logs DNS para análise e observabilidade
 - [ ] Redundância de Serviços Essenciais: Criar backup dos serviços principais para caso de falhas
