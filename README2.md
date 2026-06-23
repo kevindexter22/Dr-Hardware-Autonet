@@ -10,23 +10,34 @@
 
 ```text
 Dr-Hardware-Autonet/
-├── 🏠 Infrastructure/                 # REAL INFRASTRUCTURE (Home Lab)
-│   ├── Virtualization and Workloads/  # Virtualization and Containerization (configs)
-│   ├── Network-Services/              # Services and Devices (basic configs)
-│   ├── Observability/                 # General Observability (dashboards and alerts)
-│   └── Security-Auth/                 # Servers and Tools (security and auditing)
-├── 🧪 labs/                           # VIRTUAL LABS (Studies and R&D)
-│   ├── Network-Lab/                   # Network Simulations (Packet Tracer/PNETLAB)
-│   ├── DevOps-Orchestration/          # Orchestration and Services Testing
-│   └── Observability-Logging          # Complex log ingestion tests
-├── 🛠️ scripts/                        # GENERAL AUTOMATION
-├── 📖 docs/                           # GENERAL DOCUMENTATION
-│   ├── architecture/                  # Diagrams
-│   └── troubleshooting/               # A Guide for Challenges, Errors and Solutions
-├── .gitignore
-├── LICENSE
-├── README.md                          # The Project Control Panel (brazilian portuguese)
-└── README2.md                         # The Project Control Panel
+├── 🏠 01-infrastructure/               # PHYSICAL AND LOGICAL INFRASTRUCTURE (Home Lab)
+│   ├── compute-virtualization/         # Hypervisors (Proxmox, ESXi) and Containers (K8s, Docker)
+│   ├── network-core/                   # Routing, Switching and Base Services (DHCP, DNS, BGP, OSPF)
+│   └── storage/                        # NAS, SAN, Ceph, etc.
+│
+├── ⚙️ 02-automation-iac/               # CONFIGURATION MANAGEMENT AND AUTOMATION (MTTR Reduction)
+│   ├── ansible/                        # Playbooks for setup and configuration management
+│   ├── terraform/                      # IaC for resource setup
+│   └── python-scripts/                 # Custom scripts (Netmiko, NAPALM, REST APIs/ETL)
+│
+├── 👁️ 03-oss-management/               # OPERATION SUPPORT SYSTEMS (FCAPS)
+│   ├── observability/                  # Metrics (Prometheus, Grafana), Logs (ELK/Loki) and Tracing
+│   ├── security-iam/                   # Authentication, Authorization (Radius, TACACS+, Vault)
+│   └── alerts-mediation/               # Alert rules, webhooks and data mediation
+│
+├── 🧪 04-labs-rnd/                     # RESEARCH AND DEVELOPMENT (Simulators and PoCs)
+│   ├── network-simulations/            # EVE-NG, GNS3, PNETLab, Packet Tracer
+│   └── devops-sandboxes/               # Isolated tests for orchestration and CI/CD
+│
+├── 📖 docs/                            # OFFICIAL DOCUMENTATION AND ENGINEERING
+│   ├── architecture-diagrams/          # Topologies (L2/L3), API flows and logical diagrams
+│   ├── runbooks-troubleshooting/       # Guides to fix problems (SOPs)
+│   └── standards-policies.md           # IPAM policies, VLANs and naming rules
+│
+├── .gitignore                          # Ignore sensitive files (.env, tfstate, etc.)
+├── LICENSE                             # Project license
+├── README.md                           # Main Control Panel (Portuguese)
+└── README.en.md                        # Main Control Panel (English)
 ```
 
 😉 "I hope my journey helps and inspires you to have new ideas and build your own projects. Let's grow together!"
