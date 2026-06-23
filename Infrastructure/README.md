@@ -59,6 +59,62 @@ graph TD
         SW2 --- RPi3B_4
     end
 
+```
+
+#### Diagrama L3 a L7: Arquitetura Lógica e Ecossistema OSS
+
+```mermaid
+graph TD
+    %% Classes de Estilo L3-L7
+    classDef hypervisor fill:#8e44ad,stroke:#FFFFFF,stroke-width:2px,color:#fff;
+    classDef oss fill:#27ae60,stroke:#FFFFFF,stroke-width:2px,color:#fff;
+    classDef coreService fill:#d35400,stroke:#FFFFFF,stroke-width:2px,color:#fff;
+    classDef cloud fill:#f39c12,stroke:#FFFFFF,stroke-width:2px,color:#fff;
+
+    subgraph VIM [Infraestrutura de Virtualização e Containers]
+        PVE[Proxmox VE<br/>HP Pavilion]:::hypervisor
+        DOCKER[Docker Engine / CasaOS<br/>RPi 4B]:::hypervisor
+        NATIVE[Ubuntu Server Nativo<br/>RPi 3Bs]:::hypervisor
+    end
+
+    subgraph AAA_SEC [Control Plane: Segurança e IAM]
+        FIPA[FreeIPA - LXC]:::coreService
+        FRAD[FreeRADIUS - Nativo]:::coreService
+        PVE -.-> FIPA
+        NATIVE -.-> FRAD
+        FRAD -.->|Consulta LDAP| FIPA
+    end
+
+    subgraph NET_SERVICES [Data Plane: Serviços de Rede e Storage]
+        UNB[Unbound DNS - Docker]:::coreService
+        SMB[Samba v2/v3 - Docker]:::coreService
+        VPN[VPN Server - Docker]:::coreService
+        
+        DOCKER -.-> UNB
+        DOCKER -.-> SMB
+        DOCKER -.-> VPN
+    end
+
+    subgraph OSS_MGMT [Management Plane: Observabilidade FCAPS]
+        ZPX[Zabbix Proxy]:::oss
+        ZA[Zabbix Agents]:::oss
+        GRAF_LOKI[Grafana Loki / Promtail]:::oss
+        
+        DOCKER -.-> ZPX
+        NATIVE -.-> ZPX
+        NATIVE -.-> ZA
+    end
+
+    subgraph PUBLIC_CLOUD [Oracle Cloud OCI]
+        ZBS[Zabbix Server]:::cloud
+        GRAF[Grafana Dashboards]:::cloud
+    end
+
+    %% Fluxos de Mediação de Dados
+    ZA ==>|Métricas TCP/10050| ZPX
+    ZPX ==>|Trapper TCP/10051| ZBS
+    GRAF_LOKI -.->|Logs| GRAF
+    ZBS --- GRAF
 
 ```
 
