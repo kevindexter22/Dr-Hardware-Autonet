@@ -81,6 +81,8 @@ Add the output to the /media/<your_user>/bootfs/userconf.txt file using the key-
 admin_lab:$6$dU2DKSj1d8KE57Uy$Q.5BPFHoWNzupp7YQWbteJMt8/ANu...
 ```
 
+---
+
 ### ✅ Phase 4: Validation and Handover (Post-Boot)
 
 1. Safely eject the Micro-SD card, insert it into the Raspberry Pi hardware, and power on the device.
