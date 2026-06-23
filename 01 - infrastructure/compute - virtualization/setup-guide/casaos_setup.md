@@ -18,11 +18,19 @@ A função dessa ferramenta no cenário proposto é rodar alguns serviços essen
 
 ##
 
-### ⚙️ Preparação do sistema (Atualização)
+### ⚙️ Fase 1: Preparação do sistema
 
-Antes de instalar qualquer serviço é preciso garantir que a base do sistema operacional está atualizada com os patches de segurança e os repositórios mais recentes.
+1. Antes de instalar qualquer serviço é preciso garantir que a base do sistema operacional está atualizada com os patches de segurança e os repositórios mais recentes.
 
 Para isso utilizamos o seguinte comando:
 ```bash
 sudo apt update; sudo apt upgrade -y
 ```
+**(Se o sistema pedir para reiniciar após atualizar o kernel, faça isso com `sudo reboot` e conecte-se novamente).**
+
+2. O script de instalação do CasaOS precisa da ferramenta `curl` para baixar os arquivos. O Ubuntu geralmente já vem com ela, mas por garantia, execute o comando:
+```bash
+sudo apt install curl -y
+```
+
+##
