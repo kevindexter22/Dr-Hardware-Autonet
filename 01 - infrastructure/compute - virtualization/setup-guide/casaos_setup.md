@@ -33,7 +33,7 @@ sudo apt update; sudo apt upgrade -y
 sudo apt install curl -y
 ```
 
----
+##
 
 ### ⚙️ Fase 2: Instalando o CasaOS
 
@@ -55,7 +55,7 @@ hostname -I
 ```
 *Você verá um endereço no formato 192.168.x.x ou 10.x.x.x*
 
----
+##
 
 ### 🖥️ Fase 3: Acessar o dashboard e criar conta de administrador
 
@@ -72,7 +72,7 @@ http://192.168.x.x
 
 5. Pronto! Você estará no Dashboard principal e já pode começar a instalar os aplicativos pela "App Store" nativa deles ou carregar seus docker-compose.
 
----
+##
 
 ### 💡 Dicas Pós-Instalação
 
