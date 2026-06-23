@@ -57,3 +57,9 @@ hostname -I
 
 ---
 
+### 🖥️ Fase 3: Acessar o dashboard e criar conta de administrador
+
+
+
+---
+
