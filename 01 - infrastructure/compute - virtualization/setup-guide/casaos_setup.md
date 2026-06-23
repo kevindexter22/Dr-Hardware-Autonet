@@ -6,7 +6,7 @@
 
 O CasaOS não é um sistema operacional completo no sentido estrito, mas sim uma interface de gerenciamento (UI/Dashboard) leve e baseada em ecossistema Docker, rodando tipicamente sobre uma distribuição Linux (como Debian ou Ubuntu) nativa da arquitetura ARM do Raspberry Pi.
 
-A função dele no cenário proposto é rodar alguns serviços essenciais para o meu dia-a-dia em containeres docker, facilitando a manutenção e operação, uma vez que tem uma interface web intuitiva e uma loja com alguns serviços prontos para a instalação e utilização em poucos cliques.
+A função dessa ferramenta no cenário proposto é rodar alguns serviços essenciais para o meu dia-a-dia em containeres docker, facilitando a manutenção e operação, uma vez que possui interface web intuitiva e uma loja com alguns docker-compose pré-configurados para a instalação e utilização em poucos cliques.
 
 ##
 
