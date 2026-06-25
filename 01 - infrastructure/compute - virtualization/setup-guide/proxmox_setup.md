@@ -50,7 +50,7 @@ Após iniciar o instalador do Sistema Operacional, durante o processo defina os 
 
 ### 🚀 Fase 3: Otimizações Pós-Instalação (Tuning)
 
-Após o primeiro boot, acesse a interface web de gerência (https://<IP_DO_PROXMOX>:8006) e, em seguida, abra o shel do node para aplicar os ajustes de infraestrutura.
+Após o primeiro boot, acesse a interface web de gerência (https://<IP_DO_PROXMOX>:8006) e, em seguida, abra o shell do node para aplicar os ajustes de infraestrutura.
 
 #### A. Adequação dos Repositórios e Configurações de Base
 
