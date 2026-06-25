@@ -12,3 +12,7 @@ O objetivo é instalar o sistema operacional e preparar o hardware para executar
 
 ### 💾 Fase 1: Preparação Física e Instalação (Host OS)
 
+#### A. Configuração de BIOS/UEFI
+
+
+
