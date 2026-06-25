@@ -38,8 +38,6 @@ Antes de iniciar, acesse a BIOS do computador e garanta que:
 1. A opção Virtualization Technology (VT-x) esteja Habilitada. Sem isso, o KVM não funcionará.
 2. Boot Order: Configure o pendrive bootável do Proxmox VE como primário.
 
-
-
 #### B. Parâmetros de Instalação (Proxmox Installer)
 
 Após iniciar o instalador do Sistema Operacional, durante o processo defina os parâmetros conforme abaixo:
@@ -63,12 +61,10 @@ Como não temos uma licença enterprise, vamos alterar o repositório enterprise
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh)"
 ```
-    - Após rodar esse comando, ele te fará algumas perguntas como: se você quer rodar o script, se deseja desabilitar o repositório enterprise do Proxmox, se vc deseja habilitar um repositório adicional para pessoas que não assinam o enterprise, se deseja desabilitar o HA (se for utilizar o servidor como nó único, pode desabilitar) e no final ele vai atualizar e pedir para reiniciar o servidor.
+  - Após rodar esse comando, ele te fará algumas perguntas como: se você quer rodar o script, se deseja desabilitar o              repositório enterprise do Proxmox, se vc deseja habilitar um repositório adicional para pessoas que não assinam o enterprise,    se deseja desabilitar o HA (se for utilizar o servidor como nó único, pode desabilitar) e no final ele vai atualizar e pedir     para reiniciar o servidor.
     
-    ⚠️ ***Observação:** Antes de rodar um script de terceiros, sempre acesse o conteúdo e valide o que esse script está fazendo na prática, para que não haja riscos.<br>
-Como eu já dei uma olhada e esse script é seguro, utilizei ele para essa configuração inicial.*
-
-
+  ⚠️ ***Observação:** Antes de rodar um script de terceiros, sempre acesse o conteúdo e valide o que esse script está fazendo na   prática, para que não haja riscos.<br>
+  Como eu já dei uma olhada e esse script é seguro, utilizei ele para essa configuração inicial.*
 
 **B. Provisionamento do HDD 750 GB (Tier 2 storage)**
 
