@@ -44,7 +44,7 @@ Após iniciar o instalador do Sistema Operacional, durante o processo defina os 
 
 1. **Target Hard Disk:** Selecione estritamente qual será o disco onde instalará o sistema. Ex.: SSD de 480 GB.
 2. **Options (Filesystem):** Clique em options e certifique-se de que o sistema de arquivos está definido como EXT4.
-3. **Network Setup:** Defina um IP estático para a interface de rede cabeada (eth0/eno1). *Obs.: Evite usar wi-fi para o hypervisor, para melhor latência e largura de banda.* 
+3. **Network Setup:** Defina um IP estático para a interface de rede cabeada (eth0/eno1) e o hostname. *Obs.: Evite usar wi-fi para o hypervisor, para melhor latência e largura de banda.* 
 
 ##
 
