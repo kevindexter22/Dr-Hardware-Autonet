@@ -67,4 +67,9 @@ bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/Proxmo
 
 **B. Provisionamento do HDD 750 GB (Tier 2 storage)**
 
-
+1. Identifique o disco (geralmente `/dev/sdb`):
+   ```bash
+   lsblk
+   ```
+2. Formate e crie o diretório:
+3. 
