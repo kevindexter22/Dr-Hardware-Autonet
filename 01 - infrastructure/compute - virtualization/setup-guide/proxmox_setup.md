@@ -4,7 +4,9 @@
 
 ### 📝 Descrição e Escopo
 
+Este documento define o Procedimento Operacional Padrão (SOP) para o provisionamento inicial do Hypervisor Proxmox VE.
 
+O objetivo é instalar o sistema operacional e preparar o hardware para executar sistemas e serviços tanto em KVM como em LXC (Linux Containers. 
 
 ##
 
