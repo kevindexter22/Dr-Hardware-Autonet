@@ -86,7 +86,7 @@ Como não temos uma licença enterprise, vamos alterar o repositório enterprise
    - Directory: `/mnt/hdd750`
    - Content: Selecione VZDump backup file, ISO image, Container template
 
-#### D. Otimização de Memória Virtual (Swappiness)
+#### C. Otimização de Memória Virtual (Swappiness)
 
 Para preservar a vida útil do SSD e evitar contenção de I/O em um sistema com pouca RAM, reduza a agressividade com que o sistema usa o arquivo de paginação (Swap):
 
@@ -98,6 +98,27 @@ Para preservar a vida útil do SSD e evitar contenção de I/O em um sistema com
    ```bash
    echo "vm.swappiness=10" >> /etc/sysctl.conf
    ```
+
+#### D. Desabilitar suspensão do laptop
+
+Laptops suspendem a operação quando a tampa é fechada. Para um servidor, isso representa uma falha de disponibilidade (Downtime).
+
+Para desabilitar a suspenção, fazemos o seguinte:
+
+1. Edite o arquivo de logind:
+   ```bash
+   nano /etc/systemd/logind.conf
+   ```
+2. Descomente e altere a seguinte linha:
+   ```bash
+   HandleLidSwitch=ignore
+   ```
+3. Reinicie o serviço:
+   ```bash
+   systemctl restart systemd-logind.service
+   ```
+
+##
 
 
 
