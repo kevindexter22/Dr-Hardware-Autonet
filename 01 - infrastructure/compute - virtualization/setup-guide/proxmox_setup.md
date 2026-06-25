@@ -65,7 +65,7 @@ Como não temos uma licença enterprise, vamos alterar o repositório enterprise
    <br>⚠️ ***Observação:** Antes de rodar um script de terceiros, sempre acesse o conteúdo e valide o que esse script está          fazendo na prática, para que não haja riscos.<br>
    Como eu já dei uma olhada e esse script é seguro, utilizei ele para essa configuração inicial.*
 
-**B. Provisionamento do HDD 750 GB (Tier 2 storage)**
+#### B. Provisionamento do HDD 750 GB (Tier 2 storage)
 
 1. Identifique o disco (geralmente `/dev/sdb`):
    ```bash
@@ -81,3 +81,23 @@ Como não temos uma licença enterprise, vamos alterar o repositório enterprise
    echo "/dev/sdb /mnt/hdd750 ext4 defaults 0 2" >> /etc/fstab
    mount -a
    ```
+4. Vá na interface Web do Proxmox: Datacenter > Storage > Add > Directory
+   - ID: `Storage-HDD`
+   - Directory: `/mnt/hdd750`
+   - Content: Selecione VZDump backup file, ISO image, Container template
+
+#### D. Otimização de Memória Virtual (Swappiness)
+
+Para preservar a vida útil do SSD e evitar contenção de I/O em um sistema com pouca RAM, reduza a agressividade com que o sistema usa o arquivo de paginação (Swap):
+
+1. No shell do Proxmox digite:
+   ```bash
+   sysctl vm.swappiness=10
+   ```
+2. Para tornar a alteração persistente, use o comando:
+   ```bash
+   echo "vm.swappiness=10" >> /etc/sysctl.conf
+   ```
+
+
+
