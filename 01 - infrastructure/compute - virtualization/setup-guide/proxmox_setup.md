@@ -56,4 +56,14 @@ Após o primeiro boot, acesse a interface web de gerência (https://<IP_DO_PROXM
 
 Como não temos uma licença enterprise, vamos alterar o repositório enterprise para evitar erros de atualizaçções. Vou aproveitar e ajustar/desabilitar alguns recursos que não irei utilizar por hora.
 
-Para isso utilizarei um script de Pós-Instalação disponibilizado em <a href="https://community-scripts.org/">community-scripts.org</a>.
+Para isso utilizarei um script de Pós-Instalação do PVE disponibilizado em <a href="https://community-scripts.org/">community-scripts.org</a>.
+
+⚠️ **Observação:** Antes de rodar um script de terceiros, sempre acesse o conteúdo e valide o que esse script está fazendo na prática, para que não haja riscos.<br>
+Como eu já dei uma olhada e esse script é seguro, estarei utilizando ele para essa configuração inicial.
+
+Para executar esse script, cole o segundo comando no shell do Proxmox:
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh)"
+```
+Após rodar esse comando, ele te fará algumas perguntas como: se você quer rodar o script, se deseja desabilitar o repositório enterprise do Proxmox, se vc deseja habilitar um repositório adicional para pessoas que não assinam o enterprise, se deseja desabilitar o HA (se for utilizar o servidor como nó único, pode desabilitar) e no final ele vai atualizar e pedir para reiniciar o servidor.
+
