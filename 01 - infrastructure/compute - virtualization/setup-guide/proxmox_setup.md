@@ -18,11 +18,11 @@ Nesse projeto estarei reaproveitando um laptop antigo, um HP Pavilion G4-2170br.
 
 Para contornar as limitações de hardware, adotaremos nesse cenário as seguintes diretrizes arquiteturais:
 
-- **Paradigma de Virtualização (LXC vs KVM):** o Proxmox nos permite trabalhar tanto com LXC como com o KVM. Devido ao hardware limitado vou priorizar a utilização de LXC, pois eles compartilham o kernel do host e consomem frações da memória RAM e da CPU em comparação a KVM. Usarei KVM somente se em algum momento for utilizar algum serviço ou ferramenta que precise de SO diferente do Linux (Windows ou BSD).
+- **Paradigma de Virtualização (LXC vs KVM):** o Proxmox nos permite trabalhar tanto com LXC (Linux Containers) como com o KVM (Máquinas Virtuais). Devido ao hardware limitado vou priorizar a utilização de LXC, pois eles compartilham o kernel do host e consomem frações da memória RAM e da CPU em comparação a KVM. Usarei KVM somente se em algum momento for utilizar algum serviço ou ferramenta que precise de SO diferente do Linux (Windows ou BSD).
   
 - **Topologia de Storage:**
-   - SSD 480 GB (Tier 1): Hospedará o SO (Proxmox) e os discos virtuais das VMs/Containers (LVM-Thin). A leitura/escrita mais        rápida é vital para o IOPS do sistema.
-   - HDD 750 GB (Tier 2): Será mapeado como um diretório de armazenamento para arquivos não críticos à latência: ISOs de            instalação,templates de containers e, primordialmente, Backups. Isso garante uma estratégia básica de redução de MTTR em caso    de falha do SSD. 
+   - SSD 480 GB (Tier 1): Hospedará o SO (Proxmox) e os discos virtuais das VMs/Containers (LVM-Thin). A leitura/escrita mais        rápida é vital para IOPS (operações de entrada e saídas por segundo) do sistema.
+   - HDD 750 GB (Tier 2): Será mapeado como um diretório de armazenamento para arquivos não críticos à latência: ISOs de            instalação,templates de containers e, primordialmente, Backups. Isso garante uma estratégia básica de redução no tempo de        reparo em caso de falha do SSD. 
 
 - **Sistema de Arquivos:** O Proxmox funciona com partições EXT4, ZFS ou BTRFS. Como o hardware que tenho disponível é modesto, estarei utilizando o EXT4.<br>
 Como a finalidade aqui é um homelab, troquei os recursos avançados de integridade de dados do ZFS/Btrfs pela garantia de performance bruta, baixa latência de disco e disponibilidade de RAM (EXT4 + LVM-Thin), mitigando o risco da perda de dados através de uma rotina de backups apontada para o HDD secundário.
@@ -118,7 +118,12 @@ Para desabilitar a suspenção, fazemos o seguinte:
    systemctl restart systemd-logind.service
    ```
 
+## 
+
+### ⚙️ Fase 4: Gestão de Operações
+
+- **Gerenciamento de Falhas (Backups):** Configure um *Backup Job* no Proxmox (Datacenter > Backups) para realizar snapshots       semanais de suas KVM/LXC vitais, apontando o destino estritamente para o `Storage-HDD`.
+  
+- **Gerenciamento de Desempenho:**
+
 ##
-
-
-
