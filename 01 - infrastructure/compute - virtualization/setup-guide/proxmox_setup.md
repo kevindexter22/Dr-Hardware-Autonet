@@ -14,5 +14,7 @@ O objetivo é instalar o sistema operacional e preparar o hardware para executar
 
 #### A. Configuração de BIOS/UEFI
 
+Antes de iniciar, acesse a BIOS do computador e garanta que:
 
+1. Virtualization Technology (VT-x) esteja <b>Habilitada</b>. 
 
