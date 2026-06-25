@@ -10,6 +10,20 @@ O objetivo é instalar o sistema operacional e preparar o hardware para executar
 
 ##
 
+###  📋 Fase 1: Arquitetura Lógica e Estratégia de Provisionamento
+
+Primeiramente precisamos entender o nosso cenário de utilização e o hardware que temos disponível e pensar como vamos utilizá-lo para evitar problemas futuros.
+
+Nesse projeto estarei reaproveitando um laptop antigo, um HP Pavilion G4-2170br. Esse laptop conta com um processador Intel Core i5 3210M 2.50 GHz (3ª geração), 8 GB de RAM DDR3 1600 MHz, 1 SSD Kingston 480 GB, 1 adaptador caddy com HDD 750 GB.
+
+Para contornar as limitações de hardware, adotaremos nesse cenário as seguintes diretrizes arquiteturais:
+
+- Paradigma de Virtualização (LXC vs KVM): o Proxmox nos permite trabalhar tanto com LXC (Linux Containers) como com o KVM (máquinas virtuais completas). Devido ao hardware limitado vou priorizar a utilização de LXC, pois eles compartilham o kernel do host e consomem frações da memória RAM e da CPU em comparação a KVM. Usarei KVM somente se em algum momento for utilizar algum serviço ou ferramenta que precise de SO diferente do Linux (Windows ou BSD).
+  
+- 
+
+##
+
 ### 💾 Fase 2: Preparação Física e Instalação (Host OS)
 
 #### A. Configuração de BIOS/UEFI
@@ -26,6 +40,8 @@ Após iniciar o instalador do Sistema Operacional, durante o processo defina os 
 1. **Target Hard Disk:** Selecione estritamente qual será o disco onde instalará o sistema. Ex.: SSD de 480 GB.
 2. **Options (Filesystem):** Clique em options e certifique-se de que o sistema de arquivos está definido como EXT4.
 3. **Network Setup:** Defina um IP estático para a interface de rede cabeada (eth0/eno1). *Obs.: Evite usar wi-fi para o hypervisor, para melhor latência e largura de banda.* 
+
+##
 
 ### 🚀 Fase 3: Otimizações Pós-Instalação (Tuning)
 
