@@ -16,5 +16,12 @@ O objetivo é instalar o sistema operacional e preparar o hardware para executar
 
 Antes de iniciar, acesse a BIOS do computador e garanta que:
 
-1. Virtualization Technology (VT-x) esteja <b>Habilitada</b>. 
+1. A opção Virtualization Technology (VT-x) esteja Habilitada. Sem isso, o KVM não funcionará.
+2. Boot Order: Configure o pendrive bootável do Proxmox VE como primário.
+
+#### B. Parâmetros de Instalação (Proxmox Installer)
+
+Após iniciar o instalador do Sistema Operacional, durante o processo defina os parâmetros conforme abaixo:
+
+1. **Target Hard Disk:**
 
