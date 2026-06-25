@@ -124,6 +124,7 @@ Para desabilitar a suspenção, fazemos o seguinte:
 
 - **Gerenciamento de Falhas (Backups):** Configure um *Backup Job* no Proxmox (Datacenter > Backups) para realizar snapshots       semanais de suas KVM/LXC vitais, apontando o destino estritamente para o `Storage-HDD`.
   
-- **Gerenciamento de Desempenho:**
+- **Gerenciamento de Desempenho:** Monitore o balão de memória (Memory Ballooning) na aba Summary do Node. Mantenha o consumo      global abaixo de 85% (aprox. 6.8 GB) para evitar que o OOM Killer (Out of Memory) do kernel Linux derrube seus serviços.         Podemos automatizar isso com ferramentas de observabilidade também.
 
 ##
+
