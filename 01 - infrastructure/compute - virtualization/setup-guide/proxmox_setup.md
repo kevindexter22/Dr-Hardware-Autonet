@@ -56,9 +56,9 @@ Após o primeiro boot, acesse a interface web de gerência (https://<IP_DO_PROXM
 
 Como não temos uma licença enterprise, vamos alterar o repositório enterprise para evitar erros de atualizaçções. Vou aproveitar e ajustar/desabilitar alguns recursos que não irei utilizar por hora.
 
-Para isso utilizarei um script de Pós-Instalação do PVE disponibilizado em <a href="https://community-scripts.org/">community-scripts.org</a>.
+1. Para isso utilizarei um script de Pós-Instalação do PVE disponibilizado em <a href="https://community-scripts.org/">community-scripts.org</a>.
 
-Para executar esse script, cole o segundo comando no shell do Proxmox:
+2. Para executar esse script, cole o segundo comando no shell do Proxmox:
 ```bash
 bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh)"
 ```
