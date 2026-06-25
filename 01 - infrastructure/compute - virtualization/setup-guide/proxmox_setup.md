@@ -21,7 +21,8 @@ Para contornar as limitações de hardware, adotaremos nesse cenário as seguint
 - **Paradigma de Virtualização (LXC vs KVM):** o Proxmox nos permite trabalhar tanto com LXC (Linux Containers) como com o KVM (máquinas virtuais completas). Devido ao hardware limitado vou priorizar a utilização de LXC, pois eles compartilham o kernel do host e consomem frações da memória RAM e da CPU em comparação a KVM. Usarei KVM somente se em algum momento for utilizar algum serviço ou ferramenta que precise de SO diferente do Linux (Windows ou BSD).
   
 - **Topologia de Storage:**
-   - SSD 480 GB (Tier1): Hospedará o SO (Proxmox) e os discos virtuais das VMs/Containers (LVM-Thin). A leitura/escrita mais        rápida é 
+   - SSD 480 GB (Tier 1): Hospedará o SO (Proxmox) e os discos virtuais das VMs/Containers (LVM-Thin). A leitura/escrita mais        rápida é vital para o IOPS do sistema.
+   - HDD 750 GB (Tier 2): Será mapeado como um diretório de armazenamento para arquivos não críticos à latência: ISOs de            instalação,templates de containers e, primordialmente, Backups. Isso garante uma estratégia básica de redução de MTTR em caso    de falha do SSD. 
 
 ##
 
