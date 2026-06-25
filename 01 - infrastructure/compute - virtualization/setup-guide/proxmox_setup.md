@@ -54,3 +54,6 @@ Após o primeiro boot, acesse a interface web de gerência (https://<IP_DO_PROXM
 
 #### A. Adequação dos Repositórios e Configurações de Base
 
+Como não temos uma licença enterprise, vamos alterar o repositório enterprise para evitar erros de atualizaçções. Vou aproveitar e ajustar/desabilitar alguns recursos que não irei utilizar por hora.
+
+Para isso utilizarei um script de Pós-Instalação disponibilizado em <a href="https://community-scripts.org/">community-scripts.org</a>.
