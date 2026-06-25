@@ -23,5 +23,7 @@ Antes de iniciar, acesse a BIOS do computador e garanta que:
 
 Após iniciar o instalador do Sistema Operacional, durante o processo defina os parâmetros conforme abaixo:
 
-1. **Target Hard Disk:**
+1. **Target Hard Disk:** Selecione estritamente qual será o disco onde instalará o sistema. Ex.: SSD de 480 GB.
+2. **Options (Filesystem):** Clique em options e certifique-se de que o sistema de arquivos está definido como ext4.
+3. 
 
