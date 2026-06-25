@@ -66,3 +66,7 @@ Após rodar esse comando, ele te fará algumas perguntas como: se você quer rod
 
 ⚠️ ***Observação:** Antes de rodar um script de terceiros, sempre acesse o conteúdo e valide o que esse script está fazendo na prática, para que não haja riscos.<br>
 Como eu já dei uma olhada e esse script é seguro, utilizei ele para essa configuração inicial.*
+<br>
+**B. Provisionamento do HDD 750 GB (Tier 2 storage)**
+
+
