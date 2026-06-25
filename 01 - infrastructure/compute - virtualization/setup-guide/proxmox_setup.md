@@ -38,7 +38,7 @@ Antes de iniciar, acesse a BIOS do computador e garanta que:
 1. A opção Virtualization Technology (VT-x) esteja Habilitada. Sem isso, o KVM não funcionará.
 2. Boot Order: Configure o pendrive bootável do Proxmox VE como primário.
 
-__
+
 
 #### B. Parâmetros de Instalação (Proxmox Installer)
 
@@ -67,7 +67,7 @@ Após rodar esse comando, ele te fará algumas perguntas como: se você quer rod
 ⚠️ ***Observação:** Antes de rodar um script de terceiros, sempre acesse o conteúdo e valide o que esse script está fazendo na prática, para que não haja riscos.<br>
 Como eu já dei uma olhada e esse script é seguro, utilizei ele para essa configuração inicial.*
 
-__
+
 
 **B. Provisionamento do HDD 750 GB (Tier 2 storage)**
 
