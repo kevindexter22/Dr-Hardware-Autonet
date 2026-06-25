@@ -18,9 +18,10 @@ Nesse projeto estarei reaproveitando um laptop antigo, um HP Pavilion G4-2170br.
 
 Para contornar as limitações de hardware, adotaremos nesse cenário as seguintes diretrizes arquiteturais:
 
-- Paradigma de Virtualização (LXC vs KVM): o Proxmox nos permite trabalhar tanto com LXC (Linux Containers) como com o KVM (máquinas virtuais completas). Devido ao hardware limitado vou priorizar a utilização de LXC, pois eles compartilham o kernel do host e consomem frações da memória RAM e da CPU em comparação a KVM. Usarei KVM somente se em algum momento for utilizar algum serviço ou ferramenta que precise de SO diferente do Linux (Windows ou BSD).
+- **Paradigma de Virtualização (LXC vs KVM):** o Proxmox nos permite trabalhar tanto com LXC (Linux Containers) como com o KVM (máquinas virtuais completas). Devido ao hardware limitado vou priorizar a utilização de LXC, pois eles compartilham o kernel do host e consomem frações da memória RAM e da CPU em comparação a KVM. Usarei KVM somente se em algum momento for utilizar algum serviço ou ferramenta que precise de SO diferente do Linux (Windows ou BSD).
   
-- 
+- **Topologia de Storage:**
+   - SSD 480 GB (Tier1): Hospedará o SO (Proxmox) e os discos virtuais das VMs/Containers (LVM-Thin). A leitura/escrita mais        rápida é 
 
 ##
 
