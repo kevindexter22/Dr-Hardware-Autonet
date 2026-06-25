@@ -14,15 +14,18 @@ O objetivo é instalar o sistema operacional e preparar o hardware para executar
 
 Primeiramente precisamos entender o nosso cenário de utilização e o hardware que temos disponível e pensar como vamos utilizá-lo para evitar problemas futuros.
 
-Nesse projeto estarei reaproveitando um laptop antigo, um HP Pavilion G4-2170br. Esse laptop conta com um processador Intel Core i5 3210M 2.50 GHz (3ª geração), 8 GB de RAM DDR3 1600 MHz, 1 SSD Kingston 480 GB, 1 adaptador caddy com HDD 750 GB.
+Nesse projeto estarei reaproveitando um laptop antigo, um HP Pavilion G4-2170br. Esse laptop conta com um processador Intel Core i5 3210M 2.50 GHz (3ª geração), 8 GB de RAM DDR3 1600 MHz, 1 SSD Kingston 480 GB, 1 HDD 750 GB.
 
 Para contornar as limitações de hardware, adotaremos nesse cenário as seguintes diretrizes arquiteturais:
 
-- **Paradigma de Virtualização (LXC vs KVM):** o Proxmox nos permite trabalhar tanto com LXC (Linux Containers) como com o KVM (máquinas virtuais completas). Devido ao hardware limitado vou priorizar a utilização de LXC, pois eles compartilham o kernel do host e consomem frações da memória RAM e da CPU em comparação a KVM. Usarei KVM somente se em algum momento for utilizar algum serviço ou ferramenta que precise de SO diferente do Linux (Windows ou BSD).
+- **Paradigma de Virtualização (LXC vs KVM):** o Proxmox nos permite trabalhar tanto com LXC como com o KVM. Devido ao hardware limitado vou priorizar a utilização de LXC, pois eles compartilham o kernel do host e consomem frações da memória RAM e da CPU em comparação a KVM. Usarei KVM somente se em algum momento for utilizar algum serviço ou ferramenta que precise de SO diferente do Linux (Windows ou BSD).
   
 - **Topologia de Storage:**
    - SSD 480 GB (Tier 1): Hospedará o SO (Proxmox) e os discos virtuais das VMs/Containers (LVM-Thin). A leitura/escrita mais        rápida é vital para o IOPS do sistema.
    - HDD 750 GB (Tier 2): Será mapeado como um diretório de armazenamento para arquivos não críticos à latência: ISOs de            instalação,templates de containers e, primordialmente, Backups. Isso garante uma estratégia básica de redução de MTTR em caso    de falha do SSD. 
+
+- **Sistema de Arquivos:** O Proxmox funciona com partições EXT4, ZFS ou BTRFS. Como o hardware que tenho disponível é modesto, estarei utilizando o EXT4.<br>
+Como a finalidade aqui é um homelab, troquei os recursos avançados de integridade de dados do ZFS/Btrfs pela garantia de performance bruta, baixa latência de disco e disponibilidade de RAM (EXT4 + LVM-Thin), mitigando o risco da perda de dados através de uma rotina de backups apontada para o HDD secundário.
 
 ##
 
