@@ -10,7 +10,7 @@ O objetivo é instalar o sistema operacional e preparar o hardware para executar
 
 ##
 
-### 💾 Fase 1: Preparação Física e Instalação (Host OS)
+### 💾 Fase 2: Preparação Física e Instalação (Host OS)
 
 #### A. Configuração de BIOS/UEFI
 
@@ -27,8 +27,9 @@ Após iniciar o instalador do Sistema Operacional, durante o processo defina os 
 2. **Options (Filesystem):** Clique em options e certifique-se de que o sistema de arquivos está definido como EXT4.
 3. **Network Setup:** Defina um IP estático para a interface de rede cabeada (eth0/eno1). *Obs.: Evite usar wi-fi para o hypervisor, para melhor latência e largura de banda.* 
 
-### 🚀 Fase 2: Otimizações Pós-Instalação (Tuning)
+### 🚀 Fase 3: Otimizações Pós-Instalação (Tuning)
 
 Após o primeiro boot, acesse a interface web de gerência (https://<IP_DO_PROXMOX>:8006) e, em seguida, abra o shel do node para aplicar os ajustes de infraestrutura.
 
-#### A. Adequação dos Repositórios (Software Management)
+#### A. Adequação dos Repositórios e Configurações de Base
+
