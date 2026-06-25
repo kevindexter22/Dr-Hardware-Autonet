@@ -128,3 +128,4 @@ Para desabilitar a suspenção, fazemos o seguinte:
 
 ##
 
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
