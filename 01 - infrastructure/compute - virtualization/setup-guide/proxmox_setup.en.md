@@ -60,8 +60,63 @@ We do not have an enterprise license. We will change the enterprise repository s
    ```bash
    bash -c "$(curl -fsSL [https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh](https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh))"
 ```
-  - *After you run this command, it will ask some questions: if you want to run the script, if you want to turn off the         enterprise repository, if you want to turn on a free repository, and if you want to turn off HA (if you have only one         server, you can turn it off). At the end, it will update and ask to restart the server.*<br>
+  - After you run this command, it will ask some questions: if you want to run the script, if you want to turn off the          enterprise repository, if you want to turn on a free repository, and if you want to turn off HA (if you have only one         server, you can turn it off). At the end, it will update and ask to restart the server.<br>
   <br>⚠️ Note: Before you run scripts from the internet, always read the code to see if it is safe.  
   <br>I checked this script and it is safe, so I used it for this setup.
 
+#### B. Setup 750 GB HDD (Tier 2 storage)
 
+1. Find the disk (usually /dev/sdb):
+   ```bash
+   lsblk
+    ```
+2. Format it and make a folder:
+   ```bash
+   mkfs.ext4 /dev/sdb
+   mkdir -p /mnt/hdd750
+   ```
+3. Add to fstab to mount automatically when you start the server:
+   ```bash
+   echo "/dev/sdb /mnt/hdd750 ext4 defaults 0 2" >> /etc/fstab
+   mount -a
+   ```
+4. Go to the Proxmox Web Interface: Datacenter > Storage > Add > Directory
+   - ID: Storage-HDD
+   - Directory: /mnt/hdd750
+   - Content: Choose VZDump backup file, ISO image, Container template
+
+#### C. Virtual Memory Tweak (Swappiness)
+
+To protect the SSD health and keep the system fast when RAM is low, we will make the system use less Swap memory:
+
+1. Type this in the Proxmox shell:
+
+Bash
+sysctl vm.swappiness=10
+To save this change permanently, use this command:
+
+Bash
+echo "vm.swappiness=10" >> /etc/sysctl.conf
+D. Disable Laptop Sleep Mode
+Laptops sleep when you close the lid. For a server, this is bad because the server stops working (Downtime).
+
+To stop this sleep mode, we do this:
+
+Edit the logind file:
+
+Bash
+nano /etc/systemd/logind.conf
+Remove the # and change this line:
+
+Bash
+HandleLidSwitch=ignore
+Restart the service:
+
+Bash
+systemctl restart systemd-logind.service
+⚙️ Phase 4: Operations Management
+Fail Management (Backups): Make a Backup Job in Proxmox (Datacenter > Backups) to create weekly snapshots of your important KVM/LXC. Put the destination strictly in Storage-HDD.
+
+Performance Management: Watch the Memory Ballooning in the Node Summary tab. Keep the global RAM use under 85% (about 6.8 GB). This stops the Linux OOM Killer (Out of Memory) from closing your services. We can also use observability tools to do this automatically.
+
+ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT license
