@@ -90,33 +90,40 @@ We do not have an enterprise license. We will change the enterprise repository s
 To protect the SSD health and keep the system fast when RAM is low, we will make the system use less Swap memory:
 
 1. Type this in the Proxmox shell:
+   ```bash
+    sysctl vm.swappiness=10
+2. To save this change permanently, use this command:
+   ```bash
+   echo "vm.swappiness=10" >> /etc/sysctl.conf
+   ```
 
-Bash
-sysctl vm.swappiness=10
-To save this change permanently, use this command:
+#### D. Disable Laptop Sleep Mode
 
-Bash
-echo "vm.swappiness=10" >> /etc/sysctl.conf
-D. Disable Laptop Sleep Mode
 Laptops sleep when you close the lid. For a server, this is bad because the server stops working (Downtime).
 
 To stop this sleep mode, we do this:
 
-Edit the logind file:
+1. Edit the logind file:
+   ```bash
+   nano /etc/systemd/logind.conf
+   ```
+2. Remove the # and change this line:
+   ```bash
+   HandleLidSwitch=ignore
+   ```
+3. Restart the service:
+   ```bash
+   systemctl restart systemd-logind.service
+   ```
 
-Bash
-nano /etc/systemd/logind.conf
-Remove the # and change this line:
+##
 
-Bash
-HandleLidSwitch=ignore
-Restart the service:
+### ⚙️ Phase 4: Operations Management
 
-Bash
-systemctl restart systemd-logind.service
-⚙️ Phase 4: Operations Management
-Fail Management (Backups): Make a Backup Job in Proxmox (Datacenter > Backups) to create weekly snapshots of your important KVM/LXC. Put the destination strictly in Storage-HDD.
+- **Fail Management (Backups):** Make a Backup Job in Proxmox (Datacenter > Backups) to create weekly snapshots of your important KVM/LXC. Put the destination strictly in Storage-HDD.
 
-Performance Management: Watch the Memory Ballooning in the Node Summary tab. Keep the global RAM use under 85% (about 6.8 GB). This stops the Linux OOM Killer (Out of Memory) from closing your services. We can also use observability tools to do this automatically.
+- **Performance Management:** Watch the Memory Ballooning in the Node Summary tab. Keep the global RAM use under 85% (about 6.8 GB). This stops the Linux OOM Killer (Out of Memory) from closing your services. We can also use observability tools to do this automatically.
 
-ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT license
+##
+
+###### ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT license
