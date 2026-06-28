@@ -31,7 +31,7 @@ Tools focused on hardware resources:
 * **`htop`**: Interactive process viewer (finds CPU, RAM memory, and Swap bottlenecks).
 * **`iotop`**: Disk I/O monitor per process (very important to find slow database queries or Micro-SD read/write limits).
 
----
+##
 
 ### 🚀 Manual Installation Guide
 
