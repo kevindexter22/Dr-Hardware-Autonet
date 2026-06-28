@@ -7,20 +7,72 @@ Este equipamento atua como o roteador de borda (Gateway L3) do laboratório, res
 
 ##
 
-### ⚙️ Papéis e Serviços Ativos
-* **Serviço de Borda:** Recebe IP estático/PPPoE do provedor na interface `WAN`.
-* **Roteamento Interno:** Roteia o tráfego da subnet principal `<LAN_SUBNET_CIDR>`.
-* **Port Forwarding:** Regras ativas para direcionamento de tráfego HTTPS e túneis VPN para o nó de virtualização interno.
+### 🛡️ Proteção de Borda e Firewall Ativo
+
+O roteador atua como a primeira linha de defesa (*Perimeter Security*) contra tráfego malicioso originado da WAN.
+
+* **Prevenção de DoS (Denial of Service):** Filtros ativados contra ataques de *Flood* (SYN/ICMP/UDP) e mitigação de *Port Scanning*.
+* **Políticas de ACL (Access Control List):** Tráfego de entrada (*Inbound*) bloqueado por padrão (Default Deny), exceto para portas estritamente configuradas no *Port Forwarding*.
 
 ##
 
-### 🔒 Política de Acesso (SecOps)
-* Acesso administrativo via porta web (`TCP/<CUSTOM_ADMIN_PORT>`) restrito apenas para IPs da rede de gerência.
-* Broadcast de SSID do Wi-Fi Administrativo configurado como oculto (Hidden SSID).
+### 📡 Arquitetura Wireless (WLAN)
+
+As redes sem fio estão segmentadas logicamente para isolar o tráfego de dispositivos de naturezas diferentes, reduzindo a superfície de movimentação lateral em caso de comprometimento.
+
+| Finalidade | SSID (Oculto?) | Isolamento de Clientes (AP Isolation) |
+| :--- | :--- | :--- |
+| **Administração/Core** | Não | Ativado (Acesso à minha rede interna, somente para meus dispositivos pessoais) |
+| **IoT (Dispositivos Inteligentes)** | Não | Ativado (Sem acesso à rede administrativa) |
+| **Guest (Visitantes)** | Não | Ativado (Apenas acesso à internet) |
 
 ##
 
-### 📂 Sobre os Arquivos de Configuração
-O arquivo `config-backup-sanitized.txt` contém a extração da configuração do roteador com dados sensíveis mascarados. Para restauração em caso de falha física, substitua as tags `< >` pelos valores reais documentados no cofre de senhas *offline* do laboratório.
+### 📡 Gerenciamento de Provedor (TR-069 / TR-181)
+
+O protocolo CWMP (TR-069/TR-181) é utilizado por ISPs para provisionamento remoto, atualizações de firmware e coleta de telemetria do roteador. 
+
+* **Status:** `DESATIVADO`
+* **Justificativa de SecOps:** A manutenção/desativação deste protocolo na rede é porque ainda estarei implementando meu serviço pessoal visando a criaão de automações para uso em minha rede.
 
 ##
+
+### 🔒 Política de Acesso e Gestão
+
+* Acesso administrativo via porta web (`TCP/<CUSTOM_ADMIN_PORT>`) restrito apenas para IPs da rede interna.
+* Senhas de acesso e chaves WPA2/WPA3 mantidas offline no cofre de credenciais do laboratório.
+
+##
+
+### 🎮 Política de Gaming & NAT (UPnP)
+
+Para garantir a melhor experiência em jogos online, o sistema permite a negociação dinâmica de portas (UPnP). 
+
+* **Status:** Ativo (Restrito).
+* **Justificativa:** Necessário para obtenção de NAT Aberto (Open NAT) nos consoles de videogame, garantindo latência mínima e pareamento eficiente.
+* **Política de Isolamento:** * O tráfego de entrada (*Inbound*) negociado via UPnP é inspecionado pelo Firewall de Host (UFW) em cada servidor/dispositivo destino.
+* **Mitigação de Riscos:**
+    * O UPnP não possui permissão para negociar portas de gerenciamento dos servidores (`SSH`, `Web Admin`, `Database`).
+    * Auditoria mensal de mapeamento de portas via logs do roteador.
+
+##
+
+### ⚙️ Considerações de Gerência em Mesh
+
+Como os roteadores estão em Mesh, a configuração de firewall e TR-069 deve ser replicada ou sincronizada de forma consistente entre eles:
+
+* **Consistência de Estado:** As ACLs de firewall configuradas no Controller são propagadas para o Satellite para garantir que a política de segurança seja uniforme em todo o laboratório.
+
+* **Sincronização TR-069:** Caso o protocolo TR-069 esteja ativo, ambos os nós reportam telemetria ao ISP. Em um ambiente Mesh, a desativação deve ser realizada no Controller para garantir que nenhum dos nós inicie um processo de auto-provisioning inesperado que possa afetar o par.
+
+##
+
+### 📂 Sobre os Arquivos de Configuração (Mesh-Ready)
+
+Ao documentar as configurações, note que o arquivo de backup deve refletir a configuração de "nó" específica:
+
+* **config-backup-controller-sanitized.txt:** Configuração contendo as regras de WAN/NAT.
+* **config-backup-satellite-sanitized.txt:** Configuração focada em bridging e rádio.
+
+##
+
