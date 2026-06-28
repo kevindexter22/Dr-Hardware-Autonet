@@ -74,38 +74,40 @@ The L3/L4 security policy uses local Zero Trust (Default Deny). This means incom
 
 Fail2ban works as a host-based IPS (Intrusion Prevention System). It reads system logs and adds dynamic rules to iptables/UFW to ban bad IPs.
 
-Install the package with this command:
+1. Install the package with this command:
+   ```bash
+   sudo apt update; sudo apt install fail2ban -y
+   ``` 
+2. Make a local copy of the config file (this stops overwrites during package updates):
+   ```bash
+   sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+   ```
+3. Edit the local file to configure the SSH Jail:
+   ```bash
+   sudo nano /etc/fail2ban/jail.local
+   ``` 
+4. Find the [sshd] section. Change the port to match Phase 1, and turn on the rule:
+   ```bash
+   [sshd]
+   enabled = true
+   port    = <CUSTOM_SSH_PORT>
+   logpath = %(sshd_log)s
+   backend = %(sshd_backend)s
+   maxretry = 3
+   bantime = 3600
+   ``` 
+   - `maxretry` = 3: Bans the IP after 3 failed tries.
+   - `bantime` = 3600: Ban time (in seconds, e.g., 1 hour).
+5. Start the service:
+   ```bash
+   sudo systemctl enable fail2ban
+   systemctl restart fail2ban
+   ```
 
-Bash
-sudo apt update; sudo apt install fail2ban -y
-Make a local copy of the config file (this stops overwrites during package updates):
+##
 
-Bash
-sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-Edit the local file to configure the SSH Jail:
+### ✅ Phase 4: Operational Check (Anti-Lockout)
 
-Bash
-sudo nano /etc/fail2ban/jail.local
-Find the [sshd] section. Change the port to match Phase 1, and turn on the rule:
-
-Bash
-[sshd]
-enabled = true
-port    = <CUSTOM_SSH_PORT>
-logpath = %(sshd_log)s
-backend = %(sshd_backend)s
-maxretry = 3
-bantime = 3600
-maxretry = 3: Bans the IP after 3 failed tries.
-
-bantime = 3600: Ban time (in seconds, e.g., 1 hour).
-
-Start the service:
-
-Bash
-sudo systemctl enable fail2ban
-systemctl restart fail2ban
-✅ Phase 4: Operational Check (Anti-Lockout)
 Now, we need to make sure you do not lose SSH access after these changes.
 
 Note: Do not close your current terminal. If the settings are wrong, you will lose access if you close it.
