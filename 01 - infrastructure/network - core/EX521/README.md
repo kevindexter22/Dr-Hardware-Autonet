@@ -22,7 +22,7 @@ As redes sem fio estão segmentadas logicamente para isolar o tráfego de dispos
 
 | Finalidade | SSID (Oculto?) | Isolamento de Clientes (AP Isolation) |
 | :--- | :--- | :--- |
-| **Administração/Core** | Não | Ativado (Acesso à minha rede interna, somente para meus dispositivos pessoais) |
+| **Administração/Core** | Não | Ativado (Acesso à minha rede interna e internet, somente para meus dispositivos pessoais) |
 | **IoT (Dispositivos Inteligentes)** | Não | Ativado (Sem acesso à rede administrativa) |
 | **Guest (Visitantes)** | Não | Ativado (Apenas acesso à internet) |
 
