@@ -101,6 +101,25 @@ O Fail2ban atua como um IPS (Intrusion Prevention System) baseado em host, monit
    systemctl restart fail2ban
    ```
 
-   ##
+##
 
-   
+### ✅ Fase 4: Validação Operacional (Anti-Lockout)
+
+Agora vamos garantir que não haverá bloqueio do acesso via SSH após aplicar as configurações.
+
+**Observação:** Não feche o terminal atual onde você executou estas configurações, para não perder o acesso caso os ajustes não tenham sido devidamente aplicados.
+
+1. Abra um segundo terminal na sua máquina local.
+2. Tente estabelecer uma nova conexão SSH utilizando a porta customizada:
+   ```bash
+   ssh <SEU_USUÁRIO>@<IP_DO_SERVIDOR> -p <cCUSTOM_SSH_PORT>
+   ``` 
+3. Valide se o Fail2ban está operando corretamente e monitorando o SSH:
+   ```bash
+   sudo fail2ban-client status sshd
+   ```
+4. Se o acesso na janela 2 for bem-sucedido, o *Baseline* de Segurança foi implementado com êxito e a janela 1 pode ser encerrada.
+
+##
+
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
