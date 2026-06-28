@@ -76,3 +76,4 @@ Ao documentar as configurações, note que o arquivo de backup deve refletir a c
 
 ##
 
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
