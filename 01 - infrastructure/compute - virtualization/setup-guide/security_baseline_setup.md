@@ -25,7 +25,7 @@ A ofuscação da porta padrão (TCP/22) reduz drasticamente o ruído de *scanner
    PubkeyAuthentication yes
    ```
    ***Nota Arquitetural:*** *Em ambientes de produção, recomenda-se alterar PasswordAuthentication para no, forçando o uso       exclusivo de chaves criptográficas (RSA/Ed25519).*<br>
-<br>3. Reinicie o serviço ssh para aplicar as alterações:
+3. Reinicie o serviço ssh para aplicar as alterações:
    ```bash
    sudo systemctl restart ssh
    ``` 
