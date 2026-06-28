@@ -110,18 +110,19 @@ Fail2ban works as a host-based IPS (Intrusion Prevention System). It reads syste
 
 Now, we need to make sure you do not lose SSH access after these changes.
 
-Note: Do not close your current terminal. If the settings are wrong, you will lose access if you close it.
+**Note:** Do not close your current terminal. If the settings are wrong, you will lose access if you close it.
 
-Open a second terminal on your local machine.
+1. Open a second terminal on your local machine.
+2. Try to make a new SSH connection using the custom port:
+   ```bash
+   ssh <YOUR_USER>@<SERVER_IP> -p <CUSTOM_SSH_PORT>
+   ``` 
+3. Check if Fail2ban is working well and watching SSH:
+   ```bash
+   sudo fail2ban-client status sshd
+   ``` 
+4. If the connection in window 2 works, the Security Baseline is a success. You can now close window 1.
 
-Try to make a new SSH connection using the custom port:
+##
 
-Bash
-ssh <YOUR_USER>@<SERVER_IP> -p <CUSTOM_SSH_PORT>
-Check if Fail2ban is working well and watching SSH:
-
-Bash
-sudo fail2ban-client status sshd
-If the connection in window 2 works, the Security Baseline is a success. You can now close window 1.
-
-ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT license.
+###### ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT license.
