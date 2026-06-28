@@ -64,7 +64,7 @@ A política de segurança L3/L4 adota o princípio de *Zero Trust* local (Defaul
    ```
 6. Valide a tabela de regras:
    ```bash
-   sudo ufw status verbose
+   sudo ufw status
    ```
 
 ##
