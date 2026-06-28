@@ -14,7 +14,7 @@ O objetivo é reduzir a superfície de ataque, ofuscar portas padrão, aplicar p
 
 A ofuscação da porta padrão (TCP/22) reduz drasticamente o ruído de *scanners* automatizados na rede.
 
-1. Acesse o arquivo de configuração do *daemon* SSH:
+1. Acesse o servidor via ssh e abra o arquivo de configuração do *daemon* SSH:
    ```bash
    sudo nano /etc/ssh/sshd_config
    ```
