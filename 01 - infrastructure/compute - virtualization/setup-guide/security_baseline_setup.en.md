@@ -34,39 +34,44 @@ Hiding the standard port (TCP/22) stops a lot of noise from automatic network sc
 ## 
 
 ### 🧱 Phase 2: Host Firewall (UFW - Uncomplicated Firewall)
+
 The L3/L4 security policy uses local Zero Trust (Default Deny). This means incoming traffic is only allowed if you declare it.
 
-First, make sure UFW is installed:
+1. First, make sure UFW is installed:
+   ```bash
+   sudo apt update; sudo apt install ufw -y
+   ```
+2. Set the default rules (Block incoming, allow outgoing):
+   ```bash
+   sudo ufw default deny incoming
+   sudo ufw default allow outgoing
+   ```
+3. **CRITICAL:** Allow the new SSH port before you turn on the firewall. This prevents a lockout:
+   ```bash
+   sudo ufw allow <CUSTOM_SSH_PORT>/tcp
+   ```
+4. Allow the ports for the services running on this host (e.g., web, samba, etc.):
+   ```bash
+   # TCP Ports
+   sudo ufw allow <SERVICE_PORT>/tcp comment "Service name for this port"
+   # UDP Ports
+   sudo ufw allow <SERVICE_PORT>/udp comment "Service name for this port"
+   # TCP and UDP Ports
+   sudo ufw allow <SERVICE_PORT> comment "Service name for this port"
+   ``` 
+5. Turn on the firewall:
+   ```bash
+   sudo ufw enable
+   ```
+6. Check the rule table:
+   ```bash
+   sudo ufw status
+   ```
 
-Bash
-sudo apt update; sudo apt install ufw -y
-Set the default rules (Block incoming, allow outgoing):
+##
 
-Bash
-sudo ufw default deny incoming
-sudo ufw default allow outgoing
-CRITICAL: Allow the new SSH port before you turn on the firewall. This prevents a lockout:
+### 🚨 Phase 3: Local IPS and Intrusion Prevention (Fail2ban)
 
-Bash
-sudo ufw allow <CUSTOM_SSH_PORT>/tcp
-Allow the ports for the services running on this host (e.g., web, samba, etc.):
-
-Bash
-# TCP Ports
-sudo ufw allow <SERVICE_PORT>/tcp comment "Service name for this port"
-# UDP Ports
-sudo ufw allow <SERVICE_PORT>/udp comment "Service name for this port"
-# TCP and UDP Ports
-sudo ufw allow <SERVICE_PORT> comment "Service name for this port"
-Turn on the firewall:
-
-Bash
-sudo ufw enable
-Check the rule table:
-
-Bash
-sudo ufw status verbose
-🚨 Phase 3: Local IPS and Intrusion Prevention (Fail2ban)
 Fail2ban works as a host-based IPS (Intrusion Prevention System). It reads system logs and adds dynamic rules to iptables/UFW to ban bad IPs.
 
 Install the package with this command:
