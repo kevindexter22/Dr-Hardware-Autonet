@@ -67,6 +67,8 @@ A política de segurança L3/L4 adota o princípio de *Zero Trust* local (Defaul
    sudo ufw status verbose
    ```
 
+##
+
 ### 🚨 Fase 3: IPS Local e Prevenção de Intrusão (Fail2ban)
 
 O Fail2ban atua como um IPS (Intrusion Prevention System) baseado em host, monitorando os logs do sistema e injetando regras dinâmicas no iptables/UFW para banir IPs maliciosos.
