@@ -8,7 +8,7 @@ Este documento lista os pacotes fundamentais de observabilidade local e ferramen
 
 O objetivo é padronizar o ecossistema para garantir que, durante um incidente operacional de rede ou alta carga de CPU/Disco, as ferramentas de diagnóstico já estejam disponíveis no *host*, reduzindo o Tempo Médio de Reparo (MTTR).
 
----
+##
 
 ### 🛠️ Pacotes de Rede e Conectividade (L2 - L4)
 
