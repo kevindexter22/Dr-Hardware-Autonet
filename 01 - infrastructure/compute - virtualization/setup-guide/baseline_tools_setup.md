@@ -36,16 +36,14 @@ Utilitários focados no consumo de recursos de hardware:
 ### 🚀 Procedimento de Instalação Manual
 
 Para injetar o *Toolkit* base em um novo servidor Ubuntu/Debian recém-provisionado, execute:
-   ```bash
-   # 1. Atualize a lista de pacotes do repositório base
-   sudo apt update
-   # 2. Instale as ferramentas de diagnóstico
-   sudo apt install -y net-tools htop iftop nload traceroute iputils-ping mtr-tiny tcpdump iotop
-   ```
+
+```bash
+# 1. Atualize a lista de pacotes do repositório base
+sudo apt update
+# 2. Instale as ferramentas de diagnóstico
+sudo apt install -y net-tools htop iftop nload traceroute iputils-ping mtr-tiny tcpdump iotop
+```
 
 ##
 
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
-
-# 2. Instale as ferramentas de diagnóstico em modo não-interativo (-y)
-sudo apt install -y net-tools htop iftop nload traceroute iputils-ping mtr-tiny tcpdump iotop
