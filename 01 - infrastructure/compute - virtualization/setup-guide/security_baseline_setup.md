@@ -67,6 +67,40 @@ A política de segurança L3/L4 adota o princípio de *Zero Trust* local (Defaul
    sudo ufw status verbose
    ```
 
-##
+### 🚨 Fase 3: IPS Local e Prevenção de Intrusão (Fail2ban)
 
+O Fail2ban atua como um IPS (Intrusion Prevention System) baseado em host, monitorando os logs do sistema e injetando regras dinâmicas no iptables/UFW para banir IPs maliciosos.
 
+1. Instale o pacote utilizando o comando:
+   ```bash
+   sudo apt update; sudo apt install fail2ban -y
+   ```
+2. Crie uma cópia local do arquivo de configuração (evita sobreposição em atualizações de pacote):
+   ```bash
+   sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+   ```
+3. Edite o arquivo local para configurar a Jail do SSH:
+   ```bash
+   sudo nano /etc/fail2ban/jail.local
+   ```
+4. Localize a seção [sshd] e altere a porta para coincidir com o ajuste feito na Fase 1, ativando a regra:
+   ```bash
+   [sshd]
+   enabled = true
+   port    = <CUSTOM_SSH_PORT>
+   logpath = %(sshd_log)s
+   backend = %(sshd_backend)s
+   maxretry = 3
+   bantime = 3600
+   ```
+   - `maxretry` = 3: Bane o IP após 3 tentativas falhas.
+   - `bantime` = 3600: Tempo de banimento (em segundos, ex: 1 hora).
+5. Iniciando o serviço:
+   ```bash
+   sudo systemctl enable fail2ban
+   systemctl restart fail2ban
+   ```
+
+   ##
+
+   
