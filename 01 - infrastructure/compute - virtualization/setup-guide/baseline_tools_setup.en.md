@@ -41,7 +41,7 @@ To add the base toolkit to a new Ubuntu/Debian server, run:
 # 1. Update the repository package list
 sudo apt update
 
-# 2. Install the diagnostic tools automatically (-y)
+# 2. Install the diagnostic tools
 sudo apt install -y net-tools htop iftop nload traceroute iputils-ping mtr-tiny tcpdump iotop
 ```
 
