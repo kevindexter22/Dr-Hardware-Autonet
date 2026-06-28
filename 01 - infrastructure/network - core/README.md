@@ -41,3 +41,4 @@ Inventário dos componentes que formam o núcleo de conectividade:
 
 ##
 
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
