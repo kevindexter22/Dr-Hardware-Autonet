@@ -8,7 +8,7 @@ Este Procedimento Operacional Padrão (SOP) define as diretrizes de endureciment
 
 O objetivo é reduzir a superfície de ataque, ofuscar portas padrão, aplicar políticas de *Default Deny* no firewall de host (UFW) e mitigar ataques de força bruta utilizando análise de logs (*Fail2ban*). Este baseline deve ser aplicado imediatamente após o *Bootstrap* inicial do servidor.
 
----
+##
 
 ### 🔐 Fase 1: SSH Hardening (Ofuscação e Controle de Acesso)
 
