@@ -1,6 +1,6 @@
 <h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01 - infrastructure/compute - virtualization/setup-guide/casaos_setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
-# 🛠️ Installing CasaOS - Raspberry Pi
+# 🛠️ (SOP) Installing CasaOS - Raspberry Pi
 
 ### 📝 Description and Scope
 
