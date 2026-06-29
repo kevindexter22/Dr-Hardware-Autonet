@@ -3,6 +3,7 @@
 # Architecture Domain: OSS Management
 # Author: Kevin Oliveira
 # ==============================================================================
+
 name: zabbix-proxy-oss
 services:
   zabbix-proxy:
