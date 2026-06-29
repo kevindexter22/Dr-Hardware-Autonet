@@ -1,1 +1,6 @@
-
+# ==============================================================================
+# Workload: trilium
+# Original Author: Jason McFeetors
+# Modified by: Kevin Oliveira (Adaptação para o ecossistema Autonet)
+# Changes: Ajuste de VLANs, substituição de variáveis de ambiente e volumes.
+# ==============================================================================
