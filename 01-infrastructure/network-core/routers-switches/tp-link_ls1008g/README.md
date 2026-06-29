@@ -25,7 +25,7 @@ O TP-Link LS1008G é um *switch* L2 de acesso não gerenciável de 8 portas. Na 
 
 ### ⚠️ Limitações Arquiteturais e SecOps
 
-Por ser um equipamento *Plug-and-Play* sem plano de controle (*Control Plane*), aplicam-se as seguintes restrições de arquitetura:
+Por ser um equipamento *Plug-and-Play* sem plano de controle, aplicam-se as seguintes restrições de arquitetura:
 
 * **Domínio de Broadcast Único (Rede Plana):** O *switch* não suporta a criação de VLANs (IEEE 802.1Q). Todos os dispositivos conectados a ele pertencem ao mesmo domínio de colisão/broadcast imposto pelo roteador/gateway superior.
 * **Ausência de Spanning Tree (STP):** Não há proteção contra *Loops* de Camada 2. Uma conexão acidental de um cabo entre duas portas deste *switch* causará um *Broadcast Storm*, derrubando a rede.
