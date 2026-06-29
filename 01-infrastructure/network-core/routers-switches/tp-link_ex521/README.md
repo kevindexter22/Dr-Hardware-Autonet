@@ -22,11 +22,21 @@ Documentação do painel traseiro do roteador (Port Allocation). Mantém a rastr
 
 #### 📍 Nó 1: EX521 - Controller (Gateway Principal)
 
-| Interface (Porta) | Status Físico | Velocidade (Link) | Destino (Conectado a) | Observação
-| :--- | :--- | :--- |
-| **Administração/Core** | Não | Ativado (Acesso à minha rede interna e internet, somente para meus dispositivos pessoais) |
-| **IoT (Dispositivos Inteligentes)** | Não | Ativado (Sem acesso à rede administrativa) |
-| **Guest (Visitantes)** | Não | Ativado (Apenas acesso à internet) |
+| Interface (Porta) | Status Físico | Velocidade (Link) | Destino (Conectado a) | Observação |
+| :--- | :--- | :--- | :--- | :--- |
+| WAN | UP | 1 Gbps | Modem do Provedor (ISP) | Recebe a conexão externa e faz a autenticação via PPPoE |
+| LAN 1 | UP | 1 Gbps | Switch TP-Link LS1008G | Uplink principal para a distribuição de acesso da rede |
+| LAN 2 | UP | 1 Gbps | Router TP-Link WR850N | Roteador dedicado às câmeras |
+| LAN 3 | UP | 1 Gbps | Router EX521 Satellite | Nó de extensão mesh |
+
+#### 📍 Nó 2: EX521 - Satellite (Nó de extensão mesh)
+
+| Interface (Porta) | Status Físico | Velocidade (Link) | Destino (Conectado a) | Observação |
+| :--- | :--- | :--- | :--- | :--- |
+| WAN | UP | 1 Gbps | Router EX521 Controller | Usada para Ethernet Backhaul |
+| LAN 1 | UP | 1 Gbps | Desktop 1 | Usada para conectar computador à internet |
+| LAN 2 | UP | 1 Gbps | Desktop 3 | Usada para conectar computador à internet |
+| LAN 3 | UP | 1 Gbps | Router EX521 Satellite | Nó de extensão mesh |
 
 ##
 
