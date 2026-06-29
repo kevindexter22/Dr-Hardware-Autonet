@@ -1,1 +1,87 @@
+# ==============================================================================
+# Workload: cloudbeaver
+# Original Author: joaobosconff
+# Modified by: Kevin Oliveira (Adaptação para o ecossistema Autonet)
+# Changes: Ajuste da porta de acesso à interface.
+# ==============================================================================
 
+name: cloudbeaver
+services:
+  cloudbeaver:
+    cpu_shares: 90
+    command: []
+    container_name: cloudbeaver
+    deploy:
+      resources:
+        limits:
+          memory: 3789M
+        reservations:
+          memory: "268435456"
+    hostname: cloudbeaver
+    image: dbeaver/cloudbeaver:25.2.5
+    labels:
+      icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/icon.png
+    ports:
+      - target: 8978
+        published: "<CUSTOM_PORT>"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/cloudbeaver/workspace
+        target: /opt/cloudbeaver/workspace
+    x-casaos:
+      ports:
+        - container: "8978"
+          description:
+            en_us: WebUI HTTP Port
+            pt_br: Porta da WebUI
+            zh_cn: WebUI HTTP端口
+          protocol: tcp
+      volumes:
+        - container: /opt/cloudbeaver/workspace
+          description:
+            en_us: Workspace directory.
+            pt_br: Diretório do workspace
+            zh_cn: 工作目录
+    devices: []
+    cap_add: []
+    environment: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  author: joaobosconff
+  category: Developer
+  description:
+    en_us: CloudBeaver is a web-based database GUI tool which provides rich web
+      interface. You can use it to manage PostgreSQL, MySQL, MariaDB, SQL
+      Server, Oracle, DB2, Firebird, H2, Trino.
+    pt_br: CloudBeaver é uma ferramenta GUI de banco de dados baseada na web que
+      oferece uma interface web abrangente. Você pode usá-lo para gerenciar
+      PostgreSQL, MySQL, MariaDB, SQL Server, Oracle, DB2, Firebird, H2 e Trino.
+    zh_cn: CloudBeaver是一个基于Web的数据库GUI工具，提供丰富的Web界面。您可以使用它来管理PostgreSQL、MySQL、MariaDB、SQL
+      Server、Oracle、DB2、Firebird、H2和Trino。
+  developer: dbeaver
+  hostname: ""
+  icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/icon.png
+  index: /
+  is_uncontrolled: false
+  main: cloudbeaver
+  port_map: "<CUSTOM_PORT>"
+  scheme: http
+  screenshot_link:
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/screenshot-1.png
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/screenshot-2.png
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/CloudBeaver/screenshot-3.png
+  store_app_id: cloudbeaver
+  tagline:
+    en_us: Cloud Database Manager.
+    pt_br: Administrador de Banco de Dados na Nuvem.
+    zh_cn: 云数据库管理器。
+  title:
+    custom: ""
+    en_us: CloudBeaver
+    pt_br: CloudBeaver
