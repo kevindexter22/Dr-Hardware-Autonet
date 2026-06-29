@@ -17,6 +17,30 @@ The router acts as the first line of defense (Perimeter Security) against malici
 
 ##
 
+### 🔌 Physical Interface Mapping (LAN / WAN)
+
+Documentation of the router's back panel (Port Allocation). It helps to track Layer 1 and 2 for physical maintenance and to prevent network loops.
+
+#### 📍 Node 1: EX521 - Controller (Main Gateway)
+
+| Interface (Port) | Physical Status | Speed (Link) | Destination (Connected to) | Note |
+| :--- | :--- | :--- | :--- | :--- |
+| **WAN** | `UP` | 1 Gbps | ISP Modem | Receives the external connection and authenticates using PPPoE. |
+| **LAN 1** | `UP` | 1 Gbps | Switch TP-Link LS1008G | Main uplink to distribute network access. |
+| **LAN 2** | `UP` | 1 Gbps | Router TP-Link WR850N | Dedicated router for cameras. |
+| **LAN 3** | `UP` | 1 Gbps | Router EX521 Satellite | Mesh extension node. |
+
+#### 📍 Node 2: EX521 - Satellite (Mesh Extension Node)
+
+| Interface (Port) | Physical Status | Speed (Link) | Destination (Connected to) | Note |
+| :--- | :--- | :--- | :--- | :--- |
+| **WAN** | `UP` | 1 Gbps | Router EX521 Controller | Used for Ethernet Backhaul. |
+| **LAN 1** | `UP` | 1 Gbps | Desktop 1 | Used to connect the computer to the internet. |
+| **LAN 2** | `UP` | 1 Gbps | Desktop 3 | Used to connect the computer to the internet. |
+| **LAN 3** | `UP` | 100 Mbps | Switch Overtek (Fast Eth) | Lab switch for Fast Ethernet devices. |
+
+##
+
 ### 📡 Wireless Architecture (WLAN)
 
 The wireless networks are logically segmented to isolate traffic from different devices. This reduces the lateral movement surface if the network is compromised.
