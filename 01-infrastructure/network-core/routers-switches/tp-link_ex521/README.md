@@ -16,6 +16,20 @@ O roteador atua como a primeira linha de defesa (*Perimeter Security*) contra tr
 
 ##
 
+### 🔌 Mapeamento Físico de Interfaces (LAN / WAN)
+
+Documentação do painel traseiro do roteador (Port Allocation). Mantém a rastreabilidade da Camada 1 e 2 para manutenções físicas e mitigação de loops.
+
+#### 📍 Nó 1: EX521 - Controller (Gateway Principal)
+
+| Interface (Porta) | Status Físico | Velocidade (Link) | Destino (Conectado a) | Observação
+| :--- | :--- | :--- |
+| **Administração/Core** | Não | Ativado (Acesso à minha rede interna e internet, somente para meus dispositivos pessoais) |
+| **IoT (Dispositivos Inteligentes)** | Não | Ativado (Sem acesso à rede administrativa) |
+| **Guest (Visitantes)** | Não | Ativado (Apenas acesso à internet) |
+
+##
+
 ### 📡 Arquitetura Wireless (WLAN)
 
 As redes sem fio estão segmentadas logicamente para isolar o tráfego de dispositivos de naturezas diferentes, reduzindo a superfície de movimentação lateral em caso de comprometimento.
