@@ -18,7 +18,7 @@ An overview of the logical segmentation and routing. The exact addresses are kep
 - **Internal DNS Service:** <INTERNAL_DNS_IP_1> / <INTERNAL_DNS_IP_2>
 - **VPN Tunnel (Remote Access):** <VPN_SUBNET_CIDR> (L3 Routed Protocol)
 
-***Note:*** *For details about assignment policies, please see the official standards document at `05-docs/standards-policies.md`.*
+> **Note:** For details about assignment policies, please see the official standards document at `05-docs/standards-policies.md`.
 
 ##
 
