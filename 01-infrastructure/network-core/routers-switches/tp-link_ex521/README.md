@@ -36,7 +36,7 @@ Documentação do painel traseiro do roteador (Port Allocation). Mantém a rastr
 | WAN | UP | 1 Gbps | Router EX521 Controller | Usada para Ethernet Backhaul |
 | LAN 1 | UP | 1 Gbps | Desktop 1 | Usada para conectar computador à internet |
 | LAN 2 | UP | 1 Gbps | Desktop 3 | Usada para conectar computador à internet |
-| LAN 3 | UP | 1 Gbps | Router EX521 Satellite | Nó de extensão mesh |
+| LAN 3 | UP | 100 Mbps | Switch Overtek (Fast Eth) | Switch Laboratório para Dispositivos Fast |
 
 ##
 
