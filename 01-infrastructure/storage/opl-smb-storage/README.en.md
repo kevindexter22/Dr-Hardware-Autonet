@@ -1,4 +1,4 @@
-<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/storage/casaos-local-storage/README.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
+<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/storage/opl-smb-storage/README.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 🎮 OPL Samba Storage (PS2 Game Server)
 
