@@ -35,8 +35,8 @@ A list of the components that make the connectivity core:
 ### 📂 Directory Structure
 ```text
 01-infrastructure/network-core/
-├── 📄 README.md                 # Network Topology Overview (This file)
-├── 📄 README.en.md
+├── 📄 README.md                 # Network Topology Overview (portuguese)
+├── 📄 README.en.md              # Network Topology Overview (english)
 ├── 📂 routers-switches/         # Extracted and cleaned configurations from physical hardware
 └── 📂 setup-guides/             # Manual procedures (SOPs) for VPN, DNS setup, etc.
 ```
