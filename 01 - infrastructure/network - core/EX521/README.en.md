@@ -51,26 +51,28 @@ To guarantee the best online gaming experience, the system allows dynamic port n
 
 * **Status:** Active (Restricted).
 * **Justification:** Necessary to get Open NAT on video game consoles, guaranteeing minimum latency and efficient matchmaking.
-* **Isolation Policy:** Inbound traffic negotiated via UPnP is inspected by the Host Firewall (UFW) on each destination server/device.
+* **Isolation Policy:** Inbound traffic negotiated via UPnP is inspected by the Host Firewall (UFW) on each destination          server/device.
+* **Risk Mitigation:**
+  * UPnP does not have permission to negotiate server management ports (SSH, Web Admin, Database).
+  * Monthly audit of port mapping via router logs.
 
-Risk Mitigation:
+##
 
-UPnP does not have permission to negotiate server management ports (SSH, Web Admin, Database).
+### ⚙️ Mesh Management Considerations
 
-Monthly audit of port mapping via router logs.
-
-⚙️ Mesh Management Considerations
 Because the routers are in Mesh, the firewall and TR-069 configuration must be replicated or synchronized consistently between them:
 
-State Consistency: Firewall ACLs configured on the Controller are propagated to the Satellite to guarantee that the security policy is uniform across the lab.
+* **State Consistency:** Firewall ACLs configured on the Controller are propagated to the Satellite to guarantee that the        security policy is uniform across the lab.
+* **TR-069 Synchronization:** If the TR-069 protocol is active, both nodes will report telemetry to a server.
 
-TR-069 Synchronization: If the TR-069 protocol is active, both nodes will report telemetry to a server.
+##
 
-📂 About the Configuration Files (Mesh-Ready)
+### 📂 About the Configuration Files (Mesh-Ready)
+
 When documenting the configurations, note that the backup file must show the specific "node" configuration:
+* **config-backup-controller-sanitized.txt:** Configuration containing the WAN/NAT rules.
+* **config-backup-satellite-sanitized.txt:** Configuration focused on bridging and radio.
 
-config-backup-controller-sanitized.txt: Configuration containing the WAN/NAT rules.
-
-config-backup-satellite-sanitized.txt: Configuration focused on bridging and radio.
+##
 
 ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT license.
