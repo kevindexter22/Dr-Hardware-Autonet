@@ -24,7 +24,7 @@ Responsável pela **Automação Imperativa e Rotinas de SO**.
 
 ### 🚧 Roadmap de Maturidade IaC (Planejado)
 
-As tecnologias abaixo compõem o estado futuro (*To-Be*) da arquitetura do laboratório para substituir gradativamente os *scripts* imperativos por declarações de estado.
+As tecnologias abaixo compõem o estado futuro da arquitetura do laboratório para substituir gradativamente os *scripts* imperativos por declarações de estado.
 
 * **[⏳ PLANEJADO] Ansible (`ansible/`):** Para **Gerência de Configuração**. Conterá os *Playbooks* para garantir o estado desejado dos servidores (ex: aplicação de *Hardening* de SO, injeção de chaves SSH e instalação de pacotes base em massa).
 * **[⏳ PLANEJADO] Terraform (`terraform/`):** Para **Provisionamento Declarativo**. Contonterá os manifestos utilizados para provisionar recursos computacionais imutáveis (ex: criação automatizada de Máquinas Virtuais no Proxmox).
