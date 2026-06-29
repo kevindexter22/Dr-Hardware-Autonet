@@ -30,7 +30,7 @@ As redes sem fio estão segmentadas logicamente para isolar o tráfego de dispos
 
 ### 📡 Gerenciamento de Provedor (TR-069 / TR-181)
 
-O protocolo CWMP (TR-069/TR-181) é utilizado por ISPs para provisionamento remoto, atualizações de firmware e coleta de telemetria do roteador. 
+O protocolo CWMP (TR-069/TR-181) é utilizado por ISPs para provisionamento remoto, atualizações de firmware e coleta de telemetria do roteador. Em nosso cenário utilizaremos para automações pontuais. 
 
 * **Status:** `DESATIVADO`
 * **Justificativa de SecOps:** A manutenção/desativação deste protocolo na rede é porque ainda estarei implementando meu serviço pessoal visando a criaão de automações para uso em minha rede.
