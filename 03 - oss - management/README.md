@@ -8,7 +8,7 @@ Este diretório atua como o **Plano de Gerenciamento (Management Plane)** do lab
 
 As ferramentas contidas aqui não são aplicações de consumo final (Workloads), mas sim os sistemas críticos que vigiam a fundação de rede e servidores (Network Core & Compute).
 
----
+##
 
 ### 🏗️ Arquitetura de Domínios
 
@@ -17,15 +17,19 @@ Responsável pela Gestão de Falhas (*Fault*) e Desempenho (*Performance*). Cent
 * **`myspeed/`**: Stack para monitoramento automatizado de qualidade de link (*throughput* e latência recorrentes).
 * **`zabbix-stack/`**: Ecossistema principal de monitoramento via agentes e interrogadores (*Proxies*, *Agents* e *Templates*).
 
+##
+
 #### 🔐 2. Security & IAM (S do FCAPS)
 Responsável pela Gestão de Segurança (*Security*). É o núcleo de Identidade e Controle de Acesso da rede.
 * Abriga as stacks de *Identity and Access Management* (IAM), como provedores de *Single Sign-On* (SSO), diretórios de usuários (LDAP/Active Directory) e controle de autenticação de rede (RADIUS, FREEIPA).
+
+##
 
 #### 🚨 3. Alerts & Mediation
 Responsável por orquestrar a inteligência de incidentes.
 * Recebe os gatilhos brutos da camada de *Observability*, filtra ruídos e roteia alertas acionáveis para os canais de notificação corretos (Webhooks, Telegram, N8N, e-mail).
 
----
+##
 
 ### 🛠️ Padrão de Organização (GitOps)
 
