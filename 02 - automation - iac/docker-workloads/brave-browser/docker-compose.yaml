@@ -1,1 +1,71 @@
+# =======================================================================================================
+# Workload: brave browser
+# Original Author: BigBearTechWorld
+# Modified by: Kevin Oliveira
+# Changes: changed password, changed container hostname, customized tcp port, changed download directory, 
+#          addicted extra hosts, changed launch url
+# ========================================================================================================
 
+name: big-bear-brave
+services:
+  brave:
+    cpu_shares: 90
+    command: []
+    container_name: brave-browser
+    deploy:
+      resources:
+        limits:
+          memory: 3784M
+    environment:
+      - LAUNCH_URL=https://your.domain/
+      - VNC_PW=<YOUR_PASSWORD>
+    extra_hosts:
+      - <SERVER_DOMAIN_NAME>:<SERVER_IP_ADDRESS>
+    hostname: brave-browser
+    image: kasmweb/brave:1.15.0-rolling
+    labels:
+      icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/brave.png
+    ports:
+      - target: 6901
+        published: "<CUSTOM_PORT>"
+        protocol: tcp
+    restart: unless-stopped
+    shm_size: "536870912"
+    volumes:
+      - type: bind
+        source: /DATA/AppData/brave-browser/Downloads
+        target: /home/<YOUR_USER>/Downloads
+        bind:
+          create_host_path: true
+    devices: []
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  author: BigBearTechWorld
+  category: BigBearCasaOS
+  description:
+    en_us: This Image contains a browser-accessible version of Brave.
+  developer: kasmweb
+  hostname: ""
+  icon: https://cdn.jsdelivr.net/gh/selfhst/icons/png/brave.png
+  index: /
+  is_uncontrolled: false
+  main: brave
+  port_map: "<CUSTOM_PORT>"
+  scheme: https
+  store_app_id: big-bear-brave
+  tagline:
+    en_us: Brave
+  thumbnail: ""
+  tips:
+    before_install:
+      en_us: |
+        Username: kasm_user
+        Password: my_password
+  title:
+    custom: ""
+    en_us: Brave
