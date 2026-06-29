@@ -4,3 +4,103 @@
 # Modified by: Kevin Oliveira
 # Changes: customized tcp port, edited the description
 # =====================================================================================================
+
+name: n8n
+services:
+  n8n:
+    cpu_shares: 90
+    command: []
+    container_name: n8n
+    deploy:
+      resources:
+        limits:
+          memory: 3784M
+        reservations:
+          memory: "335544320"
+    environment:
+      - N8N_SECURE_COOKIE=false
+      - TZ=America/Sao_Paulo
+    hostname: n8n
+    image: n8nio/n8n:1.123.0
+    labels:
+      icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/N8n/icon.png
+    ports:
+      - target: 5678
+        published: "<CUSTOM_PORT>"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/n8n
+        target: /home/node/.n8n
+    x-casaos:
+      envs:
+        - container: TZ
+          description:
+            en_us: TimeZone
+            zh_cn: 时区
+      ports:
+        - container: "5678"
+          description:
+            en_us: web port
+            zh_cn: web 端口
+      volumes:
+        - container: /home/node/.n8n
+          description:
+            en_us: n8n directory.
+            zh_cn: n8n 目录。
+    devices: []
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  author: YoussofKhawaja
+  category: Utilities
+  description:
+    en_US: >
+      n8n is a powerful open-source workflow automation and conversational AI
+      platform that blends the flexibility of coding with the simplicity of
+      no-code development, empowering users to create efficient and secure
+      automation workflows. It seamlessly connects any app with an API,
+      leveraging native AI capabilities (like LangChain-based AI agent
+      workflows) to process custom data, ideal for personal task management,
+      team collaboration, or enterprise-grade automation. Its vibrant community
+      offers over 400 integrations and 900+ ready-to-use templates, enabling
+      users to deploy automations quickly.
+  developer: n8n
+  hostname: ""
+  icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/N8n/icon.png
+  index: /
+  is_uncontrolled: false
+  main: n8n
+  port_map: "<CUSTOM_PORT>"
+  scheme: http
+  screenshot_link:
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/N8n/screenshot-1.png
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/N8n/screenshot-2.png
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/N8n/screenshot-3.png
+  store_app_id: n8n
+  tagline:
+    de_DE: Werkzeug zur Workflow-Automatisierung
+    el_GR: Εργαλείο αυτοματοποίησης ροών εργασιών
+    en_GB: Workflow automation tool
+    en_US: Workflow automation tool
+    fr_FR: Outil d'automatisation des flux de travail
+    hr_HR: Alat za automatizaciju radnih procesa
+    it_IT: Strumento di automazione dei flussi di lavoro
+    ja_JP: ワークフロー自動化ツール
+    ko_KR: 워크플로우 자동화 도구
+    nb_NO: Verktøy for arbeidsflytautomatisering
+    pt_PT: Ferramenta de automação de fluxos de trabalho
+    ru_RU: Инструмент автоматизации рабочих процессов
+    sv_SE: Verktyg för arbetsflödesautomatisering
+    tr_TR: İş akışı otomasyon aracı
+    zh_CN: 工作流自动化工具
+  thumbnail: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/N8n/thumbnail.png
+  tips: {}
+  title:
+    custom: ""
+    en_us: n8n
