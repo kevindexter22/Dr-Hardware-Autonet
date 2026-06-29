@@ -2,7 +2,7 @@
 # Workload: trilium
 # Original Author: Jason McFeetors
 # Modified by: Kevin Oliveira (Adaptação para o ecossistema Autonet)
-# Changes:  Ajuste da porta de acesso à interface.
+# Changes: customized tcp port
 # ==============================================================================
 
 name: trilium
