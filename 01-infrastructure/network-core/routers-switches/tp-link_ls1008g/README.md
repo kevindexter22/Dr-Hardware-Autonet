@@ -19,7 +19,8 @@ O TP-Link LS1008G é um *switch* L2 de acesso não gerenciável de 8 portas. Na 
   * Porta 4: `CasaOS_Server`
   * Porta 5: `<NODE_COMPUTE_4>`
   * Porta 6: `<NODE_COMPUTE_5>`
-  * Portas 7-8: *Disponíveis*
+  * Porta 7: `Disponível`
+  * Porta 8: `Disponível`
 
 ##
 
