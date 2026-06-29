@@ -1,4 +1,4 @@
-<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01 - infrastructure/compute - virtualization/setup-guide/proxmox_setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
+<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/compute-virtualization/setup-guide/proxmox_setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 🛠️ SOP: Bare-Metal Setup - Proxmox VE
 
