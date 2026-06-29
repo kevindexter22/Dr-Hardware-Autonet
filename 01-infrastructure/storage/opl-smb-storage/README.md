@@ -56,7 +56,7 @@ A arquitetura do servidor de arquivos conta com dois *scripts* executados em *ba
 
 #### 2. `ps2_monitor.sh` (Gestão de Energia e Segurança)
 * **Função:** *Polling* L3 para desligamento ocioso inteligente.
-* **Lógica:** Executa *Echo Requests* (Ping) periódicos para o IP estático do PlayStation 2. Caso o console permaneça inalcançável (Offline) por um período contínuo de `X` minutos (indicando o fim da jogatina), o script aciona o desligamento seguro (`shutdown`) do servidor Linux.
+* **Lógica:** Executa *Echo Requests* (Ping) periódicos para o IP estático do PlayStation 2. Caso o console permaneça inalcançável (Offline) por um período contínuo de `100` minutos (indicando o fim da jogatina), o script aciona o desligamento seguro (`shutdown`) do servidor Linux.
 * **Justificativa:** Reduz o *uptime* desnecessário da Raspberry Pi, mitigando desgaste físico da unidade de armazenamento, diminuindo o consumo elétrico e fechando a janela de exposição de rede do protocolo legado SMBv1.
 
 ##
