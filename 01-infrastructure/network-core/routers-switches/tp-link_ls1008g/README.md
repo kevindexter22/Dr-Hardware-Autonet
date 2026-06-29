@@ -10,7 +10,7 @@ O TP-Link LS1008G é um *switch* L2 de acesso não gerenciável de 8 portas. Na 
 
 ### 🗺️ Papel na Topologia Física
 
-* **Localização Física:** `<LOCAL_DE_INSTALAÇÃO>`
+* **Localização Física:** `Sala`
 * **Uplink (Conexão de Origem):** Conectado à porta `LAN_1` do equipamento `EX521_Controller` via cabo Cat6A.
 * **Dispositivos Conectados (Downlinks):**
   * Porta 1: `Uplink`
