@@ -21,10 +21,11 @@ The router acts as the first line of defense (Perimeter Security) against malici
 
 The wireless networks are logically segmented to isolate traffic from different devices. This reduces the lateral movement surface if the network is compromised.
 
-Purpose	SSID (Hidden?)	Client Isolation (AP Isolation)
-Administration/Core	No	Active (Access to my internal network and internet, only for my personal devices)
-IoT (Smart Devices)	No	Active (No access to the admin network)
-Guest (Visitors)	No	Active (Internet access only)
+| Purpose	| SSID (Hidden?) | Client Isolation (AP Isolation) |
+| :--- | :--- | :--- |
+| **Administration/Core** |	No | Active (Access to my internal network and internet, only for my personal devices) |
+| **IoT (Smart Devices)** |	No | Active (No access to the admin network) |
+| **Guest (Visitors)**	| No | Active (Internet access only) |
 
 ##
 
