@@ -50,21 +50,25 @@ PS2Jogos/
 
 The file server architecture has two background scripts. They keep the system working and save resources automatically.
 
-1. hdd_mount_script.sh (Mount Audit)
-Function: Fixes the mount state of the USB storage.
-* **Logic: It uses blkid to check if the disk UUID is connected. Sometimes the system mounts the drive in a random place. If this happens, the script unmounts it and uses the official rule in /etc/fstab. This makes sure Samba always finds the ISO images in the /mnt/ps2hdd folder.
+1. `hdd_mount_script.sh` (Mount Audit)
+* **Function:** Fixes the mount state of the USB storage.
+* **Logic:** It uses blkid to check if the disk UUID is connected. Sometimes the system mounts the drive in a random place. If   this happens, the script unmounts it and uses the official rule in /etc/fstab. This makes sure Samba always finds the ISO      images in the /mnt/ps2hdd folder.
 
-2. ps2_monitor.sh (Power and Security Management)
-Function: L3 polling for smart idle shutdown.
+2. `ps2_monitor.sh` (Power and Security Management)
+* **Function:** L3 polling for smart idle shutdown.
+* **Logic:** It sends regular Pings to the PlayStation 2 static IP. If the console is offline for 100 minutes (meaning the       game is over), the script safely shuts down the Linux server (shutdown).
+* **Reason:** It stops the Raspberry Pi from running when not needed. This saves the physical storage drive, uses less           electricity, and closes the security risk of the old SMBv1 protocol.
 
-Logic: It sends regular Pings to the PlayStation 2 static IP. If the console is offline for 100 minutes (meaning the game is over), the script safely shuts down the Linux server (shutdown).
+##
 
-Reason: It stops the Raspberry Pi from running when not needed. This saves the physical storage drive, uses less electricity, and closes the security risk of the old SMBv1 protocol.
+### 🚀 Management and Maintenance
 
-🚀 Management and Maintenance
 To restart the service after maintenance or after adding new games:
-
-Bash
+```bash
 sudo systemctl restart smbd nmbd
 sudo systemctl status smbd
-ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT License.
+```
+
+##
+
+###### ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT License.
