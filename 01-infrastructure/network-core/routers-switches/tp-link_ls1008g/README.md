@@ -13,14 +13,17 @@ O TP-Link LS1008G é um *switch* L2 de acesso não gerenciável de 8 portas. Na 
 * **Localização Física:** `Sala`
 * **Uplink (Conexão de Origem):** Conectado à porta `LAN_1` do equipamento `EX521_Controller` via cabo Cat6A.
 * **Dispositivos Conectados (Downlinks):**
-  * Porta 1: `Uplink`
-  * Porta 2: `Smart_TV`
-  * Porta 3: `Zabbix_Proxy1 (Raspberry Pi 3B`
-  * Porta 4: `CasaOS_Server (Raspberry Pi 4B`
-  * Porta 5: `OPL_Samba_Server (Raspberry Pi 3B)`
-  * Porta 6: `PlayStation_2_OPL`
-  * Porta 7: `PlayStation_4`
-  * Porta 8: `Disponível`
+
+| Interface (Porta) | Status Físico | Velocidade (Link) | Destino (Conectado a) | Observação |
+| :--- | :--- | :--- | :--- | :--- |
+| **Porta 1** | `UP` | 1 Gbps | Router EX521 Satellite | Usada para uplink e comunicação com a internet |
+| **Porta 2** | `UP` | 1 Gbps | Smart TV Sala | Usada para conexão com a internet |
+| **Porta 3** | `UP` | 100 Mbps | Raspberry Pi 3B (ZBX_Proxy/ZBX_Agent) | Usada para transferir métricas ao zabbix server |
+| **Porta 4** | `UP` | 1 Gbps | Raspberry Pi 4B (CasaOS Server) | Usada para comunicação de serviços com a internet |
+| **Porta 5** | `UP` | 100 Mbps | Raspberry Pi 3B (OPL_Samba_Server) | Usado para virtualização de jogos a partir da rede |
+| **Porta 6** | `UP` | 100 Mbps | PlayStation_2_OPL | Usado para comunicação com servidor OPL_Samba |
+| **Porta 7** | `UP` | 1 Gbps | PlayStation_4 | Usado para comunicação do console com a internet |
+| **Porta 8** | `UP` | 1 Gbps | Vaga | Vaga |
 
 ##
 
