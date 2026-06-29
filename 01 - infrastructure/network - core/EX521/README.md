@@ -3,7 +3,7 @@
 # 🖧 Edge Router: Roteador EX521 (Gateway Principal)
 
 ### 📝 Descrição do Ativo
-Este equipamento atua como o roteador de borda (Gateway L3) do laboratório, responsável por receber o link físico do provedor de internet (ISP), gerenciar o NAT (Network Address Translation) e segmentar a rede local inicial.
+Este equipamento atua como o roteador de borda (Gateway L3) do laboratório, responsável por autenticar com o provedor de internet (ISP), gerenciar o NAT (Network Address Translation) e segmentar a rede local inicial.
 
 ##
 
@@ -49,8 +49,8 @@ O protocolo CWMP (TR-069/TR-181) é utilizado por ISPs para provisionamento remo
 Para garantir a melhor experiência em jogos online, o sistema permite a negociação dinâmica de portas (UPnP). 
 
 * **Status:** Ativo (Restrito).
-* **Justificativa:** Necessário para obtenção de NAT Aberto (Open NAT) nos consoles de videogame, garantindo latência mínima e pareamento eficiente.
-* **Política de Isolamento:** * O tráfego de entrada (*Inbound*) negociado via UPnP é inspecionado pelo Firewall de Host (UFW) em cada servidor/dispositivo destino.
+* **Justificativa:** Necessário para obtenção de NAT Aberto (Open NAT) nos consoles de videogame, garantindo latência mínima e   pareamento eficiente.
+* **Política de Isolamento:** * O tráfego de entrada (*Inbound*) negociado via UPnP é inspecionado pelo Firewall de Host (UFW)   em cada servidor/dispositivo destino.
 * **Mitigação de Riscos:**
     * O UPnP não possui permissão para negociar portas de gerenciamento dos servidores (`SSH`, `Web Admin`, `Database`).
     * Auditoria mensal de mapeamento de portas via logs do roteador.
@@ -61,8 +61,7 @@ Para garantir a melhor experiência em jogos online, o sistema permite a negocia
 
 Como os roteadores estão em Mesh, a configuração de firewall e TR-069 deve ser replicada ou sincronizada de forma consistente entre eles:
 
-* **Consistência de Estado:** As ACLs de firewall configuradas no Controller são propagadas para o Satellite para garantir que a política de segurança seja uniforme em todo o laboratório.
-
+* **Consistência de Estado:** As ACLs de firewall configuradas no Controller são propagadas para o Satellite para garantir que   a política de segurança seja uniforme em todo o laboratório.
 * **Sincronização TR-069:** Caso o protocolo TR-069 esteja ativo, ambos os nós reportarão telemetria a um servidor.
 
 ##
