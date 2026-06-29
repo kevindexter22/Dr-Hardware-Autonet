@@ -1,1 +1,113 @@
+# ====================================================================================================
+# Workload: emby
+# Original Author: CasaOS Team
+# Modified by: Kevin Oliveira
+# Changes: customized tcp port, edited the description, addicted new directory for media
+# =====================================================================================================
 
+name: emby
+services:
+  emby:
+    cpu_shares: 90
+    command: []
+    container_name: emby
+    deploy:
+      resources:
+        limits:
+          memory: 3784M
+        reservations:
+          memory: "67108864"
+    devices:
+      - /dev/dri:/dev/dri
+      - /dev/vchiq:/dev/vchiq
+      - /dev/video10:/dev/video10
+      - /dev/video11:/dev/video11
+      - /dev/video12:/dev/video12
+    environment:
+      - PGID=1000
+      - PUID=1000
+      - TZ=America/Sao_Paulo
+    hostname: emby
+    image: linuxserver/emby:latest
+    labels:
+      icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/icon.png
+    ports:
+      - target: 8096
+        published: "<CUSTOM_PORT>"
+        protocol: tcp
+      - target: 8920
+        published: "8920"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/emby/config
+        target: /config
+      - type: bind
+        source: /DATA/Media/TV Shows
+        target: /data/tvshows
+      - type: bind
+        source: /DATA/Media/Movies
+        target: /data/movies
+      - type: bind
+        source: /mnt/Ext_HDD/Emby # new directory for media on external HDD
+        target: /Emby
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  author: CasaOS Team
+  category: Media
+  description:
+    en_US: >
+      Emby is a personal media management platform that brings home videos,
+      music, and photos together, automatically converting and streaming to any
+      device. An intuitive design makes it ideal for users to enjoy media
+      content anytime, anywhere, meeting family entertainment and media
+      management needs.
+
+  developer: linuxserver
+  hostname: ""
+  icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/icon.png
+  index: /
+  is_uncontrolled: false
+  main: emby
+  port_map: "<CUSTOM_PORT>"
+  scheme: http
+  screenshot_link:
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-1.png
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-2.png
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-3.png
+  store_app_id: emby
+  tagline:
+    de_DE: Emby bringt Ihre persönlichen Videos, Musik, Fotos und Live-Fernsehen
+      zusammen.
+    el_GR: Το Emby συνδυάζει τα προσωπικά σας βίντεο, μουσική, φωτογραφίες και
+      ζωντανή τηλεόραση.
+    en_GB: Emby brings together your personal videos, music, photos, and live
+      television.
+    en_US: Emby brings together your personal videos, music, photos, and live
+      television.
+    fr_FR: Emby rassemble vos vidéos personnelles, musique, photos et télévision en
+      direct.
+    hr_HR: Emby okuplja vaše osobne videozapise, glazbu, fotografije i televiziju
+      uživo.
+    it_IT: Emby riunisce i tuoi video personali, musica, foto e televisione dal vivo.
+    ja_JP: Embyは個人ビデオ、音楽、写真、ライブテレビをまとめます。
+    ko_KR: Emby는 개인 비디오, 음악, 사진, 라이브 TV를 하나로 모읍니다.
+    nb_NO: Emby samler dine personlige videoer, musikk, bilder og direktesending.
+    pt_PT: O Emby reúne os seus vídeos pessoais, música, fotografias e televisão ao
+      vivo.
+    ru_RU: Emby объединяет ваши личные видео, музыку, фотографии и прямое телевидение.
+    sv_SE: Emby samlar dina personliga videor, musik, foton och live-TV.
+    tr_TR: Emby kişisel videolarınızı, müziğinizi, fotoğraflarınızı ve canlı
+      televizyonu bir araya getirir.
+    zh_CN: Emby 整合您的个人视频、音乐、照片和直播电视。
+  thumbnail: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/thumbnail.png
+  tips: {}
+  title:
+    custom: ""
+    en_US: Emby
