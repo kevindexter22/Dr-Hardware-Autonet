@@ -73,6 +73,8 @@ When documenting the configurations, note that the backup file must show the spe
 * **config-backup-controller-sanitized.txt:** Configuration containing the WAN/NAT rules.
 * **config-backup-satellite-sanitized.txt:** Configuration focused on bridging and radio.
 
+⚠️ ***Note:*** *For security reasons, these files are stored offline in a backup storage. This is because .bin files can contain encrypted passwords and other sensitive information.*
+
 ##
 
 ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT license.
