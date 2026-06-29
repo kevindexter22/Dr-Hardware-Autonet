@@ -30,12 +30,16 @@ A list of the components that make the connectivity core:
 - **Name Resolution (DNS/DHCP):** Services to block telemetry at the network level (e.g., Pi-hole / Unbound) and to resolve      local TLD domains.
 - **Secure Remote Access (VPN):** Encrypted tunnels to access the lab's Management Plane from external, untrusted networks.
 
-📂 Directory Structure
-Plaintext
+##
+
+### 📂 Directory Structure
+```text
 01-infrastructure/network-core/
 ├── 📄 README.md                 # Network Topology Overview (This file)
+├── 📄 README.en.md
 ├── 📂 routers-switches/         # Extracted and cleaned configurations from physical hardware
 └── 📂 setup-guides/             # Manual procedures (SOPs) for VPN, DNS setup, etc.
+```
 
 ##
 
