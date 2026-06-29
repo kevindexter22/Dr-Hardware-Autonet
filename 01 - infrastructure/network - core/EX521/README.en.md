@@ -29,26 +29,29 @@ The wireless networks are logically segmented to isolate traffic from different 
 
 ##
 
-📡 Provider Management (TR-069 / TR-181)
+### 📡 Provider Management (TR-069 / TR-181)
+
 ISPs use the CWMP protocol (TR-069/TR-181) for remote provisioning, firmware updates, and router telemetry collection. In our scenario, we will use it for specific automations.
 
-Status: DISABLED
+* **Status:** DISABLED
+* **SecOps Justification:** I keep/disable this protocol on the network because I will still implement my personal service to create automations for my network.
 
-SecOps Justification: I keep/disable this protocol on the network because I will still implement my personal service to create automations for my network.
+##
 
-🔒 Access and Management Policy
-Admin access via web port (TCP/<CUSTOM_ADMIN_PORT>) is restricted to internal network IPs only.
+### 🔒 Access and Management Policy
 
-Access passwords and WPA2/WPA3 keys are kept offline in the lab's credential vault.
+* Admin access via web port (TCP/<CUSTOM_ADMIN_PORT>) is restricted to internal network IPs only.
+* Access passwords and WPA2/WPA3 keys are kept offline in the lab's credential vault.
 
-🎮 Gaming & NAT Policy (UPnP)
+##
+
+### 🎮 Gaming & NAT Policy (UPnP)
+
 To guarantee the best online gaming experience, the system allows dynamic port negotiation (UPnP).
 
-Status: Active (Restricted).
-
-Justification: Necessary to get Open NAT on video game consoles, guaranteeing minimum latency and efficient matchmaking.
-
-Isolation Policy: Inbound traffic negotiated via UPnP is inspected by the Host Firewall (UFW) on each destination server/device.
+* **Status:** Active (Restricted).
+* **Justification:** Necessary to get Open NAT on video game consoles, guaranteeing minimum latency and efficient matchmaking.
+* **Isolation Policy:** Inbound traffic negotiated via UPnP is inspected by the Host Firewall (UFW) on each destination server/device.
 
 Risk Mitigation:
 
