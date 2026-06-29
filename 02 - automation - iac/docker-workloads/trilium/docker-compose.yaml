@@ -2,5 +2,63 @@
 # Workload: trilium
 # Original Author: Jason McFeetors
 # Modified by: Kevin Oliveira (Adaptação para o ecossistema Autonet)
-# Changes: Ajuste de VLANs, substituição de variáveis de ambiente e volumes.
+# Changes:  Ajuste da porta de acesso à interface.
 # ==============================================================================
+
+name: trilium
+services:
+  trilium:
+    cpu_shares: 90
+    command: []
+    container_name: trilium
+    deploy:
+      resources:
+        limits:
+          memory: 3789M
+        reservations:
+          memory: "268435456"
+    hostname: trilium
+    image: zadam/trilium:latest
+    labels:
+      icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Trilium/icon.png
+    ports:
+      - target: 8080
+        published: "<CUSTOM_PORT>"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /DATA/AppData/trilium
+        target: /home/node/trilium-data
+    devices: []
+    cap_add: []
+    environment: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+    - arm
+  author: Jason McFeetors
+  category: Notes
+  description:
+    en_us: Trilium Notes is a hierarchical note-taking application with a focus on
+      building large personal knowledge bases.
+    zh_cn: Trilium Notes是一款具有层次结构的笔记应用程序，专注于构建庞大的个人知识库。
+  developer: zadam
+  hostname: ""
+  icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Trilium/icon.png
+  index: /
+  is_uncontrolled: false
+  port_map: "<CUSTOM_PORT>"
+  scheme: http
+  screenshot_link:
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Trilium/screenshot-1.png
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Trilium/screenshot-2.png
+    - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Trilium/screenshot-3.png
+  store_app_id: trilium
+  title:
+    custom: ""
+    en_us: Trilium
+    zh_cn: Trilium
