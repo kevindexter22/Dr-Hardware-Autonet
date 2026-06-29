@@ -2,8 +2,8 @@
 # Workload: brave browser
 # Original Author: BigBearTechWorld
 # Modified by: Kevin Oliveira
-# Changes: changed password, changed container hostname, customized tcp port, changed download directory, 
-#          addicted extra hosts, changed launch url
+# Changes: changed password, changed container hostname, customized tcp port, addicted extra hosts, 
+#          changed launch url
 # ========================================================================================================
 
 name: big-bear-brave
@@ -34,7 +34,7 @@ services:
     volumes:
       - type: bind
         source: /DATA/AppData/brave-browser/Downloads
-        target: /home/<YOUR_USER>/Downloads
+        target: /home/kasm_user/Downloads
         bind:
           create_host_path: true
     devices: []
