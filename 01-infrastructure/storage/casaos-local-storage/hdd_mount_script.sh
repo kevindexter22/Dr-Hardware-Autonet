@@ -1,7 +1,13 @@
+# ==============================================================================
+# Workload: hdd_mount_script
+# Architecture Domain: Network Core
+# Author: Kevin Oliveira
+# ==============================================================================
+
 #!/bin/bash
 
 # UUID configurado no /etc/fstab
-UUID=F0B8596AB8592FF8
+UUID=F0B8596AB8592FF8 # troque pelo UUID do seu dispositivo 
 
 # Função de log
 log() {
