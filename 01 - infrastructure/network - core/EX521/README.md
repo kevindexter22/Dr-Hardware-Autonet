@@ -63,7 +63,7 @@ Como os roteadores estão em Mesh, a configuração de firewall e TR-069 deve se
 
 * **Consistência de Estado:** As ACLs de firewall configuradas no Controller são propagadas para o Satellite para garantir que a política de segurança seja uniforme em todo o laboratório.
 
-* **Sincronização TR-069:** Caso o protocolo TR-069 esteja ativo, ambos os nós reportam telemetria ao ISP. Em um ambiente Mesh, a desativação deve ser realizada no Controller para garantir que nenhum dos nós inicie um processo de auto-provisioning inesperado que possa afetar o par.
+* **Sincronização TR-069:** Caso o protocolo TR-069 esteja ativo, ambos os nós reportarão telemetria a um servidor.
 
 ##
 
