@@ -1,4 +1,4 @@
-<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01 - infrastructure/network - core/routers - switches/router_tp-link_ex521.en.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
+<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01 - infrastructure/network - core/routers - switches/router_tp-link_ex521.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 🖧 Edge Router: EX521 Router (Main Gateway)
 
