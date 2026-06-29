@@ -11,7 +11,7 @@ Sistemas operacionais desktop e interfaces web frequentemente "sequestram" HDDs 
 
 ### ⚙️ Lógica de Funcionamento (State Enforcement)
 
-O script `mount-external-disk.sh` não altera configurações do host; ele faz a leitura do estado atual e aplica ações corretivas:
+O script `hdd_mount_script.sh` não altera configurações do host; ele faz a leitura do estado atual e aplica ações corretivas:
 
 1. **Validação de Hardware:** Utiliza `blkid` para confirmar se o UUID mapeado está fisicamente conectado ao barramento USB.
 2. **Leitura da Fonte da Verdade:** Consulta o `/etc/fstab` para descobrir qual é o *Mountpoint* oficial daquele disco.
