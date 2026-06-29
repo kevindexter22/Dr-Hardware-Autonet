@@ -15,9 +15,9 @@ O TP-Link LS1008G é um *switch* L2 de acesso não gerenciável de 8 portas. Na 
 * **Dispositivos Conectados (Downlinks):**
   * Porta 1: `Uplink`
   * Porta 2: `Smart_TV`
-  * Porta 3: `Zabbix_Proxy1`
-  * Porta 4: `CasaOS_Server`
-  * Porta 5: `OPL_Samba_Server`
+  * Porta 3: `Zabbix_Proxy1 (Raspberry Pi 3B`
+  * Porta 4: `CasaOS_Server (Raspberry Pi 4B`
+  * Porta 5: `OPL_Samba_Server (Raspberry Pi 3B)`
   * Porta 6: `PlayStation_2_OPL`
   * Porta 7: `PlayStation_4`
   * Porta 8: `Disponível`
