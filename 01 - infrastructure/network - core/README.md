@@ -34,7 +34,8 @@ Inventário dos componentes que formam o núcleo de conectividade:
 
 ```text
 01-infrastructure/network-core/
-├── 📄 README.md                 # Visão Geral da Topologia de Rede (Este arquivo)
+├── 📄 README.md                 # Visão Geral da Topologia de Rede (português)
+├── 📄 README.en.md              # Visão Geral da Topologia de Rede (inglês)
 ├── 📂 routers-switches/         # Configurações extraídas e sanitizadas de hardware físico
 └── 📂 setup-guides/             # Procedimentos manuais (SOPs) de implementação de VPN, DNS, etc.
 ```
