@@ -73,7 +73,7 @@ Ao documentar as configurações, note que o arquivo de backup deve refletir a c
 * **config-backup-controller-sanitized.bin:** Configuração contendo as regras de WAN/NAT.
 * **config-backup-satellite-sanitized.bin:** Configuração focada em bridging e rádio.
 
-⚠️ ***Observação:*** *Por questão de segurança esses arquivos ficam armazenados offline num storage de backup, uma vez que nos arquivos .bin pode contr senhas criptografadas e outras informações sensíveis.*
+⚠️ ***Observação:*** *Por questão de segurança esses arquivos ficam armazenados offline num storage de backup, uma vez que nos arquivos `.bin` pode contr senhas criptografadas e outras informações sensíveis.*
 
 ##
 
