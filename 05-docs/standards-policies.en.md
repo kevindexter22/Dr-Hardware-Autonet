@@ -1,4 +1,4 @@
-<h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/05-docs/standards-policies.en.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
+<h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/05-docs/standards-policies.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 📖 Central Governance and Standards Document
 
