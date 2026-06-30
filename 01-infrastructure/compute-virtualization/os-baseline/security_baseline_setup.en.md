@@ -1,4 +1,4 @@
-<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/compute-virtualization/setup-guide/security_baseline_setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
+<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/compute-virtualization/os-baseline/security_baseline_setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 🛡️ SOP: Security Base and OS Hardening
 
