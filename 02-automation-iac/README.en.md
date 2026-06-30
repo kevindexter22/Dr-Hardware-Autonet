@@ -12,7 +12,7 @@ Here you can find the tools to provision resources. They apply base settings (*b
 
 ### 🏗️ Domain Architecture
 
-#### 📦 1. Docker Workloads (`docker-workloads/`)
+#### 📦 1. Docker Compose Stacks (`docker-compose-stacks/`)
 Responsible for **End-User Application Orchestration (VAS - Value-Added Services)**.
 * Unlike critical infrastructure, this folder has the manifests (`docker-compose.yaml`) for end-user apps. Examples are media servers, notes (Trilium), and personal automation platforms (N8N). They run *on top* of the infrastructure. You can easily destroy and create them again.
 
