@@ -84,7 +84,7 @@ Agora vamos executar o instalador automático.
 Rode o comando de provisionamento omitindo interações manuais:
 ```bash
 ipa-server-install \
-  --realm=<SEU_DOMINIO.LOCAL> \
+  --realm=<SEU_DOMINIO.LOCAL> \ # Digite em letras maiusculas
   --domain=<SEU_DOMINIO.LOCAL> \
   --hostname=<SEU_HOSTNAME.SEU_DOMINIO.LOCAL> \
   --setup-dns \
@@ -98,12 +98,50 @@ ipa-server-install \
 
 ##
 
+###  🐧 Fase 4: Configuração e Acoplamento do Cliente (Ubuntu/Debian)
 
+No seu servidor cliente (qualquer nó Ubuntu ou Debian), execute a limpeza preventiva e a instalação limpa para se conectar ao novo servidor AlmaLinux 8.
 
-##
+```bash
+# 1. Purga de configurações anteriores (se nunca configurou o FreeIPA client, ignore essa parte)
+sudo ipa-client-install --uninstall -U
+sudo rm -rf /var/lib/sss/db/*
+sudo rm -f /etc/krb5.keytab
 
-### 💡 Dicas Pós-Instalação
+# 2. Instalação do agente cliente
+sudo apt update
+sudo apt install freeipa-client sssd-tools -y
 
+# 3. Registro no novo domínio (.click)
+sudo ipa-client-install \
+  --server=<SERVER_HOSTNAME.SEU_DOMINIO.LOCAL> \
+  --domain=<SEU_DOMINIO.LOCAL> \
+  --realm=<SEU_DOMINIO.LOCAL> \ # Digite em letras maiusculas
+  --principal=admin \
+  -w "SuaSenhaAdminAqui" \
+  --mkhomedir \
+  --unattended \
+  --force-join \
+  --fixed-primary \
+  --no-ntp
+```
+Ajustes Pós-Instalação no Cliente (Garantia de SSH e PAM)
+
+Para mitigar em definitivo os erros de expiração de token no Ubuntu:
+```bash
+# Force a injeção do SSSD nas camadas do PAM do Ubuntu
+sudo pam-auth-update --enable sss
+
+# Certifique-se de que o SSH aceita a intermediação do PAM
+sudo sed -i 's/UsePAM no/UsePAM yes/g' /etc/ssh/sshd_config
+sudo sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/g' /etc/ssh/sshd_config
+
+# Reinicie as travas de cache
+sudo sss_cache -E
+sudo systemctl restart sssd ssh
+```
+
+Essa estrutura baseada em AlmaLinux 8 como servidor central rodando em LXC dedicado mitiga falhas de concorrência de portas e entrega uma gerência de identidades extremamente performática e limpa para o seu ecossistema Proxmox.
 
 ##
 
