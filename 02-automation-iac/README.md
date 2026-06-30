@@ -12,7 +12,7 @@ Aqui residem as ferramentas responsáveis por provisionar recursos, aplicar conf
 
 ### 🏗️ Arquitetura de Domínios
 
-#### 📦 1. Docker Workloads (`docker-workloads/`)
+#### 📦 1. Docker Compose Stacks (`docker-compose-stacks/`)
 Responsável pela **Orquestração de Aplicações Finais (VAS - Value-Added Services)**.
 * Diferente da infraestrutura crítica, esta pasta abriga os manifestos (`docker-compose.yaml`) de aplicações para o usuário final, como servidores de mídia, blocos de anotações (Trilium) e plataformas de automação pessoal (N8N). Eles rodam *sobre* a infraestrutura, sendo facilmente destruídos e recriados.
 
