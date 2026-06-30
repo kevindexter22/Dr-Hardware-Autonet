@@ -6,7 +6,7 @@
 
 Este documento atua como a **Fonte da Verdade para Governança (Policy Management)** do ecossistema Dr. Hardware Autonet. Ele define as regras sistêmicas de arquitetura, segurança e nomenclatura que toda infraestrutura física, lógica ou código de automação deve obedecer, garantindo o alinhamento com o framework OSS (FCAPS).
 
----
+##
 
 ### 🏷️ 1. Padrões de Nomenclatura de Ativos (Naming Convention)
 
@@ -19,7 +19,7 @@ Define a taxonomia rigorosa para facilitar a descoberta de serviços, inventári
 | **Artefatos de Backup (Configs)** | `config-backup-[NODE]-sanitized.[EXT]` | `config-backup-controller-sanitized.bin` |
 | **Servidores / LXC / VMs** | `[FUNÇÃO]-[SO/APP]-[AMBIENTE]` | `IAM-FreeIPA-Prod` ou `Storage-Samba-OPL` |
 
----
+##
 
 ### 🗺️ 2. Política de Endereçamento e Segmentação (IPAM)
 
@@ -29,7 +29,7 @@ Estabelece a lógica de roteamento (Camada 3) e contenção de domínios de *bro
 * **Segmentação Lógica (Sub-redes):** O laboratório opera com blocos CIDR distintos para a rede primária, rede de CFTV/Câmeras (WR850N) e segmentos Fast Ethernet, isolando os domínios de colisão e *broadcast*.
 * **Gestão de IPAM:** Todo novo IP estático designado deve ser documentado e reservado na base central antes do provisionamento da máquina ou contêiner.
 
----
+##
 
 ### 🛡️ 3. Políticas de Segurança de Rede (SecOps / L4-L7)
 
@@ -40,7 +40,7 @@ Diretrizes arquiteturais para proteção do perímetro físico e lógico contra 
 * **Gestão de UPnP (Gaming):** A negociação dinâmica de portas é permitida exclusivamente para otimização de latência em consoles. É estritamente proibida a negociação dinâmica para portas de gerência (ex: TCP 22, 80, 443, 3389).
 * **Controle de Protocolos Legados (TR-069):** Agentes CWMP de provedores externos devem permanecer `DESATIVADOS`. A porta de gerência remota L7 será ativada apenas para instâncias de automação interna proprietária.
 
----
+##
 
 ### 🔌 4. Padrões de Topologia Física (Physical Layer)
 
@@ -50,7 +50,7 @@ Regras de resiliência e mitigação de falhas em *hardware* de Camada 1 e 2.
 * **Prevenção de Loops (Switches Não Gerenciáveis):** Portas de interfaces não alocadas (*Port Allocation*) em equipamentos *Plug-and-Play* devem permanecer fisicamente isoladas (sem cabos conectados soltos) para evitar tempestades de *broadcast*.
 * **Documentação Visual:** Todas as conexões físicas críticas de *Uplink* devem estar fisicamente etiquetadas nas duas extremidades do cabo.
 
----
+##
 
 ### ⚙️ 5. Gestão de Mudança e Consistência (Configuration Management)
 
