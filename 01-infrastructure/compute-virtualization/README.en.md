@@ -37,10 +37,12 @@ In this section, I document the lab's computer resources (NFVI). It shows the ph
 
 ```text
 01-infrastructure/compute-virtualization/
-├── 📄 README.md              # Overview and Hardware Inventory (Portuguese)
-├── 📄 README.en.md           # Overview and Hardware Inventory (English)
-├── 📂 setup-guides/          # Standard Operating Procedures (SOPs) for base setup
-└── 📂 templates/             # Base images, Cloud-Init, and infrastructure files
+├── 📄 README.md                # Overview and Hardware Inventory (Portuguese)
+├── 📄 README.en.md             # Overview and Hardware Inventory (English)
+├── casaos/                     # CasaOS orchestrator setup
+├── os-baseline/                # OS standardization and hardening (Day 1)
+├── proxmox/                    # Hypervisor installation and Capacity Planning
+└── raspberry-pi/               # Bare-metal ARM provisioning
 ```
 
 ##
