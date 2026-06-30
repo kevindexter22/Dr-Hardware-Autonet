@@ -46,4 +46,6 @@ A integridade do sistema de arquivos é mantida através de práticas de IaC e m
 Para detalhes sobre as políticas globais de nomenclatura e padrões de segurança, consulte a documentação oficial:
 👉 **[Documento Central de Governança e Padrões (Standards & Policies)](#)**
 
+##
+
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
