@@ -44,7 +44,7 @@ File system integrity is maintained through IaC practices and proactive monitori
 ### 🔄 References and Governance
 
 For details on global naming policies and security standards, refer to the official documentation:
-👉 **[Central Governance and Standards Document](#)**
+👉 **[Central Governance and Standards Document](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/05-docs/standards-policies.en.md)**
 
 ##
 
