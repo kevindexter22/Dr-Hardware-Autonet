@@ -37,10 +37,12 @@ Nesta seção, documento o inventário e a gestão de recursos computacionais do
 
 ```text
 01-infrastructure/compute-virtualization/
-├── 📄 README.md              # Visão Geral e Inventário de Hardware (Português)
-├── 📄 README.en.md           # Visão Geral e Inventário de Hardware (Inglês)
-├── 📂 setup-guides/          # Procedimentos Operacionais Padrão (SOPs) de provisionamento base
-└── 📂 templates/             # Imagens base, Cloud-Init e manifestos de infraestrutura
+├── 📄 README.md                # Visão Geral e Inventário de Hardware (Português)
+├── 📄 README.en.md             # Visão Geral e Inventário de Hardware (Inglês)
+├── casaos/                     # Setup do orquestrador CasaOS
+├── os-baseline/                # Padronização e hardening de SO (Day 1)
+├── proxmox/                    # Instalação do Hypervisor e Capacity Planning
+└── raspberry-pi/               # Provisionamento bare-metal ARM
 ```
 
 ##
