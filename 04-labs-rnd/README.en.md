@@ -39,7 +39,7 @@ To ensure the integrity of the main environment, all experimentation must follow
 ### 🔄 Cross-References
 
 * **Automation:** To integrate the code validated here into your automation repository, see the `02-automation-iac` section.
-* **Policies:** For asset naming guidelines and security standards, see our **[Governance Document](#)**.
+* **Policies:** For asset naming guidelines and security standards, see our **[Governance Document](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/05-docs/standards-policies.en.md)**.
 
 ##
 
