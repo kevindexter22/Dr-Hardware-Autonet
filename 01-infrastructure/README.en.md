@@ -226,4 +226,13 @@ Because I don't have physical space for a rack to put all the homelab devices an
 
 ##
 
+### 🏛️ Governance and Architecture
+
+All the physical topology, IP addressing, and asset setup described in this folder strictly follow the policies in our central governance document. 
+
+To understand the IPAM logic, Naming, and *Firewall* Policies (SecOps) applied to the routers and switches below, please check:
+👉 **[Central Governance and Standards Document](#)**
+
+##
+
 ###### ℹ️ Part of the Dr. Hardware Autonet project - MIT License.
