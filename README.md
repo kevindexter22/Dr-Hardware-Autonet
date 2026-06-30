@@ -20,7 +20,7 @@ Dr-Hardware-Autonet/
 │   ├── docker-compose-stacks/          # Arquivos para provisionamento de serviços em containers docker
 │   ├── ansible/                        # Playbooks para provisionamento e gerência de configuração
 │   ├── terraform/                      # IaC para provisionamento de recursos
-│   └── python-scripts/                 # Scripts customizados (Netmiko, NAPALM, APIs REST/ETL)
+│   └── python-scripts/                 # Scripts customizados 
 │
 ├── 👁️ 03-oss-management/               # SISTEMAS DE SUPORTE À OPERAÇÃO (FCAPS)
 │   ├── observability/                  # Métricas (Prometheus, Grafana), Logs (ELK/Loki) e Tracing
