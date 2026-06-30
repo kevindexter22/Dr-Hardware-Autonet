@@ -12,29 +12,32 @@
 Dr-Hardware-Autonet/
 ├── 🏠 01-infrastructure/               # PHYSICAL AND LOGICAL INFRASTRUCTURE (Home Lab)
 │   ├── compute-virtualization/         # Hypervisors (Proxmox, ESXi) and Containers (K8s, Docker)
-│   ├── network-core/                   # Routing, Switching and Base Services (DHCP, DNS, BGP, OSPF)
+│   ├── network-core/                   # Routing, Switching, and Base Services (DHCP, DNS, BGP, OSPF)
 │   └── storage/                        # NAS, SAN, Ceph, etc.
 │
 ├── ⚙️ 02-automation-iac/               # CONFIGURATION MANAGEMENT AND AUTOMATION (MTTR Reduction)
-│   ├── ansible/                        # Playbooks for setup and configuration management
-│   ├── terraform/                      # IaC for resource setup
-│   └── python-scripts/                 # Custom scripts (Netmiko, NAPALM, REST APIs/ETL)
+|   ├── bash-scripts/                   # Custom scripts
+│   ├── docker-compose-stacks/          # Files to provision services in Docker containers
+│   ├── ansible/                        # Playbooks for provisioning and configuration management
+│   ├── terraform/                      # IaC for resource provisioning
+│   └── python-scripts/                 # Custom scripts (Netmiko, NAPALM, REST/ETL APIs)
 │
 ├── 👁️ 03-oss-management/               # OPERATION SUPPORT SYSTEMS (FCAPS)
-│   ├── observability/                  # Metrics (Prometheus, Grafana), Logs (ELK/Loki) and Tracing
+│   ├── observability/                  # Metrics (Prometheus, Grafana), Logs (ELK/Loki), and Tracing
 │   ├── security-iam/                   # Authentication, Authorization (Radius, TACACS+, Vault)
-│   └── alerts-mediation/               # Alert rules, webhooks and data mediation
+│   └── alerts-mediation/               # Alert rules, webhooks, and data mediation
 │
 ├── 🧪 04-labs-rnd/                     # RESEARCH AND DEVELOPMENT (Simulators and PoCs)
 │   ├── network-simulations/            # EVE-NG, GNS3, PNETLab, Packet Tracer
 │   └── devops-sandboxes/               # Isolated tests for orchestration and CI/CD
 │
 ├── 📖 05-docs/                         # OFFICIAL DOCUMENTATION AND ENGINEERING
-│   ├── architecture-diagrams/          # Topologies (L2/L3), API flows and logical diagrams
-│   ├── runbooks-troubleshooting/       # Guides to fix problems (SOPs)
-│   └── standards-policies.md           # IPAM policies, VLANs and naming rules
+│   ├── architecture-diagrams/          # Topologies (L2/L3), API flows, and logical diagrams
+│   ├── runbooks-troubleshooting/       # Troubleshooting guides (SOPs)
+|   ├── standards-policies.en.md        # IPAM policies, VLANs, and naming rules used (English)
+│   └── standards-policies.md           # IPAM policies, VLANs, and naming rules used (Portuguese)
 │
-├── .gitignore                          # Ignore sensitive files (.env, tfstate, etc.)
+├── .gitignore                          # Exclude sensitive files (.env, tfstate, etc.)
 ├── LICENSE                             # Project license
 ├── README.md                           # Main Control Panel (Portuguese)
 └── README.en.md                        # Main Control Panel (English)
