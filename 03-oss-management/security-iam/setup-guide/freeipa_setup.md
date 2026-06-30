@@ -8,7 +8,7 @@
 
 ##
 
-### 🐧 Fase 1: Download e Instalação do Template AlmaLinux 8 no Proxmox
+###  🗄️ Fase 1: Download e Instalação do Template AlmaLinux 8 no Proxmox
 
 Para que o Proxmox possa criar o container, precisamos garantir que o template oficial do AlmaLinux 8 esteja presente no seu armazenamento (storage).
 
@@ -29,11 +29,11 @@ Para que o Proxmox possa criar o container, precisamos garantir que o template o
    -cores 2 \
    -memory 2548 \
    -swap 512 \
-   -hostname <SEU_HOSTNAME.DOMAIN> \
+   -hostname <SEU_HOSTNAME.SEU_DOMÍNIO.LOCAL> \
    -ostype almalinux \
    -storage local-lvm \
    -rootfs local-lvm:8 \
-   -net0 name=eth0,bridge=vmbr0,ip=<IP_ADDRESS/CIDR>,gw=<IP_GATEWAY> \
+   -net0 name=eth0,bridge=vmbr0,ip=<IP_SERVIDOR/CIDR>,gw=<IP_GATEWAY> \
    -unprivileged 0 \
    -features nesting=1
    ```
@@ -42,7 +42,7 @@ Para que o Proxmox possa criar o container, precisamos garantir que o template o
 
 ##
 
-### ⚙️ Fase 2: Preparação do Sistema Operacional (No Container)
+###  🐧 Fase 2: Preparação do Sistema Operacional (No Container)
 
 Inicie o container no Proxmox, acesse o console dele e configure a consistência de rede:
 ```bash
@@ -57,7 +57,7 @@ nano /etc/hosts
 Certifique-se de que a linha do IP estático aponte diretamente para o FQDN antes do nome curto. O arquivo deve ficar assim:
 ```bash
 127.0.0.1   localhost localhost.localdomain
-192.168.1.13 <SEU_HOSTNAME.DOMAIN> ipa
+192.168.1.13 <SEU_HOSTNAME.SEU_DOMÍNIO.LOCAL> ipa
 ```
 
 Atualize os repositórios do AlmaLinux 8:
@@ -67,7 +67,37 @@ dnf update -y
 
 ##
 
-### 🖥️ Fase 3: 
+###  🚀 Fase 3: Instalação do servidor FreeIPA
+
+No AlmaLinux 8, os pacotes do FreeIPA estão contidos em um módulo específico do AppStream chamado idm. 
+
+Precisamos habilitar esse fluxo antes da instalação:
+```bash
+# 1. Habilitar o módulo Identity Management (IDM) específico do AlmaLinux 8
+dnf module enable idm:DL1 -y
+
+# 2. Instalar o servidor FreeIPA com gerenciamento de DNS integrado
+dnf install freeipa-server freeipa-server-dns -y
+```
+Agora vamos executar o instalador automático.
+
+Rode o comando de provisionamento omitindo interações manuais:
+```bash
+ipa-server-install \
+  --realm=<SEU_DOMINIO.LOCAL> \
+  --domain=<SEU_DOMINIO.LOCAL> \
+  --hostname=<SEU_HOSTNAME.SEU_DOMINIO.LOCAL> \
+  --setup-dns \
+  --auto-forwarders \
+  --allow-zone-overlap \
+  -a "SuaSenhaAdminAqui" \
+  -p "SuaSenhaDirectoryManagerAqui" \
+  -U
+```
+*Ao término, o FreeIPA Server estará rodando e controlando o domínio .local*
+
+##
+
 
 
 ##
