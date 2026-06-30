@@ -44,6 +44,3 @@ Para garantir a integridade do ambiente principal, toda experimentação deve se
 ##
 
 ###### ℹ️ Ambiente de laboratório isolado - Parte do Dr. Hardware Autonet.
-
-##
-###### ℹ️ Ambiente de laboratório isolado - Parte do Dr. Hardware Autonet.
