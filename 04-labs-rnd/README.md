@@ -39,7 +39,7 @@ Para garantir a integridade do ambiente principal, toda experimentação deve se
 ### 🔄 Referências Cruzadas
 
 * **Automação:** Para integrar o código validado aqui ao seu repositório de automação, consulte a seção `02-automation-iac`.
-* **Políticas:** Para diretrizes de nomenclatura de ativos e padrões de segurança, consulte nosso **[Documento de Governança](#)**.
+* **Políticas:** Para diretrizes de nomenclatura de ativos e padrões de segurança, consulte nosso **[Documento de Governança](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/05-docs/standards-policies.md)**.
 
 ##
 
