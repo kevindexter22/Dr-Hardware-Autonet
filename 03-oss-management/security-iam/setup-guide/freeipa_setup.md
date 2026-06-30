@@ -29,7 +29,7 @@ Para que o Proxmox possa criar o container, precisamos garantir que o template o
    -cores 2 \
    -memory 2548 \
    -swap 512 \
-   -hostname <SEU_HOSTNAME> \
+   -hostname <SEU_HOSTNAME.DOMAIN> \
    -ostype almalinux \
    -storage local-lvm \
    -rootfs local-lvm:8 \
@@ -37,12 +37,33 @@ Para que o Proxmox possa criar o container, precisamos garantir que o template o
    -unprivileged 0 \
    -features nesting=1
    ```
-
+   * `unprivileged 0`: Define o container como Privilegiado. O FreeIPA no AlmaLinux 8 manipula travas de chaves de segurança         do Kernel (keyrings) que são bloqueadas em containers desprivilegiados.
+   * `features nesting=1`: Permite o funcionamento correto do systemd dentro do LXC.
 
 ##
 
-### ⚙️ Fase 2: Instalando o FreeIPA
+### ⚙️ Fase 2: Preparação do Sistema Operacional (No Container)
 
+Inicie o container no Proxmox, acesse o console dele e configure a consistência de rede:
+```bash
+# 1. Iniciar e acessar (se feito via CLI do Proxmox)
+pct start 100
+pct enter 100
+
+# 2. Corrigir o arquivo /etc/hosts (Crítico para o FreeIPA)
+nano /etc/hosts
+```
+
+Certifique-se de que a linha do IP estático aponte diretamente para o FQDN antes do nome curto. O arquivo deve ficar assim:
+```bash
+127.0.0.1   localhost localhost.localdomain
+192.168.1.13 <SEU_HOSTNAME.DOMAIN> ipa
+```
+
+Atualize os repositórios do AlmaLinux 8:
+```bash
+dnf update -y
+```
 
 ##
 
