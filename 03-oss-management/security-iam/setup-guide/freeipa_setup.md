@@ -4,7 +4,13 @@
 
 ### 📝 Descrição e Escopo
 
+Este procedimento operacional padrão (SOP) documenta o provisionamento e a configuração do **FreeIPA**, que atua como o **Identity and Access Management (IAM) Plane** do laboratório. 
 
+No contexto do framework OSS (FCAPS), este nó é o núcleo primário de **Security Management**, responsável por centralizar a governança de credenciais, auditoria e controle de acesso baseado em funções (RBAC).
+
+* **Arquitetura Lógica (Camada 7):** Atua como a *Single Source of Truth* (SSoT) da infraestrutura. Consolida os serviços de **AuthN** (Autenticação via Kerberos) e **AuthZ** (Autorização via LDAP), além de prover resolução de nomes interna integrada (DNS).
+* **Arquitetura de Infraestrutura (Virtualização):** Hospedado de forma otimizada como um contêiner LXC Privilegiado no Proxmox (utilizando AlmaLinux 8). Esta topologia elimina o *overhead* de uma máquina virtual completa (KVM), mantendo acesso direto aos *keyrings* do Kernel necessários para a criptografia do Kerberos.
+* **Interoperabilidade e SRE:** Substitui a gestão descentralizada (usuários estáticos no `/etc/passwd` de cada máquina) por um modelo dinâmico acoplado via SSSD e PAM. Isso reduz o MTTR operacional, elimina o *Configuration Drift* e permite a revogação instantânea de acessos (Zero Trust) em todo o parque de servidores (Ubuntu/Debian).
 
 ##
 
