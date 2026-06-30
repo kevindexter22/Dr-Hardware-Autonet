@@ -15,7 +15,7 @@ The router acts as the first line of defense (Perimeter Security) against malici
 * **DoS (Denial of Service) Prevention:** Active filters against Flood attacks (SYN/ICMP/UDP) and Port Scanning mitigation.
 * **ACL (Access Control List) Policies:** Inbound traffic is blocked by default (Default Deny), except for strict ports in       Port Forwarding.
 
-> **⚖️ Policy Compliance (SecOps):** The *Default Deny* setup and the strict UPnP limits shown below directly follow the guidelines of our **[L4-L7 Governance Document](#)**.
+> **⚖️ Policy Compliance (SecOps):** The *Default Deny* setup and the strict UPnP limits shown below directly follow the guidelines of our **[L4-L7 Governance Document](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/05-docs/standards-policies.en.md)**.
 
 ##
 
