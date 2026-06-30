@@ -1,7 +1,5 @@
 <h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/04-labs-rnd/README.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
-<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/04-labs-rnd/README.en.md" target="_blank" rel="noopener noreferrer">🇧🇷 Portuguese</a></h6>
-
 # 🧪 Research and Development (R&D Sandbox)
 
 ### 📝 Scope Description
