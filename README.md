@@ -16,6 +16,8 @@ Dr-Hardware-Autonet/
 │   └── storage/                        # NAS, SAN, Ceph, etc.
 │
 ├── ⚙️ 02-automation-iac/               # GESTÃO DE CONFIGURAÇÃO E AUTOMAÇÃO (Redução de MTTR)
+|   ├── bash-scripts/                   # Scripts customizados
+│   ├── docker-compose-stacks/          # Arquivos para provisionamento de serviços em containers docker
 │   ├── ansible/                        # Playbooks para provisionamento e gerência de configuração
 │   ├── terraform/                      # IaC para provisionamento de recursos
 │   └── python-scripts/                 # Scripts customizados (Netmiko, NAPALM, APIs REST/ETL)
@@ -32,7 +34,8 @@ Dr-Hardware-Autonet/
 ├── 📖 05-docs/                         # DOCUMENTAÇÃO OFICIAL E ENGENHARIA
 │   ├── architecture-diagrams/          # Topologias (L2/L3), fluxos de API e diagramas lógicos
 │   ├── runbooks-troubleshooting/       # Guias de mitigação de falhas (SOPs)
-│   └── standards-policies.md           # Políticas de IPAM, VLANs e nomenclaturas adotadas
+|   ├── standards-policies.en.md        # Políticas de IPAM, VLANs e nomenclaturas adotadas (Inglês)
+│   └── standards-policies.md           # Políticas de IPAM, VLANs e nomenclaturas adotadas (Português)
 │
 ├── .gitignore                          # Exclusão de arquivos sensíveis (.env, tfstate, etc.)
 ├── LICENSE                             # Licenciamento do projeto
