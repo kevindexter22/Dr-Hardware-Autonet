@@ -29,7 +29,7 @@ Documentation of the router's back panel (Port Allocation). It helps to track La
 | :--- | :--- | :--- | :--- | :--- |
 | **WAN** | `UP` | 1 Gbps | ISP Modem | Receives the external connection and authenticates using PPPoE. |
 | **LAN 1** | `UP` | 1 Gbps | Switch TP-Link LS1008G | Main uplink to distribute network access. |
-| **LAN 2** | `UP` | 1 Gbps | Router TP-Link WR850N | Dedicated router for cameras. |
+| **LAN 2** | `UP` | 1 Gbps | Router TP-Link WR840N | Dedicated router for cameras. |
 | **LAN 3** | `UP` | 1 Gbps | Router EX521 Satellite | Mesh extension node. |
 
 #### 📍 Node 2: EX521 - Satellite (Mesh Extension Node)
