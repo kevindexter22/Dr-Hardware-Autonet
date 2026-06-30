@@ -1,6 +1,6 @@
 <h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/storage/README.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
-# 💾 Storage Infrastructure (NAS/SAN)
+# 💾 Infraestrutura de Armazenamento (NAS/SAN)
 
 ### 📝 Descrição do Escopo
 
