@@ -6,7 +6,7 @@
 
 Nesta seção, documento o inventário e a gestão de recursos computacionais do laboratório (NFVI), detalhando o hardware físico e a camada de virtualização/orquestração (VIM) responsável por particionar e entregar os recursos aos serviços.
 
----
+##
 
 ### 💻 Inventário de Hardware (Resource Pool)
 
@@ -16,7 +16,7 @@ Nesta seção, documento o inventário e a gestão de recursos computacionais do
 | **Raspberry Pi 4B** | Container Host Edge | Cortex-A72 Quad-core (ARMv8 64-bit) | 4 GB LPDDR4 | 64 GB Micro-SD | Gigabit Ethernet, Wi-Fi 5 |
 | **Raspberry Pi 3B (x4)** | Micro-Serviços / Node | Cortex-A53 Quad-core (ARMv8 64-bit) | 1 GB LPDDR2 | 16/32 GB Micro-SD | Fast Ethernet (10/100), Wi-Fi 4 |
 
----
+##
 
 ### 🛠️ Hypervisors e Runtimes (VIM / CaaS)
 
@@ -24,14 +24,14 @@ Nesta seção, documento o inventário e a gestão de recursos computacionais do
 *   **Proxmox VE (HP Pavilion):** Hypervisor Bare-Metal responsável por isolar e gerenciar Máquinas Virtuais (VMs) e Contêineres de Sistema (LXC) para os serviços de infraestrutura mais pesados.
 *   **Ubuntu Server (Bare-Metal):** Sistema Operacional base adotado nativamente nas instâncias de Raspberry Pi 3B para execução direta de serviços com menor overhead (sem camada de virtualização).
 
----
+##
 
 ### 🚀 Políticas e Implementações Técnicas
 
 *   **Gestão de Recursos (Capacity Management):** Aplicação de *overprovisioning* controlado de vCPUs e RAM no Proxmox para maximizar a densidade de serviços e otimizar os custos energéticos do hardware legado.
 *   **Storage Persistence:** Padronização da montagem de volumes para o ecossistema Docker, utilizando ExFAT, NFS ou SMB, garantindo a persistência e a integridade dos dados operacionais fora do ciclo de vida dos contêineres.
 
----
+##
 
 ### 📂 Estrutura do Diretório
 
