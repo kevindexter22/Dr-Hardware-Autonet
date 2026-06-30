@@ -145,4 +145,10 @@ Essa estrutura baseada em AlmaLinux 8 como servidor central rodando em LXC dedic
 
 ##
 
+### 💡 Dicas
+* **Importante:** *Se na configuração aplicada em `/etc/ssh/sshd_config` estiver com a opção `AllowUsers` e os usuários          adicionados não forem os mesmos do FreeIPA, ele pode bloquear por segurança ao tentar acessar via ssh.
+  Sendo assim comente a opção `AllowUsers` ou adicione os usuários criados no FreeIPA a essa regra e reinicie o serviço ssh.
+
+##
+
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
