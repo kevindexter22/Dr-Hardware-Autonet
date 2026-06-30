@@ -229,7 +229,7 @@ Como não disponho de espaço físico para um rack que centralizaria todos os di
 Toda a topologia física, endereçamento IP e configuração de ativos descritos neste diretório seguem rigorosamente as políticas estabelecidas no nosso documento de governança central. 
 
 Para entender as lógicas de IPAM, Nomenclatura e Políticas de *Firewall* (SecOps) aplicadas aos roteadores e switches abaixo, consulte:
-👉 **[Documento Central de Governança e Padrões (Standards & Policies)](#)**
+👉 **[Documento Central de Governança e Padrões (Standards & Policies)](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/05-docs/standards-policies.md)**
 
 ##
 
