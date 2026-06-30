@@ -14,8 +14,8 @@ O roteador atua como a primeira linha de defesa (*Perimeter Security*) contra tr
 * **Prevenção de DoS (Denial of Service):** Filtros ativados contra ataques de *Flood* (SYN/ICMP/UDP) e mitigação de *Port Scanning*.
 * **Políticas de ACL (Access Control List):** Tráfego de entrada (*Inbound*) bloqueado por padrão (Default Deny), exceto para portas estritamente configuradas no *Port Forwarding*.
 
-> **⚖️ Conformidade com Políticas (SecOps):** A configuração de *Default Deny* e as restrições rigorosas de UPnP documentadas abaixo estão em conformidade direta com as diretrizes do nosso **[Documento de Governança L4-L7](#)**.
-> 
+> **⚖️ Conformidade com Políticas (SecOps):** A configuração de *Default Deny* e as restrições rigorosas de UPnP documentadas abaixo estão em conformidade direta com as diretrizes do nosso **[Documento de Governança L4-L7](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/05-docs/standards-policies.md)**.
+
 ##
 
 ### 🔌 Mapeamento Físico de Interfaces (LAN / WAN)
