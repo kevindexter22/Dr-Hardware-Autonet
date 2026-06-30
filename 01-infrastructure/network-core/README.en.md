@@ -38,7 +38,7 @@ A list of the components that make the connectivity core:
 ├── 📄 README.md                 # Network Topology Overview (portuguese)
 ├── 📄 README.en.md              # Network Topology Overview (english)
 ├── 📂 routers-switches/         # Extracted and cleaned configurations from physical hardware
-└── 📂 setup-guides/             # Manual procedures (SOPs) for VPN, DNS setup, etc.
+└── 📂 services/                 # Manual procedures (SOPs) for VPN, DNS setup, etc.
 ```
 
 ##
