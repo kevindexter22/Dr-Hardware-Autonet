@@ -1,4 +1,4 @@
-<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/compute-virtualization/raspberry-pi/raspberry_pi_setup.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/zabbix-stack/zabbix-agent/zabbix_agent_2_setup.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
 # 🛠️ SOP: Instalando o Zabbix Agent 2 - Raspberry Pi (ARM64)
 
