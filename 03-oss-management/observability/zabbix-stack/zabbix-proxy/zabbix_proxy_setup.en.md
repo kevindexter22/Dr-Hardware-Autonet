@@ -40,4 +40,4 @@ The goal is to have a server on the internal network that works as a communicati
     
 ##
 
-#### ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT License.
+###### ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT License.
