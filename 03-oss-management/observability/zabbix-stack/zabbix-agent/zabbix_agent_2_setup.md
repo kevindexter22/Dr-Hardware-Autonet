@@ -62,7 +62,7 @@ Para que a comunicação funcione, precisamos liberar o IP de nosso Zabbix Serve
    
 ## 
 
-### ℹ️ Diferença entre Métricas Passivas e Ativas:
+###  ⁉️ Diferença entre Métricas Passivas e Ativas:
 
 * **Métricas Passivas (Server):** O Servidor Zabbix pede os dados, e o Agente responde na hora. É ideal para acompanhar o status em tempo real.
 * **Métricas Ativas (ServerActive):** O Agente pede a lista de tarefas, coleta os dados sozinho e envia para o Servidor. É ideal para logs e redes instáveis.
