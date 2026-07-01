@@ -38,6 +38,37 @@ O objetivo é que o servidor possa se comunicar diretamente com o Zabbix Server 
    
 ##
 
+### 💾 Fase 2: Ajustando a comunicação entre o Zabbix Agent 2 e o Zabbix Server
+
+Para que a comunicação funcione, precisamos liberar o IP de nosso Zabbix Server e/ou Zabbix Proxies no arquivo de configuração.
+
+1. Abra o arquivo `/etc/zabbix/zabbix_agent2.conf` e faça os seguintes ajustes:
+   ```bash
+   # Procure pelas opções Server e ServerActive e adicione o IP do Servidor ou proxy:
+   Server=<IP_DO_SERVIDOR/PROXY> # Permite que o servidor ou proxy faça conexões passivas
+   ServerActive=<IP_DO_SERVIDOR/PROXY> # Permite que o servidor ou proxy faça conexões passivas
+   # É possível adicionar mais de um servidor/proxy separando por vírgula, conforme exemplo o abaixo:
+   Server=<IP_DO_SERVIDOR>,<IP_DO_PROXY>
+   ServerActive=<IP_DO_SERVIDOR>,<IP_DO_PROXY>
+
+   # Configure o hostname do servidor
+   Hostname=<NOME_DO_HOST_NO_ZABBIX> # Deve ser exatamente o nome registrado na interface web do servidor   
+   ```
+2. Para aplicar as configurações é necessário reiniciar o serviço:
+   ```bash
+   sudo systemctl restart zabbix-agent2
+   sudo systemctl status zabbix-agent2 # Mostra se o serviço iniciou corretamente
+   ```
+   
+## 
+
+### ℹ️ Diferença entre Métricas Passivas e Ativas:
+
+* **Métricas Passivas (Server):** O Servidor Zabbix pede os dados, e o Agente responde na hora. É ideal para acompanhar o status em tempo real.
+* **Métricas Ativas (ServerActive):** O Agente pede a lista de tarefas, coleta os dados sozinho e envia para o Servidor. É ideal para logs e redes instáveis.
+
+##
+
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
 
 
