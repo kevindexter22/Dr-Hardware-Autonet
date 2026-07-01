@@ -31,7 +31,7 @@ A adoção não precisa ser excludente. O Zabbix Agent 2 é um *drop-in replacem
 
 #### 🟩 Opte pelo **Zabbix Agent 2** (Padrão Recomendado)
 * **Workloads Modernos e Bancos de Dados:** Sempre que o host executar PostgreSQL, MySQL, MongoDB, Redis, Docker, certificados SSL, ou serviços web. 
-* **Por quê?** O Agent 2 suporta *Stateful Checks*. Em vez de abrir e fechar uma conexão TCP com o banco de dados a cada 30 segundos (gerando alto *overhead*), o Agent 2 mantém a conexão aberta no nível do *plugin*, otimizando radicalmente a performance.
+* **Por quê?** O Agent 2 suporta *Stateful Checks*. Em vez de abrir e fechar uma conexão TCP com o banco de dados a cada 30 segundos, o Agent 2 mantém a conexão aberta no nível do *plugin*, otimizando radicalmente a performance.
 
 #### 🟦 Opte pelo **Zabbix Agent (Clássico)**
 * **Sistemas Legados ou IoT Extremo:** Quando o SO do hardware for antigo, não suportar binários compilados em Go, ou tiver restrições severas de memória RAM (ex: roteadores customizados, hardwares de automação industrial com < 256MB RAM).
