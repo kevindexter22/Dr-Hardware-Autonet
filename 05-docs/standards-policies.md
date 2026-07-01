@@ -16,7 +16,7 @@ Define a taxonomia rigorosa para facilitar a descoberta de serviços, inventári
 | :--- | :--- | :--- |
 | **Elementos de Rede (L1/L2/L3)** | `[TIPO]-[MODELO]-[FUNÇÃO]` | `Router-EX521-Controller` ou `Switch-LS1008G-Access` |
 | **Redes Sem Fio (WLAN)** | Focado na finalidade, não no hardware | `Core`, `IoT`, `Guest` |
-| **Artefatos de Backup (Configs)** | `config-backup-[NODE]-sanitized.[EXT]` | `config-backup-controller-sanitized.bin` |
+| **Artefatos de Backup (Configs)** | `config-backup-[NODE]-[DATE].[EXT]` | `config-backup-controller-20260625.bin` |
 | **Servidores / LXC / VMs** | `[FUNÇÃO]-[SO/APP]-[AMBIENTE]` | `IAM-FreeIPA-Prod` ou `Storage-Samba-OPL` |
 
 ##
