@@ -22,7 +22,7 @@ O objetivo é que o servidor possa se comunicar diretamente com o Zabbix Server 
    dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
    apt update 
    ```
-3. Instale o Zabbix Agent ou Zabbix Agent 2:
+3. Instale o Zabbix Agent:
    ```bash
    apt install zabbix-agent   
    ```
