@@ -1,4 +1,4 @@
-<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/obervability/zabbix-stack/zabbix_proxy_setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Portuguese</a></h6>
+<h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observibility/zabbix-stack/zabbix-proxy/zabbix_proxy_setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 🛠️ SOP: Installing Zabbix Proxy - Raspberry Pi (ARM64)
 
