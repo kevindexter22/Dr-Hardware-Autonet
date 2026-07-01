@@ -1,6 +1,6 @@
-<h6 align="right">Read this page in <a href="./README.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/zabbix-stack/zabbix-agent/zabbix_agent_setup.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
-# 🕵️ Zabbix Agents (Data Collection Nodes)
+# 🕵️ Zabbix Agents
 
 ### 📝 Descrição do Escopo
 
