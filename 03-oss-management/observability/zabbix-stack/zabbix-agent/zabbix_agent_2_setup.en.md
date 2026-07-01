@@ -60,4 +60,4 @@ For the communication to work, we need to allow the IP of our Zabbix Server and/
     
 ##
 
-ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT License.
+#### ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT License.
