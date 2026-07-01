@@ -1,3 +1,4 @@
+<h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/05-docs/runbooks-troubleshooting/dual_homed_monitoring.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 📘 Runbook & Architecture: Isolated Monitoring via Dual-Homing
 
