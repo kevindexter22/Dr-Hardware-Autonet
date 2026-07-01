@@ -120,7 +120,7 @@ Como parte das nossas políticas de SecOps e conformidade (Compliance), todos os
 
    Este e um sistema privado pertencente ao lab Dr. Hardware Autonet.
    O acesso e restrito a usuarios autorizados. Todas as conexoes sao 
-   registradas e monitoradas (Audit Trail). O acesso nao autorizado
+   registradas e monitoradas (Auditadas). O acesso nao autorizado
    resultara em desconexao imediata e possiveis sancoes.
 
    ***************************************************************************
