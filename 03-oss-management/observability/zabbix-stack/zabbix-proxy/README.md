@@ -7,7 +7,7 @@ Este diretório documenta a arquitetura e a implantação do **Zabbix Proxy**, o
 
 O proxy atua como um mediador de dados de telemetria entre a rede interna (LAN) e o nó centralizador (Zabbix Server) provisionado na nuvem. Esta topologia reduz a sobrecarga de conexões na WAN, otimiza o *polling* local e garante resiliência na coleta de métricas em cenários de instabilidade no link de internet.
 
----
+##
 
 ### 🏗️ Alinhamento Operacional (FCAPS)
 
@@ -17,7 +17,7 @@ A introdução deste componente na infraestrutura atende diretamente aos pilares
 *   **C (Configuration Management):** Centraliza o apontamento dos agentes locais. Dispositivos da LAN (roteadores, switches, servidores) reportam para o IP local do Proxy, unificando a superfície de gerência.
 *   **P (Performance Management):** Reduz a latência de coleta (ICMP/SNMP/Traps) ao realizar o *polling* na camada 2/3 localmente, transferindo para a nuvem apenas dados consolidados e comprimidos.
 
----
+##
 
 ### 🖧 Topologia Lógica (OSI Layer 4-7)
 
@@ -27,7 +27,7 @@ A introdução deste componente na infraestrutura atende diretamente aos pilares
 | **Zabbix Proxy (Docker Container)** | Mediação / Cache (SQLite3) | `Proxy -> Server` | TCP `CUSTOM_PORT` (Active Proxy Mode) |
 | **Zabbix Server (Cloud)** | Processamento / Alertas | `Server <- Proxy` | TCP 10051 (Zabbix Trapper) |
 
----
+##
 
 ### 🛡️ Requisitos de Segurança e Rede (SecOps)
 
@@ -35,7 +35,7 @@ Para garantir a integridade da comunicação e isolamento da infraestrutura:
 
 1.  **Firewall (Borda):** Apenas o tráfego de saída (Egress) na porta `TCP 10051` ou outra porta de escolha, que se faz necessário no modo *Active Proxy*. Nenhuma regra de *Inbound* (NAT/Port Forwarding) deve ser exposta na WAN para este serviço.
 
----
+##
 
 ### ⚖️ Escalabilidade e Resiliência (Proxy Groups)
 
