@@ -24,6 +24,7 @@ A introdução deste componente na infraestrutura atende diretamente aos pilares
 | Componente | Função Lógica | Comunicação | Protocolos |
 | :--- | :--- | :--- | :--- |
 | **Zabbix Proxy (ARM64)** | Mediação / Cache (SQLite3) | `Proxy -> Server` | TCP 10051 (Active Proxy Mode) |
+| **Zabbix Proxy (Docker Container)** | Mediação / Cache (SQLite3) | `Proxy -> Server` | TCP `CUSTOM_PORT` (Active Proxy Mode) |
 | **Zabbix Server (Cloud)** | Processamento / Alertas | `Server <- Proxy` | TCP 10051 (Zabbix Trapper) |
 
 ---
@@ -32,9 +33,18 @@ A introdução deste componente na infraestrutura atende diretamente aos pilares
 
 Para garantir a integridade da comunicação e isolamento da infraestrutura:
 
-1.  **Firewall (Borda):** Apenas o tráfego de saída (Egress) na porta `TCP 10051` é necessário no modo *Active Proxy*. Nenhuma regra de *Inbound* (NAT/Port Forwarding) deve ser exposta na WAN para este serviço.
+1.  **Firewall (Borda):** Apenas o tráfego de saída (Egress) na porta `TCP 10051` ou outra porta de escolha, que se faz necessário no modo *Active Proxy*. Nenhuma regra de *Inbound* (NAT/Port Forwarding) deve ser exposta na WAN para este serviço.
 
 ---
+
+### ⚖️ Escalabilidade e Resiliência (Proxy Groups)
+
+A arquitetura lógica de telemetria suporta escalabilidade horizontal através da adição de múltiplos proxies, operando sob a lógica de **Proxy Groups** (recurso nativo Zabbix 7.0+). A inserção de um segundo Proxy no mesmo agrupamento garante:
+
+* **Alta Disponibilidade (Fault Management - HA):** Elimina o *único ponto de falha* na coleta local. Em caso de *indisponibilidade* ou *"quebra"* do SO, manutenção programada ou falha de rede em um dos nós, o tráfego dos *Zabbix Agent* (LAN) e as rotinas de *polling* realizam o *comutação* automática para o nó sobrevivente, garantindo MTTR zero para a recepção de métricas.
+* **Balanceamento de Carga (Performance Management):** A carga computacional de verificações ativas, testes ICMP paralelos e processamento prévio de *Traps* é distribuída dinamicamente entre os nós do grupo. Isso evita gargalos de CPU/IOPs em dispositivos únicos, otimizando o *throughput* de dados até o *Zabbix Server* na nuvem.
+
+##
 
 ### 🛠️ Procedimentos Operacionais (Runbooks)
 
