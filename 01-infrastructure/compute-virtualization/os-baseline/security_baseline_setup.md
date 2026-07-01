@@ -105,6 +105,41 @@ O Fail2ban atua como um IPS (Intrusion Prevention System) baseado em host, monit
 
 ##
 
+### 🛡️ Configuração do Banner de Segurança (SSH)
+
+Como parte das nossas políticas de SecOps e conformidade (Compliance), todos os servidores devem exibir um aviso legal antes da autenticação SSH, desencorajando acessos não autorizados.
+
+1. Edite o arquivo de mensagens de rede do sistema:
+   ```bash
+   sudo nano /etc/issue.net
+   ```
+2. Insira o banner padrão da sua empresa/rede:
+   ```bash
+   ***************************************************************************
+                              A V I S O
+
+   Este e um sistema privado pertencente ao lab Dr. Hardware Autonet.
+   O acesso e restrito a usuarios autorizados. Todas as conexoes sao 
+   registradas e monitoradas (Audit Trail). O acesso nao autorizado
+   resultara em desconexao imediata e possiveis sancoes.
+
+   ***************************************************************************
+   ```
+3. Configure o daemon do SSH para exibir o arquivo:
+   ```bash
+   sudo nano /etc/ssh/sshd_config
+   ```
+4. Procure pela diretiva Banner (ou adicione-a no final do arquivo):
+   ```bash
+   Banner /etc/issue.net
+   ```
+5. Reinicie o serviço SSH para aplicar a política:
+   ```bash
+   sudo systemctl restart ssh
+   ```
+
+##
+
 ### ✅ Fase 4: Validação Operacional (Anti-Lockout)
 
 Agora vamos garantir que não haverá bloqueio do acesso via SSH após aplicar as configurações.
