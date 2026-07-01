@@ -103,7 +103,41 @@ Fail2ban works as a host-based IPS (Intrusion Prevention System). It reads syste
    sudo systemctl enable fail2ban
    systemctl restart fail2ban
    ```
+##
 
+### 🛡️ Security Banner Configuration (SSH)
+
+As part of our SecOps and compliance policies, all servers must show a legal warning before SSH login. This helps to stop unauthorized access.
+
+1. Edit the system network message file:
+   ```bash
+   sudo nano /etc/issue.net
+   ```
+2. Insert the standard banner for your company/network:
+   ```bash
+   ***************************************************************************
+                              W A R N I N G
+
+   This is a private system belonging to the Dr. Hardware Autonet lab.
+   Access is restricted to authorized users. All connections are 
+   logged and monitored (Audited). Unauthorized access will
+   result in immediate disconnection and possible penalties.
+   
+   ***************************************************************************
+   ```
+3. Configure the SSH daemon to show the file:
+   ```bash
+   sudo nano /etc/ssh/sshd_config
+   ```
+4. Look for the Banner directive (or add it at the end of the file):
+   ```bash
+   Banner /etc/issue.net
+   ```
+5. Restart the SSH service to apply the policy:
+   ```bash
+   sudo systemctl restart ssh
+   ```
+   
 ##
 
 ### ✅ Phase 4: Operational Check (Anti-Lockout)
