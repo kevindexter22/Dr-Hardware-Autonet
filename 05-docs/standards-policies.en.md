@@ -15,7 +15,7 @@ It defines strict rules to easily find services, list them in Zabbix, and automa
 | :--- | :--- | :--- |
 | **Network Elements (L1/L2/L3)** | `[TYPE]-[MODEL]-[ROLE]` | `Router-EX521-Controller` or `Switch-LS1008G-Access` |
 | **Wireless Networks (WLAN)** | Focus on the use, not the hardware | `Core`, `IoT`, `Guest` |
-| **Backup Files (Configs)** | `config-backup-[NODE]-sanitized.[EXT]` | `config-backup-controller-sanitized.bin` |
+| **Backup Files (Configs)** | `config-backup-[NODE]-[DATE].[EXT]` | `config-backup-controller-20260625.bin` |
 | **Servers / LXC / VMs** | `[ROLE]-[OS/APP]-[ENVIRONMENT]` | `IAM-FreeIPA-Prod` or `Storage-Samba-OPL` |
 
 ##
