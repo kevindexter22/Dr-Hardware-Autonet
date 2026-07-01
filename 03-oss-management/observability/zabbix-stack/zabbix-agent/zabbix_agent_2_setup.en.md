@@ -57,14 +57,7 @@ For the communication to work, we need to allow the IP of our Zabbix Server and/
     sudo systemctl restart zabbix-agent2
     sudo systemctl status zabbix-agent2 # Shows if the service started correctly
     ```
-
-##
-
-### ⁉️ Difference between Passive and Active Metrics:
-
-* **Passive Metrics (Server):** The Zabbix Server asks for the data, and the Agent answers right away. It is ideal for checking the status in real time.
-* **Active Metrics (ServerActive):** The Agent asks for the task list, collects the data by itself, and sends it to the Server. It is ideal for logs and unstable networks.
-
+    
 ##
 
 ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT License.
