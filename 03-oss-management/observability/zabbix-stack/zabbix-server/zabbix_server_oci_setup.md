@@ -105,7 +105,7 @@ Instale o MySQL Server nativo do Ubuntu:
   * Username: Admin (com 'A' maiúsculo)
   * Password: zabbix
 
-> **⚠️ Alerta de Segurança:**
+> **⚠️ Alerta de Segurança:**<br>
 > *Troque a senha do usuário Admin imediatamente após o primeiro login.*<br>
 > *Realize a configuração de um certificado SSL para o apache.*
 
