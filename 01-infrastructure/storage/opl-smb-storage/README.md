@@ -27,7 +27,9 @@ O PlayStation 2 é um equipamento legado que exige a utilização de protocolos 
 Para mitigar a imensa superfície de ataque que isso gera na rede interna, a segurança **não é feita na camada da aplicação (Samba), mas sim na camada de rede (Firewall L3/L4)**:
 
 1. **Default Deny no UFW:** O serviço Samba da Raspberry Pi rejeita sumariamente qualquer tentativa de conexão na porta `TCP/445` e `TCP/139` vinda da rede geral.
+
 2. **Exceção de IP (Whitelist):** Existe uma regra explícita no *Firewall* de Host (UFW) permitindo tráfego SMB **apenas e exclusivamente** a partir do endereço de IP estático atribuído ao PlayStation 2 (`<IP_DO_PS2>`).
+
 3. Qualquer outro computador ou contêiner na rede que tentar acessar o diretório `PS2Jogos` terá a conexão "dropada".
 
 ##
@@ -65,6 +67,7 @@ A arquitetura do servidor de arquivos conta com dois *scripts* executados em *ba
 ### 🚀 Gestão e Manutenção
 
 Para reiniciar o serviço após manutenções ou adição de novos jogos em lote:
+
 ```bash
 sudo systemctl restart smbd nmbd
 sudo systemctl status smbd
@@ -72,4 +75,4 @@ sudo systemctl status smbd
 
 ##
 
-ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
