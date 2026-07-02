@@ -27,14 +27,17 @@ apt update
 ```
 
 3. Instale o Zabbix Agent:
-   ```bash
-   apt install zabbix-agent   
-   ```
+
+```bash
+apt install zabbix-agent   
+```
+
 4. Inicie o serviço:
-   ```bash
-    systemctl restart zabbix-agent
-    systemctl enable zabbix-agent 
-   ```
+
+```bash
+systemctl restart zabbix-agent
+systemctl enable zabbix-agent 
+```
 
 ##
 
@@ -43,26 +46,28 @@ apt update
 Para que a comunicação funcione, precisamos liberar o IP de nosso Zabbix Server e/ou Zabbix Proxies no arquivo de configuração.
 
 1. Abra o arquivo `/etc/zabbix/zabbix_agentd.conf` e faça os seguintes ajustes:
-   ```bash
-   # Procure pelas opções Server e ServerActive e adicione o IP do Servidor ou proxy:
-   Server=<IP_DO_SERVIDOR/PROXY> # Permite que o servidor ou proxy faça conexões passivas
-   ServerActive=<IP_DO_SERVIDOR/PROXY> # Permite que o servidor ou proxy faça conexões passivas
 
-    # É possível adicionar mais de um servidor/proxy separando por vírgula, conforme exemplo o abaixo:
-   Server=<IP_DO_SERVIDOR>,<IP_DO_PROXY>
-   ServerActive=<IP_DO_SERVIDOR>,<IP_DO_PROXY>
+```bash
+# Procure pelas opções Server e ServerActive e adicione o IP do Servidor ou proxy:
+Server=<IP_DO_SERVIDOR/PROXY> # Permite que o servidor ou proxy faça conexões passivas
+ServerActive=<IP_DO_SERVIDOR/PROXY> # Permite que o servidor ou proxy faça conexões passivas
 
-   # Configure o hostname do servidor
-   Hostname=<NOME_DO_HOST_NO_ZABBIX> # Deve ser exatamente o nome registrado na interface web do servidor
+# É possível adicionar mais de um servidor/proxy separando por vírgula, conforme exemplo o abaixo:
+Server=<IP_DO_SERVIDOR>,<IP_DO_PROXY>
+ServerActive=<IP_DO_SERVIDOR>,<IP_DO_PROXY>
 
-   # É possível alterar a porta do modo passivo do Zabbix Agent no parâmetro:
-   ListenPort=10050 # Altere da 10050 para a porta desejada  
-   ```
+# Configure o hostname do servidor
+Hostname=<NOME_DO_HOST_NO_ZABBIX> # Deve ser exatamente o nome registrado na interface web do servidor
+
+# É possível alterar a porta do modo passivo do Zabbix Agent no parâmetro:
+ListenPort=10050 # Altere da 10050 para a porta desejada  
+```
+
 3. Para aplicar as configurações é necessário reiniciar o serviço:
-   ```bash
-   sudo systemctl restart zabbix-agent
-   sudo systemctl status zabbix-agent # Mostra se o serviço iniciou corretamente
-   ```
+```bash
+sudo systemctl restart zabbix-agent
+sudo systemctl status zabbix-agent # Mostra se o serviço iniciou corretamente
+```
 
 ##
 
