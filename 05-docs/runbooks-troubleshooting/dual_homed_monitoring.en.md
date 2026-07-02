@@ -16,6 +16,8 @@ The solution was to make the existing Zabbix Proxy (Raspberry Pi) a **Dual-Homed
 | **`wlan0`** (Wi-Fi) | Isolated Network / IoT | **Ingress (Collection):** Collects metrics from agents on the wireless network. |
 | **`eth0`** (Cable) | Main LAN | **Egress (Outflow):** Sends data safely to the cloud. |
 
+> **Note:** For technical implementation details and Netplan code blocks, see the [Proxy Technical Implementation Documentation](../../03-oss-management/observability/zabbix-stack/zabbix-proxy/dual_homed_monitoring.en.md).
+
 ##
 
 ### 🛡️ Security and Routing (SecOps)
