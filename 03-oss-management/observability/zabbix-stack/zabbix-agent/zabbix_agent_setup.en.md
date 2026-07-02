@@ -13,24 +13,31 @@ The goal is to allow the server to talk directly to the Zabbix Server (running o
 ### 💾 Phase 1: Install and configure the Zabbix Agent
 
 1. Access the terminal via SSH with root privileges:
-   ```bash
-   sudo su -
-   ```
+
+```bash
+sudo su -
+```
+
 2. Install the Zabbix repository:
-   ```bash
-    wget [https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb](https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb)
-    dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
-    apt update 
-    ```
+
+```bash
+wget [https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb](https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb)
+dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
+apt update 
+```
+
 3. Install the Zabbix Agent:
-   ```bash
-   apt install zabbix-agent   
-   ```
+
+```bash
+apt install zabbix-agent   
+```
+
 4. Start the service:
-   ```bash
-   systemctl restart zabbix-agent
-   systemctl enable zabbix-agent 
-   ```
+
+```bash
+systemctl restart zabbix-agent
+systemctl enable zabbix-agent 
+```
 
 ##
 
@@ -39,26 +46,28 @@ The goal is to allow the server to talk directly to the Zabbix Server (running o
 For the communication to work, we need to allow the IP of our Zabbix Server and/or Zabbix Proxies in the configuration file.
 
 1. Open the file `/etc/zabbix/zabbix_agentd.conf` and make the following changes:
-   ```bash
-    # Look for the Server and ServerActive options and add the Server or proxy IP:
-    Server=<SERVER/PROXY_IP> # Allows the server or proxy to make passive connections
-    ServerActive=<SERVER/PROXY_IP> # Allows the server or proxy to make passive connections
 
-     # You can add more than one server/proxy by separating them with a comma, like the example below:
-    Server=<SERVER_IP>,<PROXY_IP>
-    ServerActive=<SERVER_IP>,<PROXY_IP>
+```bash
+# Look for the Server and ServerActive options and add the Server or proxy IP:
+Server=<SERVER/PROXY_IP> # Allows the server or proxy to make passive connections
+ServerActive=<SERVER/PROXY_IP> # Allows the server or proxy to make passive connections
 
-    # Configure the server hostname
-    Hostname=<HOST_NAME_IN_ZABBIX> # It must be exactly the name registered in the server web interface
+# You can add more than one server/proxy by separating them with a comma, like the example below:
+Server=<SERVER_IP>,<PROXY_IP>
+ServerActive=<SERVER_IP>,<PROXY_IP>
 
-    # You can change the Zabbix Agent passive mode port in the parameter:
-    ListenPort=10050 # Change from 10050 to the desired port  
-    ```
+# Configure the server hostname
+Hostname=<HOST_NAME_IN_ZABBIX> # It must be exactly the name registered in the server web interface
+
+# You can change the Zabbix Agent passive mode port in the parameter:
+ListenPort=10050 # Change from 10050 to the desired port  
+```
+
 2. To apply the settings, you need to restart the service:
-    ```bash
-    sudo systemctl restart zabbix-agent
-    sudo systemctl status zabbix-agent # Shows if the service started correctly
-    ```
+```bash
+sudo systemctl restart zabbix-agent
+sudo systemctl status zabbix-agent # Shows if the service started correctly
+```
 
 ##
 
