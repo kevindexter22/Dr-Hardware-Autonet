@@ -49,7 +49,7 @@ Preparação do cliente ACME no Proxmox para autenticação no serviço delegado
 
    * **Plugin ID:** duckdns
    * **DNS API:** DuckDNS
-   * **API Data:** DuckDNS_Token=<SEU_TOKEN_ALFANUMERICO>
+   * **API Data:** DuckDNS_Token=<SEU_TOKEN>
    * **Validation Delay:** 300 (Threshold necessário para garantir a convergência e dissipação de cache dos servidores globais de DNS antes do disparo da validação).
 
 ##
