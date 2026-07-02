@@ -22,7 +22,7 @@ Antes de estabelecer a nova arquitetura, é imperativo garantir a integridade do
 1. Acesse o terminal do Proxmox (via SSH ou Web Shell).
 2. Remoção de Estado Anterior: Execute o comando abaixo para deletar o escopo do domínio antigo e evitar conflitos de schema:
    ```bash
-   pvenode config delete acmedomain0
+   pvenode config set --delete acmedomain0
    ```
 3. Garanta que você possui o Token alfanumérico fornecido no painel do DuckDNS e o nome do seu subdomínio ativo (ex: seu-lab.duckdns.org).
 
