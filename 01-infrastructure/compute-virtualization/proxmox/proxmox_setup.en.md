@@ -132,9 +132,9 @@ To stop this sleep mode, we do this:
 
 ##
 
-> **☢️ Security Alert:**<br>
-> After you finish the installation, configure an SSL certificate for the web interface.<br>
-> You can generate a certificate using your [own domain](#) or a [free Dynamic DNS](#).
+**☢️ Security Alert:**<br>
+After you finish the installation, configure an SSL certificate for the web interface.<br>
+You can generate a certificate using your [own domain](#) or a [free Dynamic DNS](#).
 
 ##
 
