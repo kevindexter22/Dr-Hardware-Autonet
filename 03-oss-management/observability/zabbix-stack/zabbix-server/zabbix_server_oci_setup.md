@@ -3,7 +3,7 @@
 
 ### 📝 Descrição do Escopo
 
-Este Procedimento Operacional Padrão (SOP) detalha a instalação do **Zabbix Server 7.0 LTS** (com banco de dados MariaDB e frontend Apache) em uma instância Ubuntu 24.04 hospedada na Oracle Cloud Infrastructure (OCI). 
+Este Procedimento Operacional Padrão (SOP) detalha a instalação do **Zabbix Server 7.0 LTS** (com banco de dados MySQL e frontend Apache) em uma instância Ubuntu 24.04 hospedada na Oracle Cloud Infrastructure (OCI). 
 
 Sendo o nó central (*Core*) da arquitetura de monitoramento, este servidor será responsável por receber todas as conexões criptografadas dos Zabbix Proxies e Agents distribuídos (Edge).
 
