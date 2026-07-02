@@ -71,4 +71,6 @@ Após a instância ser provisionada, anote o **Public IP Address** exibido no pa
    ```
    * ***Próximo passo:*** *Consulte a documentação de [os-baseline](#) para aplicar o hardening do sistema operacional antes de instalar as aplicações).*
 
-ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
+##
+
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
