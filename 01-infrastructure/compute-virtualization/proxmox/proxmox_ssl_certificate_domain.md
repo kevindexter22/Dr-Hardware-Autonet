@@ -10,7 +10,7 @@ Isso garante a criptografia do tráfego de gerência e a interoperabilidade de s
 
 ##
 
-### ⚠️ Pré-requisito:
+### 📋 Pré-requisito:
 
 * É necessário já ter acessado o site [duckdns](https://www.duckdns.org/) e já ter logado com sua conta google ou github e já ter cadastrado um subdomínio.
 * Após feito isso basta copiar o ***Token*** que aparecerá na parte superior do site e continuar com os passos abaixo.
