@@ -8,6 +8,13 @@ O objetivo é estabelecer uma arquitetura de segurança de borda utilizando o de
 
 ##
 
+### ⚠️ Pré-requisito:
+
+* É necessário já ter acessado o site [duckdns](https://www.duckdns.org/) e já ter logado com sua conta google ou github e já ter cadastrado um subdomínio.
+* Após feito isso basta copiar o ***Token*** que aparecerá na parte superior do site e continuar com os passos abaixo.
+
+##
+
 ### 🧹 Fase 1: Saneamento e Preparação (Control Plane)
 
 Antes de estabelecer a nova arquitetura, é imperativo garantir a integridade do banco de dados de configuração do cluster (PMXCFS), expurgando quaisquer configurações de domínios anteriores ou tentativas de apontamentos Alias.
