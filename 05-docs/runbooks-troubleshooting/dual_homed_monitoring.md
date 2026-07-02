@@ -17,7 +17,7 @@ A solução adotada foi promover o Zabbix Proxy existente (Raspberry Pi) a um n�
 | **`wlan0`** (Wi-Fi) | Rede Isolada / IoT | **Ingress (Coleta):** Coleta métricas dos agentes na rede sem fio. |
 | **`eth0`** (Cabeada) | LAN Principal | **Egress (Escoamento):** Envia os dados para a nuvem de forma segura. |
 
-> **Note:** Para os detalhes técnicos de implementação e blocos de código Netplan, consulte a [Documentação de Implementação Técnica do Proxy](../../03-oss-management/observability/zabbix-stack/zabbix-proxy/dual_homed_monitoring.md).
+> **Observação:** Para os detalhes técnicos de implementação e blocos de código Netplan, consulte a [Documentação de Implementação Técnica do Proxy](../../03-oss-management/observability/zabbix-stack/zabbix-proxy/dual_homed_monitoring.md).
 
 ##
 
