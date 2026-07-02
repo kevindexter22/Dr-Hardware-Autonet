@@ -48,6 +48,9 @@ wifis:
     dhcp4: true
     dhcp4-overrides:
       use-routes: false  # Garante que a LAN principal (eth0) mantenha a Default Route
+    access-points:
+          "<SSID_DA_REDE>":
+            password: "<SENHA_DA_REDE>"
 ```
 
 Caso prefira configurar um IP estático, ficará da seguinte forma:
@@ -61,6 +64,9 @@ wifis:
       - <IP_DA_REDE/CIDR>
     dhcp4-overrides:
       use-routes: false  # Garante que a LAN principal (eth0) mantenha a Default Route
+    access-points:
+          "<SSID_DA_REDE>":
+            password: "<SENHA_DA_REDE>"
 ```
 
 ##
