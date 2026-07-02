@@ -64,9 +64,9 @@ We do not have an enterprise license. We will change the enterprise repository s
 
 ##
 
-> **⚠️ Note:**<br>
-> Before you run scripts from the internet, always read the code to see if it is safe.<br>
-> I checked this script and it is safe, so I used it for this setup.
+**⚠️ Note:**<br>
+Before you run scripts from the internet, always read the code to see if it is safe.<br>
+I checked this script and it is safe, so I used it for this setup.
 
 ##
 
