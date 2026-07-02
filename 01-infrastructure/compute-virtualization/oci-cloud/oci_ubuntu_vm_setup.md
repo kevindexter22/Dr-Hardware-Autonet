@@ -7,7 +7,7 @@ Este Procedimento Operacional Padrão (SOP) detalha a criação de uma infraestr
 
 Este nó atuará como o núcleo (*Core*) da topologia em nuvem, recebendo conexões criptografadas dos nós de borda (Edge/Proxies) da rede local.
 
----
+##
 
 ### 🌐 Fase 1: Configuração de Redes (VCN e Sub-rede)
 
@@ -22,7 +22,7 @@ Antes de criar o servidor, precisamos estabelecer o perímetro lógico de rede.
    * **Private Subnet CIDR Block:** `10.0.1.0/24` (Opcional para este laboratório, mas criado por padrão).
 4. Revise a topologia e clique em **Create**.
 
----
+##
 
 ### 🛡️ Fase 2: Configuração de Segurança (Security Lists / SecOps)
 
@@ -37,7 +37,7 @@ Por padrão, o firewall da OCI bloqueia todo o tráfego de entrada (*Ingress*), 
    * **Destination Port Range:** `80,443`
    * **Description:** Allow Web UI Access
 
----
+##
 
 ### 💻 Fase 3: Provisionamento da Instância (Compute)
 
@@ -55,7 +55,7 @@ Por padrão, o firewall da OCI bloqueia todo o tráfego de entrada (*Ingress*), 
    * **Opção B (Usar chave existente):** Selecione **Paste public keys** ou **Upload public key files** e insira a sua chave pública atual (ex: `id_ed25519.pub`).
 6. Clique em **Create**. Aguarde o status mudar de *Provisioning* para *Running*.
 
----
+##
 
 ### 🔑 Fase 4: Validação e Primeiro Acesso
 
