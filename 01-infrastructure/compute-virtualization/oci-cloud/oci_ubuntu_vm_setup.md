@@ -69,7 +69,7 @@ Após a instância ser provisionada, anote o **Public IP Address** exibido no pa
    ```bash
    sudo apt update && sudo apt upgrade -y
    ```
-   * ***Próximo passo:*** *Consulte a documentação de [os-baseline](#) para aplicar o hardening do sistema operacional antes de instalar as aplicações).*
+   * ***Próximo passo:*** *Consulte a documentação de [os-baseline](https://github.com/kevindexter22/Dr-Hardware-Autonet/tree/main/01-infrastructure/compute-virtualization/os-baseline) para aplicar o hardening do sistema operacional antes de instalar as aplicações).*
 
 ##
 
