@@ -134,7 +134,7 @@ Para desabilitar a suspenção, fazemos o seguinte:
 
 ##
 
-> **⚠️ Alerta de Segurança:**<br>
+> **☢️ Alerta de Segurança:**<br>
 > *Após finalizar a instalação, realize a configuração de um certificado SSL para a interface web.*<br>
 > *Você pode gerar um certificado usando um [Domínio Próprio](#) ou um [DNS Dinâmico Gratuito](#).
 
