@@ -127,6 +127,8 @@ Para desabilitar a suspenção, fazemos o seguinte:
   
 - **Gerenciamento de Desempenho:** Monitore o balão de memória (Memory Ballooning) na aba Summary do Node. Mantenha o consumo      global abaixo de 85% (aprox. 6.8 GB) para evitar que o OOM Killer (Out of Memory) do kernel Linux derrube seus serviços.         Podemos automatizar isso com ferramentas de observabilidade também.
 
+##
+
 > **⚠️ Alerta de Segurança:**<br>
 > *Após finalizar a instalação, realize a configuração de um certificado SSL para a interface web.*<br>
 > *Você pode gerar um [certificado usando um domínio próprio](#) ou um [DNS Dinâmico Gratuito](#).
