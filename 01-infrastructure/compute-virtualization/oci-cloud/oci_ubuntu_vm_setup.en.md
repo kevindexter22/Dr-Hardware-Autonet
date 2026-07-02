@@ -70,7 +70,7 @@ After the instance is provisioned, note down the **Public IP Address** shown on 
    ```bash
    sudo apt update && sudo apt upgrade -y
    ```
-   * ***Next step:*** *See the os-baseline documentation to apply operating system hardening before installing applications).*
+   * ***Next step:*** *See the [os-baseline](https://github.com/kevindexter22/Dr-Hardware-Autonet/tree/main/01-infrastructure/compute-virtualization/os-baseline) documentation to apply operating system hardening before installing applications).*
 
 ##
 
