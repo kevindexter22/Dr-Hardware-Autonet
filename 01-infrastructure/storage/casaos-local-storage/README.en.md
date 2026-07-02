@@ -14,9 +14,13 @@ Desktop systems and web interfaces often "kidnap" external hard drives. They mou
 The `hdd_mount_script.sh` script does not change host settings. It just reads the current state and fixes problems:
 
 1. **Hardware Check:** It uses `blkid` to see if the UUID is really connected to the USB port.
+
 2. **Read the Truth:** It checks the `/etc/fstab` file to find the correct official *Mountpoint* for that disk.
+
 3. **State Audit:** It compares the data with `lsblk`. If the system mounted the disk in the wrong place, the script does a forced `umount`.
+
 4. **Apply State:** It mounts the disk in the correct folder using the official system rule (`mount <MOUNTPOINT>`).
+
 5. **Logs (Syslog):** All actions, successes, or errors go to the system log using the tag `HDD_Mount`. You can find them using `journalctl`.
 
 ##
@@ -26,9 +30,11 @@ The `hdd_mount_script.sh` script does not change host settings. It just reads th
 For this script to work, the disk must already have a valid line inside the `/etc/fstab` file of the machine. 
 
 Example of a good FSTAB line:
+
 ```text
 UUID=F0B8596AB8592FF8 /mnt/storage_externo auto defaults,nofail 0 2
 ```
+
 * **Note:** *The nofail option is very important. It makes sure the Raspberry Pi can still boot normally if you disconnect the     USB drive.*
 
 ##
@@ -36,6 +42,7 @@ UUID=F0B8596AB8592FF8 /mnt/storage_externo auto defaults,nofail 0 2
 ### 🚀 Manual Test and Execution
 
 To run the script and see the execution logs:
+
 ```bash
 chmod +x mount-external-disk.sh
 sudo ./mount-external-disk.sh
@@ -46,4 +53,4 @@ sudo journalctl -t HDD_Mount
 
 ##
 
-ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT License.
+###### ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT License.
