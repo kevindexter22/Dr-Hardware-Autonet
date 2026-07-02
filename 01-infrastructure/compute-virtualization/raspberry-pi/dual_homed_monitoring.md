@@ -1,3 +1,4 @@
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/compute-virtualization/raspberry-pi/raspberry_pi_setup.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
 # 🏗️ Solution Design: Monitoramento Isolado via Dual-Homing (Zabbix Proxy)
 
