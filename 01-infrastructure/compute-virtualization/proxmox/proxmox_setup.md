@@ -65,9 +65,9 @@ Como não temos uma licença enterprise, vamos alterar o repositório enterprise
 
 ##
 
-> ⚠️ ***Observação:** Antes de rodar um script de terceiros, sempre acesse o conteúdo e valide o que esse script está <br>
-> fazendo na prática, para que não haja riscos.<br>
-> Como eu já dei uma olhada e esse script é seguro, utilizei ele para essa configuração inicial.*
+⚠️ ***Observação:** Antes de rodar um script de terceiros, sempre acesse o conteúdo e valide o que esse script está <br>
+fazendo na prática, para que não haja riscos.<br>
+Como eu já dei uma olhada e esse script é seguro, utilizei ele para essa configuração inicial.*
 
 ##
 
@@ -134,9 +134,10 @@ Para desabilitar a suspenção, fazemos o seguinte:
 
 ##
 
-> **☢️ Alerta de Segurança:**<br>
-> *Após finalizar a instalação, realize a configuração de um certificado SSL para a interface web.*<br>
-> *Você pode gerar um certificado usando um [Domínio Próprio](#) ou um [DNS Dinâmico Gratuito](#).
+### **☢️ Alerta de Segurança:**
+
+Após finalizar a instalação, realize a configuração de um certificado SSL para a interface web.<br>
+Você pode gerar um certificado usando um [Domínio Próprio](#) ou um [DNS Dinâmico Gratuito](#).
 
 ##
 
