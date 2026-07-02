@@ -13,16 +13,19 @@ O objetivo é que o servidor possa se comunicar diretamente com o Zabbix Server 
 ### 💾 Fase 1: Instalar e configurar o Zabbix Agent
 
 1. Acesse o terminal via ssh com privilégios de superusuário:
-   ```bash
-   sudo su -
-   ```
+
+```bash
+sudo su -
+```
 
 2. Instale o repositório do Zabbix:
-   ```bash
-    wget https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
-    dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
-    apt update 
-    ```
+
+```bash
+wget https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
+dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
+apt update 
+```
+
 3. Instale o Zabbix Agent:
    ```bash
    apt install zabbix-agent   
