@@ -1,3 +1,4 @@
+<h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/zabbix-stack/zabbix-proxy/dual_homed_monitoring.en.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 🏗️ Solution Design: Isolated Monitoring via Dual-Homing (Zabbix Proxy)
 
