@@ -35,6 +35,7 @@ Because the hardware is limited, we will use these rules:
 Before you start, open the computer BIOS and check:
 
 1. Virtualization Technology (VT-x) must be Enabled. Without this, KVM will not work.
+
 2. Boot Order: Put the Proxmox VE USB drive as the first option.
 
 #### B. Install Settings (Proxmox Installer)
@@ -42,7 +43,9 @@ Before you start, open the computer BIOS and check:
 When you start the OS installer, choose these settings:
 
 1. **Target Hard Disk:** Choose the correct disk for the system. Example: 480 GB SSD.
+
 2. **Options (Filesystem):** Click options and make sure the file system is EXT4.
+
 3. **Network Setup:** Choose a static IP for the cable network (eth0/eno1) and a hostname. *Note: Do not use Wi-Fi for the hypervisor. Cables give better speed and ping.* 
 
 ##
@@ -56,11 +59,14 @@ After the first boot, open the web interface (https://<PROXMOX_IP>:8006). Then, 
 We do not have an enterprise license. We will change the enterprise repository so we do not get update errors. I will also turn off some tools I do not need right now.
 
 1. I will use a PVE Post-Install script from <a href="https://community-scripts.org/">community-scripts.org</a>.
+
 2.  To run this script, copy this command into the Proxmox shell:
-   ```bash
-   bash -c "$(curl -fsSL [https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh](https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh))"
+
+```bash
+bash -c "$(curl -fsSL [https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh](https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh))"
 ```
-  - After you run this command, it will ask some questions: if you want to run the script, if you want to turn off the          enterprise repository, if you want to turn on a free repository, and if you want to turn off HA (if you have only one         server, you can turn it off). At the end, it will update and ask to restart the server.
+
+* After you run this command, it will ask some questions: if you want to run the script, if you want to turn off the          enterprise repository, if you want to turn on a free repository, and if you want to turn off HA (if you have only one         server, you can turn it off). At the end, it will update and ask to restart the server.
 
 ##
 
@@ -73,19 +79,25 @@ I checked this script and it is safe, so I used it for this setup.
 #### B. Setup 750 GB HDD (Tier 2 storage)
 
 1. Find the disk (usually /dev/sdb):
-   ```bash
-   lsblk
-    ```
+
+```bash
+lsblk
+```
+
 2. Format it and make a folder:
-   ```bash
-   mkfs.ext4 /dev/sdb
-   mkdir -p /mnt/hdd750
-   ```
+
+```bash
+mkfs.ext4 /dev/sdb
+mkdir -p /mnt/hdd750
+```
+
 3. Add to fstab to mount automatically when you start the server:
-   ```bash
-   echo "/dev/sdb /mnt/hdd750 ext4 defaults 0 2" >> /etc/fstab
-   mount -a
-   ```
+
+```bash
+echo "/dev/sdb /mnt/hdd750 ext4 defaults 0 2" >> /etc/fstab
+mount -a
+```
+
 4. Go to the Proxmox Web Interface: Datacenter > Storage > Add > Directory
    - ID: Storage-HDD
    - Directory: /mnt/hdd750
@@ -96,12 +108,16 @@ I checked this script and it is safe, so I used it for this setup.
 To protect the SSD health and keep the system fast when RAM is low, we will make the system use less Swap memory:
 
 1. Type this in the Proxmox shell:
-   ```bash
-    sysctl vm.swappiness=10
+
+```bash
+sysctl vm.swappiness=10
+```
+
 2. To save this change permanently, use this command:
-   ```bash
-   echo "vm.swappiness=10" >> /etc/sysctl.conf
-   ```
+
+```bash
+echo "vm.swappiness=10" >> /etc/sysctl.conf
+```
 
 #### D. Disable Laptop Sleep Mode
 
@@ -110,25 +126,30 @@ Laptops sleep when you close the lid. For a server, this is bad because the serv
 To stop this sleep mode, we do this:
 
 1. Edit the logind file:
-   ```bash
-   nano /etc/systemd/logind.conf
-   ```
+
+```bash
+nano /etc/systemd/logind.conf
+```
+
 2. Remove the # and change this line:
-   ```bash
-   HandleLidSwitch=ignore
-   ```
+
+```bash
+HandleLidSwitch=ignore
+```
+
 3. Restart the service:
-   ```bash
-   systemctl restart systemd-logind.service
-   ```
+
+```bash
+systemctl restart systemd-logind.service
+```
 
 ##
 
 ### ⚙️ Phase 4: Operations Management
 
-- **Fail Management (Backups):** Make a Backup Job in Proxmox (Datacenter > Backups) to create weekly snapshots of your important KVM/LXC. Put the destination strictly in Storage-HDD.
+* **Fail Management (Backups):** Make a Backup Job in Proxmox (Datacenter > Backups) to create weekly snapshots of your important KVM/LXC. Put the destination strictly in Storage-HDD.
 
-- **Performance Management:** Watch the Memory Ballooning in the Node Summary tab. Keep the global RAM use under 85% (about 6.8 GB). This stops the Linux OOM Killer (Out of Memory) from closing your services. We can also use observability tools to do this automatically.
+* **Performance Management:** Watch the Memory Ballooning in the Node Summary tab. Keep the global RAM use under 85% (about 6.8 GB). This stops the Linux OOM Killer (Out of Memory) from closing your services. We can also use observability tools to do this automatically.
 
 ##
 
