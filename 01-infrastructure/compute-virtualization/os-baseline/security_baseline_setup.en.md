@@ -15,21 +15,24 @@ The goal is to reduce the attack surface, hide standard ports, use Default Deny 
 Hiding the standard port (TCP/22) stops a lot of noise from automatic network scanners.
 
 1. Access the server via SSH and open the SSH configuration file:
-   ```bash
-   sudo nano /etc/ssh/sshd_config
-   ```
+
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
 2. Change these lines (remove the comment symbol if necessary):
-   ```bash
-   Port <CUSTOM_PORT_SSH>
-   PermitRootLogin no
-   PubkeyAuthentication yes
-   ```
-   ***Architectural Note:*** *In production, it is good to change PasswordAuthentication to no. This forces the use of              cryptographic keys only (RSA/Ed25519).*
+
+```bash
+Port <CUSTOM_PORT_SSH>
+PermitRootLogin no
+PubkeyAuthentication yes
+```
+***Architectural Note:*** *In production, it is good to change PasswordAuthentication to no. This forces the use of              cryptographic keys only (RSA/Ed25519).*
 
 3. Restart the SSH service to apply the changes:
-   ```bash
-   sudo systemctl restart ssh
-   ```
+```bash
+sudo systemctl restart ssh
+```
 
 ## 
 
@@ -38,35 +41,48 @@ Hiding the standard port (TCP/22) stops a lot of noise from automatic network sc
 The L3/L4 security policy uses local Zero Trust (Default Deny). This means incoming traffic is only allowed if you declare it.
 
 1. First, make sure UFW is installed:
-   ```bash
-   sudo apt update; sudo apt install ufw -y
-   ```
+
+```bash
+sudo apt update; sudo apt install ufw -y
+```
+
 2. Set the default rules (Block incoming, allow outgoing):
-   ```bash
-   sudo ufw default deny incoming
-   sudo ufw default allow outgoing
-   ```
+
+```bash
+sudo ufw default deny incoming
+sudo ufw default allow outgoing
+```
+
 3. **CRITICAL:** Allow the new SSH port before you turn on the firewall. This prevents a lockout:
-   ```bash
-   sudo ufw allow <CUSTOM_SSH_PORT>/tcp
-   ```
+
+```bash
+sudo ufw allow <CUSTOM_SSH_PORT>/tcp
+```
+
 4. Allow the ports for the services running on this host (e.g., web, samba, etc.):
-   ```bash
-   # TCP Ports
-   sudo ufw allow <SERVICE_PORT>/tcp comment "Service name for this port"
-   # UDP Ports
-   sudo ufw allow <SERVICE_PORT>/udp comment "Service name for this port"
-   # TCP and UDP Ports
-   sudo ufw allow <SERVICE_PORT> comment "Service name for this port"
-   ``` 
+
+```bash
+# TCP Ports
+sudo ufw allow <SERVICE_PORT>/tcp comment "Service name for this port"
+
+# UDP Ports
+sudo ufw allow <SERVICE_PORT>/udp comment "Service name for this port"
+
+# TCP and UDP Ports
+sudo ufw allow <SERVICE_PORT> comment "Service name for this port"
+```
+ 
 5. Turn on the firewall:
-   ```bash
-   sudo ufw enable
-   ```
+
+```bash
+sudo ufw enable
+```
+
 6. Check the rule table:
-   ```bash
-   sudo ufw status
-   ```
+
+```bash
+sudo ufw status
+```
 
 ##
 
@@ -75,34 +91,42 @@ The L3/L4 security policy uses local Zero Trust (Default Deny). This means incom
 Fail2ban works as a host-based IPS (Intrusion Prevention System). It reads system logs and adds dynamic rules to iptables/UFW to ban bad IPs.
 
 1. Install the package with this command:
-   ```bash
-   sudo apt update; sudo apt install fail2ban -y
-   ``` 
+
+```bash
+sudo apt update; sudo apt install fail2ban -y
+``` 
+
 2. Make a local copy of the config file (this stops overwrites during package updates):
-   ```bash
-   sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
-   ```
+```bash
+sudo cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
+```
+
 3. Edit the local file to configure the SSH Jail:
-   ```bash
-   sudo nano /etc/fail2ban/jail.local
-   ``` 
+```bash
+sudo nano /etc/fail2ban/jail.local
+``` 
+
 4. Find the [sshd] section. Change the port to match Phase 1, and turn on the rule:
-   ```bash
-   [sshd]
-   enabled = true
-   port    = <CUSTOM_SSH_PORT>
-   logpath = %(sshd_log)s
-   backend = %(sshd_backend)s
-   maxretry = 3
-   bantime = 3600
-   ``` 
-   - `maxretry` = 3: Bans the IP after 3 failed tries.
-   - `bantime` = 3600: Ban time (in seconds, e.g., 1 hour).
+
+```bash
+[sshd]
+enabled = true
+port    = <CUSTOM_SSH_PORT>
+logpath = %(sshd_log)s
+backend = %(sshd_backend)s
+maxretry = 3
+bantime = 3600
+``` 
+- `maxretry` = 3: Bans the IP after 3 failed tries.
+- `bantime` = 3600: Ban time (in seconds, e.g., 1 hour).
+
 5. Start the service:
-   ```bash
-   sudo systemctl enable fail2ban
-   systemctl restart fail2ban
-   ```
+
+```bash
+sudo systemctl enable fail2ban
+systemctl restart fail2ban
+```
+
 ##
 
 ### 🛡️ Security Banner Configuration (SSH)
@@ -110,12 +134,14 @@ Fail2ban works as a host-based IPS (Intrusion Prevention System). It reads syste
 As part of our SecOps and compliance policies, all servers must show a legal warning before SSH login. This helps to stop unauthorized access.
 
 1. Edit the system network message file:
-   ```bash
-   sudo nano /etc/issue.net
-   ```
+
+```bash
+sudo nano /etc/issue.net
+```
+
 2. Insert the standard banner for your company/network:
-   ```bash
-   ***************************************************************************
+```bash
+***************************************************************************
                               W A R N I N G
 
    This is a private system belonging to the Dr. Hardware Autonet lab.
@@ -123,20 +149,26 @@ As part of our SecOps and compliance policies, all servers must show a legal war
    logged and monitored (Audited). Unauthorized access will
    result in immediate disconnection and possible penalties.
    
-   ***************************************************************************
-   ```
+***************************************************************************
+```
+
 3. Configure the SSH daemon to show the file:
-   ```bash
-   sudo nano /etc/ssh/sshd_config
-   ```
+
+```bash
+sudo nano /etc/ssh/sshd_config
+```
+
 4. Look for the Banner directive (or add it at the end of the file):
-   ```bash
-   Banner /etc/issue.net
-   ```
+
+```bash
+Banner /etc/issue.net
+```
+
 5. Restart the SSH service to apply the policy:
-   ```bash
-   sudo systemctl restart ssh
-   ```
+
+```bash
+sudo systemctl restart ssh
+```
    
 ##
 
@@ -147,14 +179,19 @@ Now, we need to make sure you do not lose SSH access after these changes.
 **Note:** Do not close your current terminal. If the settings are wrong, you will lose access if you close it.
 
 1. Open a second terminal on your local machine.
+
 2. Try to make a new SSH connection using the custom port:
-   ```bash
-   ssh <YOUR_USER>@<SERVER_IP> -p <CUSTOM_SSH_PORT>
-   ``` 
+
+```bash
+ssh <YOUR_USER>@<SERVER_IP> -p <CUSTOM_SSH_PORT>
+``` 
+
 3. Check if Fail2ban is working well and watching SSH:
-   ```bash
-   sudo fail2ban-client status sshd
-   ``` 
+
+```bash
+sudo fail2ban-client status sshd
+``` 
+
 4. If the connection in window 2 works, the Security Baseline is a success. You can now close window 1.
 
 ##
