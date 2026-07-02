@@ -30,7 +30,7 @@ wget [https://images.linuxcontainers.org/images/almalinux/8/amd64/default/defaul
 
 *Note: If your template storage is different from the default /var/lib/vz, change the path in the cd command.*
 
-2. Create LXC Container via CLI (Optimized)
+2. Create LXC Container via CLI (Optimized):
 
 You can create the container using the Proxmox graphic interface, or you can run this command directly in the Proxmox shell. This creates it with the necessary privilege flags and sub-resources:
 
