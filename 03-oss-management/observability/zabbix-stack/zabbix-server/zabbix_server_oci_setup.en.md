@@ -128,7 +128,7 @@ http://<OCI_PUBLIC_IP>/zabbix
 
 ##
 
-### ⚠️ Security Alert:
+**⚠️ Security Alert:**
 
 * Change the Admin user password immediately after your first login.
 * Configure an SSL certificate for Apache.
