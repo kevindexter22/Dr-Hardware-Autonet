@@ -13,15 +13,19 @@ O objetivo é ter um servidor na rede interna que sirva como uma ponte de comuni
 ### 💾 Fase 1: Instalar e configurar o Zabbix Proxy
 
 1. Acesse o terminal via ssh com privilégios de superusuário:
-   ```bash
-   sudo su -
-   ```
+
+```bash
+sudo su -
+```
+
 2. Instale o repositório do Zabbix:
-   ```bash
-   wget https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
-   dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
-   apt update
-   ```
+
+```bash
+wget https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
+dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
+apt update
+```
+
 3. Instale o Zabbix Proxy:
    ```bash
    apt install zabbix-proxy-sqlite3 -y
