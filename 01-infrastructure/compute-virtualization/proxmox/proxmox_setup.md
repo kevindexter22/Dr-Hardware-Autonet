@@ -65,8 +65,8 @@ Como não temos uma licença enterprise, vamos alterar o repositório enterprise
 
 ##
 
-⚠️ ***Observação:** Antes de rodar um script de terceiros, sempre acesse o conteúdo e valide o que esse script está <br>
-fazendo na prática, para que não haja riscos.<br>
+⚠️ ***Observação:** <br>
+Antes de rodar um script de terceiros, sempre acesse o conteúdo e valide o que esse script está fazendo na prática, para que não haja riscos.<br>
 Como eu já dei uma olhada e esse script é seguro, utilizei ele para essa configuração inicial.*
 
 ##
