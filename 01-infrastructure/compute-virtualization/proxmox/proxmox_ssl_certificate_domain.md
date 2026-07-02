@@ -69,7 +69,7 @@ Para garantir a aplicação do parâmetro Alias (que resolve a disparidade lógi
    ```
 ##
 
-### ✅ Fase 4: Validação e Lifecycle Management (Operações de Dia 2)
+### ✅ Fase 4: Validação e Gerênciamento do Ciclo de Vida
 
 Uma vez executado o passo anterior, o output do terminal registrará a injeção do TXT Record na API, o tempo de latência aguardado (300s) e o sucesso do desafio criptográfico.
 
