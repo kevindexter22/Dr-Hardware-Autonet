@@ -21,7 +21,7 @@ sudo su -
 2. Install the Zabbix repository:
 
 ```bash
-wget [https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb](https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb)
+wget https://repo.zabbix.com/zabbix/7.0/ubuntu-arm64/pool/main/z/zabbix-release/zabbix-release_latest_7.0+ubuntu24.04_all.deb
 dpkg -i zabbix-release_latest_7.0+ubuntu24.04_all.deb
 apt update
 ```
