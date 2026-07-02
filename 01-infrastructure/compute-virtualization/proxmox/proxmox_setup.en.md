@@ -60,9 +60,14 @@ We do not have an enterprise license. We will change the enterprise repository s
    ```bash
    bash -c "$(curl -fsSL [https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh](https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh))"
 ```
-  - After you run this command, it will ask some questions: if you want to run the script, if you want to turn off the          enterprise repository, if you want to turn on a free repository, and if you want to turn off HA (if you have only one         server, you can turn it off). At the end, it will update and ask to restart the server.<br>
-  <br>⚠️ Note: Before you run scripts from the internet, always read the code to see if it is safe.  
-  <br>I checked this script and it is safe, so I used it for this setup.
+  - After you run this command, it will ask some questions: if you want to run the script, if you want to turn off the          enterprise repository, if you want to turn on a free repository, and if you want to turn off HA (if you have only one         server, you can turn it off). At the end, it will update and ask to restart the server.
+
+##
+
+> **⚠️ Note:** Before you run scripts from the internet, always read the code to see if it is safe.<br>
+> I checked this script and it is safe, so I used it for this setup.
+
+##
 
 #### B. Setup 750 GB HDD (Tier 2 storage)
 
