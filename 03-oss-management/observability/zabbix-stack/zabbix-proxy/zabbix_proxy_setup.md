@@ -27,20 +27,26 @@ apt update
 ```
 
 3. Instale o Zabbix Proxy:
-   ```bash
-   apt install zabbix-proxy-sqlite3 -y
-   ```
+
+```bash
+apt install zabbix-proxy-sqlite3 -y
+```
+
 4. Configure o banco de dados para o Zabbix Proxy:
-   Edite arquivo /etc/zabbix/zabbix_proxy.conf and adicione o parâmetro DBName indicando o diretório e nome para o BD.
-   ```bash
-   # Exemplo:
-   DBName=/var/lib/zabbix/zbxproxy.db
-   ```
+
+Edite arquivo /etc/zabbix/zabbix_proxy.conf and adicione o parâmetro DBName indicando o diretório e nome para o BD.
+
+```bash
+# Exemplo:
+DBName=/var/lib/zabbix/zbxproxy.db
+```
+
 5. Inicie o serviço:
-   ```bash
-   systemctl restart zabbix-proxy
-   systemctl enable zabbix-proxy
-   ```
+
+```bash
+systemctl restart zabbix-proxy
+systemctl enable zabbix-proxy
+```
    
 ##
 
