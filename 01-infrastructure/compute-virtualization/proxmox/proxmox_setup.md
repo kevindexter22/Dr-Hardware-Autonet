@@ -36,6 +36,7 @@ Como a finalidade aqui é um homelab, troquei os recursos avançados de integrid
 Antes de iniciar, acesse a BIOS do computador e garanta que:
 
 1. A opção Virtualization Technology (VT-x) esteja Habilitada. Sem isso, o KVM não funcionará.
+
 2. Boot Order: Configure o pendrive bootável do Proxmox VE como primário.
 
 #### B. Parâmetros de Instalação (Proxmox Installer)
@@ -57,11 +58,14 @@ Após o primeiro boot, acesse a interface web de gerência (https://<IP_DO_PROXM
 Como não temos uma licença enterprise, vamos alterar o repositório enterprise para evitar erros de atualizaçções. Vou aproveitar e ajustar/desabilitar alguns recursos que não irei utilizar por hora.
 
 1. Para isso utilizarei um script de Pós-Instalação do PVE disponibilizado em <a href="https://community-scripts.org/">community-scripts.org</a>.
+
 2.  Para executar esse script, cole o segundo comando no shell do Proxmox:
-   ```bash
-   bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh)"
-   ```
-   - Após rodar esse comando, ele te fará algumas perguntas como: se você quer rodar o script, se deseja desabilitar o              repositório enterprise do Proxmox, se vc deseja habilitar um repositório adicional para pessoas que não assinam o enterprise,    se deseja desabilitar o HA (se for utilizar o servidor como nó único, pode desabilitar) e no final ele vai atualizar e pedir     para reiniciar o servidor.<br>
+
+```bash
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/community-scripts/ProxmoxVE/main/tools/pve/post-pve-install.sh)"
+```
+
+* Após rodar esse comando, ele te fará algumas perguntas como: se você quer rodar o script, se deseja desabilitar o            repositório enterprise do Proxmox, se vc deseja habilitar um repositório adicional para pessoas que não assinam o enterprise,se deseja desabilitar o HA (se for utilizar o servidor como nó único, pode desabilitar) e no final ele vai atualizar e pedir para reiniciar o servidor.
 
 ##
 
@@ -74,19 +78,25 @@ Como eu já dei uma olhada e esse script é seguro, utilizei ele para essa confi
 #### B. Provisionamento do HDD 750 GB (Tier 2 storage)
 
 1. Identifique o disco (geralmente `/dev/sdb`):
-   ```bash
-   lsblk
-   ```
+
+```bash
+lsblk
+```
+
 2. Formate e crie o diretório:
-   ```bash
-   mkfs.ext4 /dev/sdb
-   mkdir -p /mnt/hdd750
-   ```
+
+```bash
+mkfs.ext4 /dev/sdb
+mkdir -p /mnt/hdd750
+```
+
 3. Adicione ao `fstab` para montagem automática no boot:
-   ```bash
-   echo "/dev/sdb /mnt/hdd750 ext4 defaults 0 2" >> /etc/fstab
-   mount -a
-   ```
+
+```bash
+echo "/dev/sdb /mnt/hdd750 ext4 defaults 0 2" >> /etc/fstab
+mount -a
+```
+
 4. Vá na interface Web do Proxmox: Datacenter > Storage > Add > Directory
    - ID: `Storage-HDD`
    - Directory: `/mnt/hdd750`
@@ -97,13 +107,15 @@ Como eu já dei uma olhada e esse script é seguro, utilizei ele para essa confi
 Para preservar a vida útil do SSD e evitar contenção de I/O em um sistema com pouca RAM, reduza a agressividade com que o sistema usa o arquivo de paginação (Swap):
 
 1. No shell do Proxmox digite:
-   ```bash
-   sysctl vm.swappiness=10
-   ```
+
+```bash
+sysctl vm.swappiness=10
+```
+
 2. Para tornar a alteração persistente, use o comando:
-   ```bash
-   echo "vm.swappiness=10" >> /etc/sysctl.conf
-   ```
+```bash
+echo "vm.swappiness=10" >> /etc/sysctl.conf
+```
 
 #### D. Desabilitar suspensão do laptop
 
@@ -112,17 +124,22 @@ Laptops suspendem a operação quando a tampa é fechada. Para um servidor, isso
 Para desabilitar a suspenção, fazemos o seguinte:
 
 1. Edite o arquivo de logind:
-   ```bash
-   nano /etc/systemd/logind.conf
-   ```
+
+```bash
+nano /etc/systemd/logind.conf
+```
+
 2. Descomente e altere a seguinte linha:
-   ```bash
-   HandleLidSwitch=ignore
-   ```
+
+```bash
+HandleLidSwitch=ignore
+```
+
 3. Reinicie o serviço:
-   ```bash
-   systemctl restart systemd-logind.service
-   ```
+
+```bash
+systemctl restart systemd-logind.service
+```
 
 ## 
 
