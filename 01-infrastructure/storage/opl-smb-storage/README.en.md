@@ -3,11 +3,12 @@
 # 🎮 OPL Samba Storage (PS2 Game Server)
 
 ### 📝 Descrição do Escopo
+
 Este diretório documenta a configuração e o provisionamento do servidor de arquivos Samba (SMB/CIFS) dedicado ao ecossistema de *Retro Gaming*. O serviço é desenhado especificamente para hospedar e transmitir imagens ISO para o console PlayStation 2 via rede utilizando o **Open PS2 Loader (OPL)**.
 
 O serviço roda fisicamente em um Raspberry Pi 3B, tirando proveito da interface *Fast Ethernet* (100 Mbps), que é perfeitamente simétrica à capacidade da placa de rede nativa do PS2.
 
----
+##
 
 ### ⚙️ Arquitetura e Tuning do Serviço
 
@@ -17,7 +18,7 @@ O serviço roda fisicamente em um Raspberry Pi 3B, tirando proveito da interface
 * **Autenticação:** Aberta (`guest ok = yes`) mapeada para o usuário `root`.
 * **Network Tuning (L4):** Otimizações de soquete ativadas (`TCP_NODELAY`, `IPTOS_LOWDELAY`) e buffers de recepção/envio travados em 64KB (`SO_RCVBUF=65536 SO_SNDBUF=65536`) para eliminar latência e travamentos em vídeos (FMVs) durante a jogatina.
 
----
+##
 
 ### 🛡️ Considerações de Segurança (SecOps) e Isolamento
 
@@ -26,10 +27,12 @@ O PlayStation 2 é um equipamento legado que exige a utilização de protocolos 
 Para mitigar a imensa superfície de ataque que isso gera na rede interna, a segurança **não é feita na camada da aplicação (Samba), mas sim na camada de rede (Firewall L3/L4)**:
 
 1. **Default Deny no UFW:** O serviço Samba da Raspberry Pi rejeita sumariamente qualquer tentativa de conexão na porta `TCP/445` e `TCP/139` vinda da rede geral.
+
 2. **Exceção de IP (Whitelist):** Existe uma regra explícita no *Firewall* de Host (UFW) permitindo tráfego SMB **apenas e exclusivamente** a partir do endereço de IP estático atribuído ao PlayStation 2 (`<IP_DO_PS2>`).
+
 3. Qualquer outro computador ou contêiner na rede que tentar acessar o diretório `PS2Jogos` terá a conexão "dropada".
 
----
+##
 
 ### 📂 Estrutura de Diretórios (Padrão OPL)
 
@@ -64,6 +67,7 @@ The file server architecture has two background scripts. They keep the system wo
 ### 🚀 Management and Maintenance
 
 To restart the service after maintenance or after adding new games:
+
 ```bash
 sudo systemctl restart smbd nmbd
 sudo systemctl status smbd
