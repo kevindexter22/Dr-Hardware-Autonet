@@ -49,6 +49,19 @@ wifis:
       use-routes: false  # Garante que a LAN principal (eth0) mantenha a Default Route
 ```
 
+Caso prefira configurar um IP estático, ficará da seguinte forma:
+
+```yaml
+# Exemplo do bloqueio lógico da rota na interface secundária (Netplan)
+wifis:
+  wlan0:
+    dhcp4: false
+    addresses:
+      - <IP_DA_REDE/CIDR>
+    dhcp4-overrides:
+      use-routes: false  # Garante que a LAN principal (eth0) mantenha a Default Route
+```
+
 ##
 
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
