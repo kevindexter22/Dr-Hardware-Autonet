@@ -25,6 +25,7 @@ The solution was to make the existing Zabbix Proxy (Raspberry Pi) a **Dual-Homed
 To make sure the Proxy does not become an unsafe bridge between networks:
 
 1. **No Default Gateway Hijack:** The Wi-Fi interface (`wlan0`) was configured in Netplan with `use-routes: false`. This ensures the internet continues to go out through the cable (`eth0`).
+
 2. **Isolation (No IP Forwarding):** Packet forwarding (`net.ipv4.ip_forward=0`) is disabled in Linux. Nobody on the Wi-Fi network can use the Proxy as a router to invade the main network.
 
 ##
@@ -34,13 +35,15 @@ To make sure the Proxy does not become an unsafe bridge between networks:
 If the Wi-Fi monitoring stops or the Proxy loses connection to the cloud, follow these steps:
 
 1. **Check the Default Route (Critical):**
-   Run `ip route`. The line that starts with `default via` **must** point to the `eth0` interface. If it points to `wlan0`, the traffic is going the wrong way.
-   * *Fix:* Check the `/etc/netplan/*.yaml` file and run `sudo netplan apply`.
+Run `ip route`. The line that starts with `default via` **must** point to the `eth0` interface. If it points to `wlan0`, the traffic is going the wrong way.
+* *Fix:* Check the `/etc/netplan/*.yaml` file and run `sudo netplan apply`.
+
 2. **Check the Wi-Fi Connection:**
-   Run `ip a show wlan0`. Check if the interface got an IP address. If it does not have an IP, the radio might be disconnected.
-   * *Fix:* Check the passwords in Netplan and run `sudo wpa_cli status`.
+Run `ip a show wlan0`. Check if the interface got an IP address. If it does not have an IP, the radio might be disconnected.
+* *Fix:* Check the passwords in Netplan and run `sudo wpa_cli status`.
+
 3. **Test the Isolation:**
-   Try to ping from the Wi-Fi network to a main network IP using the Proxy. The ping must **fail**, ensuring the security isolation is active.
+Try to ping from the Wi-Fi network to a main network IP using the Proxy. The ping must **fail**, ensuring the security isolation is active.
 
 ##
 
