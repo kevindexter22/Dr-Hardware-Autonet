@@ -54,7 +54,7 @@ Parametrizamos a chave para o formato tradicional RSA 2048, garantindo a retroco
 /root/.acme.sh/acme.sh --issue --dns dns_duckdns -d seu-lab.duckdns.org -k 2048
 ```
 
-2. Staging Area (Área de Transição): Crie o diretório de custódia e fragmente a cadeia de certificados para isolar a Autoridade Certificadora (CA).
+3. Staging Area (Área de Transição): Crie o diretório de custódia e fragmente a cadeia de certificados para isolar a Autoridade Certificadora (CA).
 
 ```bash
 mkdir -p /etc/ssl/freeipa
