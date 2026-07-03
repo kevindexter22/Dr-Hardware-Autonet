@@ -121,8 +121,6 @@ Você pode gerar um certificado usando um [Domínio Próprio](https://github.com
 
 ##
 
-##
-
 ###  🐧 Fase 4: Configuração e Acoplamento do Cliente (Ubuntu/Debian)
 
 No seu servidor cliente (qualquer nó Ubuntu ou Debian), execute a limpeza preventiva e a instalação limpa para se conectar ao novo servidor AlmaLinux 8.
