@@ -26,6 +26,7 @@ A solução adotada foi promover o Zabbix Proxy existente (Raspberry Pi) a um n�
 Para garantir que o Proxy não se torne uma ponte insegura entre as redes:
 
 1. **Sem Sequestro de Rota (Default Gateway Hijack):** A interface Wi-Fi (`wlan0`) foi configurada no Netplan com `use-routes: false`. Isso garante que a internet continue saindo pelo cabo (`eth0`).
+
 2. **Isolamento (No IP Forwarding):** O repasse de pacotes (`net.ipv4.ip_forward=0`) está desativado no Linux. Ninguém na rede Wi-Fi consegue usar o Proxy como roteador para invadir a rede principal.
 
 ##
@@ -35,13 +36,15 @@ Para garantir que o Proxy não se torne uma ponte insegura entre as redes:
 Se o monitoramento da rede Wi-Fi parar ou o Proxy perder conexão com a nuvem, siga estes passos:
 
 1. **Verifique a Rota Padrão (Crítico):**
-   Execute `ip route`. A linha que começa com `default via` **deve** apontar para a interface `eth0`. Se estiver apontando        para `wlan0`, o tráfego está indo para o lugar errado.
-   * *Correção:* Revise o arquivo `/etc/netplan/*.yaml` e aplique `sudo netplan apply`.
+Execute `ip route`. A linha que começa com `default via` **deve** apontar para a interface `eth0`. Se estiver apontando para `wlan0`, o tráfego está indo para o lugar errado.
+* *Correção:* Revise o arquivo `/etc/netplan/*.yaml` e aplique `sudo netplan apply`.
+
 2. **Verifique a Conexão Wi-Fi:**
-   Execute `ip a show wlan0`. Verifique se a interface pegou um endereço IP. Se não tiver IP, o rádio pode estar desconectado.
-   * *Correção:* Verifique as credenciais no Netplan e rode `sudo wpa_cli status`.
+Execute `ip a show wlan0`. Verifique se a interface pegou um endereço IP. Se não tiver IP, o rádio pode estar desconectado.
+* *Correção:* Verifique as credenciais no Netplan e rode `sudo wpa_cli status`.
+
 3. **Teste o Isolamento:**
-   Tente fazer um ping da rede Wi-Fi para um IP da rede principal usando o Proxy. O ping deve **falhar**, garantindo que o        isolamento de segurança está ativo.
+Tente fazer um ping da rede Wi-Fi para um IP da rede principal usando o Proxy. O ping deve **falhar**, garantindo que o isolamento de segurança está ativo.
 
 ##
 
