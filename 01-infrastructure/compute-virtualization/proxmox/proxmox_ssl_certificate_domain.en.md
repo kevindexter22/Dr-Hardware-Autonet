@@ -64,3 +64,23 @@ We must use the Alias parameter to fix the difference between the requested .cli
 
 ```bash
 pvenode config set --acmedomain0 domain=proxmox.your-domain.click,plugin=duckdns,alias=your-lab.duckdns.org
+```
+
+3. Run the manual provisioning command to validate and get the first certificate:
+
+```bash
+pvenode acme cert order
+```
+
+##
+
+### ✅ Phase 4: Validation and Lifecycle Management
+
+After you run the last step, the terminal will show the logs: the API gets the TXT Record, the system waits for 300 seconds, and the cryptographic challenge is successful.
+
+* **Interface Handover:** The HTTP service (pveproxy) applies the new keys (.pem and .key) and does an automatic graceful reload. This does not cause VM downtime. Now, you can access the interface securely at https://proxmox.your-domain.click:8006 (Green Padlock).
+* **Zero-Touch Provisioning (Auto Renewal):** You do not need to create cron jobs or custom scripts. The native service (pve-daily-update.service) manages the state automatically. Exactly 30 days before the certificate expires, Proxmox will repeat Phases 2 and 3 silently in the background. This makes the operational cost (OPEX) for cryptographic lifecycle maintenance zero.
+
+##
+
+###### ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT license.
