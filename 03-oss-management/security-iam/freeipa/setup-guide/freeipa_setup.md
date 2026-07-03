@@ -114,6 +114,15 @@ ipa-server-install \
 
 ##
 
+### **☢️ Alerta de Segurança:**
+
+Após finalizar a instalação, realize a configuração de um certificado SSL para a interface web.<br>
+Você pode gerar um certificado usando um [Domínio Próprio](#) ou um [DNS Dinâmico Gratuito](#).
+
+##
+
+##
+
 ###  🐧 Fase 4: Configuração e Acoplamento do Cliente (Ubuntu/Debian)
 
 No seu servidor cliente (qualquer nó Ubuntu ou Debian), execute a limpeza preventiva e a instalação limpa para se conectar ao novo servidor AlmaLinux 8.
