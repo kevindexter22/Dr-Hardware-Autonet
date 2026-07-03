@@ -153,7 +153,7 @@ systemctl restart systemd-logind.service
 
 ##
 
-### **☢️ Security Alert:**<br>
+**☢️ Security Alert:**<br>
 
 After you finish the installation, configure an SSL certificate for the web interface.<br>
 You can generate a certificate using your [own domain](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/compute-virtualization/proxmox/proxmox_ssl_certificate_domain.en.md) or a [free Dynamic DNS](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/compute-virtualization/proxmox/proxmox_ssl_certificate.en.md).
