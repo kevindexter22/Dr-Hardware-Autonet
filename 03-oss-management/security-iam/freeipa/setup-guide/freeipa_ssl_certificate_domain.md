@@ -1,3 +1,5 @@
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/security-iam/freeipa/setup-guide/freeipa_ssl_certificate_domain.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
+
 # 🛡️ SOP: Provisionamento de SSL (Let's Encrypt) no FreeIPA via DNS-01
 
 ### 📝 Descrição e Escopo
