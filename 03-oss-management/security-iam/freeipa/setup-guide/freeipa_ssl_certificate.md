@@ -102,7 +102,7 @@ Diferente de servidores Web comuns, o FreeIPA não lê os certificados do diret�
 
 Para garantir que a renovação automática a cada 60 dias seja aplicada sem intervenção humana, atrelamos um Hook (Gatilho) de reinicialização diretamente no orquestrador.
 
-Deploy com Automação: Execute o comando abaixo substituindo SUA_SENHA_AQUI pela senha real do seu Directory Manager. 
+1. Deploy com Automação: Execute o comando abaixo substituindo SUA_SENHA_AQUI pela senha real do seu Directory Manager. 
 
 O acme.sh instalará as chaves agora e memorizará este comando para executá-lo em segundo plano em todas as renovações futuras.
 
@@ -113,7 +113,7 @@ O acme.sh instalará as chaves agora e memorizará este comando para executá-lo
 --reloadcmd      "ipa-server-certinstall -w -d --dirman-password='SUA_SENHA_AQUI' --pin='' /etc/ssl/freeipa/ipa.key /etc/ssl/freeipa/ipa.cer && ipactl restart"
 ```
 
-A partir da execução com sucesso, o painel de gerência do FreeIPA estará acessível de forma segura via HTTPS, e a infraestrutura operará com custo zero de manutenção operacional (OPEX) para a criptografia.
+2. A partir da execução com sucesso, o painel de gerência do FreeIPA estará acessível de forma segura via HTTPS, e a infraestrutura operará com custo zero de manutenção operacional (OPEX) para a criptografia.
 
 ```text
 https://seu-lab.duckdns.org
