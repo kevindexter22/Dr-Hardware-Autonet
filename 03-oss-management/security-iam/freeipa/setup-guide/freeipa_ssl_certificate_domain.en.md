@@ -113,9 +113,8 @@ Now that the trust chain is ready, apply the keys to the FreeIPA services (Apach
 ipa-server-certinstall -w -d /etc/ssl/freeipa/ipa.key /etc/ssl/freeipa/ipa.cer
 ```
 
-* ***Operational Note:*** *When the system asks for the "Directory Manager password", type your admin password.*
-
-Next, it will ask for the "private key unlock password": just press ENTER with nothing typed, because Let's Encrypt keys do not have a local password.
+* ***Operational Note:*** *When the system asks for the "Directory Manager password", type your admin password.* <br>
+*Next, it will ask for the "private key unlock password": just press ENTER with nothing typed, because Let's Encrypt keys do not have a local password.*
 
 2. Graceful Restart: Restart the control plane to apply the new settings:
 
