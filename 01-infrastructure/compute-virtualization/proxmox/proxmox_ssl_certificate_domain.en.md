@@ -1,3 +1,5 @@
+<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/compute-virtualization/proxmox/proxmox_ssl_certificate_domain.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
+
 # 🔒 SOP: Zero-Touch SSL Provisioning (DNS-01) - Proxmox VE
 
 ### 📝 Description and Scope
