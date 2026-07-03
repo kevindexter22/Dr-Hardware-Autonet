@@ -128,7 +128,9 @@ http://<OCI_PUBLIC_IP>/zabbix
 
 ##
 
-**🧩 Optional adjustment:** Since I will be installing Grafana on the same server to integrate with the *Zabbix Server*, I will be [enabling and configuring the Apache proxy](#).
+**🧩 Optional adjustment:**
+
+Since we will be [installing and configuring Grafana](#) on the same server to integrate with *Zabbix Server*, we will be [enabling and configuring the Apache proxy](#) to route HTTP traffic internally.
 
 ##
 
