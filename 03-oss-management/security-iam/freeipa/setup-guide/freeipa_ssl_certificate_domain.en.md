@@ -122,9 +122,9 @@ ipa-server-certinstall -w -d /etc/ssl/freeipa/ipa.key /etc/ssl/freeipa/ipa.cer
 ipactl restart
 ```
 
-3. The web interface for FreeIPA will now use a valid TLS certificate (Green Lock). This protects your network credentials and keeps them safe.
+The web interface for FreeIPA will now use a valid TLS certificate (Green Lock). This protects your network credentials and keeps them safe.
 
-To access it now, you can use this URL:
+3. To access it now, you can use this URL:
 
 ```text
 https://ipa.infra.seu_dominio.com
