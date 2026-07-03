@@ -64,7 +64,7 @@ mkdir -p /etc/ssl/freeipa
 
 ##
 
-# 🔗 Phase 4: Syncing the Trust Chain
+### 🔗 Phase 4: Syncing the Trust Chain
 
 FreeIPA works as its own Certificate Authority. We must add the public keys from Let's Encrypt into the NSS database. This helps the server recognize your new certificate.
 
