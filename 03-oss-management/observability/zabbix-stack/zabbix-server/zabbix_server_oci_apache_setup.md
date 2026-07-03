@@ -60,4 +60,12 @@ sudo systemctl reload apache2
 
 ##
 
+**☢️ Alerta de Segurança:**
+
+* Realize a configuração de um certificado SSL para o apache.
+
+##
+
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
+
 
