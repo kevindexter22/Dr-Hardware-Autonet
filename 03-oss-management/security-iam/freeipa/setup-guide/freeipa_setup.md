@@ -114,7 +114,7 @@ ipa-server-install \
 
 ##
 
-### **☢️ Alerta de Segurança:**
+**☢️ Alerta de Segurança:**
 
 Após finalizar a instalação, realize a configuração de um certificado SSL para a interface web.<br>
 Você pode gerar um certificado usando um [Domínio Próprio](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/security-iam/freeipa/setup-guide/freeipa_ssl_certificate_domain.md) ou um [DNS Dinâmico Gratuito](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/security-iam/freeipa/setup-guide/freeipa_ssl_certificate.md).
