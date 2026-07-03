@@ -41,4 +41,4 @@ Após essa estrutura, o tráfego chegará no IP público da OCI, o Apache valida
 
 ##
 
-
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
