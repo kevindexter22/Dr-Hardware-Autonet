@@ -128,6 +128,10 @@ http://<OCI_PUBLIC_IP>/zabbix
 
 ##
 
+**🧩 Optional adjustment:** Since I will be installing Grafana on the same server to integrate with the *Zabbix Server*, I will be [enabling and configuring the Apache proxy](#).
+
+##
+
 **☢️ Security Alert:**
 
 * Change the Admin user password immediately after your first login.
