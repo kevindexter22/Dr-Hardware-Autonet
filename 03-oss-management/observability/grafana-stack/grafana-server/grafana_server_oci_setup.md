@@ -156,7 +156,7 @@ sudo systemctl restart grafana-server
     * Username: admin
     * Password: admin
 
-2. configure o Data Source apontando para a API local do seu Zabbix (http://localhost/zabbix/api_jsonrpc.php ou a URL interna configurada no seu ambiente).
+2. configure o [Data Source](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/grafana-stack/integrations/zabbix_grafana_data_source_integration.md) apontando para a API local do seu Zabbix (http://localhost/zabbix/api_jsonrpc.php ou a URL interna configurada no seu ambiente).
 
 ##
 
