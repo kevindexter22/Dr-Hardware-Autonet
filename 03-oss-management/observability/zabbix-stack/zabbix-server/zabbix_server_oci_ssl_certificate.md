@@ -19,7 +19,7 @@ sudo apt update && sudo apt install certbot python3-certbot-apache -y
 
 2. Para emitir um certificado do Zabbix Server isolado, rodamos o comando:
 
-**Importante:** *O domínio aqui deve ser o mesmo configurado em `ServerName` na configuração do apache.*
+***Importante:*** *O domínio aqui deve ser o mesmo configurado em `ServerName` na configuração do apache.*
 
 ```bash
 sudo certbot --apache -d zabbix.seu-dominio.com
