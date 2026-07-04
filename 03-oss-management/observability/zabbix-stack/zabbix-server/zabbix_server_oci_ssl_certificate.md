@@ -19,13 +19,13 @@ sudo apt update && sudo apt install certbot python3-certbot-apache -y
 
 2. Para emitir um certificado do Zabbix Server isolado, rodamos o comando:
 
+**Importante:** *O domínio aqui deve ser o mesmo configurado em `ServerName` na configuração do apache.*
+
 ```bash
 sudo certbot --apache -d zabbix.seu-dominio.com
 ```
 
 * *Durante a execução, o Certbot perguntará se você deseja redirecionar o tráfego HTTP para HTTPS (Redirect). Selecione Sim (Option 2). Isso implementará a segurança em Camada 7 automaticamente.*
-
-**Importante:** *O domínio aqui deve ser o mesmo configurado em `ServerName` na configuração do apache.*
 
 ##
 
