@@ -106,7 +106,7 @@ Com o roteamento HTTP validado, aplicamos a camada de segurança para encriptar 
 
 1. Emissão de Certificado Isolado:
 
-Utilize o Certbot (já instalado na sua arquitetura) para invocar o desafio HTTP-01 e gerar o certificado exclusivamente para o subdomínio do Grafana.
+Utilize o Certbot (já instalado na sua arquitetura) para invocar o desafio HTTP-01 e gerar o certificado exclusivamente para o subdomínio configurado para o Grafana.
 
 ```bash
 sudo certbot --apache -d grafana.seu-dominio.com
