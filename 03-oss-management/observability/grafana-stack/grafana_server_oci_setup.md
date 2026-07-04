@@ -140,8 +140,6 @@ sudo systemctl restart grafana-server
 
 2. configure o Data Source apontando para a API local do seu Zabbix (http://localhost/zabbix/api_jsonrpc.php ou a URL interna configurada no seu ambiente).
 
-
-
 ##
 
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
