@@ -138,7 +138,7 @@ Como estareemos [instalando e configurando o Grafana](https://github.com/kevinde
 **☢️ Alerta de Segurança:**
 
 * Troque a senha do usuário Admin imediatamente após o primeiro login.
-* Realize a configuração de um [certificado SSL](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/zabbix-stack/zabbix-server/zabbix_server_oci_ssl_certificate.md) para o apache.
+* Realize a configuração de um certificado SSL para o apache.
 
 ##
 
