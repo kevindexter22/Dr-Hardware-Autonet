@@ -50,9 +50,8 @@ The Zabbix Server is designed to support infrastructure growth. It makes sure mo
 
 For maintenance, package updates, or *troubleshooting* the Zabbix core, please read the procedures below:
 
-* 👉 **[SOP: Zabbix Server and Apache Installation and Configuration (Ubuntu/ARM64)](./zabbix_server_setup.md)**
-* 👉 **[SOP: Database Management, Backup, and Restore](./zabbix_database_management.md)**
-
+* 👉 **[SOP: Zabbix Server and Apache Installation and Configuration (Ubuntu/ARM64)](./zabbix_server_setup.en.md)**
+  
 ##
 
 ###### ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT license.
