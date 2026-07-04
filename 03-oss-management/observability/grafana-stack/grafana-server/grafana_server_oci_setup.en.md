@@ -1,4 +1,4 @@
-<h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/grafana-stack/grafana_server_oci_setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
+<h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/grafana-stack/grafana-server/grafana_server_oci_setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 📊 SOP: Installing Grafana Server (Oracle Cloud - OCI)
 
