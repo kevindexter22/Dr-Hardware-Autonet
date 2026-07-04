@@ -18,7 +18,7 @@ sudo apt update && sudo apt install certbot python3-certbot-apache -y
 
 2. To get a certificate only for the Zabbix Server, run this command:
 
-**Important:** The domain here must be exactly the same one used in the ServerName part of your Apache settings.
+***Important:*** *The domain here must be exactly the same one used in the ServerName part of your Apache settings.*
 
 ```bash
 sudo certbot --apache -d zabbix.seu-dominio.com
