@@ -65,7 +65,7 @@ Com o componente ativo, estabeleça a ponte de dados entre as duas plataformas:
 
 ### ✅ Critério de Sucesso: 
 
-Um prompt verde de notificação confirmará o sucesso da conexão informando a versão detectada da API (ex: Zabbix API version: 7.0.x). A partir deste momento, os dados já estão disponíveis para a construção de Dashboards.
+Um prompt verde de notificação confirmará o sucesso da conexão informando a versão detectada da API (ex: `Zabbix API version: 7.0.x`). A partir deste momento, os dados já estão disponíveis para a construção de Dashboards.
 
 ##
 
