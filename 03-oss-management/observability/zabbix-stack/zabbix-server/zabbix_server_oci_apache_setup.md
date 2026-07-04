@@ -49,7 +49,7 @@ Verifique o `DocumentRoot` exato da sua instalação (geralmente é /usr/share/z
 </VirtualHost>
 ```
 
-* ***Observação:*** Caso não possua um dominio, adicione o IP Público da instância na opção `ServerName`. 
+* ***Dica:*** *caso não possua domínio próprio, substitua o domínio em `ServerName` por um DDNS gerado no [Duck DNS](https://www.duckdns.org/).* 
 
 2. Ative o novo site e recarregue o serviço:
 
