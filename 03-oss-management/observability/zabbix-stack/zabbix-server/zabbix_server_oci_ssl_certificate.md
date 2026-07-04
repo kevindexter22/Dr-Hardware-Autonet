@@ -1,3 +1,4 @@
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/zabbix-stack/zabbix-server/zabbix_server_oci_ssl_certificate.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
 # 🛡️ SOP: Provisionamento de SSL (certbot) na OCI para o Zabbix Server
 
