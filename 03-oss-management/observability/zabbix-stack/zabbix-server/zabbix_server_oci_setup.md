@@ -138,7 +138,6 @@ Como estareemos [instalando e configurando o Grafana](https://github.com/kevinde
 **☢️ Alerta de Segurança:**
 
 * Troque a senha do usuário Admin imediatamente após o primeiro login.
-* Realize a configuração de um certificado SSL para o apache.
 
 ##
 
