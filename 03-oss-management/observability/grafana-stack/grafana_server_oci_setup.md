@@ -48,7 +48,7 @@ O Apache será instruído a atuar como um Gateway de Aplicação para o domínio
 
 Certifique-se de que o motor de proxy do Apache está habilitado para realizar o encaminhamento de pacotes HTTP.
 
-***Observação:*** caso tenha instalado o Zabbix Server na mesma instância seguindo a documentação desse repositório, essa habilitação já deve estar feita.
+***Observação:*** caso tenha instalado o Zabbix Server na mesma instância seguindo a documentação desse repositório, essa habilitação já deve estar feita. Nesse caso basta pular para a próxima etapa.
 
 ```bash
 sudo a2enmod proxy
