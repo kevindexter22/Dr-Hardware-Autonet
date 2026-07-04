@@ -153,7 +153,7 @@ sudo systemctl restart grafana-server
 
 * Go to https://grafana.your-domain.com and do the first login.
   * Default Grafana Credentials (First Access): Username: admin | Password: admin
-  * Configure the Data Source pointing to your local Zabbix API (http://localhost/zabbix/api_jsonrpc.php or your internal URL).
+  * Configure the [Data Source](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/grafana-stack/integrations/zabbix_grafana_data_source_integration.en.md) pointing to your local Zabbix API (http://localhost/zabbix/api_jsonrpc.php or your internal URL).
 
 ##
 
