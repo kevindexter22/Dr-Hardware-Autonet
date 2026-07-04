@@ -116,6 +116,24 @@ sudo certbot --apache -d grafana.your-domain.com
 * ***Note:*** *When Certbot asks if you want to redirect traffic (Redirect HTTP to HTTPS), choose Yes.* <br>
   *This forces end-to-end encryption.*
 
+2. Sometimes, after you configure HTTPS, Grafana has a problem and you cannot log in.
+
+To fix this, just open the `/etc/grafana/grafana.ini` file and make this change:
+
+```bash
+# Look for the [server] section and configure it like this:
+[server]
+domain = grafana.your-domain.com
+root_url = https://grafana.your-domain.com/
+```
+
+3.After you save the file, just restart Grafana and check if it starts without problems:
+
+```bash
+sudo systemctl restart grafana-server
+sudo systemctl status grafana-server
+```
+
 ##
 
 ### 🧩 Phase 4: System Integration (Zabbix-Grafana API)
