@@ -1,3 +1,6 @@
+<h6 align="right">Leia esta página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/zabbix-stack/zabbix-server/zabbix_server_oci_apache_setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
+
+
 # 🔗 SOP: Zabbix Server - Enabling Apache2 Proxy
 
 ### 📝 Description and Scope
