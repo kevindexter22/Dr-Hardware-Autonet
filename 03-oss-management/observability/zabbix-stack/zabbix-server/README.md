@@ -51,7 +51,6 @@ O Zabbix Server foi desenhado para suportar o crescimento da infraestrutura, gar
 Para rotinas de manutenção, atualização de pacotes ou *troubleshooting* do núcleo do Zabbix, consulte os procedimentos abaixo:
 
 * 👉 **[SOP: Instalação e Configuração do Zabbix Server e Apache (Ubuntu/ARM64)](./zabbix_server_setup.md)**
-* 👉 **[SOP: Gestão, Backup e Restauração do Banco de Dados](./zabbix_database_management.md)**
 
 ##
 
