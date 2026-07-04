@@ -87,7 +87,7 @@ sudo nano /etc/apache2/sites-available/grafana.conf
 </VirtualHost>
 ```
 
-* ***Dica:*** *caso não possua domínio próprio, substitua o domínio em `ServerName` por um DDNS gerado na Duck DNS.*
+* ***Dica:*** *caso não possua domínio próprio, substitua o domínio em `ServerName` por um DDNS gerado no [Duck DNS](https://www.duckdns.org/).*
 
 4. Aplicação do Roteamento (Graceful Reload):
 
