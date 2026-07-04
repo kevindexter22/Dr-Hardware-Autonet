@@ -2,7 +2,7 @@
 
 ### 📝 Descrição do Escopo
 
-Este Procedimento Operacional Padrão (SOP) detalha a configuração do apache2 no servidor do ***Zabbix Server 7.0 LTS*** para a instalação e integração com o ****Grafana*** que será responsáveis pelas *dashboards* da nossa infraestrutura.
+Este Procedimento Operacional Padrão (SOP) detalha a configuração do apache2 no servidor do ***Zabbix Server 7.0 LTS*** para a instalação e integração com o ***Grafana*** que será responsáveis pelas *dashboards* da nossa infraestrutura.
 
 ##
 
