@@ -42,7 +42,7 @@ sudo systemctl start grafana-server
 
 ##
 
-🔀 Fase 2: Arquitetura Lógica de Roteamento (Proxy Reverso)
+### 🔀 Fase 2: Arquitetura Lógica de Roteamento (Proxy Reverso)
 
 O Apache será instruído a atuar como um Gateway de Aplicação para o domínio do Grafana.
 
@@ -59,8 +59,6 @@ sudo a2enmod ssl
 sudo a2enmod rewrite
 sudo systemctl restart apache2
 ```
-
-###
 
 2. Criação do Virtual Host (SNI):
 
@@ -102,7 +100,7 @@ sudo systemctl reload apache2
 
 ##
 
-# 🔒 Fase 3: Provisionamento Criptográfico (TLS/SSL)
+### 🔒 Fase 3: Provisionamento Criptográfico (TLS/SSL)
 
 Com o roteamento HTTP validado, aplicamos a camada de segurança para encriptar o tráfego da interface de gerência.
 
