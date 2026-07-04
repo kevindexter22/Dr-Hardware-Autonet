@@ -63,7 +63,7 @@ sudo systemctl reload apache2
 
 **☢️ Security Alert:**
 
-* Please configure an SSL certificate for Apache.  
+* Please configure an [SSL certificate](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/zabbix-stack/zabbix-server/zabbix_server_oci_ssl_certificate.en.md) for Apache.  
 
 ##
 
