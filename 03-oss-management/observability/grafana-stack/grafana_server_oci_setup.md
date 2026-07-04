@@ -130,3 +130,4 @@ sudo systemctl restart grafana-server
 
 ##
 
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
