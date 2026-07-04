@@ -137,7 +137,6 @@ Since we will be [installing and configuring Grafana](#) on the same server to i
 **☢️ Security Alert:**
 
 * Change the Admin user password immediately after your first login.
-* Configure an SSL certificate for Apache.
 
 ##
 
