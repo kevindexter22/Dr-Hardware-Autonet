@@ -115,7 +115,7 @@ sudo certbot --apache -d grafana.seu-dominio.com
 * ***Nota:*** *Quando o assistente do Certbot perguntar se deseja redirecionar o tráfego (Redirect HTTP to HTTPS), opte por Yes.* <br>
   *Isso forçará a encriptação ponta-a-ponta.*
 
-2. Pode aconteceu de após ter sido configurado o https, o grafana estranhar e não deixar acessar.
+2. Pode acontecer de após ter sido configurado o https, o grafana estranhar e não deixar acessar.
 
 Para resolver basta acessar o arquivo `/etc/grafana/grafana.ini` e fazer o seguinte ajuste:
 
