@@ -130,7 +130,7 @@ http://<OCI_PUBLIC_IP>/zabbix
 
 **🧩 Optional adjustment:**
 
-Since we will be [installing and configuring Grafana](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/grafana-stack/grafana_server_oci_setup.en.md) on the same server to integrate with *Zabbix Server*, we will be [enabling and configuring the Apache proxy](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/zabbix-stack/zabbix-server/zabbix_server_oci_apache_setup.en.md) to route HTTP traffic internally.
+Since we will be [installing and configuring Grafana](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/grafana-stack/grafana-server/grafana_server_oci_setup.en.md) on the same server to integrate with *Zabbix Server*, we will be [enabling and configuring the Apache proxy](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/zabbix-stack/zabbix-server/zabbix_server_oci_apache_setup.en.md) to route HTTP traffic internally.
 
 ##
 
