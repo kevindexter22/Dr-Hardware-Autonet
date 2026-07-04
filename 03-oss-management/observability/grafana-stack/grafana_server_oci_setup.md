@@ -87,6 +87,8 @@ sudo nano /etc/apache2/sites-available/grafana.conf
 </VirtualHost>
 ```
 
+* ***Dica:*** *caso não possua domínio próprio, substitua o domínio em `ServerName` por um DDNS gerado na Duck DNS.*
+
 4. Aplicação do Roteamento (Graceful Reload):
 
 Ative o novo bloco e recarregue o Apache sem derrubar as sessões ativas do Zabbix.
@@ -119,14 +121,26 @@ sudo certbot --apache -d grafana.seu-dominio.com
 
 Para que o Grafana consuma os dados de telemetria do seu Zabbix Server local, você precisará instalar o plugin oficial de mediação de dados.
 
-1. Instalação do Plugin Alexander Zobnin:
+Instalação do Plugin Alexander Zobnin:
 
 ```bash
 sudo grafana-cli plugins install alexanderzobnin-zabbix-app
 sudo systemctl restart grafana-server
 ```
 
-* ***Post-Deployment Check:*** *Acesse `https://grafana.seu-dominio.com`, faça o login inicial (usuário: admin, senha: admin) e configure o Data Source apontando para a API local do seu Zabbix (http://localhost/zabbix/api_jsonrpc.php ou a URL interna configurada no seu ambiente).
+##
+
+### ✅ Post-Deployment Check: 
+
+1. Acesse `https://grafana.seu-dominio.com`, faça o login inicial:
+   
+  * Credenciais padrão do Grafana (Primeiro Acesso):
+    * Username: admin
+    * Password: admin
+
+2. configure o Data Source apontando para a API local do seu Zabbix (http://localhost/zabbix/api_jsonrpc.php ou a URL interna configurada no seu ambiente).
+
+
 
 ##
 
