@@ -10,7 +10,7 @@ A partir das versões estáveis recentes, a ferramenta de linha de comando legad
 
 ##
 
-### 🛡️ Passo 1: Salvaguarda de Dados (Pre-Upgrade)
+### 🛡️ Passo 1: Backup de Dados (Pre-Upgrade)
 
 Realize a cópia dos arquivos de configuração e da base interna baseada em SQLite3 antes de prosseguir:
 
