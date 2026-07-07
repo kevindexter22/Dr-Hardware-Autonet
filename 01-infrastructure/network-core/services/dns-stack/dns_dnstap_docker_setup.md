@@ -26,6 +26,8 @@ mkdir -p /DATA/AppData/unbound/build
 curl -o /DATA/AppData/unbound/root.hints https://www.internic.net/domain/named.root
 ```
 
+##
+
 ### 🐳 Fase 2: Construção da Imagem Docker (ARM)
 
 Para habilitar o suporte ao dnstap e embutir as ferramentas de diagnóstico, vamos compilar o Unbound a partir do código-fonte em um container Alpine Linux.
