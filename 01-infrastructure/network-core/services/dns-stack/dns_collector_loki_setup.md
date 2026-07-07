@@ -16,6 +16,20 @@ Recomenda-se o uso de um container LXC leve (Debian ou Ubuntu) para hospedar o c
 
 1. No Proxmox, crie um novo container LXC (ex: CT ID 200, Hostname dns-collector, Template debian-12 ou ubuntu-24.04).
 
+```bash
+pct create 200 /var/lib/vz/template/cache/ubuntu-26.04-standard_26.04-1_amd64.tar.zst \
+-cores 1 \
+-memory 512 \
+-swap 256 \
+-hostname <SEU_HOSTNAME.SEU_DOMÍNIO.LOCAL> \
+-ostype ubuntu \
+-storage local-lvm \
+-rootfs local-lvm:8 \
+-net0 name=eth0,bridge=vmbr0,ip=<IP_SERVIDOR/CIDR>,gw=<IP_GATEWAY> \
+-unprivileged 0 \
+-features nesting=1
+```
+
 2. Acesse o console do LXC e atualize os pacotes do sistema:
 
 ```bash
