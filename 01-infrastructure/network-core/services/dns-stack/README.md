@@ -1,5 +1,5 @@
 
-# 🎯 SOP: Compilação e Instalação do Unbound DNS + DNSTAP (Docker/CasaOS)
+# 🎯 SOP: Compilação e Instalação do Unbound DNS + DNSTAP (Docker)
 
 ### 📝 Descrição do Escopo
 
