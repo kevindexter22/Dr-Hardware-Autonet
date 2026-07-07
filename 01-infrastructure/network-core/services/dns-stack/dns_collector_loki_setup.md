@@ -19,7 +19,7 @@ Recomenda-se o uso de um container LXC leve (Debian ou Ubuntu) para hospedar o c
 2. Acesse o console do LXC e atualize os pacotes do sistema:
 
 ```bash
-apt update && apt upgrade -y
+apt update; apt upgrade -y
 ```
 
 3. Instale dependências básicas:
@@ -30,7 +30,97 @@ apt install wget curl nano tar -y
 
 ##
 
-### ⚙️ Fase 2: Instalação do go-dnscollector
+### ⚙️ Instalando e Configurando o Loki
+
+Acesse o terminal do seu novo LXC. A forma mais leve de rodar o Loki (sem docker) é baixando o binário direto.
+
+1. Baixe o Loki:
+
+```bash
+apt update; apt install unzip wget -y
+wget https://github.com/grafana/loki/releases/download/v3.0.0/loki-linux-amd64.zip
+unzip loki-linux-amd64.zip
+chmod +x loki-linux-amd64
+mv loki-linux-amd64 /usr/local/bin/loki
+```
+
+2. Crie a configuração (/etc/loki-config.yaml):
+
+Crie um arquivo básico apenas para receber logs localmente e sem autenticação complexa (já que ficará na rede interna).
+
+```YAML
+4. cole as configurações abaixo:
+auth_enabled: false
+
+server:
+  http_listen_port: 3100
+
+common:
+  path_prefix: /opt/loki
+  storage:
+    filesystem:
+      chunks_directory: /opt/loki/chunks
+      rules_directory: /opt/loki/rules
+  replication_factor: 1
+  ring:
+    instance_addr: 127.0.0.1
+    kvstore:
+      store: inmemory
+
+schema_config:
+  configs:
+    - from: 2020-10-24
+      store: tsdb
+      object_store: filesystem
+      schema: v13
+      index:
+        prefix: index_
+        period: 24h
+```
+
+3. Inicie o serviço:
+
+Você pode criar um serviço no systemd para o Loki rodar em background apontando para essa configuração (loki -config.file=/etc/loki-config.yaml).
+
+```bash
+# Crie o arquivo de configuração:
+nano /etc/systemd/system/loki.service
+
+# Cole as configurações abaixo:
+[Unit]
+Description=Loki Log Aggregation System
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/loki -config.file=/etc/loki-config.yaml
+Restart=always
+RestartSec=5
+
+# Opcional: Se quiser limitar o uso do sistema, descomente as linhas abaixo
+# LimitNOFILE=65536
+# LimitNPROC=4096
+
+[Install]
+WantedBy=multi-user.target
+```
+
+4. Ative o serviço:
+
+```bash
+# Recarrega a lista de serviços do systemd
+systemctl daemon-reload
+
+# Faz o Loki iniciar automaticamente no boot do LXC
+systemctl enable loki
+
+# Inicia o Loki agora
+systemctl start loki
+```
+
+##
+
+### ⚙️ Fase 3: Instalação do go-dnscollector
 
 1. Vamos baixar o binário oficial do go-dnscollector e configurá-locomo um serviço do sistema para rodar em background.
 
@@ -52,13 +142,15 @@ chmod +x /usr/local/bin/go-dnscollector
 
 ```bash
 [Unit]
-Description=go-dnscollector
-After=network.target
+Description=DNS-collector (Log Shipper para Loki)
+# Configurado para iniciar só depois que a rede e o Loki estiverem de pé
+After=network.target loki.service
 
 [Service]
+Type=simple
 ExecStart=/usr/local/bin/go-dnscollector -config /etc/dnscollector.yml
 Restart=always
-RestartSec=3
+RestartSec=5
 
 [Install]
 WantedBy=multi-user.target
@@ -72,7 +164,7 @@ systemctl daemon-reload
 
 ##
 
-### 🛠️ Fase 3: Configuração do Pipeline (Formato JSON)
+### 🛠️ Fase 4: Configuração do Pipeline (Formato JSON)
 
 Para que o Grafana consiga ler os campos nativamente (como IP de origem, domínio e status), precisamos forçar o coletor a enviar os dados em flat-json para o Loki.
 
@@ -85,18 +177,24 @@ nano /etc/dnscollector.yml
 Adicione a configuração do pipeline. Neste exemplo, o coletor escuta logs DNS na porta 5000 (adapte a entrada conforme a exportação do seu Pi-hole/Adguard) e envia para o Loki:
 
 ```bash
+global:
+  trace:
+    verbose: true
+
 pipelines:
+  # Recebe os logs do Docker via TCP (usando o protocolo dnstap)
   - name: dns_input
     dnstap:
       listen-ip: 0.0.0.0
       listen-port: 6000
-    
     routing-policy:
       forward: [ loki_output ]
 
+# Envia os dados estruturados para o Loki local
   - name: loki_output
     lokiclient:
-      server-url: "http://<IP_DO_SEU_LOKI>:3100/loki/api/v1/push"
+      server-url: "http://127.0.0.1:3100/loki/api/v1/push"
+      job-name: "dns-logs"
       mode: flat-json
 ```
 
