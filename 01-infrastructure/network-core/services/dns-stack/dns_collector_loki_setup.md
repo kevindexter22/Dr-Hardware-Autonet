@@ -1,4 +1,4 @@
-# 🎯 SOP: Coleta e Visualização de Logs DNS (LXC + go-dnscollector + Loki + Grafana)
+# 🎯 SOP: Coleta de Logs DNS (go-dnscollector + Loki) em LXC
 
 ### 📝 Descrição do Escopo
 
@@ -108,5 +108,11 @@ systemctl status go-dnscollector
 ```
 
 ##
+
+**🧩 Integração:**
+
+Agora podemos integrar o loki com o Grafana e gerar uma *dashboard* para visualização das requisições. 
+
+## 
 
 ###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
