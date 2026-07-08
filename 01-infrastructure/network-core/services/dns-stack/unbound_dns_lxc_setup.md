@@ -34,8 +34,8 @@ Dentro do LXC (Ubuntu 22.04), instale as dependências de compilação, o framew
 
 ```bash
 # 1. Atualização da base e instalação de dependências rigorosas
-apt-get update && apt-get upgrade -y
-apt-get install -y build-essential libssl-dev libexpat1-dev \
+apt update && apt upgrade -y
+apt install -y build-essential libssl-dev libexpat1-dev \
     libsystemd-dev libevent-dev libprotobuf-c-dev protobuf-c-compiler \
     libfstrm-dev wget ca-certificates
 
