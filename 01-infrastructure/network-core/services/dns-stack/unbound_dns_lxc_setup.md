@@ -1,6 +1,6 @@
 
 
-# 🎯 SOP: Compilação e Instalação do Unbound DNS + DNSTAP (Docker)
+# 🎯 SOP: Compilação e Instalação do Unbound DNS + DNSTAP (LXC)
 
 ### 📝 Descrição do Escopo
 
