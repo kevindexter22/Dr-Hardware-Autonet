@@ -2,7 +2,7 @@
 
 Este repositório contém a documentação e os manifestos necessários para implementar uma arquitetura de Alta Disponibilidade (HA) para resolução de DNS em ambientes HomeLab ou corporativos.
 
-A solução utiliza Nginx (Módulo Stream L4) atuando como Balanceador de Carga, orquestrado pelo Keepalived (Protocolo VRRP) para garantir tolerância a falhas (MTTR < 2s) entre múltiplos nós, misturando ambientes Docker (CasaOS/Raspberry Pi) e LXC (Proxmox).
+A solução utiliza Nginx (Módulo Stream L4) orquestrado pelo Keepalived (Protocolo VRRP) para garantir tolerância a falhas (MTTR < 2s) entre múltiplos nós, misturando ambientes Docker (CasaOS/Raspberry Pi) e LXC (Proxmox).
 
 ##
 
@@ -63,14 +63,14 @@ stream {
         server 127.0.0.1:5353 max_fails=2 fail_timeout=5s; 
         
         # DNS 2: Outro servidor na rede (Ex: DNS 2)
-        server 10.10.0.14:53 max_fails=2 fail_timeout=5s;   
+        server 10.10.0.14:53 backup max_fails=2 fail_timeout=2s;   
     }
 
     # Proxy para DNS via UDP (Consultas Rápidas)
     server {
         listen 53 udp reuseport;
         proxy_pass dns_servers;
-        proxy_timeout 5s;
+        proxy_timeout 2s;
     }
 
     # Proxy para DNS via TCP (Respostas Longas / Transferência de Zona)
@@ -210,14 +210,14 @@ stream {
         server 127.0.0.1:5353 max_fails=2 fail_timeout=5s; 
         
         # DNS 2: Outro servidor na rede (Ex: DNS 2)
-        server 10.10.0.14:53 max_fails=2 fail_timeout=5s;   
+        server 10.10.0.14:53 backup max_fails=2 fail_timeout=2s;   
     }
 
     # Proxy para DNS via UDP (Consultas Rápidas)
     server {
         listen 53 udp reuseport;
         proxy_pass dns_servers;
-        proxy_timeout 5s;
+        proxy_timeout 2s;
     }
 
     # Proxy para DNS via TCP (Respostas Longas / Transferência de Zona)
@@ -296,7 +296,7 @@ nslookup www.google.com 192.168.1.17
 
 3. Teste Go-Live:
 
-Acesse as configurações de DHCP da sua rede/roteador Wi-Fi e altere o DNS Primário para 192.168.1.17, deixando o secundário em branco.
+Acesse as configurações de DHCP da sua rede/roteador Wi-Fi e altere o DNS Primário para 192.168.1.17, deixando o secundário em branco ou adicionando u segundo dns de sua preferência.
 
 ##
 
