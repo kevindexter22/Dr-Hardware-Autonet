@@ -86,21 +86,31 @@ graph TD
 
     subgraph NET_SERVICES [Data Plane: Serviços de Rede e Storage]
         UNB[Unbound DNS - Docker]:::coreService
+        RPROXY1[NGINX 2 - Docker]:::coreService
         SMB[Samba v2/v3 - Docker]:::coreService
         VPN[VPN Server - Docker]:::coreService
-        UDNSL[DNS 2 - LXC]:::coreService
-        RNGNXL[NGINX 2 - LXC]:::coreService
+        NOTE[Trilium - Docker]:::coreService
+        EMB[Emby - Docker]:::coreService
+        N8N[N8N - Docker]:::coreService
+        UNB2[Unbound DNS 2 - LXC]:::coreService
+        RPROXY2[NGINX 2 - LXC]:::coreService
         DOCKER -.-> UNB
         DOCKER -.-> SMB
         DOCKER -.-> VPN
-        PVE -.-> UDNSL
-        PVE -.-> RNGNXL
+        DOCKER -.-> NOTE
+        DOCKER -.-> EMB
+        DOCKER -.-> N8N
+        DOCKER -.-> RPROXY1
+        PVE -.-> UNB2
+        PVE -.-> RPROXY2
     end
 
     subgraph OSS_MGMT [Management Plane: Observabilidade FCAPS]
+        SPDT[MySpeed]:::oss
         ZPX[Zabbix Proxy]:::oss
         ZA[Zabbix Agents]:::oss
         GRAF_LOKI[Grafana Loki / DNS Collector]:::oss
+        DOCKER -.-> SPDT
         DOCKER -.-> ZPX
         NATIVE -.-> ZPX
         NATIVE -.-> ZA
