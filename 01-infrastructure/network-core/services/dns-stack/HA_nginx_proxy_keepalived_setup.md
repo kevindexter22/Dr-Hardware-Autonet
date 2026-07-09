@@ -297,10 +297,12 @@ nslookup www.google.com 192.168.1.17
 2. Teste de Failover (Chaos):
 
     2.1 - Deixe um ping 192.168.1.17 -t rodando.
+   
     2.2 - Desligue o contêiner no CasaOS. Observe que o ping perderá no máximo 1 pacote e o Node 2 assumirá o tráfego instantaneamente.
+
     2.3 - Ligue o Master novamente e ele fará o preempt do VIP.
 
-3. Teste Go-Live:
+4. Teste Go-Live:
 
 Acesse as configurações de DHCP da sua rede/roteador Wi-Fi e altere o DNS Primário para 192.168.1.17, deixando o secundário em branco ou adicionando um segundo dns de sua preferência.
 
