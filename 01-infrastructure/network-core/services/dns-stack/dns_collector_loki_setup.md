@@ -1,3 +1,5 @@
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/dns-stack/dns_collector_loki_setup.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
+
 # 🎯 SOP: Coleta de Logs DNS (go-dnscollector + Loki) em LXC
 
 ### 📝 Descrição do Escopo
