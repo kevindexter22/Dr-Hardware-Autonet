@@ -352,9 +352,10 @@ You can access the container terminal at any time. Use the installed network too
 ### 💡 Tips
 
   * Always run the native validator before restarting the service after you change the .conf:
-    ```bash
+
+```bash
     /usr/sbin/unbound-checkconf /etc/unbound/unbound.conf
-    ```
+```
 
   * To confirm the compile linked the correct telemetry library, run unbound -V. The output must show: Linked libs: libevent [...] dnstap.
 
