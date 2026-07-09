@@ -1,5 +1,7 @@
 # 🌐 High Availability DNS
 
+### 📝 Scope Description
+
 This repository has the documents and files to make a High Availability (HA) DNS system. You can use it in a HomeLab or a company network.
 
 This solution uses Nginx (L4 Stream Module) and Keepalived (VRRP Protocol). It makes sure the system does not fail (MTTR < 2s) between many nodes. It uses Docker (CasaOS/Raspberry Pi) and LXC (Proxmox).
