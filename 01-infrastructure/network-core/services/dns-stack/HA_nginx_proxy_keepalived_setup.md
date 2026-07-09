@@ -1,3 +1,5 @@
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/dns-stack/HA_nginx_proxy_keepalived_setup.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
+
 # 🌐 Alta Disponibilidade do DNS
 
 ### 📝 Descrição do Escopo
