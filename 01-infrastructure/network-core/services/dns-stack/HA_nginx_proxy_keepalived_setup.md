@@ -300,7 +300,7 @@ nslookup www.google.com 192.168.1.17
 
 3. Teste Go-Live:
 
-Acesse as configurações de DHCP da sua rede/roteador Wi-Fi e altere o DNS Primário para 192.168.1.17, deixando o secundário em branco ou adicionando u segundo dns de sua preferência.
+Acesse as configurações de DHCP da sua rede/roteador Wi-Fi e altere o DNS Primário para 192.168.1.17, deixando o secundário em branco ou adicionando um segundo dns de sua preferência.
 
 ##
 
