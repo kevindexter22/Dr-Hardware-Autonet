@@ -169,11 +169,15 @@ Como não disponho de espaço físico para um rack que centralizaria todos os di
 - [x] Smart Shutdown: Script para desligamento inteligente do Host Samba_OPL baseado no estado do PS2
 
 #### 📊 Monitoramento e Serviços
+- [x] Unbound DNS: DNS privado
+- [x] Grafana: Criação de dashboards em geral
 - [x] Zabbix Stack: Servidor principal na OCI com Proxy para monitoramento de rede descentralizado
 - [x] Grafana: Dashboards avançadas para visualizações de métricas e saúde do hardware
 - [x] Samba server (OPL): Servidor de arquivos dedicado para carregamento de jogos de PS2
 - [x] Docker Ecosystem: Diversos microsserviços implementados via Docker
 - [x] FreeIPA: Gerenciamento centralizado de identidades, autenticações e políticas
+- [x] Redundância de Serviços Essenciais: Criar backup dos serviços principais para caso de falhas
+- [x] DNS Colector + Grafana LOKI: Coleta e indexação de logs DNS para análise e observabilidade
 
 #### 📡 Ativos de Redes (Físicos)
 - [x] ONT/Modem: Intelbras - instalado pelo meu ISP
@@ -196,7 +200,7 @@ Como não disponho de espaço físico para um rack que centralizaria todos os di
 - [ ] Script para gerar relatórios do Netbox
 - [ ] Script de healthcheck para FreeRADIUS
 - [ ] Watchdog de sincronismo do MySQL Master-Master
-- [ ] Automação de DNS Blacklist (Pi-hole "Caseiro" com Unbound)
+- [ ] Automação de DNS Blacklist (para Unbound)
 - [ ] Backup de configurações de cada servidor,serviço e banco de dados
 
 ##### 💊 *Scripts de Remediação*
@@ -224,12 +228,8 @@ Como não disponho de espaço físico para um rack que centralizaria todos os di
 #### 📊 Monitoramento e Serviços
 - [ ] Netbox: Gerenciamento de endereços IP
 - [ ] GenieACS: Centralização de acesso e gerenciamento via TR-069/TR-098 ou TR-181
-- [ ] Unbound DNS: DNS privado 
-- [ ] DNS Colector + Grafana LOKI: Coleta e indexação de logs DNS para análise e observabilidade
-- [ ] Redundância de Serviços Essenciais: Criar backup dos serviços principais para caso de falhas
 - [ ] Freeradius + MySQL: Autenticação AAA com banco de dados para controle de acesso e accounting
 - [ ] Zabbix VAE (Virtual Appliance Edition): Monitoramento de Hardware, SNMP e Integração Nativa com Proxmox
-- [ ] Grafana: Criação de dashboards em geral
 
 #### 📡 Ativos de Redes (Físicos)
 - [ ] Substituição do TP-Link antigo das câmeras e melhorias no sistema
