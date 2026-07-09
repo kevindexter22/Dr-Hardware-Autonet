@@ -79,8 +79,12 @@ graph TD
 
     subgraph AAA_SEC [Control Plane: Segurança e IAM]
         FIPA[FreeIPA - LXC]:::coreService
+        LDNSL[DNS Logs - LXC]:::coreService
+        UDNSL[DNS 2 - LXC]:::coreService
         FRAD[FreeRADIUS - Nativo]:::coreService
         PVE -.-> FIPA
+        PVE -.-> LDNSL
+        PVE -.-> UDNSL
         NATIVE -.-> FRAD
         FRAD -.->|Consulta LDAP| FIPA
     end
