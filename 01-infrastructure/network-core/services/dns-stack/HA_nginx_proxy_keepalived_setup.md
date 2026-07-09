@@ -8,13 +8,13 @@ A solução utiliza Nginx (Módulo Stream L4) orquestrado pelo Keepalived (Proto
 
 ### 🏗️ Arquitetura Lógica
 
-  * **Virtual IP (VIP):** 10.10.0.10 (Gateway DNS para toda a rede).
+  * **Virtual IP (VIP):** IP 10.10.0.10 (Gateway DNS para toda a rede).
 
-  * **Node 1 (MASTER):** Docker no CasaOS (Raspberry Pi). Prioridade VRRP: 100.
+  * **Node 1 (MASTER):** Docker no CasaOS (Raspberry Pi). IP 10.10.0.11 e Prioridade VRRP: 100.
 
-  * **Node 2 (BACKUP):** LXC no Proxmox. Prioridade VRRP: 90.
+  * **Node 2 (BACKUP):** LXC no Proxmox. IP 10.10.0.12 e Prioridade VRRP: 90.
 
-  * **Upstream 1 (DNS Primário):** Unbound no CasaOS (Mapeado na porta 5353).
+  * **Upstream 1 (DNS Primário):** Unbound no CasaOS ( IP 10.10.0.13 mapeado na porta 5353).
 
   * **Upstream 2 (DNS Secundário):** Servidor DNS Adicional (ex: Pi-hole em 10.10.0.14:53).
 
@@ -190,43 +190,47 @@ systemctl restart systemd-resolved
 rm /etc/resolv.conf && echo "nameserver 10.10.0.14" > /etc/resolv.conf
 ``` 
 
-3. Crie o arquivo L4 do Nginx (/etc/nginx/stream.conf.d/dns.conf):
+3. Ajuste o arquivo `nginx.conf`
 
-**Nota:** Certifique-se de adicionar include `/etc/nginx/stream.conf.d/*.conf;` no final do `/etc/nginx/nginx.conf`. 
+Abra o arquivo `/etc/nginx/nginx.conf` e adicione a linha `include /etc/nginx/stream.conf.d/*.conf;` no final do arquivo.
+
+***Opcional:*** *Costumo deixar mais enxuto fazendo a limpeza do arquivo com o comando `echo > /etc/nginx/nginx.conf` e adicionando somente a linha `include /etc/nginx/stream.conf./*.conf;`.*
+
+4. Crie o arquivo L4 do Nginx (/etc/nginx/stream.conf.d/dns.conf):
 
 ```bash
-user nginx;
-worker_processes 1;
-error_log /var/log/nginx/error.log warn;
-pid /var/run/nginx.pid;
+# Descomente se limpou o arquivo /etc/nginx/nginx.conf
+# user www-data;
+# worker_processes 1;
+# error_log /var/log/nginx/error.log warn;
+# pid /var/run/nginx.pid;
+# include /etc/nginx/modules-enabled/*.conf;
 
-events { 
-    worker_connections 1024; 
-}
+# events {
+#    worker_connections 1024;
+#}
 
+# Configuração geral
 stream {
     upstream dns_servers {
-        # DNS 1: Unbound local no CasaOS (na porta 5353 para evitar conflito)
-        server 127.0.0.1:5353 max_fails=2 fail_timeout=5s; 
-        
-        # DNS 2: Outro servidor na rede (Ex: DNS 2)
-        server 10.10.0.14:53 backup max_fails=2 fail_timeout=2s;   
+        server 10.10.0.13:5353 max_fails=2 fail_timeout=5s;
+        server 10.10.0.14:53 backup max_fails=2 fail_timeout=2s;
     }
 
-    # Proxy para DNS via UDP (Consultas Rápidas)
     server {
         listen 53 udp reuseport;
         proxy_pass dns_servers;
+        # proxy_responses 1;
         proxy_timeout 2s;
     }
 
-    # Proxy para DNS via TCP (Respostas Longas / Transferência de Zona)
     server {
         listen 53 so_keepalive=on;
         proxy_pass dns_servers;
         proxy_timeout 5s;
     }
 }
+
 ```
 
 3. Crie o arquivo `/etc/keepalived/keepalived.conf`:
@@ -251,9 +255,9 @@ vrrp_instance VI_DNS {
     priority 90               # Importante: Prioridade menor que o Master
     advert_int 1
     
-    unicast_src_ip 10.10.0.11  # IP deste LXC
+    unicast_src_ip 10.10.0.12  # IP deste LXC
     unicast_peer {
-        10.10.0.12              # IP da Raspberry Pi (CasaOS)
+        10.10.0.11              # IP da Raspberry Pi (CasaOS)
     }
 
     authentication {
