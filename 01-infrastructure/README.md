@@ -88,13 +88,11 @@ graph TD
         UNB[Unbound DNS - Docker]:::coreService
         SMB[Samba v2/v3 - Docker]:::coreService
         VPN[VPN Server - Docker]:::coreService
-        LDNSL[DNS Logs - LXC]:::coreService
         UDNSL[DNS 2 - LXC]:::coreService
         RNGNXL[NGINX 2 - LXC]:::coreService
         DOCKER -.-> UNB
         DOCKER -.-> SMB
         DOCKER -.-> VPN
-        PVE -.-> LDNSL
         PVE -.-> UDNSL
         PVE -.-> RNGNXL
     end
@@ -103,10 +101,10 @@ graph TD
         ZPX[Zabbix Proxy]:::oss
         ZA[Zabbix Agents]:::oss
         GRAF_LOKI[Grafana Loki / DNS Collector]:::oss
-        
         DOCKER -.-> ZPX
         NATIVE -.-> ZPX
         NATIVE -.-> ZA
+        PVE -.-> GRAF_LOKI
     end
 
     subgraph PUBLIC_CLOUD [Oracle Cloud OCI]
