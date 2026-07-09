@@ -17,7 +17,7 @@ O TP-Link LS1008G é um *switch* L2 de acesso não gerenciável de 8 portas. Na 
 | Interface (Porta) | Status Físico | Velocidade (Link) | Destino (Conectado a) | Observação |
 | :--- | :--- | :--- | :--- | :--- |
 | **Porta 1** | `UP` | 1 Gbps | Router EX521 Satellite | Usada para uplink e comunicação com a internet |
-| **Porta 2** | `UP` | 1 Gbps | Smart TV Sala | Usada para conexão com a internet |
+| **Porta 2** | `UP` | 1 Gbps | PlayStation 4 | Usada para conexão com a internet |
 | **Porta 3** | `UP` | 100 Mbps | Raspberry Pi 3B (ZBX_Proxy/ZBX_Agent) | Usada para transferir métricas ao zabbix server |
 | **Porta 4** | `UP` | 1 Gbps | Raspberry Pi 4B (CasaOS Server) | Usada para comunicação de serviços com a internet |
 | **Porta 5** | `UP` | 100 Mbps | Raspberry Pi 3B (OPL_Samba_Server) | Usado para virtualização de jogos a partir da rede |
