@@ -65,46 +65,57 @@ graph TD
 #### L3-L7: Logical Architecture and OSS
 
 ```mermaid
-
 graph TD
-    %% L3-L7 Style Classes
+    %% Classes de Estilo L3-L7
     classDef hypervisor fill:#8e44ad,stroke:#FFFFFF,stroke-width:2px,color:#fff;
     classDef oss fill:#27ae60,stroke:#FFFFFF,stroke-width:2px,color:#fff;
     classDef coreService fill:#d35400,stroke:#FFFFFF,stroke-width:2px,color:#fff;
     classDef cloud fill:#f39c12,stroke:#FFFFFF,stroke-width:2px,color:#fff;
 
-    subgraph VIM [Virtualization and Container Infrastructure]
+    subgraph VIM [Infraestrutura de Virtualização e Containers]
         PVE[Proxmox VE<br/>HP Pavilion]:::hypervisor
         DOCKER[Docker Engine / CasaOS<br/>RPi 4B]:::hypervisor
-        NATIVE[Native Ubuntu Server<br/>RPi 3Bs]:::hypervisor
+        NATIVE[Ubuntu Server Nativo<br/>RPi 3Bs]:::hypervisor
     end
 
-    subgraph AAA_SEC [Control Plane: Security and IAM]
+    subgraph AAA_SEC [Control Plane: Segurança e IAM]
         FIPA[FreeIPA - LXC]:::coreService
-        FRAD[FreeRADIUS - Native]:::coreService
+        FRAD[FreeRADIUS - Nativo]:::coreService
         PVE -.-> FIPA
         NATIVE -.-> FRAD
-        FRAD -.->|LDAP Query| FIPA
     end
 
-    subgraph NET_SERVICES [Data Plane: Network and Storage Services]
+    subgraph NET_SERVICES [Data Plane: Serviços de Rede e Storage]
         UNB[Unbound DNS - Docker]:::coreService
+        RPROXY1[NGINX 2 - Docker]:::coreService
         SMB[Samba v2/v3 - Docker]:::coreService
         VPN[VPN Server - Docker]:::coreService
-        
+        NOTE[Trilium - Docker]:::coreService
+        EMB[Emby - Docker]:::coreService
+        N8N[N8N - Docker]:::coreService
+        UNB2[Unbound DNS 2 - LXC]:::coreService
+        RPROXY2[NGINX 2 - LXC]:::coreService
         DOCKER -.-> UNB
         DOCKER -.-> SMB
         DOCKER -.-> VPN
+        DOCKER -.-> NOTE
+        DOCKER -.-> EMB
+        DOCKER -.-> N8N
+        DOCKER -.-> RPROXY1
+        PVE -.-> UNB2
+        PVE -.-> RPROXY2
     end
 
-    subgraph OSS_MGMT [Management Plane: FCAPS Observability]
+    subgraph OSS_MGMT [Management Plane: Observabilidade FCAPS]
+        SPDT[MySpeed]:::oss
         ZPX[Zabbix Proxy]:::oss
         ZA[Zabbix Agents]:::oss
-        GRAF_LOKI[Grafana Loki / Promtail]:::oss
-        
+        GRAF_LOKI[Grafana Loki / DNS Collector]:::oss
+        DOCKER -.-> SPDT
         DOCKER -.-> ZPX
         NATIVE -.-> ZPX
         NATIVE -.-> ZA
+        PVE -.-> GRAF_LOKI
     end
 
     subgraph PUBLIC_CLOUD [Oracle Cloud OCI]
@@ -112,9 +123,9 @@ graph TD
         GRAF[Grafana Dashboards]:::cloud
     end
 
-    %% Data Mediation Flows (Ports Obfuscated)
-    ZA ==>|TCP/XXXX Metrics| ZPX
-    ZPX ==>|TCP/XXXX Trapper| ZBS
+    %% Fluxos de Mediação de Dados
+    ZA ==>|Métricas TCP/XXXX| ZPX
+    ZPX ==>|Trapper TCP/XXXX| ZBS
     GRAF_LOKI -.->|Logs| GRAF
     ZBS --- GRAF
 
