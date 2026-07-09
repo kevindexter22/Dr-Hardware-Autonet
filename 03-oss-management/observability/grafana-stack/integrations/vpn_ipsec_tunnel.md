@@ -55,7 +55,7 @@ Edite o ficheiro de configuração principal no cliente (OCI):
 sudo nano /etc/ipsec.conf
 ```
 
-Garanta que a ligação contenha a diretiva de identidade EAP exata (eap_identity) que coincidirá com o utilizador configurado no servidor:
+Garanta que a ligação contenha a diretiva de identidade EAP exata (`eap_identity`) que coincidirá com o utilizador configurado no servidor:
 
 ```
 conn vpn-lab
