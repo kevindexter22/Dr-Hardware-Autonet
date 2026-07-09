@@ -1,4 +1,4 @@
-<h6 align="right">Read this page in <a href="./README.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
+<h6 align="right">Leia essa página em <a href="./README.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 🖧 Routers & Switches (Network Infrastructure)
 
