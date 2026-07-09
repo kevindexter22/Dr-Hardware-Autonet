@@ -1,3 +1,4 @@
+<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/README.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 🎯 SOP: Installation and Configuration of strongSwan VPN Server (IKEv2 + MSCHAPv2 via ipsec.conf)
 
