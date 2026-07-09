@@ -1,3 +1,4 @@
+<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/dns-stack/unbound_dns_lxc_setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 🎯 SOP: Compile and Install Unbound DNS + DNSTAP (LXC)
 
