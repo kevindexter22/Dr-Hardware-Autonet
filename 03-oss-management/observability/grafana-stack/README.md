@@ -1,5 +1,7 @@
 # 📊 Grafana Stack
 
+### 📝 Descrição do Escopo
+
 Bem-vindo ao diretório da Grafana Stack do projeto.
 
 Este ambiente é a camada visual (Frontend) da nossa arquitetura de observabilidade. 
