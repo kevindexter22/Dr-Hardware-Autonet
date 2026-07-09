@@ -101,7 +101,7 @@ sudo ipsec up vpn-lab
 
 ##
 
-📊 Fase 3: Ligação do Data Source no Grafana
+### 📊 Fase 3: Ligação do Data Source no Grafana
 
 Com o túnel estabelecido (`ESTABLISHED`), a OCI possui agora uma rota direta para a rede interna do seu laboratório.
 
