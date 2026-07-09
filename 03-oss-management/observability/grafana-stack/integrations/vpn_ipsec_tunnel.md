@@ -113,7 +113,7 @@ Com o túnel estabelecido (`ESTABLISHED`), a OCI possui agora uma rota direta pa
 
 4. No campo URL, insira o endereço IP da rede local onde o Loki está rodando no LXC, seguido da porta 3100:
 
-   * http://<IP_INTERNO_DO_LOKI>:3100 (Ex: http://192.168.1.50:3100)
+   * http://<IP_INTERNO_DO_LOKI>:3100 (Ex: http://10.10.0.50:3100)
 
 5. Role até ao final e clique em `Save & Test`.
 
