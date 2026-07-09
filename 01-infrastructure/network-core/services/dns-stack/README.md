@@ -28,13 +28,13 @@ A operação desta stack consolida as estratégias de Gerência de Redes corpora
 
 ### 🖧 Topologia Lógica (OSI Layer 3-7)
 
-| Componente	| Função Lógica	| Comunicação	| Protocolos / Camada OSI |
-| Keepalived (VIP)	| Redundância de Gateway	| Client -> VIP	VRRP | (IP/Layer 3) |
-| Nginx (Stream Proxy)	| Balanceamento de Carga	| VIP -> Nginx -> Unbound	| UDP/TCP 53 (Layer 4) |
-| Unbound (Resolver)	| Resolução e Cache	| Nginx <- Unbound -> Upstream	DNS | (Layer 7) / UDP 53 |
-| DNS-Collector	| Captura e Parsing de Tráfego	| Unbound -> Collector	| PCAP / DNSTap (Layer 7) |
-| Loki	| Retenção de Logs (Observabilidade)	| Collector -> Loki	| HTTP/REST TCP 3100 (Layer 7) |
-
+| Componente | Função Lógica | Comunicação | Protocolos / Camada OSI |
+| :--- | :--- | :--- | :--- |
+| **Keepalived (VIP)** | Redundância de Gateway | `Client -> VIP` | VRRP (IP/Layer 3) |
+| **Nginx (Stream Proxy)** | Proxy / Failover Direto | `VIP -> Nginx -> Unbound` | UDP/TCP 53 (Layer 4) |
+| **Unbound (Resolver)** | Resolução e Cache | `Nginx <- Unbound -> Upstream` | DNS (Layer 7) / UDP 53 |
+| **DNS-Collector** | Captura e Parsing | `Unbound -> Collector` | PCAP / DNSTap (Layer 7) |
+| **Loki** | Retenção (Observabilidade) | `Collector -> Loki` | HTTP/REST TCP 3100 (Layer 7) |
 ##
 
 ### 🛡️ Requisitos de Segurança e Rede (SecOps)
