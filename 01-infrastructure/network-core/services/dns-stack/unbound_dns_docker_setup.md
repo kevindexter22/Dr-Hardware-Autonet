@@ -320,10 +320,11 @@ services:
       context: /DATA/AppData/unbound/build
       dockerfile: Dockerfile
     container_name: unbound-dns
+    hostname: dns1.seu_hostname.com
     restart: unless-stopped
     ports:
-      - "53:53/udp"
-      - "53:53/tcp"
+      - "5353:53/udp"
+      - "5353:53/tcp"
     volumes:
       - /DATA/AppData/unbound:/opt/unbound/etc/unbound
     environment:
@@ -331,6 +332,15 @@ services:
     cap_add:
       - NET_ADMIN
       - NET_RAW
+# Caso utilize o Casaos
+x-casaos:
+  architectures:
+    - amd64
+    - arm64
+  main: unbound
+  title:
+    en_US: Unbound DNS
+  icon: https://www.netdata.cloud/img/unbound.png
 ```
 
 2. Para compilar a imagem e iniciar o serviço nativamente no plugin Docker V2 do CasaOS, execute:
