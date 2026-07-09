@@ -17,7 +17,7 @@ The TP-Link LS1008G is an 8-port unmanaged L2 access switch. In my network archi
 | Interface (Port) | Physical Status | Speed (Link) | Destination (Connected to) | Note |
 | :--- | :--- | :--- | :--- | :--- |
 | **Port 1** | `UP` | 1 Gbps | Router EX521 Satellite | Used for uplink and internet communication |
-| **Port 2** | `UP` | 1 Gbps | Living Room Smart TV | Used for internet connection |
+| **Port 2** | `UP` | 1 Gbps | PlayStation 4 | Used for internet connection |
 | **Port 3** | `UP` | 100 Mbps | Raspberry Pi 3B (ZBX_Proxy/ZBX_Agent) | Used to send metrics to the Zabbix server |
 | **Port 4** | `UP` | 1 Gbps | Raspberry Pi 4B (CasaOS Server) | Used for service communication with the internet |
 | **Port 5** | `UP` | 100 Mbps | Raspberry Pi 3B (OPL_Samba_Server) | Used to load games over the network |
