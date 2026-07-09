@@ -1,5 +1,7 @@
 # 🌐 Alta Disponibilidade do DNS
 
+### 📝 Descrição do Escopo
+
 Este repositório contém a documentação e os manifestos necessários para implementar uma arquitetura de Alta Disponibilidade (HA) para resolução de DNS em ambientes HomeLab ou corporativos.
 
 A solução utiliza Nginx (Módulo Stream L4) orquestrado pelo Keepalived (Protocolo VRRP) para garantir tolerância a falhas (MTTR < 2s) entre múltiplos nós, misturando ambientes Docker (CasaOS/Raspberry Pi) e LXC (Proxmox).
