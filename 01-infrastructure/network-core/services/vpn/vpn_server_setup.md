@@ -40,7 +40,9 @@ pki --issue --lifetime 1825 --cacert ~/pki/cacerts/ca-cert.pem \
     --outform pem > ~/pki/certs/server-cert.pem
 ```
 
-🐧 Fase 2: Preparação do SO e Instalação de Pacotes
+##
+
+### 🐧 Fase 2: Preparação do SO e Instalação de Pacotes
 
 Instale o strongSwan e as dependências necessárias para a autenticação extauth/EAP. Em seguida, mova os certificados gerados para a estrutura oficial do daemon ipsec.
 
