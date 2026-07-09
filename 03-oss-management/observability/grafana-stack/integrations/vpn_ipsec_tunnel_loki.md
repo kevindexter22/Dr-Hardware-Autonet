@@ -1,3 +1,5 @@
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/grafana-stack/integrations/vpn_ipsec_tunnel_loki.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
+
 # 🎯 SOP: Túnel VPN IPsec (OCI ➔ CasaOS) para Grafana
 
 ### 📝 Descrição do Escopo
