@@ -117,7 +117,7 @@ With the tunnel established (`ESTABLISHED`), OCI now has a direct route to your 
 
 5. Scroll down to the end and click `Save & Test`.
 
-6. If the VPN is routing traffic correctly, Grafana will return a green alert showing *"Data source successfully connected"*.
+6. If the VPN is routing traffic correctly, Grafana will return a green alert showing ***"Data source successfully connected"***.
 
 ##
 
