@@ -1,3 +1,4 @@
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/vpn_server_setup.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
 # 🎯 SOP: Instalação e Configuração de VPN Server strongSwan (IKEv2 + MSCHAPv2 via ipsec.conf)
 
