@@ -170,6 +170,10 @@ Because I don't have physical space for a rack to put all the homelab devices an
 - [x] Smart Shutdown: Script for smart shutdown of the Samba_OPL Host based on the PS2 state
 
 #### 📊 Monitoring and Services
+- [x] Unbound DNS: Private DNS
+- [x] Grafana: Creation of general dashboards
+- [x] DNS Collector + Grafana LOKI: Collect and index DNS logs for analysis and observability
+- [x] Redundancy for Essential Services: Create backups for main services in case of failure
 - [x] Zabbix Stack: Main server on OCI with Proxy for decentralized network monitoring
 - [x] Grafana: Advanced dashboards to see metrics and hardware health
 - [x] Samba server (OPL): Dedicated file server to load PS2 games
@@ -225,12 +229,8 @@ Because I don't have physical space for a rack to put all the homelab devices an
 #### 📊 Monitoring and Services
 - [ ] Netbox: IP address management
 - [ ] GenieACS: Access centralization and management via TR-069/TR-098 or TR-181
-- [ ] Unbound DNS: Private DNS
-- [ ] DNS Collector + Grafana LOKI: Collect and index DNS logs for analysis and observability
-- [ ] Redundancy for Essential Services: Create backups for main services in case of failure
 - [ ] Freeradius + MySQL: AAA Authentication with database for access control and accounting
 - [ ] Zabbix VAE (Virtual Appliance Edition): Hardware Monitoring, SNMP, and Native Proxmox Integration
-- [ ] Grafana: Creation of general dashboards
 
 #### 📡 Network Devices (Physical)
 - [ ] Replace the old TP-Link for cameras and improve the system
