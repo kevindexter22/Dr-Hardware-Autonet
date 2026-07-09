@@ -171,13 +171,15 @@ Como não disponho de espaço físico para um rack que centralizaria todos os di
 #### 📊 Monitoramento e Serviços
 - [x] Unbound DNS: DNS privado
 - [x] Grafana: Criação de dashboards em geral
+- [x] DNS Colector + Grafana LOKI: Coleta e indexação de logs DNS para análise e observabilidade
+- [x] Redundância de Serviços Essenciais: Criar backup dos serviços principais para caso de falhas
 - [x] Zabbix Stack: Servidor principal na OCI com Proxy para monitoramento de rede descentralizado
 - [x] Grafana: Dashboards avançadas para visualizações de métricas e saúde do hardware
 - [x] Samba server (OPL): Servidor de arquivos dedicado para carregamento de jogos de PS2
 - [x] Docker Ecosystem: Diversos microsserviços implementados via Docker
 - [x] FreeIPA: Gerenciamento centralizado de identidades, autenticações e políticas
-- [x] Redundância de Serviços Essenciais: Criar backup dos serviços principais para caso de falhas
-- [x] DNS Colector + Grafana LOKI: Coleta e indexação de logs DNS para análise e observabilidade
+
+
 
 #### 📡 Ativos de Redes (Físicos)
 - [x] ONT/Modem: Intelbras - instalado pelo meu ISP
