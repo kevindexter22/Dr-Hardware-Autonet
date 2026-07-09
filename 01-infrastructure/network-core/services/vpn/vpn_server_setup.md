@@ -33,7 +33,6 @@ pki --self --ca --lifetime 3650 --in ~/pki/private/ca-key.pem \
 
 ```bash
 pki --gen --type ed25519 --outform pem > ~/pki/private/server-key.pem
-
 pki --issue --lifetime 1825 --cacert ~/pki/cacerts/ca-cert.pem \
     --cakey ~/pki/private/ca-key.pem --in ~/pki/private/server-key.pem \
     --type ed25519 --dn "C=BR, O=suavpn, CN=vpn.seudominio.com.br" \
