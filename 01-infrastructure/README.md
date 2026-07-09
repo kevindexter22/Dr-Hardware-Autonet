@@ -81,12 +81,13 @@ graph TD
         FIPA[FreeIPA - LXC]:::coreService
         LDNSL[DNS Logs - LXC]:::coreService
         UDNSL[DNS 2 - LXC]:::coreService
+        RNGNXL[NGINX 2 - LXC]:::coreService
         FRAD[FreeRADIUS - Nativo]:::coreService
         PVE -.-> FIPA
         PVE -.-> LDNSL
         PVE -.-> UDNSL
+        PVE -.-> RNGNXL
         NATIVE -.-> FRAD
-        FRAD -.->|Consulta LDAP| FIPA
     end
 
     subgraph NET_SERVICES [Data Plane: Serviços de Rede e Storage]
