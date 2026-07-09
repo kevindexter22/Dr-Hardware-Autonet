@@ -350,7 +350,9 @@ cd /DATA/AppData/unbound
 docker compose up -d --build
 ```
 
-**🧩 Optional:**
+##
+
+### 🧩 Optional:
 
 You can enter the container terminal at any time. You can use the network tools to watch the DNS traffic:
 
