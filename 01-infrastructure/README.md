@@ -79,14 +79,8 @@ graph TD
 
     subgraph AAA_SEC [Control Plane: Segurança e IAM]
         FIPA[FreeIPA - LXC]:::coreService
-        LDNSL[DNS Logs - LXC]:::coreService
-        UDNSL[DNS 2 - LXC]:::coreService
-        RNGNXL[NGINX 2 - LXC]:::coreService
         FRAD[FreeRADIUS - Nativo]:::coreService
         PVE -.-> FIPA
-        PVE -.-> LDNSL
-        PVE -.-> UDNSL
-        PVE -.-> RNGNXL
         NATIVE -.-> FRAD
     end
 
@@ -94,10 +88,15 @@ graph TD
         UNB[Unbound DNS - Docker]:::coreService
         SMB[Samba v2/v3 - Docker]:::coreService
         VPN[VPN Server - Docker]:::coreService
-        
+        LDNSL[DNS Logs - LXC]:::coreService
+        UDNSL[DNS 2 - LXC]:::coreService
+        RNGNXL[NGINX 2 - LXC]:::coreService
         DOCKER -.-> UNB
         DOCKER -.-> SMB
         DOCKER -.-> VPN
+        PVE -.-> LDNSL
+        PVE -.-> UDNSL
+        PVE -.-> RNGNXL
     end
 
     subgraph OSS_MGMT [Management Plane: Observabilidade FCAPS]
