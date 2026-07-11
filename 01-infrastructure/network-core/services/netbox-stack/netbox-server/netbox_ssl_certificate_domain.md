@@ -77,7 +77,7 @@ mkdir -p /etc/ssl/netbox
 --reloadcmd      "systemctl reload nginx"
 ```
 
-Valide a automação para renovação do certificado
+4. Valide a automação para renovação do certificado
 
 ```bash
 crontab -l
