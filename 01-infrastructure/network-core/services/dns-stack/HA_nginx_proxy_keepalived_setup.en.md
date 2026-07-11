@@ -81,6 +81,7 @@ stream {
     # Proxy for DNS via TCP (Long answers / Zone Transfer)
     server {
         listen 53 so_keepalive=on;
+        tcp_nodelay on;
         proxy_pass dns_servers;
         proxy_timeout 5s;
     }
@@ -232,6 +233,7 @@ stream {
 
     server {
         listen 53 so_keepalive=on;
+        tcp_nodelay on;
         proxy_pass dns_servers;
         proxy_timeout 5s;
     }
