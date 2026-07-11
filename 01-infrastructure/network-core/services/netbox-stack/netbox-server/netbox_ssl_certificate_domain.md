@@ -77,6 +77,13 @@ mkdir -p /etc/ssl/netbox
 --reloadcmd      "systemctl reload nginx"
 ```
 
+Valide a automação para renovação do certificado
+
+```bash
+crontab -l
+```
+*Resultado: `15 0 * * * "/root/.acme.sh"/acme.sh --cron --home "/root/.acme.sh" > /dev/null`
+
 ##
 
 ### 🔗 Fase 4: Integração da Cadeia de Confiança no Proxy (Nginx)
@@ -130,7 +137,7 @@ O acesso web ao painel do NetBox agora estará operando sob criptografia TLS vá
 
 Para acessar a interface, utilize a seguinte URL no seu navegador:
 ```bash
-https://netbox.infra.seu-domini.com
+https://netbox.infra.seu-dominio.com
 ```
 
 ##
