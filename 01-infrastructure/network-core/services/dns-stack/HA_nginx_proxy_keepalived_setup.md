@@ -80,6 +80,7 @@ stream {
     # Proxy para DNS via TCP (Respostas Longas / Transferência de Zona)
     server {
         listen 53 so_keepalive=on;
+        tcp_nodelay on;
         proxy_pass dns_servers;
         proxy_timeout 5s;
     }
@@ -224,12 +225,12 @@ stream {
     server {
         listen 53 udp reuseport;
         proxy_pass dns_servers;
-        # proxy_responses 1;
         proxy_timeout 2s;
     }
 
     server {
         listen 53 so_keepalive=on;
+        tcp_nodelay on;
         proxy_pass dns_servers;
         proxy_timeout 5s;
     }
