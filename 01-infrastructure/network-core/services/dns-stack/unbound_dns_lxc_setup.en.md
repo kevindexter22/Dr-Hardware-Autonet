@@ -126,6 +126,10 @@ server:
 
 ```bash
 server:
+    # AUTHORITATIVE ZONE DEFINITION (Mandatory)
+    # This tells Unbound: "I own this domain; do not look it up on the Internet"
+    local-zone: ".local." static
+
     # --- Direct Records (A Records) ---
     local-data: "proxmox1.local. IN A <Device_IP>"
     local-data: "ipa.local. IN A <Device_IP>"
