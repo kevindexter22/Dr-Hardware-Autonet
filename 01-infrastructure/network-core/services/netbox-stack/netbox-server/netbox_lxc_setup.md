@@ -206,9 +206,17 @@ export DuckDNS_Token="SEU_TOKEN"
 /root/.acme.sh/acme.sh --install-cert -d seu-lab.duckdns.org \
 --key-file       /etc/ssl/netbox/netbox.key  \
 --fullchain-file /etc/ssl/netbox/netbox.cer
+--reloadcmd      "systemctl reload nginx"
 ```
 
-2. Configuração do Proxy Reverso (Nginx)
+2. Valide a automação para renovação do certificado
+
+```bash
+crontab -l
+```
+*Resultado: `15 0 * * * "/root/.acme.sh"/acme.sh --cron --home "/root/.acme.sh" > /dev/null`
+
+3. Configuração do Proxy Reverso (Nginx)
 
 ```bash
 cp /opt/netbox/contrib/nginx.conf /etc/nginx/sites-available/netbox
@@ -217,7 +225,7 @@ ln -s /etc/nginx/sites-available/netbox /etc/nginx/sites-enabled/netbox
 nano /etc/nginx/sites-available/netbox
 ```
 
-3. Ajuste o bloco principal do servidor garantindo o casamento exato de nomes e caminhos:
+4. Ajuste o bloco principal do servidor garantindo o casamento exato de nomes e caminhos:
 
 ```bash
 server {
