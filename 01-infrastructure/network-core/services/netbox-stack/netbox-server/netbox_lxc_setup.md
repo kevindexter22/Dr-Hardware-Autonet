@@ -190,7 +190,7 @@ systemctl enable --now netbox netbox-rq
 
 Para evitar que o Nginx falhe na inicialização devido a ficheiros ausentes, geramos o certificado antes de ativar o bloco de rotas do servidor web.
 
-***Observação:*** *Caso tenha um dominio proprio e deseje utiliza-lo, siga o passo a passo documentado [netbox_ssl_certificate_domain](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/netbox-stack/netbox-server/netbox_ssl_certificate_domain.md)*
+**⚠️*Observação:*** *Caso tenha um dominio proprio e deseje utiliza-lo, siga o passo a passo documentado [netbox_ssl_certificate_domain](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/netbox-stack/netbox-server/netbox_ssl_certificate_domain.md)*
 
 1. Desafio DNS-01 via acme.sh
 
