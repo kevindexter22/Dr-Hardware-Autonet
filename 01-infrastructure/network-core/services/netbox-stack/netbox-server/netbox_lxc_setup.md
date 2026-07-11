@@ -1,4 +1,4 @@
-# 🧿 SOP: Instalação Limpa do NetBox em LXC (Ubuntu 22.04 + PostgreSQL 16 + Python 3.12)
+# 📄 SOP: Instalação Limpa do NetBox em LXC (Ubuntu 22.04 + PostgreSQL 16 + Python 3.12)
 
 
 ### 📋 Descrição do Processo
@@ -260,3 +260,4 @@ https://seu-lab.duckdns.org
 
 ##
 
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
