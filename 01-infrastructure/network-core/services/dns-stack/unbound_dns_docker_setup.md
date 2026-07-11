@@ -142,7 +142,9 @@ server:
     # DEFINICAO DA ZONA AUTORITATIVA (Obrigatorio)
     # Isso diz ao Unbound: "Eu sou o dono deste dominio, nao procure na internet"
     local-zone: ".local." static
-     
+    # Se como eu voce utiizar um subdominio do seu dominio na rede interna, declare assim para evitar problemas/conflitos
+    # local-zone: ".seu-dominio.com." transparent
+
     # --- Apontamentos Diretos (A Records) ---
     local-data: "proxmox1.local. IN A <IP_Dispositivo>"
     local-data: "ipa.local. IN A <IP_Dispositivo>"
