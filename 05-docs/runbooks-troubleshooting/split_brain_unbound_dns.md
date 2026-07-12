@@ -48,7 +48,7 @@ Antes de qualquer reinício, valide se não há erros de pontuação ou aspas no
 unbound-checkconf
 ```
 
-* Correção: Se houver erros, edite o arquivo `/etc/unbound/unbound.conf.d/netbox.conf` e certifique-se de usar o ponto final . após as zonas de domínio na sintaxe.
+* **Correção:** Se houver erros, edite o arquivo `/etc/unbound/unbound.conf.d/netbox.conf` e certifique-se de usar o ponto final . após as zonas de domínio na sintaxe.
 
 2. Verifique a Resolução de Nomes Local:
 
