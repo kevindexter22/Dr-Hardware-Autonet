@@ -14,7 +14,7 @@ Se tentarmos o acesso direto, o tráfego morre no firewall do roteador devido à
 
 ### 💡 A Solução (Design)
 
-A solução adotada foi implementar o conceito de **Split-Brain DNS (DNS de Horizonte Dividido)** utilizando o resolvedor de nomes **Unbound DNS**. Configuramos uma [zona declarada como `transparent`](#). 
+A solução adotada foi implementar o conceito de **Split-Brain DNS (DNS de Horizonte Dividido)** utilizando o resolvedor de nomes **Unbound DNS**. Configuramos uma [zona declarada como `transparent`](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/dns-stack/split_brain_unbound_dns.md). 
 
 O Unbound intercepta apenas a requisição do NetBox e entrega o IP privado, enquanto encaminha qualquer outra requisição do domínio raiz para os servidores DNS públicos da internet.
 
