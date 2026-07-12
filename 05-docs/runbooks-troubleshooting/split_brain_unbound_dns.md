@@ -16,14 +16,12 @@ Se tentarmos o acesso direto, o tráfego morre no firewall do roteador devido à
 
 A solução adotada foi implementar o conceito de **Split-Brain DNS (DNS de Horizonte Dividido)** utilizando o resolvedor de nomes **Unbound DNS**. Configuramos uma [zona declarada como `transparent`](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/dns-stack/split_brain_unbound_dns.md). 
 
-O Unbound intercepta apenas a requisição do NetBox e entrega o IP privado, enquanto encaminha qualquer outra requisição do domínio raiz para os servidores DNS públicos da internet.
+O Unbound intercepta apenas a requisição do servidor local (ex. netbox) e entrega o IP privado, enquanto encaminha qualquer outra requisição do domínio raiz para os servidores DNS públicos da internet.
 
 | Componente | Configuração / Diretiva | Função no Fluxo (Engenharia de Tráfego) |
 | :--- | :--- | :--- |
 | **`local-zone`** | `"seu-dominio.com." transparent` | **Bypass de Zona:** Permite interceptar subdomínios locais sem quebrar o domínio principal na Hostinger. |
 | **`local-data`** | `"netbox.infra... IN A 10.10.0.250"` | **Injeção de Rota:** Responde imediatamente com o IP local do LXC, mantendo o tráfego dentro da LAN. |
-
-> **Observação:** Para os detalhes completos da instalação base da aplicação, do banco de dados PostgreSQL 16 e do Gunicorn, consulte o [SOP de Instalação Limpa do NetBox em LXC](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/netbox-stack/netbox-server/netbox_lxc_setup.md).
 
 ##
 
