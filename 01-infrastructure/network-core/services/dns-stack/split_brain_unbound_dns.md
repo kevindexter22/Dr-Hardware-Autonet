@@ -30,7 +30,7 @@ server:
     local-zone: "seu-dominio.com." transparent
     
     # Cria o apontamento estático exclusivamente para o NetBox
-    local-data: "netbox.infra.seu-dominio.com. IN A 10.10.0.250"
+    local-data: "netbox.infra.seu-dominio.com. IN A <IP DO SERVIDOR>"
 ``` 
 * *Atenção: O ponto final . após os domínios é obrigatório na sintaxe do Unbound).*
 
