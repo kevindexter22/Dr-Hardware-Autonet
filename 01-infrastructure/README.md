@@ -178,8 +178,8 @@ Como não disponho de espaço físico para um rack que centralizaria todos os di
 - [x] Samba server (OPL): Servidor de arquivos dedicado para carregamento de jogos de PS2
 - [x] Docker Ecosystem: Diversos microsserviços implementados via Docker
 - [x] FreeIPA: Gerenciamento centralizado de identidades, autenticações e políticas
-
-
+- [x] Netbox: Gerenciamento de endereços IP
+- [x] GenieACS: Centralização de acesso e gerenciamento via TR-069/TR-098 ou TR-181
 
 #### 📡 Ativos de Redes (Físicos)
 - [x] ONT/Modem: Intelbras - instalado pelo meu ISP
@@ -228,8 +228,6 @@ Como não disponho de espaço físico para um rack que centralizaria todos os di
 - [ ] Análise Preditiva: Usar Gemini para analisar tendências de queda de sinal no Redis antes que o cliente perceba
 
 #### 📊 Monitoramento e Serviços
-- [ ] Netbox: Gerenciamento de endereços IP
-- [ ] GenieACS: Centralização de acesso e gerenciamento via TR-069/TR-098 ou TR-181
 - [ ] Freeradius + MySQL: Autenticação AAA com banco de dados para controle de acesso e accounting
 - [ ] Zabbix VAE (Virtual Appliance Edition): Monitoramento de Hardware, SNMP e Integração Nativa com Proxmox
 
