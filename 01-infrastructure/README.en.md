@@ -179,6 +179,8 @@ Because I don't have physical space for a rack to put all the homelab devices an
 - [x] Samba server (OPL): Dedicated file server to load PS2 games
 - [x] Docker Ecosystem: Many microservices implemented via Docker
 - [x] FreeIPA: Central management of identities, authentications, and policies
+- [x] Netbox: IP address management
+- [x] GenieACS: Access centralization and management via TR-069/TR-098 or TR-181
 
 #### 📡 Network Devices (Physical)
 - [x] ONT/Modem: Intelbras - installed by my ISP
@@ -227,8 +229,6 @@ Because I don't have physical space for a rack to put all the homelab devices an
 - [ ] Predictive Analysis: Use Gemini to analyze signal drop trends in Redis before the client notices
 
 #### 📊 Monitoring and Services
-- [ ] Netbox: IP address management
-- [ ] GenieACS: Access centralization and management via TR-069/TR-098 or TR-181
 - [ ] Freeradius + MySQL: AAA Authentication with database for access control and accounting
 - [ ] Zabbix VAE (Virtual Appliance Edition): Hardware Monitoring, SNMP, and Native Proxmox Integration
 
