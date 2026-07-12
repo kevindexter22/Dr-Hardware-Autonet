@@ -33,7 +33,7 @@ server:
     local-data: "netbox.infra.your-domain.com. IN A 10.10.0.250"
 ```
 
-* ***Attention:*** *The dot . after the domains is required in the Unbound syntax).*
+* *Attention: The dot . after the domains is required in the Unbound syntax).*
 
 4. Restart the Unbound service to apply the new routes in memory:
 
