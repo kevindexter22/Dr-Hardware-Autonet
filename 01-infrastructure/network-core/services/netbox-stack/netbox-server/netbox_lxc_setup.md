@@ -1,6 +1,5 @@
 # 📄 SOP: Instalação Limpa do NetBox em LXC (Ubuntu 22.04 + PostgreSQL 16 + Python 3.12)
 
-
 ### 📋 Descrição do Processo
 
 Este procedimento estabelece o padrão para implantação do NetBox como Fonte Única de Verdade (SSoT) num container LXC sob o Proxmox VE, utilizando uma stack atualizada e segura sob a premissa de Zero Trust (sem abertura de portas no router).
@@ -218,7 +217,7 @@ export DuckDNS_Token="SEU_TOKEN"
 ```bash
 crontab -l
 ```
-*Resultado: `15 0 * * * "/root/.acme.sh"/acme.sh --cron --home "/root/.acme.sh" > /dev/null`
+*Resultado: `15 0 * * * "/root/.acme.sh"/acme.sh --cron --home "/root/.acme.sh" > /dev/null`.*
 
 3. Configuração do Proxy Reverso (Nginx)
 
