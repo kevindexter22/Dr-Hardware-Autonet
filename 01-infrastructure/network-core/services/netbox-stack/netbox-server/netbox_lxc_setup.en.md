@@ -1,3 +1,4 @@
+<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/netbox-stack/netbox-server/netbox_lxc_setup.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 📄 SOP: Clean Install of NetBox in LXC (Ubuntu 22.04 + PostgreSQL 16 + Python 3.12)
 
