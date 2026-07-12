@@ -12,7 +12,7 @@ If we try direct access, the traffic stops at the router firewall because there 
 
 ### 💡 The Solution (Design)
 
-The solution is to use the Split-Brain DNS concept with the Unbound DNS name resolver. We configure a [zone declared as `transparent`](#).
+The solution is to use the Split-Brain DNS concept with the Unbound DNS name resolver. We configure a [zone declared as `transparent`](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/dns-stack/split_brain_unbound_dns.en.md).
 
 Unbound intercepts only the NetBox request and gives the private IP. It sends any other request for the root domain to the public DNS servers on the internet.
 
