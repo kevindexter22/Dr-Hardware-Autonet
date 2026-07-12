@@ -194,7 +194,7 @@ systemctl enable --now netbox netbox-rq
 To prevent Nginx startup fails due to missing files, we generate the certificate before activating the web server route block.
 
 ##
-**⚠️*Note:*** *If you have your own domain and want to use it, follow the documented steps in [netbox_ssl_certificate_domain](#).*
+**⚠️*Note:*** *If you have your own domain and want to use it, follow the documented steps in [netbox_ssl_certificate_domain](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/netbox-stack/netbox-server/netbox_ssl_certificate_domain.en.md).*
 ##
 
 1. DNS-01 Challenge via acme.sh
