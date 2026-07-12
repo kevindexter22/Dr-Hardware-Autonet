@@ -12,7 +12,7 @@ If we try direct access, the traffic stops at the router firewall because there 
 
 ### 💡 The Solution (Design)
 
-The solution is to use the Split-Brain DNS concept with the Unbound DNS name resolver. We configure a zone declared as transparent.
+The solution is to use the Split-Brain DNS concept with the Unbound DNS name resolver. We configure a [zone declared as `transparent`](#).
 
 Unbound intercepts only the NetBox request and gives the private IP. It sends any other request for the root domain to the public DNS servers on the internet.
 
@@ -29,7 +29,7 @@ Unbound intercepts only the NetBox request and gives the private IP. It sends an
 
 To ensure packet delivery integrity and data privacy:
 
-1. **Native SSL/TLS Validation:** Because the browser still accesses the official address (netbox.infra.your-domain.com), Nginx can deliver the valid certificate generated via acme.sh (DNS-01 Challenge). This completely removes the "Unsafe Site" alerts.
+1. **Native SSL/TLS Validation:** Because the browser still accesses the official address (`netbox.infra.your-domain.com`), Nginx can deliver the valid certificate generated via `acme.sh` (DNS-01 Challenge). This completely removes the "Unsafe Site" alerts.
 
 2. **Traffic Privacy (Zero Leak):** No asset management or network inventory requests leave through the WAN cables. Traffic stays in Layer 2/3 strictly locally. This stops external sniffers or interceptions.
 
