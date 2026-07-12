@@ -21,8 +21,6 @@ Unbound intercepts only the NetBox request and gives the private IP. It sends an
 | **`local-zone`** | `"your-domain.com." transparent` | **Zone Bypass:** Allows intercepting local subdomains without breaking the main domain on Hostinger. |
 | **`local-data`** | `"netbox.infra... IN A 10.10.0.250"` | **Route Injection:** Answers immediately with the local LXC IP, keeping traffic inside the LAN. |
 
-**Note:** For full details on installing the base app, PostgreSQL 16 database, and Gunicorn, see the [SOP for Clean NetBox Install in LXC](https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/netbox-stack/netbox-server/netbox_lxc_setup.md).
-
 ##
 
 ### 🛡️ Security and Encryption (SecOps)
