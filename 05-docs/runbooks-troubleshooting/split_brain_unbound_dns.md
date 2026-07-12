@@ -6,13 +6,17 @@
 
 Em infraestruturas locais (*Home Labs* ou redes corporativas), frequentemente adotamos uma postura de **Zero Trust** (não abrir portas *Inbound* como 80 ou 443 no roteador de borda). 
 
-O desafio surge ao utilizarmos domínios públicos (ex: `.com` na Hostinger ou `.duckdns.org` no DuckDNS) com certificados SSL válidos da Let's Encrypt: **Como os dispositivos internos podem acessar o NetBox usando o domínio público sem abrir portas no roteador e sem que o tráfego saia para a internet?** Se tentarmos o acesso direto, o tráfego morre no firewall do roteador devido à falta de *Hairpin NAT*. Se criarmos uma zona DNS local inteira para o domínio público, causamos o **DNS Shadowing** (Sombreamento), quebrando o acesso ao site principal ou e-mails hospedados fora da rede local.
+O desafio surge ao utilizarmos domínios públicos (ex: `.com` na Hostinger ou `.duckdns.org` no DuckDNS) com certificados SSL válidos da Let's Encrypt: **Como os dispositivos internos podem acessar o NetBox usando o domínio público sem abrir portas no roteador e sem que o tráfego saia para a internet?** 
+
+Se tentarmos o acesso direto, o tráfego morre no firewall do roteador devido à falta de *Hairpin NAT*. Se criarmos uma zona DNS local inteira para o domínio público, causamos o **DNS Shadowing** (Sombreamento), quebrando o acesso ao site principal ou e-mails hospedados fora da rede local.
 
 ##
 
 ### 💡 A Solução (Design)
 
-A solução adotada foi implementar o conceito de **Split-Brain DNS (DNS de Horizonte Dividido)** utilizando o resolvedor de nomes **Unbound DNS**. Configuramos uma zona cirúrgica declarada como `transparent`. O Unbound intercepta apenas a requisição do NetBox e entrega o IP privado, enquanto encaminha qualquer outra requisição do domínio raiz para os servidores DNS públicos da internet.
+A solução adotada foi implementar o conceito de **Split-Brain DNS (DNS de Horizonte Dividido)** utilizando o resolvedor de nomes **Unbound DNS**. Configuramos uma [zona declarada como `transparent`](#). 
+
+O Unbound intercepta apenas a requisição do NetBox e entrega o IP privado, enquanto encaminha qualquer outra requisição do domínio raiz para os servidores DNS públicos da internet.
 
 | Componente | Configuração / Diretiva | Função no Fluxo (Engenharia de Tráfego) |
 | :--- | :--- | :--- |
