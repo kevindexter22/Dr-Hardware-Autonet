@@ -95,6 +95,8 @@ graph TD
         N8N[N8N - Docker]:::coreService
         UNB2[Unbound DNS 2 - LXC]:::coreService
         RPROXY2[NGINX 2 - LXC]:::coreService
+        NETBOX[NETBOX - LXC]:::coreService
+        ACS[GENIE ACS - LXC]:::coreService
         DOCKER -.-> UNB
         DOCKER -.-> SMB
         DOCKER -.-> VPN
@@ -104,6 +106,8 @@ graph TD
         DOCKER -.-> RPROXY1
         PVE -.-> UNB2
         PVE -.-> RPROXY2
+        PVE -.-> NETBOX
+        PVE -.-> ACS
     end
 
     subgraph OSS_MGMT [Management Plane: Observabilidade FCAPS]
