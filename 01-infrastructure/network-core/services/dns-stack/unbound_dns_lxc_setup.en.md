@@ -129,8 +129,6 @@ server:
     # AUTHORITATIVE ZONE DEFINITION (Mandatory)
     # This tells Unbound: "I own this domain; do not look it up on the Internet"
     local-zone: ".local." static
-    # If, like me, you use a subdomain of your domain on the internal network, declare it like this to avoid problems/conflicts
-    # local-zone: ".your-domain.com." transparent
 
     # --- Direct Records (A Records) ---
     local-data: "proxmox1.local. IN A <Device_IP>"
