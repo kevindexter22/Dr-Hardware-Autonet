@@ -1,3 +1,4 @@
+<h6 align="right">Leia essa página em <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/netbox-stack/netbox-server/netbox_ssl_certificate_domain.md" target="_blank" rel="noopener noreferrer">🇧🇷 Português</a></h6>
 
 # 🛡️ SOP: SSL Provisioning (Let's Encrypt) on NetBox via DNS-01 (Alias Mode)
 
