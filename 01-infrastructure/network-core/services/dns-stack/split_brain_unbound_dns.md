@@ -1,3 +1,5 @@
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/01-infrastructure/network-core/services/dns-stack/split_brain_unbound_dns.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
+
 # 🛠️ SOP: Engenharia de Tráfego Local via Split-Brain DNS (Unbound)
 
 ### 📝 Descrição e Escopo
