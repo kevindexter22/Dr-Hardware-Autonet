@@ -6,7 +6,7 @@
 
 Em infraestruturas locais (*Home Labs* ou redes corporativas), frequentemente adotamos uma postura de **Zero Trust** (não abrir portas *Inbound* como 80 ou 443 no roteador de borda). 
 
-O desafio surge ao utilizarmos domínios públicos (ex: `.click` na Hostinger ou `.duckdns.org` no DuckDNS) com certificados SSL válidos da Let's Encrypt: **Como os dispositivos internos podem acessar o NetBox usando o domínio público sem abrir portas no roteador e sem que o tráfego saia para a internet?** Se tentarmos o acesso direto, o tráfego morre no firewall do roteador devido à falta de *Hairpin NAT*. Se criarmos uma zona DNS local inteira para o domínio público, causamos o **DNS Shadowing** (Sombreamento), quebrando o acesso ao site principal ou e-mails hospedados fora da rede local.
+O desafio surge ao utilizarmos domínios públicos (ex: `.com` na Hostinger ou `.duckdns.org` no DuckDNS) com certificados SSL válidos da Let's Encrypt: **Como os dispositivos internos podem acessar o NetBox usando o domínio público sem abrir portas no roteador e sem que o tráfego saia para a internet?** Se tentarmos o acesso direto, o tráfego morre no firewall do roteador devido à falta de *Hairpin NAT*. Se criarmos uma zona DNS local inteira para o domínio público, causamos o **DNS Shadowing** (Sombreamento), quebrando o acesso ao site principal ou e-mails hospedados fora da rede local.
 
 ##
 
@@ -16,8 +16,8 @@ A solução adotada foi implementar o conceito de **Split-Brain DNS (DNS de Hori
 
 | Componente | Configuração / Diretiva | Função no Fluxo (Engenharia de Tráfego) |
 | :--- | :--- | :--- |
-| **`local-zone`** | `"drhardwarenetwork.click." transparent` | **Bypass de Zona:** Permite interceptar subdomínios locais sem quebrar o domínio principal na Hostinger. |
-| **`local-data`** | `"netbox.infra... IN A 192.168.1.250"` | **Injeção de Rota:** Responde imediatamente com o IP local do LXC, mantendo o tráfego dentro da LAN. |
+| **`local-zone`** | `"seu-dominio.com." transparent` | **Bypass de Zona:** Permite interceptar subdomínios locais sem quebrar o domínio principal na Hostinger. |
+| **`local-data`** | `"netbox.infra... IN A 10.10.0.250"` | **Injeção de Rota:** Responde imediatamente com o IP local do LXC, mantendo o tráfego dentro da LAN. |
 
 > **Observação:** Para os detalhes completos da instalação base da aplicação, do banco de dados PostgreSQL 16 e do Gunicorn, consulte o [SOP de Instalação Limpa do NetBox em LXC](./SOP_netbox_install.md).
 
@@ -27,7 +27,7 @@ A solução adotada foi implementar o conceito de **Split-Brain DNS (DNS de Hori
 
 Para garantir a integridade da entrega dos pacotes e a privacidade dos dados:
 
-1. **Validação Nativa SSL/TLS:** Como o navegador continua acessando o endereço oficial (`netbox.infra.drhardwarenetwork.click`), o Nginx consegue entregar o certificado válido gerado via `acme.sh` (Desafio DNS-01). Isso elimina completamente os alertas de "Site Inseguro".
+1. **Validação Nativa SSL/TLS:** Como o navegador continua acessando o endereço oficial (`netbox.infra.seu-dominio.com`), o Nginx consegue entregar o certificado válido gerado via `acme.sh` (Desafio DNS-01). Isso elimina completamente os alertas de "Site Inseguro".
 
 2. **Privacidade de Tráfego (Zero Leak):** Nenhuma requisição de gerenciamento de ativos ou inventário de rede sai pelos cabos de WAN. O tráfego permanece em Camada 2/3 de forma estritamente local, neutralizando sniffers ou interceptações externas.
 
@@ -37,7 +37,37 @@ Para garantir a integridade da entrega dos pacotes e a privacidade dos dados:
 
 Se ao digitar o domínio o navegador exibir erros como `ERR_CONNECTION_REFUSED`, `ERR_CONNECTION_TIMED_OUT` ou avisos de certificado inválido, siga estes passos de diagnóstico:
 
-1. **Verifique a Sintaxe do Unbound (Crítico):**
+1. Verifique a Sintaxe do Unbound (Crítico):
+
 Antes de qualquer reinício, valide se não há erros de pontuação ou aspas no arquivo de configuração interna.
 ```bash
 unbound-checkconf
+```
+
+* Correção: Se houver erros, edite o arquivo `/etc/unbound/unbound.conf.d/netbox.conf` e certifique-se de usar o ponto final . após as zonas de domínio na sintaxe.
+
+2. Verifique a Resolução de Nomes Local:
+
+No terminal do seu computador pessoal (cliente da rede), execute um teste de query DNS para o NetBox:
+
+```bash
+nslookup netbox.infra.seu-dominio.com
+```
+
+* **Resultado Esperado:** O retorno deve ser estritamente o IP privado do container LXC (10.10.0.250). Se retornar o IP público da sua internet, o Unbound não está interceptando a requisição.
+
+* **Correção:** Force o reinício do serviço com systemctl restart unbound e verifique se a máquina cliente está realmente usando o Unbound como servidor DNS primário.
+
+3. Teste o Isolamento do Domínio Raiz:
+
+Execute uma consulta DNS para o domínio principal ou outros subdomínios que estão na nuvem:
+
+```bash
+nslookup seu-dominio.com
+```
+
+* **Resultado Esperado:** O retorno deve ser o IP público do servidor de hospedagem. Se retornar erro ou o IP do NetBox, a diretiva transparent foi omitida ou digitada incorretamente, gerando o efeito de DNS Shadowing.
+
+##
+
+###### ℹ️ Parte do projeto Dr. Hardware Autonet - Licenciado sob a licença MIT.
