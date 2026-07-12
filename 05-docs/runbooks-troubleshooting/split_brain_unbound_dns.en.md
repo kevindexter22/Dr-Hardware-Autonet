@@ -71,5 +71,3 @@ nslookup your-domain.com
 ##
 
 ###### ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT license.
-
-ℹ️ Part of the Dr. Hardware Autonet project - Licensed under the MIT license.
