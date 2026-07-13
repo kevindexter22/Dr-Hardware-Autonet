@@ -131,6 +131,7 @@ graph TD
     ZA ==>|Métricas TCP/XXXX| ZPX
     ZPX ==>|Trapper TCP/XXXX| ZBS
     GRAF_LOKI -.->|Logs| GRAF
+     SPDT -.->|Métricas| GRAF
     ZBS --- GRAF
 
 ```
