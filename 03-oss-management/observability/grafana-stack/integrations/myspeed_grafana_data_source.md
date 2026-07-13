@@ -58,9 +58,9 @@ Configure os parâmetros de extração lógica:
 
 Na aba de Parsing, mapeie as colunas extraídas do JSON para formatar a Série Temporal:
 
-   * Coluna timestamp -> Tipo: DateTime
+   * Coluna `timestamp` -> Tipo: DateTime
 
-   * Colunas download, upload, ping -> Tipo: Number
+   * Colunas `download`, `upload`, `ping` -> Tipo: Number
 
 ***Melhor Prática de Gestão de Desempenho (FCAPS):*** *Recomenda-se ajustar a engine do MySpeed (Cron) para realizar testes estritamente em duas janelas diárias: Ociosidade (ex: 04:00) e Pico de Tráfego (ex: 16:00). No Grafana, utilize o visual de "Barras" ao invés de "Linhas", contrastando a entrega máxima nominal contra a entrega sob saturação.*
 
