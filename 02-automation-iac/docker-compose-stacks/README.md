@@ -1,4 +1,3 @@
-<h6 align="right">Read this page in <a href="./README.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
 # 🐳 Docker Compose Stacks (Workloads & IaC)
 
