@@ -52,7 +52,7 @@ Por padrão, o firewall da OCI bloqueia todo o tráfego de entrada (*Ingress*), 
 
 3. **Image and Shape:**
    * **Image:** Altere para **Ubuntu Server 24.04** (ou a LTS mais recente suportada).
-   * **Shape:** Selecione o hardware desejado. O *Always Free* da Oracle permite usar o shape AMD Micro ou o poderoso **Ampere A1 (ARM64)** com até 4 OCPUs e 24GB de RAM.
+   * **Shape:** Selecione o hardware desejado. O *Always Free* da Oracle permite usar o shape AMD Micro ou o poderoso **Ampere A1 (ARM64)** com até 2 OCPUs e 12 GB de RAM.
 
 4. **Networking:**
    * Selecione a VCN criada na Fase 1 (`NOME_DA_VCN`).
