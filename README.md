@@ -23,7 +23,7 @@ Dr-Hardware-Autonet/
 │   └── python-scripts/                 # Scripts customizados 
 │
 ├── 👁️ 03-oss-management/               # SISTEMAS DE SUPORTE À OPERAÇÃO (FCAPS)
-│   ├── observability/                  # Métricas (Prometheus, Grafana), Logs (ELK/Loki) e Tracing
+│   ├── observability/                  # Métricas (Zabbix, Grafana), Logs (Collector/Loki) e Tracing
 │   ├── security-iam/                   # Autenticação, Autorização (Radius, TACACS+, Vault)
 │   └── alerts-mediation/               # Regras de alerta, webhooks e mediação de dados
 │
@@ -31,7 +31,7 @@ Dr-Hardware-Autonet/
 │   ├── network-simulations/            # EVE-NG, GNS3, PNETLab, Packet Tracer
 │   └── devops-sandboxes/               # Testes isolados de orquestração e CI/CD
 │
-├── 📖 05-docs/                         # DOCUMENTAÇÃO OFICIAL E ENGENHARIA
+├── 📖 05-docs/                         # DOCUMENTAÇÃO OFICIAL
 │   ├── architecture-diagrams/          # Topologias (L2/L3), fluxos de API e diagramas lógicos
 │   ├── runbooks-troubleshooting/       # Guias de mitigação de falhas (SOPs)
 |   ├── standards-policies.en.md        # Políticas de IPAM, VLANs e nomenclaturas adotadas (Inglês)
