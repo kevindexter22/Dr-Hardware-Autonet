@@ -1,4 +1,4 @@
-<h6 align="right">Read this page in <a href="#" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
+<h6 align="right">Read this page in <a href="https://github.com/kevindexter22/Dr-Hardware-Autonet/blob/main/03-oss-management/observability/grafana-stack/integrations/myspeed_grafana_data_source_integration.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
 # 🔌 SOP: Integração Grafana & MySpeed (Infinity Data Source)
 
