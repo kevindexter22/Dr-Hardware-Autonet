@@ -52,7 +52,7 @@ By default, the OCI firewall blocks all incoming traffic (Ingress), except for p
 
 3. **Image and Shape:**
    * **Image:** Change to **Ubuntu Server 24.04** (or the latest supported LTS).
-   * **Shape:** Select your hardware. Oracle's *Always Free* tier allows you to use the AMD Micro shape or the powerful **Ampere A1 (ARM64)** with up to 4 OCPUs and 24GB of RAM.
+   * **Shape:** Select your hardware. Oracle's *Always Free* tier allows you to use the AMD Micro shape or the powerful **Ampere A1 (ARM64)** with up to 2 OCPUs e 12 GB of RAM.
 
 4. **Networking:**
    * Select the VCN created in Phase 1 (`VCN_NAME`).
