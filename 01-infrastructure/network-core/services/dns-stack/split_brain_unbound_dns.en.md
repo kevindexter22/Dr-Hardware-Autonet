@@ -29,7 +29,6 @@ nano /etc/unbound/unbound.conf.d/local-records.conf
 ```bash
 server:
     # Sets the zone as transparent so it does not break the main domain
-    local-zone: "seu-dominio.com." transparent
     local-zone: "subdominio.seu-dominio.com." static
     
     # Creates the static record only for NetBox
