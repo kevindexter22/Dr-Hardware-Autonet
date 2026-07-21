@@ -62,7 +62,7 @@ pct start 100
 pct enter 100
 
 # 2. Corrigir o arquivo /etc/hosts (Crítico para o FreeIPA)
-nano /etc/hosts
+vi /etc/hosts
 ```
 
 Certifique-se de que a linha do IP estático aponte diretamente para o FQDN antes do nome curto. O arquivo deve ficar assim:
