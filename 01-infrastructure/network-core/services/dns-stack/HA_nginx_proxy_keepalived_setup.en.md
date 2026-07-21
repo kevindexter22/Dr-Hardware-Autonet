@@ -143,8 +143,14 @@ services:
   nginx-proxy:
     image: nginx:alpine
     container_name: nginx-dns
+    hostname: nginx1.your-domain.com
     network_mode: "host"
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "nc -z 127.0.0.1 53 || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3 
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
 
