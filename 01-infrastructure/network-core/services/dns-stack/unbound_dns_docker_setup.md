@@ -327,6 +327,11 @@ services:
     container_name: unbound-dns
     hostname: dns1.seu_hostname.com
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "dig +short @127.0.0.1 localhost || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
     ports:
       - "5353:53/udp"
       - "5353:53/tcp"
