@@ -106,6 +106,7 @@ ipa-server-install \
   --setup-dns \
   --auto-forwarders \
   --allow-zone-overlap \
+  --no-ntp \
   -a "SuaSenhaAdminAqui" \
   -p "SuaSenhaDirectoryManagerAqui" \
   -U
