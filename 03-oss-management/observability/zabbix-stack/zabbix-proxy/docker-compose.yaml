@@ -33,8 +33,7 @@ services:
     healthcheck:
       test:
         - CMD-SHELL
-        - pidof zabbix_proxy && bash -c 'cat < /dev/null >
-          /dev/tcp/127.0.0.1/10052' || exit 1
+        - pidof zabbix_proxy || exit 1
       timeout: 10s
       interval: 30s
       retries: 3
