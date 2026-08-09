@@ -20,8 +20,8 @@ services:
       - PGID=1000
       - PUID=1000
       - SUBDOMAINS=<YOUR_SUBDOMAIN
-      - TOKEN=<Token>
-      - TZ=America/Sao_Paulo
+      - TOKEN=<YOUR_TOKEN>
+      - TZ=<YOUR_TIMEZONE>
       - UPDATE_IP=ipv6
     hostname: duckdns
     healthcheck:
