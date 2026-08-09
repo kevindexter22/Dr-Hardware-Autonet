@@ -2,7 +2,7 @@
 # Workload: duckdns
 # Original Author: CasaOS Team
 # Modified by: Kevin Oliveira
-# Changes: customized informatin, addicted healthcheck
+# Changes: customized information, addicted healthcheck
 # =====================================================================================================
 
 name: duckdns
