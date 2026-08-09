@@ -28,12 +28,19 @@ services:
       - PUID=1000
       - TZ=America/Sao_Paulo
     hostname: emby
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - curl -f http://localhost:8096 || exit 1
+      timeout: 10s
+      interval: 30s
+      retries: 3
     image: linuxserver/emby:latest
     labels:
       icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/icon.png
     ports:
       - target: 8096
-        published: "<CUSTOM_PORT>"
+        published: "8096"
         protocol: tcp
       - target: 8920
         published: "8920"
@@ -50,7 +57,7 @@ services:
         source: /DATA/Media/Movies
         target: /data/movies
       - type: bind
-        source: /mnt/Ext_HDD/Emby # new directory for media on external HDD
+        source: /mnt/Ext_HDD/Emby
         target: /Emby
     cap_add: []
     network_mode: bridge
@@ -68,14 +75,13 @@ x-casaos:
       device. An intuitive design makes it ideal for users to enjoy media
       content anytime, anywhere, meeting family entertainment and media
       management needs.
-
   developer: linuxserver
   hostname: ""
   icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/icon.png
   index: /
   is_uncontrolled: false
   main: emby
-  port_map: "<CUSTOM_PORT>"
+  port_map: "8096"
   scheme: http
   screenshot_link:
     - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-1.png
