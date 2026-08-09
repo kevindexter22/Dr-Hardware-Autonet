@@ -1,1 +1,54 @@
+# ==============================================================================
+# Workload: UrBackup
+# Architecture Domain: OSS Management
+# Author: Kevin Oliveira
+# ==============================================================================
 
+name: vibrant_harm
+services:
+  main_app:
+    cpu_shares: 10
+    command: []
+    container_name: UrBackup
+    deploy:
+      resources:
+        limits:
+          memory: 1024M
+    environment:
+      - TZ=America/Sao_Paulo
+    hostname: UrBackup
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pidof urbackupsrv || exit 1
+      timeout: 10s
+      interval: 30s
+      retries: 3
+    image: uroni/urbackup-server:latest
+    labels:
+      icon: https://icon.casaos.io/main/all/urbackup.png
+    ports:
+      - target: 55414
+        published: "55414"
+        protocol: tcp
+    restart: unless-stopped
+    volumes:
+      - type: bind
+        source: /mnt/Ext_HDD/UrBackup
+        target: /var/urbackup
+    devices: []
+    cap_add: []
+    network_mode: bridge
+    privileged: false
+x-casaos:
+  author: self
+  category: self
+  hostname: ""
+  icon: https://icon.casaos.io/main/all/urbackup.png
+  index: /
+  is_uncontrolled: false
+  port_map: "55414"
+  scheme: http
+  store_app_id: vibrant_harm
+  title:
+    custom: UrBackup Server
