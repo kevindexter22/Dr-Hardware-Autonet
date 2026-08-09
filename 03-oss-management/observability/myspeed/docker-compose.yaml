@@ -2,7 +2,7 @@
 # Workload: MySpeed
 # Original Author: joaobosconff
 # Modified by: Kevin Oliveira
-# Changes: customized tcp port
+# Changes: customized tcp port, addicted healthcheck
 # ==============================================================================
 
 name: myspeed
@@ -16,12 +16,19 @@ services:
         limits:
           memory: 256M
     hostname: myspeed
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - wget -q --spider http://127.0.0.1:5216 || exit 1
+      timeout: 10s
+      interval: 30s
+      retries: 3
     image: germannewsmaker/myspeed:1.0.9
     labels:
       icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/MySpeed/icon.png
     ports:
       - target: 5216
-        published: "<CUSTOM_PORT>"
+        published: "8082"
         protocol: tcp
     restart: unless-stopped
     volumes:
@@ -69,7 +76,7 @@ x-casaos:
   index: /
   is_uncontrolled: false
   main: myspeed
-  port_map: "<CUSTOM_PORT>"
+  port_map: "8082"
   scheme: http
   screenshot_link:
     - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/MySpeed/screenshot-1.png
@@ -80,6 +87,11 @@ x-casaos:
     en_us: Analysis software that shows your internet speed for up to 30 days.
     pt_br: Software de análise que mostra a velocidade da sua internet por até 30
       dias.
+    zh_cn: 记录网速度长达30天的分析软件。
+  title:
+    custom: ""
+    en_us: MySpeed
+    pt_br: MySpeed
     zh_cn: 记录网速度长达30天的分析软件。
   title:
     custom: ""
