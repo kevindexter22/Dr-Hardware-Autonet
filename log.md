@@ -5,5 +5,4 @@
 ##
 
 * Atualizados os docker compose
-
    * Adicionado healthcheck nos containers
