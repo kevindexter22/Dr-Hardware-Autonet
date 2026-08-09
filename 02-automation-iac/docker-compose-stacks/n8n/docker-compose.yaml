@@ -2,7 +2,7 @@
 # Workload: n8n
 # Original Author: YoussofKhawaja
 # Modified by: Kevin Oliveira
-# Changes: customized tcp port, edited the description
+# Changes: customized tcp port, add healthcheck, edited the description
 # =====================================================================================================
 
 name: n8n
@@ -21,12 +21,20 @@ services:
       - N8N_SECURE_COOKIE=false
       - TZ=America/Sao_Paulo
     hostname: n8n
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - wget --no-verbose --tries=1 --spider http://localhost:5678/healthz ||
+          exit 1
+      timeout: 10s
+      interval: 30s
+      retries: 3
     image: n8nio/n8n:1.123.0
     labels:
       icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/N8n/icon.png
     ports:
       - target: 5678
-        published: "<CUSTOM_PORT>"
+        published: "8083"
         protocol: tcp
     restart: unless-stopped
     volumes:
@@ -76,7 +84,7 @@ x-casaos:
   index: /
   is_uncontrolled: false
   main: n8n
-  port_map: "<CUSTOM_PORT>"
+  port_map: "8083"
   scheme: http
   screenshot_link:
     - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/N8n/screenshot-1.png
