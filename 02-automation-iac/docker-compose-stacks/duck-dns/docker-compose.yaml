@@ -20,7 +20,7 @@ services:
       - PGID=1000
       - PUID=1000
       - SUBDOMAINS=<YOUR_SUBDOMAIN
-      - TOKEN=c403d9ac-0f59-40ec-87ce-fb5dd4e90c9e
+      - TOKEN=<Token>
       - TZ=America/Sao_Paulo
       - UPDATE_IP=ipv6
     hostname: duckdns
