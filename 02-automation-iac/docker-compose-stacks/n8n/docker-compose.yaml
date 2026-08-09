@@ -2,7 +2,7 @@
 # Workload: n8n
 # Original Author: YoussofKhawaja
 # Modified by: Kevin Oliveira
-# Changes: customized tcp port, add healthcheck, edited the description
+# Changes: customized tcp port, addicted healthcheck, edited the description
 # =====================================================================================================
 
 name: n8n
