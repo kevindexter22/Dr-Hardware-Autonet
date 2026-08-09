@@ -40,7 +40,7 @@ services:
       icon: https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/icon.png
     ports:
       - target: 8096
-        published: "8096"
+        published: "8084"
         protocol: tcp
       - target: 8920
         published: "8920"
@@ -81,7 +81,7 @@ x-casaos:
   index: /
   is_uncontrolled: false
   main: emby
-  port_map: "8096"
+  port_map: "8084"
   scheme: http
   screenshot_link:
     - https://cdn.jsdelivr.net/gh/IceWhaleTech/CasaOS-AppStore@main/Apps/Emby/screenshot-1.png
