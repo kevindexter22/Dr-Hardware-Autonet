@@ -22,20 +22,28 @@ services:
       - ZBX_DEBUGLEVEL=3
       - ZBX_ENABLEGLOBALSCRIPTS=1
       - ZBX_ENABLEREMOTECOMMANDS=1
-      - ZBX_HOSTNAME=<HOSTNAME>
-      - ZBX_LISTENPORT=<CUSTOM_PORT>
+      - ZBX_HOSTNAME=zbxproxy-2
+      - ZBX_LISTENPORT=10052
       - ZBX_PROXYMODE=0
-      - ZBX_SERVER_HOST=<HOST_IP>
+      - ZBX_SERVER_HOST=144.22.243.143
       - ZBX_SERVER_PORT=10051
       - ZBX_STARTPINGERS=3
       - ZBX_TIMEOUT=30
     hostname: zabbix-proxy
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - pidof zabbix_proxy && bash -c 'cat < /dev/null >
+          /dev/tcp/127.0.0.1/10052' || exit 1
+      timeout: 10s
+      interval: 30s
+      retries: 3
     image: zabbix/zabbix-proxy-sqlite3:ubuntu-7.0-latest
     labels:
       icon: https://avatars.githubusercontent.com/u/80359616?s=200&v=4
     ports:
-      - target: <CUSTOM_PORT>
-        published: "<CUSTOM_PORT>"
+      - target: 10052
+        published: "10052"
         protocol: tcp
     privileged: true
     restart: always
@@ -65,5 +73,5 @@ x-casaos:
   scheme: http
   store_app_id: zabbix-proxy-oss
   title:
-    custom: ""
+    custom: zabbix Proxy 2
     en_us: zabbix-proxy
