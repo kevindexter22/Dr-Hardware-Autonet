@@ -1,6 +1,6 @@
 # 🪵 Log
 
-#### 2026-08-09
+#### 09-08-2026
 
 * Atualizados os docker compose em docker-compose-stack
    * Adicionado healthcheck nos containers
