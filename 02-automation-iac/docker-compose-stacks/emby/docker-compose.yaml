@@ -2,7 +2,7 @@
 # Workload: emby
 # Original Author: CasaOS Team
 # Modified by: Kevin Oliveira
-# Changes: customized tcp port, edited the description, addicted new directory for media
+# Changes: customized tcp port, edited the description, addicted healthcheck, addicted new directory for media
 # =====================================================================================================
 
 name: emby
