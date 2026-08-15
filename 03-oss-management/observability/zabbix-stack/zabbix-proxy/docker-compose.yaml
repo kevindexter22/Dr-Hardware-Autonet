@@ -30,13 +30,6 @@ services:
       - ZBX_STARTPINGERS=3
       - ZBX_TIMEOUT=30
     hostname: zabbix-proxy
-    healthcheck:
-      test:
-        - CMD-SHELL
-        - pidof zabbix_proxy || exit 1
-      timeout: 10s
-      interval: 30s
-      retries: 3
     image: zabbix/zabbix-proxy-sqlite3:ubuntu-7.0-latest
     labels:
       icon: https://avatars.githubusercontent.com/u/80359616?s=200&v=4
