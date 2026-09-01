@@ -143,7 +143,7 @@ services:
   nginx-proxy:
     image: nginx:alpine
     container_name: nginx-dns
-    hostname: nginx1.infra.drhardwarenetwork.click
+    hostname: HOST.SEU-DOMINIO.COM
     network_mode: "host"
     restart: unless-stopped
     healthcheck:
