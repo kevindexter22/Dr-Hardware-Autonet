@@ -97,7 +97,8 @@ global_defs {
 }
 
 vrrp_script chk_nginx {
-    script "killall -0 nginx"
+    # Validação L4 mais precisa: Verifica se o Nginx está escutando no host
+    script "</dev/tcp/127.0.0.1/53"
     interval 2
     weight -20
     fall 2
@@ -106,7 +107,7 @@ vrrp_script chk_nginx {
 
 vrrp_instance VI_DNS {
     state MASTER
-    interface eth0 
+    interface eth0 # IMPORTANTE: Verifique no terminal do host via comando 'ip a' se este é o nome real da placa de rede.
     virtual_router_id 53
     priority 100
     advert_int 1
@@ -116,16 +117,16 @@ vrrp_instance VI_DNS {
         10.10.0.12            # Substitua pelo IP físico do Node 2 (LXC Proxmox)
     }
 
-    authentication {
+     authentication {
         auth_type PASS
-        auth_pass HA_DNS_SECURE
+        auth_pass HA_DNS_2026
     }
 
     virtual_ipaddress {
         10.10.0.10/24 dev eth0 label eth0:vip
     }
 
-    track_script {
+   track_script {
         chk_nginx
     }
 }
@@ -142,7 +143,7 @@ services:
   nginx-proxy:
     image: nginx:alpine
     container_name: nginx-dns
-    hostname: nginx1.seu-dominio.com
+    hostname: nginx1.infra.drhardwarenetwork.click
     network_mode: "host"
     restart: unless-stopped
     healthcheck:
@@ -154,20 +155,15 @@ services:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
 
   keepalived-ha:
-    image: debian:bullseye-slim
+    image: osixia/keepalived:latest # Utilizando imagem imutável
     container_name: keepalived-dns
     network_mode: "host"
-    pid: "host"
     cap_add:
       - NET_ADMIN
       - NET_BROADCAST
     restart: unless-stopped
     volumes:
-      - ./keepalived.conf:/etc/keepalived/keepalived.conf:ro
-    command: >
-      /bin/bash -c "apt-get update && 
-      apt-get install -y keepalived psmisc && 
-      keepalived --dont-fork --log-console"
+      - ./keepalived.conf:/container/service/keepalived/assets/keepalived.conf:ro
 
 x-casaos:
   architectures:
@@ -176,7 +172,7 @@ x-casaos:
   main: nginx-proxy
   title:
     en_US: DNS HA Proxy
-  icon: [https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/nginx-proxy-manager.png](https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/nginx-proxy-manager.png)
+  icon: https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/nginx-proxy-manager.png
 ``` 
 ***Suba a stack:*** *sudo docker compose up -d*
 
@@ -252,7 +248,8 @@ global_defs {
 }
 
 vrrp_script chk_nginx {
-    script "killall -0 nginx"
+    # Validação L4 mais precisa: Verifica se o Nginx está escutando no host
+    script "</dev/tcp/127.0.0.1/53"
     interval 2
     weight -20
     fall 2
@@ -260,27 +257,27 @@ vrrp_script chk_nginx {
 }
 
 vrrp_instance VI_DNS {
-    state BACKUP              # Importante: Node Passivo
-    interface eth0
+    state BACKUP
+    interface eth0 # IMPORTANTE: Verifique no terminal do host via comando 'ip a' se este é o nome real da placa de rede.
     virtual_router_id 53
-    priority 90               # Importante: Prioridade menor que o Master
+    priority 90
     advert_int 1
     
-    unicast_src_ip 10.10.0.12  # IP deste LXC
+    unicast_src_ip 10.10.0.12  # Substitua pelo IP físico do Node 2 
     unicast_peer {
-        10.10.0.11              # IP da Raspberry Pi (CasaOS)
+        10.10.0.11            # Substitua pelo IP físico da Raspberry Pi
     }
 
-    authentication {
+     authentication {
         auth_type PASS
-        auth_pass HA_DNS_SECURE
+        auth_pass HA_DNS_2026
     }
 
     virtual_ipaddress {
         10.10.0.10/24 dev eth0 label eth0:vip
     }
 
-    track_script {
+   track_script {
         chk_nginx
     }
 }
