@@ -2,6 +2,8 @@
 
 # 🧰 SOP: OS Baseline & Troubleshooting Toolkit
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Description and Scope (SecOps & MTTR)
 
 This document lists the basic local monitoring and troubleshooting tools (Layers L2 to L7) that are part of the system baseline for all nodes (servers and native containers) in the lab.
