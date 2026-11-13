@@ -2,6 +2,8 @@
 
 # 🛠️ SOP: Local Traffic Engineering via Split-Brain DNS (Unbound)
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Description and Scope
 
 This document defines the Standard Operating Procedure (SOP) to configure Local Traffic Engineering (Split-DNS) using the Unbound DNS name resolver.
