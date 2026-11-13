@@ -2,6 +2,8 @@
 
 # 🎯 SOP: Instalação e Configuração de VPN Server strongSwan (IKEv2 + MSCHAPv2 via ipsec.conf)
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição do Escopo
 
 Este Procedimento Operacional Padrão (SOP) detalha a implementação de um servidor de VPN baseado no pacote clássico do strongSwan utilizando o backend tradicional (`ipsec.conf`). 
