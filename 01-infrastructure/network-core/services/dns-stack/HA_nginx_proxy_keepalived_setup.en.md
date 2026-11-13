@@ -2,6 +2,8 @@
 
 # 🌐 High Availability DNS
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Scope Description
 
 This repository has the documents and files to make a High Availability (HA) DNS system. You can use it in a HomeLab or a company network.
