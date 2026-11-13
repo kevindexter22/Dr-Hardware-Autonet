@@ -2,8 +2,6 @@
 
 # 🌐 Core de Rede e Serviços
 
-![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
-
 ### 📝 Descrição do Domínio
 
 Esta seção documenta a fundação lógica e física da rede do laboratório (Camadas 2 e 3 do Modelo OSI). Aqui residem as configurações de roteamento, comutação (*switching*) e os serviços essenciais (*Core Services*) necessários para que a infraestrutura se comunique com a internet e para que os nós internos se descubram mutuamente.
