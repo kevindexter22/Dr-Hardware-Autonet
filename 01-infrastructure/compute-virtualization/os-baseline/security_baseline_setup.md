@@ -2,6 +2,8 @@
 
 # 🛡️ SOP: Base de Segurança e Endurecimento do SO
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição e Escopo (SecOps)
 
 Este Procedimento Operacional Padrão (SOP) define as diretrizes de endurecimento (*Hardening*) para o Sistema Operacional base (Ubuntu/Debian) dos nós de infraestrutura. 
