@@ -2,6 +2,8 @@
 
 # 🎯 SOP: Build and Install Unbound DNS + DNSTAP (Docker)
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Scope Description
 
 This Standard Operating Procedure (SOP) shows how to build and install an Unbound DNS server in a container. It runs natively on CasaOS on a Raspberry Pi 4B (ARM Architecture).
