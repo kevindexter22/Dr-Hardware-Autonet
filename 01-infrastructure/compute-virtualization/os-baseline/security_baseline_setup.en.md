@@ -2,6 +2,8 @@
 
 # 🛡️ SOP: Security Base and OS Hardening
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Description and Scope (SecOps)
 
 This Standard Operating Procedure (SOP) gives the rules for base Operating System (Ubuntu/Debian) hardening on infrastructure nodes.
