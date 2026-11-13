@@ -2,6 +2,8 @@
 
 # 🎯 SOP: Compile and Install Unbound DNS + DNSTAP (LXC)
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Scope Description
 
 This Standard Operating Procedure (SOP) shows how to compile and install a container Unbound DNS server. It runs natively on Proxmox.
