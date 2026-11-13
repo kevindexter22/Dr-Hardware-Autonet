@@ -2,6 +2,8 @@
 
 # 🛠️ SOP: Installing CasaOS - Raspberry Pi
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Description and Scope
 
 CasaOS is not a full operating system. It is a light container manager with a web interface (Dashboard). It uses Docker. It usually runs on Linux (like Debian or Ubuntu) on the ARM architecture of the Raspberry Pi.
