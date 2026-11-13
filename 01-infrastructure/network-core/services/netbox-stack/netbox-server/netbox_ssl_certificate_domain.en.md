@@ -2,6 +2,8 @@
 
 # 🛡️ SOP: SSL Provisioning (Let's Encrypt) on NetBox via DNS-01 (Alias Mode)
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Description and Scope
 
 This document defines the Standard Operating Procedure (SOP) to inject valid SSL/TLS certificates into the Reverse Proxy (Nginx). This proxy protects the NetBox interface (Single Source of Truth).
