@@ -2,6 +2,8 @@
 
 # 💾 CasaOS Local Storage: Watchdog de Montagem de Disco
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição do Escopo
 Este diretório abriga o *script* garantidor de estado (State Enforcer) para mídias de armazenamento externo no CasaOS (Raspberry Pi). 
 
