@@ -2,6 +2,8 @@
 
 # 🎯 SOP: Installation and Configuration of strongSwan VPN Server (IKEv2 + MSCHAPv2 via ipsec.conf)
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Scope Description
 
 This Standard Operating Procedure (SOP) shows how to install a strongSwan VPN server. We use the traditional ipsec.conf method.
