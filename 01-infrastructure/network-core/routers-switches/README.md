@@ -1,6 +1,8 @@
 <h6 align="right">Read this page in <a href="./README.en.md" target="_blank" rel="noopener noreferrer">🇬🇧 English</a></h6>
 
-# 🖧 Routers & Switches (Network Infrastructure)
+# 🖧 Roteadores & Switches (Infraestrutura de Rede)
+
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
 
 ### 📝 Descrição da Arquitetura
 
