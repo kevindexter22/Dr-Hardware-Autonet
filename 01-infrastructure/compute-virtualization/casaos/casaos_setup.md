@@ -2,7 +2,7 @@
 
 # 🛠️ SOP: Instalando o CasaOS - Raspberry Pi
 
-![Status](https://img.shields.io/badge/Status-EM%20CONFIGURAÇÃO-blue)
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
 
 ### 📝 Descrição e Escopo
 
