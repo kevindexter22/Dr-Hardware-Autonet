@@ -2,6 +2,8 @@
 
 # 🧰 SOP: Ferramentas de Troubleshooting e Análise
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição e Escopo (SecOps & MTTR)
 
 Este documento lista os pacotes fundamentais de observabilidade local e ferramentas de *troubleshooting* (Camadas L2 a L7) que compõem o *Baseline* de sistema de todos os nós (servidores e contêineres nativos) do laboratório. 
