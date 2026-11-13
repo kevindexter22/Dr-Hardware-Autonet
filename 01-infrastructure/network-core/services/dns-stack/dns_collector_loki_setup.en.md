@@ -2,6 +2,8 @@
 
 # 🎯 SOP: DNS Logs Collection (go-dnscollector + Loki) in LXC
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Scope Description
 
 This Standard Operating Procedure (SOP) shows the complete process (end-to-end) to collect and organize DNS query logs on the network.
