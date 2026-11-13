@@ -2,6 +2,8 @@
 
 # ☁️ SOP: Provisioning an Ubuntu VM on Oracle Cloud (OCI)
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Scope Description
 
 This Standard Operating Procedure (SOP) details how to create a compute infrastructure on Oracle Cloud Infrastructure (OCI). The scope covers everything from creating the virtual cloud network (VCN) to provisioning the virtual machine (VM) with Ubuntu Server, preparing the environment to host core services.
