@@ -2,8 +2,6 @@
 
 # 🌐 DNS Stack (Unbound, HA & Telemetry)
 
-![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
-
 ### 📝 Architecture Description
 
 This folder documents the architecture, setup, and operation of the Internal Recursive DNS Stack. We designed this environment to be the main corporate name resolution infrastructure. It guarantees fast responses (low latency), protection against failures, and deep traffic visibility.
