@@ -2,6 +2,8 @@
 
 # 🌐 Network Core and Services
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Domain Description
 
 This section documents the logical and physical foundation of the lab network (OSI Model Layers 2 and 3). Here you can find the routing, switching, and essential services (Core Services). 
