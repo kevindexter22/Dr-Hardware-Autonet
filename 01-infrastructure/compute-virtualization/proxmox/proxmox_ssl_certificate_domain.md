@@ -2,6 +2,8 @@
 
 # 🔒 SOP: Provisionamento Zero-Touch de SSL (DNS-01) - Proxmox VE
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição e Escopo
 
 Este documento define o Procedimento Operacional Padrão (SOP) para a automação e gerência do ciclo de vida de certificados SSL/TLS (Let's Encrypt) no hypervisor Proxmox VE.
