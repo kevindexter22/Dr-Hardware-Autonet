@@ -2,6 +2,8 @@
 
 # 🛠️ SOP: Bare-Metal Provisioning - Raspberry Pi
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Description and Scope
 
 This document defines the Standard Operating Procedure (SOP) for the first setup of processing nodes based on ARM architecture (Raspberry Pi). 
