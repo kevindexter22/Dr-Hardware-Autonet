@@ -2,6 +2,8 @@
 
 # 🌐 DNS Stack (Unbound, HA & Telemetry)
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição da Arquitetura
 
 Este diretório documenta a arquitetura, implantação e operação da Stack de DNS Recursivo Interno. O ambiente foi desenhado para atuar como a infraestrutura crítica de resolução de nomes corporativa, garantindo baixa latência, resiliência contra falhas e visibilidade profunda de tráfego.
