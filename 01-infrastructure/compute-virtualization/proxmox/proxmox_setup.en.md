@@ -2,6 +2,8 @@
 
 # 🛠️ SOP: Bare-Metal Setup - Proxmox VE
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Description and Scope
 
 This document is the Standard Operating Procedure (SOP) to install the Proxmox VE Hypervisor.
