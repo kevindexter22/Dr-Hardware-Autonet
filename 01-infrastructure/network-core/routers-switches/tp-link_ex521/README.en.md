@@ -2,6 +2,8 @@
 
 # 🖧 Edge Router: EX521 Router (Main Gateway)
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Asset Description
 
 This equipment works as the lab's edge router (L3 Gateway). It is responsible for authenticating with the internet provider (ISP), managing NAT (Network Address Translation), and segmenting the first local network.
