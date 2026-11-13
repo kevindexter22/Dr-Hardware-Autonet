@@ -2,6 +2,8 @@
 
 # 🖧 Access Switch: TP-Link LS1008G (Unmanaged)
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Asset Description
 
 The TP-Link LS1008G is an 8-port unmanaged L2 access switch. In my network architecture, it works just to add more physical ports (OSI Layer 1 and 2). It connects end nodes (Hosts/Raspberry Pis/PCs) to the core network.
