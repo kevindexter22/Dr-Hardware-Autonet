@@ -2,6 +2,8 @@
 
 # 🎮 OPL Samba Storage (PS2 Game Server)
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Descrição do Escopo
 
 Este diretório documenta a configuração e o provisionamento do servidor de arquivos Samba (SMB/CIFS) dedicado ao ecossistema de *Retro Gaming*. O serviço é desenhado especificamente para hospedar e transmitir imagens ISO para o console PlayStation 2 via rede utilizando o **Open PS2 Loader (OPL)**.
