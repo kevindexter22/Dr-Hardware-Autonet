@@ -2,6 +2,8 @@
 
 # 🖧 Edge Router: Roteador EX521 (Gateway Principal)
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição do Ativo
 Este equipamento atua como o roteador de borda (Gateway L3) do laboratório, responsável por autenticar com o provedor de internet (ISP), gerenciar o NAT (Network Address Translation) e segmentar a rede local inicial.
 
