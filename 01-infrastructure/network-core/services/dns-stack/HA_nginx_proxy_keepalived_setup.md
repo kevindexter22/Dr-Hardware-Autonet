@@ -2,6 +2,8 @@
 
 # 🌐 Alta Disponibilidade do DNS
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green) ![Ajustes previstos](https://shields.io)
+
 ### 📝 Descrição do Escopo
 
 Este repositório contém a documentação e os manifestos necessários para implementar uma arquitetura de Alta Disponibilidade (HA) para resolução de DNS em ambientes HomeLab ou corporativos.
