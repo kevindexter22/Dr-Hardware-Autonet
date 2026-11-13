@@ -2,6 +2,8 @@
 
 # 🛠️ SOP: Instalando o CasaOS - Raspberry Pi
 
+![Status](https://img.shields.io/badge/Status-EM%20CONFIGURAÇÃO-blue)
+
 ### 📝 Descrição e Escopo
 
 O CasaOS não é um sistema operacional completo no sentido estrito, mas sim um orquestrador de containeres com uma interface de gerenciamento (UI/Dashboard) leve e baseada em ecossistema Docker, rodando tipicamente sobre uma distribuição Linux (como Debian ou Ubuntu) nativa da arquitetura ARM do Raspberry Pi.
