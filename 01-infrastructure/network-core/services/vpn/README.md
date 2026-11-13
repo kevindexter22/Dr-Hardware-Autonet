@@ -2,6 +2,8 @@
 
 # 🛡️ VPN Stack (IPsec/IKEv2 & strongSwan)
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição da Arquitetura
 Este diretório documenta a arquitetura, o provisionamento e as políticas de operação do gateway de **VPN de Acesso Remoto (Client-to-Site)**. O serviço foi desenhado para prover acesso seguro, criptografado e autenticado à infraestrutura e redes de gerência para colaboradores remotos.
 
