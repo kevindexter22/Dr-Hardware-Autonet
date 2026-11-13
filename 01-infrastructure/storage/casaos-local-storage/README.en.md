@@ -2,6 +2,8 @@
 
 # 💾 CasaOS Local Storage: Disk Mount Watchdog
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Description and Scope
 This folder has the "State Enforcer" script for external storage (USB drives) on CasaOS (Raspberry Pi). 
 
