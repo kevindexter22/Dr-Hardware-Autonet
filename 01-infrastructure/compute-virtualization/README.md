@@ -2,8 +2,6 @@
 
 # 🗄️ Computação & Virtualização
 
-![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
-
 ### 📝 Descrição
 
 Nesta seção, documento o inventário e a gestão de recursos computacionais do laboratório (NFVI), detalhando o hardware físico e a camada de virtualização/orquestração (VIM) responsável por particionar e entregar os recursos aos serviços.
