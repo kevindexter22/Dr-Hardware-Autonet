@@ -2,6 +2,8 @@
 
 # 🔒 SOP: Zero-Touch SSL Provisioning (DNS-01) - Proxmox VE (Direct DDNS Mode)
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Description and Scope
 
 This document is the Standard Operating Procedure (SOP). It shows how to automate and manage SSL/TLS certificates (Let's Encrypt) in the Proxmox VE hypervisor using only a free Dynamic DNS provider (DuckDNS).
