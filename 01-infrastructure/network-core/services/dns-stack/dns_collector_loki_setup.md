@@ -2,6 +2,8 @@
 
 # 🎯 SOP: Coleta de Logs DNS (go-dnscollector + Loki) em LXC
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição do Escopo
 
 Este Procedimento Operacional Padrão (SOP) detalha o fluxo completo (de ponta a ponta) para a coleta e estruturação de logs de consultas DNS na rede. 
