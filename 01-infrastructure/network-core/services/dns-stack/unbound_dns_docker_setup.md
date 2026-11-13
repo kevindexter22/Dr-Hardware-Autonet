@@ -2,6 +2,8 @@
 
 # 🎯 SOP: Compilação e Instalação do Unbound DNS + DNSTAP (Docker)
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição do Escopo
 
 Este Procedimento Operacional Padrão (SOP) detalha a compilação e instalação de um servidor Unbound DNS containerizado, rodando nativamente sobre CasaOS em uma Raspberry Pi 4B (Arquitetura ARM).
