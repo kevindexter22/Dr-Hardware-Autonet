@@ -2,8 +2,6 @@
 
 # 🗄️ Compute & Virtualization
 
-![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
-
 ### 📝 Description
 
 In this section, I document the lab's computer resources (NFVI). It shows the physical hardware and the virtualization layer (VIM) that divides and gives resources to the services.
