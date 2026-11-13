@@ -2,6 +2,8 @@
 
 # ☁️ SOP: Provisionamento de VM Ubuntu na Oracle Cloud (OCI)
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição e Escopo
 
 Este Procedimento Operacional Padrão (SOP) detalha a criação de uma infraestrutura de computação na Oracle Cloud Infrastructure (OCI). O escopo abrange desde a criação da rede virtual (VCN) até o provisionamento da máquina virtual (VM) com Ubuntu Server, preparando o terreno para hospedar serviços centrais.
