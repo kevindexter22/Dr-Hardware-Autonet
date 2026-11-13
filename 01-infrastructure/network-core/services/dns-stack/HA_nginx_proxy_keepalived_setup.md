@@ -2,7 +2,7 @@
 
 # 🌐 Alta Disponibilidade do DNS
 
-![Status](https://img.shields.io/badge/Status-OPERACIONAL%COM%AJUSTES%PREVISTOS-yellow)
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-yellow)
 
 ### 📝 Descrição do Escopo
 
