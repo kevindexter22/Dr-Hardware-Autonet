@@ -2,6 +2,8 @@
 
 # 🛠️ SOP: Provisionando Bare-Metal - Proxmox VE
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição e Escopo
 
 Este documento define o Procedimento Operacional Padrão (SOP) para o provisionamento inicial do Hypervisor Proxmox VE.
