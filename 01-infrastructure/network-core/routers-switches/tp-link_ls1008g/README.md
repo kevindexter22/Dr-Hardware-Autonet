@@ -2,6 +2,8 @@
 
 # 🖧 Access Switch: TP-Link LS1008G (Não Gerenciável)
 
+![Status](https://img.shields.io/badge/Status-OPERACIONAL-green)
+
 ### 📝 Descrição do Ativo
 
 O TP-Link LS1008G é um *switch* L2 de acesso não gerenciável de 8 portas. Na arquitetura da minha rede, ele atua puramente como um expansor de densidade de portas físicas (Camada 1 e 2 do Modelo OSI) para conectar nós finais (Hosts/Raspberry Pis/PCs) ao núcleo da rede.
