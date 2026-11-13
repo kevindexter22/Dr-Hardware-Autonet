@@ -2,6 +2,8 @@
 
 # 🛡️ VPN Stack (IPsec/IKEv2 & strongSwan)
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Architecture Description
 This folder documents the architecture, setup, and operation policies of the **Remote Access VPN (Client-to-Site)** gateway. We designed this service to give remote workers safe, encrypted, and authenticated access to the infrastructure and management networks.
 
