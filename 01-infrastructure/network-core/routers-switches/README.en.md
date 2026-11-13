@@ -2,6 +2,8 @@
 
 # 🖧 Routers & Switches (Network Infrastructure)
 
+![Status](https://img.shields.io/badge/Status-OPERATIONAL-green)
+
 ### 📝 Architecture Description
 
 This folder keeps the documentation, standard settings (*golden configs*), physical topology, and lifecycle management for our routing and switching devices. These devices build our network access and edge layers.
